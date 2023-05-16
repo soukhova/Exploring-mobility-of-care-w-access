@@ -1,0 +1,105 @@
+---
+title: "Geocoded Addresses"
+output: html_document
+date: "2023-05-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Anastasia's Examples 
+```{r}
+# NOTE: if you don't have these packages, you must install them! Use the following code, as an example tidyverse: 
+# install.packages("tidyverse")
+library(tidyverse)
+library(tidygeocoder)
+```
+
+```{r}
+dest <- read.csv("data-raw/Care_Destinations_2023.csv")
+dest
+```
+
+```{r}
+# Join columns related to the address. First unit Address, Street_Name, and Street_Type with a space. And next unite the created F_Address with Community and Province separated by a comma and update the column to have the full address.
+dest_test <- dest |>
+  unite(F_Address, 
+        Address, Street_Name, Street_Type,
+        sep = " ") |>
+  unite(F_Address, 
+        F_Address, Community, Province,
+        sep = ",")
+```
+
+```{r}
+dest_test |> 
+  filter(is.na(LONGITUDE) & is.na(LATITUDE)) |> # only geocode dest data that is MISSING LONGTIDUE AND LATITUDE (this is 1,046 addresses)
+  slice(1:10,) |> #here we select rows 1 to 10 from the 'dest' object and pipe it into the geocode function
+  geocode(address = F_Address, method="osm")
+```
+
+```{r}
+# Viewing the test Address that didn't geocode properly but with it's name corrected
+test <- data.frame(test_add = "215 Parkside Dr,Waterdown,Hamilton,Ontario")
+geocode(test, test_add, method="osm")
+```
+
+## Nick's Work + Experiment 
+```{r}
+# Geocoding Addresses as my own test to ensure I understand
+geocoded_done <- dest_test |> 
+  filter(is.na(LONGITUDE) & is.na(LATITUDE)) |> # only geocode dest data that is MISSING LONGTIDUE AND LATITUDE (this is 1,046 addresses)
+  geocode(address = F_Address, method="osm")
+```
+```{r}
+# Changing a couple addresses that didn't geocode to have their community to be Hamilton to see if that solves the issue
+test <- data.frame(test_add = "103 Fletcher Road,Hamilton,ON")
+geocode(test, test_add, method="osm")
+```
+
+```{r}
+# Change all the Community areas to be Hamilton 
+dest_experiment <- read.csv("data-raw/Care_Destinations_2023.csv")
+dest_experiment$Community <- ifelse(dest_experiment$Community != "", "Hamilton", dest_experiment$Community)
+```
+
+```{r}
+# Uniting all the columns into one to geocode properly 
+dest_test <- dest_experiment |>
+  unite(F_Address, 
+        Address, Street_Name, Street_Type,
+        sep = " ") |>
+  unite(F_Address, 
+        F_Address, Community, Province,
+        sep = ",")
+```
+
+```{r}
+# Testing to see if changing all the community cells to Hamilton makes a difference in geocoding 
+dest_test |> 
+  filter(is.na(LONGITUDE) & is.na(LATITUDE)) |> # only geocode dest data that is MISSING LONGTIDUE AND LATITUDE (this is 1,046 addresses)
+  slice(1:10,) |> #here we select rows 1 to 10 from the 'dest' object and pipe it into the geocode function
+  geocode(address = F_Address, method="osm")
+```
+```{r}
+# Geocoding all the Addresses with Hamilton being the only community 
+dest_geocoded <- dest_test |> 
+  filter(is.na(LONGITUDE) & is.na(LATITUDE)) |> # only geocode dest data that is MISSING LONGTIDUE AND LATITUDE (this is 1,046 addresses)
+  geocode(address = F_Address, method="osm")
+```
+
+```{r}
+# Downloading Partially Geocoded Destinations to then be manually geocoded in Excel
+write.csv(dest_geocoded, file = file.path("/Users/nicholas/Downloads", "Dest_Geocoded.csv"), row.names = FALSE)
+```
+
+```{r}
+# Putting the Geocoded Addresses back into the Repo 
+Geocoded_Addresses_FINAL <- read.csv("/Users/nicholas/Downloads/Dest_Geocoded_FINAL.csv")
+write.csv(Geocoded_Addresses_FINAL, file = file.path("/Users/nicholas/Downloads/Care-Destinations/data-raw", "Geocoded_Addresses_FINAL.csv"), row.names = FALSE)
+```
+
+
+
+
