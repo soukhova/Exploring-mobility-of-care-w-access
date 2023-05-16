@@ -1,0 +1,58 @@
+---
+title: "00-Data-prep"
+format: html
+---
+
+## Libraries
+Here, we include the libraries used in this .qmd (Quarto Markdown document) file:
+```{r}
+# NOTE: if you don't have these packages, you must install them! Use the following code, as an example tidyverse: 
+# install.packages("tidyverse")
+library(tidyverse)
+library(tidygeocoder)
+```
+
+
+## Destinations of care
+
+Here, we can describe the assumptions made, the data sources used (you can include hyperlinks like this [this, a link to GitHub](https://github.com/)), and the processes done to put together the destinations of care database in Hamilton. 
+
+Nick, I'll leave this to you!
+
+Now let's read the assembled .csv file to an object called "dest" and then we view the data in-line. We can see that the LONGITUDE and LATITUDE fields are empty, and the address is spread across a few columns:
+```{r}
+dest <- read.csv("data-raw/Care_Destinations_2023.csv")
+dest
+```
+
+Let's join all address fields into one column called "F_Address":
+```{r}
+# Join columns related to the address. First unit Address, Street_Name, and Street_Type with a space. And next unite the created F_Address with Community and Province separated by a comma and update the column to have the full address.
+dest_test <- dest |>
+  unite(F_Address, 
+        Address, Street_Name, Street_Type,
+        sep = " ") |>
+  unite(F_Address, 
+        F_Address, Community, Province,
+        sep = ",")
+
+# Here we use the '$' to view the column called 'F_Address' as a string of 'characters'. We print the first 300 rows. We can see that there are some destinations that are missing values in the address (multiple ,,,,, are present) -- these either don't have anything in an address field OR they are a destination that already has a LONG and LAT.
+
+#head(dest$F_Address, 300)
+```
+
+Let's forward geocode the 1,569 addresses. As a test, and a learning opportunity - I'll only geocode the first 10 addresses. The geocode() is a function that is part of the 'tidygeocoder' package, you can read the documentation [here](https://jessecambon.github.io/tidygeocoder/). We are using the Open Street Map method and the 'Nominatim single address geocoder'. Caution, if geocoding all the addresses, it will take some time to run.
+```{r}
+dest_test |> 
+  filter(is.na(LONGITUDE) & is.na(LATITUDE)) |> # only geocode dest data that is MISSING LONGTIDUE AND LATITUDE (this is 1,046 addresses)
+  slice(1:10,) |> #here we select rows 1 to 10 from the 'dest' object and pipe it into the geocode function
+  geocode(address = F_Address, method="osm")
+```
+
+Time for you to try Nick! The goal: geocode the rest of the addresses that do not have LATs and LONGs. You may have to manually add lat and longs to addresses that do not cooperate and/or figure out a way to make them cooperate. For instance, the addresses may be incorrectly coded: "215 Parkside Drive,Flamborough,ON" isn't working and this is because this address is infact in Waterdown, see below on the 'test' data.frame:
+
+```{r}
+test <- data.frame(test_add = "215 Parkside Dr,Waterdown,Hamilton,Ontario")
+geocode(test, test_add, method="osm")
+```
+
