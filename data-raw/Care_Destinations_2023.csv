@@ -1,4 +1,4 @@
-Care_Category,Care_Category_Specific,Care_Category_Speciality,Name,Unit,Address,Street_Name,Street_Type,Community,Province,Postal_Code,LONGITUDE,LATITUDE
+Care_Category,Care_Category_Specific,Care_Category_Speciality,Name,Unit,Address,Street_Name,Street_Type,Community,Province,Postal_Code,LATITUDE,LONGITUDE
 Child_Centric,School,,George L. Armstrong Elementary School,,460,Concession,Street,Hamilton,ON,,,
 Child_Centric,School,,Hess Street Elementary School,,107,Hess,Street North,Hamilton,ON,,,
 Child_Centric,School,,Rebecca Street Alternative Education,2nd Floor,135,Rebecca,Street,Hamilton,ON,,,
@@ -522,138 +522,138 @@ Child_Centric,Recreation_Centre,,F.H. Sherman Recreation And Learning Centre,,,,
 Child_Centric,Recreation_Centre,,Hill Park Recreation Centre,,,,,,,,43.22781851,-79.86312511
 Child_Centric,Community_Centre,,Hamilton Regional Native Learning Centre,,712,Main,Street East,Hamilton,ON,,,
 Child_Centric,Community_Centre,,Hamilton Literacy Council,Suite 329,75,Macnab,Street South,Hamilton,ON,,,
-Child_Centric,Community_Centre,,Carlisle Memorial Hall,,,,,,,,-79.98147986,43.3939429
-Child_Centric,Community_Centre,,Eastmount Community Centre,,,,,,,,-79.84866004,43.23643372
-Child_Centric,Community_Centre,,Dundas Community Pool,,,,,,,,-79.96355633,43.26547443
-Child_Centric,Community_Centre,,Dominic Agostino Riverdale Community Centre,,,,,,,,-79.75676735,43.23251479
-Child_Centric,Community_Centre,,Ancaster Old Town Hall,,,,,,,,-79.97626454,43.2255123
-Child_Centric,Community_Centre,,Simone Hall (Old Beasley),,,,,,,,-79.8617716,43.25805638
-Child_Centric,Community_Centre,,Victoria Park Clubhouse,,,,,,,,-79.88476462,43.26172199
-Child_Centric,Community_Centre,,Sealey Park Scout Hall,,,,,,,,-79.88922044,43.33081521
-Child_Centric,Community_Centre,,Greensville Community Centre,,,,,,,,-79.98361176,43.28142637
-Child_Centric,Community_Centre,,Beverly Community Centre,,,,,,,,-80.11130346,43.29679939
-Child_Centric,Community_Centre,,Winona Community Centre,,,,,,,,-79.65092457,43.20851478
-Child_Centric,Community_Centre,,Churchill Park Clubhouse,,,,,,,,-79.90483412,43.26472182
-Child_Centric,Community_Centre,,Ancaster Rotary Centre,,,,,,,,-80.00837916,43.21785936
-Child_Centric,Community_Centre,,Beasley Community Centre,,,,,,,,-79.86107224,43.25729934
-Child_Centric,Community_Centre,,Bennetto Community Centre,,,,,,,,-79.8608651,43.2702725
-Child_Centric,Community_Centre,,Beverly Township Hall,,,,,,,,-80.12663304,43.30047207
-Child_Centric,Community_Centre,,Binbrook Memorial Hall,,,,,,,,-79.80403785,43.12300553
-Child_Centric,Community_Centre,,Dundas Lions Memorial Community Centre,,,,,,,,-79.9635936,43.26737906
-Child_Centric,Community_Centre,,Stoney Creek Lions Fruitland Community Centre,,,,,,,,-79.704599,43.21853664
-Child_Centric,Community_Centre,,Millgrove Community Centre,,,,,,,,-79.95942803,43.33515359
-Child_Centric,Community_Centre,,Mount Hope Community Hall / Youth Centre,,,,,,,,-79.91142878,43.16022469
-Child_Centric,Community_Centre,,Eva Rothwell Resource Centre,,,,,,,,-79.84285308,43.26486367
-Child_Centric,Community_Centre,,Sheffield Community Hall,,,,,,,,-80.20074399,43.29704068
-Child_Centric,Community_Centre,,Stoney Creek Optimist Community Centre,,,,,,,,-79.75852769,43.22574089
-Child_Centric,Community_Centre,,Valens Community Hall,,,,,,,,-80.13076988,43.38363316
-Child_Centric,Community_Centre,,Lynden Lions Community Centre,,,,,,,,-80.14780871,43.2269158
-Child_Centric,Community_Centre,,Valley Park Community Centre,,,,,,,,-79.79810584,43.19290424
-Child_Centric,Community_Centre,,Waterdown Memorial Hall,,,,,,,,-79.89259153,43.33408713
-Child_Centric,Community_Centre,,Winona Scout Hall,,,,,,,,-79.64564257,43.2096953
-Child_Centric,Community_Centre,,Woodburn Centennial Hall,,,,,,,,-79.74280634,43.14656891
-Child_Centric,Community_Centre,,Mountsberg Hall,,,,,,,,-80.04209172,43.43422646
-Child_Centric,Community_Centre,,Spring Valley Community Centre,,,,,,,,-79.99803249,43.21717805
-Child_Centric,Community_Centre,,Greensville (West Flamborough Township) Hall,,,,,,,,-79.98836484,43.27684613
+Child_Centric,Community_Centre,,Carlisle Memorial Hall,,,,,,,,43.3939429,-79.98147986
+Child_Centric,Community_Centre,,Eastmount Community Centre,,,,,,,,43.23643372,-79.84866004
+Child_Centric,Community_Centre,,Dundas Community Pool,,,,,,,,43.26547443,-79.96355633
+Child_Centric,Community_Centre,,Dominic Agostino Riverdale Community Centre,,,,,,,,43.23251479,-79.75676735
+Child_Centric,Community_Centre,,Ancaster Old Town Hall,,,,,,,,43.2255123,-79.97626454
+Child_Centric,Community_Centre,,Simone Hall (Old Beasley),,,,,,,,43.25805638,-79.8617716
+Child_Centric,Community_Centre,,Victoria Park Clubhouse,,,,,,,,43.26172199,-79.88476462
+Child_Centric,Community_Centre,,Sealey Park Scout Hall,,,,,,,,43.33081521,-79.88922044
+Child_Centric,Community_Centre,,Greensville Community Centre,,,,,,,,43.28142637,-79.98361176
+Child_Centric,Community_Centre,,Beverly Community Centre,,,,,,,,43.29679939,-80.11130346
+Child_Centric,Community_Centre,,Winona Community Centre,,,,,,,,43.20851478,-79.65092457
+Child_Centric,Community_Centre,,Churchill Park Clubhouse,,,,,,,,43.26472182,-79.90483412
+Child_Centric,Community_Centre,,Ancaster Rotary Centre,,,,,,,,43.21785936,-80.00837916
+Child_Centric,Community_Centre,,Beasley Community Centre,,,,,,,,43.25729934,-79.86107224
+Child_Centric,Community_Centre,,Bennetto Community Centre,,,,,,,,43.2702725,-79.8608651
+Child_Centric,Community_Centre,,Beverly Township Hall,,,,,,,,43.30047207,-80.12663304
+Child_Centric,Community_Centre,,Binbrook Memorial Hall,,,,,,,,43.12300553,-79.80403785
+Child_Centric,Community_Centre,,Dundas Lions Memorial Community Centre,,,,,,,,43.26737906,-79.9635936
+Child_Centric,Community_Centre,,Stoney Creek Lions Fruitland Community Centre,,,,,,,,43.21853664,-79.704599
+Child_Centric,Community_Centre,,Millgrove Community Centre,,,,,,,,43.33515359,-79.95942803
+Child_Centric,Community_Centre,,Mount Hope Community Hall / Youth Centre,,,,,,,,43.16022469,-79.91142878
+Child_Centric,Community_Centre,,Eva Rothwell Resource Centre,,,,,,,,43.26486367,-79.84285308
+Child_Centric,Community_Centre,,Sheffield Community Hall,,,,,,,,43.29704068,-80.20074399
+Child_Centric,Community_Centre,,Stoney Creek Optimist Community Centre,,,,,,,,43.22574089,-79.75852769
+Child_Centric,Community_Centre,,Valens Community Hall,,,,,,,,43.38363316,-80.13076988
+Child_Centric,Community_Centre,,Lynden Lions Community Centre,,,,,,,,43.2269158,-80.14780871
+Child_Centric,Community_Centre,,Valley Park Community Centre,,,,,,,,43.19290424,-79.79810584
+Child_Centric,Community_Centre,,Waterdown Memorial Hall,,,,,,,,43.33408713,-79.89259153
+Child_Centric,Community_Centre,,Winona Scout Hall,,,,,,,,43.2096953,-79.64564257
+Child_Centric,Community_Centre,,Woodburn Centennial Hall,,,,,,,,43.14656891,-79.74280634
+Child_Centric,Community_Centre,,Mountsberg Hall,,,,,,,,43.43422646,-80.04209172
+Child_Centric,Community_Centre,,Spring Valley Community Centre,,,,,,,,43.21717805,-79.99803249
+Child_Centric,Community_Centre,,Greensville (West Flamborough Township) Hall,,,,,,,,43.27684613,-79.98836484
 Child_Centric,Community_Centre,,City Centre Learning Centre,3rd Level,77,James,Street North,Hamilton,ON,,,
 Child_Centric,Community_Centre,,SHAE School,,34,Ottawa,Street North,Hamilton,ON,,,
-Elder_Centric,Senior_Centre,,Flamborough Seniors Centre,,,,,,,,-79.90491466,43.32371612
-Elder_Centric,Senior_Centre,,Warden Park Seniors Club,,,,,,,,-79.79196212,43.24592797
-Elder_Centric,Senior_Centre,,Rosedale Seniors Club,,,,,,,,-79.80719808,43.21898572
-Elder_Centric,Senior_Centre,,Seniors Activities of Southwest Hamilton (SASH),,,,,,,,-79.8821645,43.25377389
-Elder_Centric,Senior_Centre,,Main Hess Senior's Activity Club,,,,,,,,-79.87775938,43.25650256
-Elder_Centric,Senior_Centre,,"Ada Bland ""Club 60"" Seniors",,,,,,,,-79.75834236,43.21735504
-Elder_Centric,Senior_Centre,,Ancaster Senior Achievement Centre (ASAC),,,,,,,,-80.07058372,43.18453818
-Elder_Centric,Senior_Centre,,Winona Senior Citizens Centre,,,,,,,,-79.65308487,43.20874439
-Elder_Centric,Seniors_Active_Living_Centre,,Jewish Social Services,,30,King,Street East,Hamilton,ON,L9H5G6,-79.95217563,43.26570659
-Elder_Centric,Seniors_Active_Living_Centre,,Bernie Morelli Recreation Centre,,876,Cannon,Street East,Hamilton,ON,L8L0C6,-79.82994039,43.24990859
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Sackville Seniors Centre,,780,Upper,Wentworth Street,Hamilton,ON,L9A4V5,-79.8624985,43.22452919
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ada Bland (Club 60) Senior Citizens' Centre,,6,King,Street West,Hamilton,ON,L8G1G8,-79.75839697,43.21732069
-Elder_Centric,Seniors_Active_Living_Centre,,St. Matthew's House,,705,Main,Street East,Hamilton,ON,L8M1K8,-79.84047509,43.24822369
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Winona Seniors' Club,,1239,Highway 8, ,Hamilton,ON,L8E5S4,-79.65306473,43.20875249
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ancaster Senior Achievement Centre,,622,Alberton,Road South,Hamilton,ON,L0R1A0,-80.07054506,43.18462327
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Main-Hess Seniors' Centre,,200,Jackson,Street West,Hamilton,ON,L8P4R9,-79.87754941,43.25655479
-Elder_Centric,Seniors_Active_Living_Centre,,Dundas Senior Citizen's Club,,10,Market,Street South,Hamilton,ON,L9H5G4,-79.96360033,43.26748039
-Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Active Living Centre 55+ - MacNab Street,,75,MacNab,Street South,Hamilton,ON,L8P3C1,-79.8714247,43.25436299
-Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Seniors Active Living Centre 55+ - Putman Family YWCA,,52,Ottawa,Street North,Hamilton,ON,L8H3Y7,-79.81890959,43.24383289
-Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Rosedale Seniors' Club,,100,Greenhill,Avenue ,Hamilton,ON,L8K4T9,-79.80706068,43.21900079
-Elder_Centric,Long-Term_Care_Home,,Hamilton Continuing Care,,125,Wentworth,Street South,Hamilton,ON,L8N2Z1,-79.850529,43.24787249
-Elder_Centric,Long-Term_Care_Home,,Extendicare Hamilton,,90,Chedmac,Drive ,Hamilton,ON,L9C7S6,-79.92145992,43.23726139
-Elder_Centric,Long-Term_Care_Home,,Shalom Village Nursing Home,,70,Macklin,Street North,Hamilton,ON,L8S3S1,-79.89517751,43.26422089
-Elder_Centric,Long-Term_Care_Home,,The Meadows,,12,Tranquility,Avenue ,Ancaster,ON,L9G5C2,-80.00729304,43.21114908
-Elder_Centric,Long-Term_Care_Home,,"St. Joseph's Villa, Dundas",,56,Governor's,Road ,Dundas,ON,L9H5G7,-79.95770113,43.26175889
-Elder_Centric,Long-Term_Care_Home,,Chartwell Willowgrove Long Term Care Residence,,1217,Old Mohawk,Road ,Ancaster,ON,L9K1P6,-79.93527582,43.23324649
-Elder_Centric,Long-Term_Care_Home,,BayWoods Place,,330,Main,Street East,Hamilton,ON,L8N3T9,-79.8569424,43.25176169
-Elder_Centric,Long-Term_Care_Home,,St. Peter's Residence at Chedoke,,125,Redfern,Avenue ,Hamilton,ON,L9C7W9,-79.92006072,43.24013109
-Elder_Centric,Long-Term_Care_Home,,The Wellington Nursing Home,,1430,Upper Wellington,Street ,Hamilton,ON,L9A5H3,-79.879518,43.20931458
-Elder_Centric,Long-Term_Care_Home,,Idlewyld Manor,,449,Sanatorium,Road ,Hamilton,ON,L9C2A7,-79.91485732,43.23618909
-Elder_Centric,Long-Term_Care_Home,,Dundurn Place Care Centre,,39,Mary,Street ,Hamilton,ON,L8R3L8,-79.8639432,43.25642639
-Elder_Centric,Long-Term_Care_Home,,Queen's Garden,,80,Queen,Street North,Hamilton,ON,L8R3P6,-79.87697411,43.26115109
-Elder_Centric,Long-Term_Care_Home,,Victoria Gardens Long Term Care,,176,Victoria,Avenue North,Hamilton,ON,L8L5G1,-79.8542889,43.25818539
-Elder_Centric,Long-Term_Care_Home,,Regina Gardens,,536,Upper Paradise,Road Road,Hamilton,ON,L9C5E3,-79.91358922,43.23102399
-Elder_Centric,Long-Term_Care_Home,,Macassa  Lodge,,701,Upper Sherman,Avenue ,Hamilton,ON,L8V3M7,-79.84805939,43.22556189
-Elder_Centric,Long-Term_Care_Home,,Parkview Nursing Centre,,545,King,Street West,Hamilton,ON,L8P1C1,-79.88486411,43.26103249
-Elder_Centric,Long-Term_Care_Home,,The Village of Wentworth Heights,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,-79.8736997,43.19887338
-Elder_Centric,Long-Term_Care_Home,,Grace Villa Nursing Home,,45,Lockton,Crescent ,Hamilton,ON,L8V4V5,-79.84709659,43.21147629
-Elder_Centric,Long-Term_Care_Home,,Blackadar Continuing Care Centre,,101,Creighton,Road ,Dundas,ON,L9H3B7,-79.96732934,43.26136689
-Elder_Centric,Long-Term_Care_Home,,Wentworth Lodge,,41,South,Street West,Dundas,ON,L9H4C4,-79.94895843,43.25986449
-Elder_Centric,Long-Term_Care_Home,,Arbour Creek Long-Term Care Centre,,2717,King,Street East,Hamilton,ON,L8G1J3,-79.77683127,43.22145709
-Elder_Centric,Retirement_Home,,Bertram Place Retirement Living Centre,,21,Hatt,Street ,Hamilton,ON,L9H2E9,-79.95508463,43.26505339
-Elder_Centric,Retirement_Home,,Lakeview Retirement Centre,,339,Highway 8, ,Hamilton,ON,L8G1E7,-79.71956205,43.22722669
-Elder_Centric,Retirement_Home,,First Place Hamilton,,360,King,Street East,Hamilton,ON,L8N3Y2,-79.858999,43.25310479
-Elder_Centric,Retirement_Home,,Summit Heights Retirement Residence,,2126,Rymal,Road East,Hamilton,ON,L0R1P0,-79.79243827,43.17536178
-Elder_Centric,Retirement_Home,,Aberdeen Gardens Retirement Residence,,330,Dundurn,Street South,Hamilton,ON,L8P4L6,-79.89294461,43.25165109
-Elder_Centric,Retirement_Home,,Caroline Place Retirement Residence,,118,Market,Street ,Hamilton,ON,L8R3P9,-79.87474961,43.25974649
-Elder_Centric,Retirement_Home,,Meadowlands Retirement Residence,,1248,Mohawk,Road ,Hamilton,ON,L9K1P5,-79.93348352,43.23242849
-Elder_Centric,Retirement_Home,,The Cardinal Retirement Residence,,10,Herkimer,Street ,Hamilton,ON,L8P2G2,-79.873109,43.24921979
-Elder_Centric,Retirement_Home,,St. Elizabeth Retirement Residence,,391,Rymal,Road West,Hamilton,ON,L9B1V2,-79.90930361,43.20620238
-Elder_Centric,Retirement_Home,,Valley Town Residence,,33,Main,Street ,Hamilton,ON,L9H2P7,-79.95289233,43.26507529
-Elder_Centric,Retirement_Home,,Highgate Residence,,325,Fiddlers Green,Road ,Hamilton,ON,L9G1W9,-79.98401634,43.20915888
-Elder_Centric,Retirement_Home,,Ressam Gardens,,1041,West Fifth,Street ,Hamilton,ON,L9B1J5,-79.89378891,43.21098918
-Elder_Centric,Retirement_Home,,Carrington Place Retirement Residence,,75,Dunham,Drive ,Hamilton,ON,L9G1X7,-79.99125764,43.21614648
-Elder_Centric,Retirement_Home,,Abington Court Retirement Residence,,1500,Main,Street East,Hamilton,ON,L8K1E1,-79.80579118,43.23895649
-Elder_Centric,Retirement_Home,,Chartwell Georgian Retirement Residence,,255,Governors,Road ,Hamilton,ON,L9H3K4,-79.97063634,43.26028359
-Elder_Centric,Retirement_Home,,Amica Stoney Creek,,135,King,Street East,Hamilton,ON,L8G1J8,-79.74832566,43.21764529
-Elder_Centric,Retirement_Home,,Village Manor,,57,John,Street West,Hamilton,ON,L0R2H0,-79.89800812,43.33537581
-Elder_Centric,Retirement_Home,,The Carlisle Retirement Residence,,467,Main,Street East,Hamilton,ON,L8N1K1,-79.8514999,43.25094969
-Elder_Centric,Retirement_Home,,Amica Dundas,,50,Hatt,Street ,Hamilton,ON,L9H0A1,-79.95503713,43.26448929
-Elder_Centric,Retirement_Home,,Tara Retirement Home,,843,Mohawk,Road East,Hamilton,ON,L8T2R4,-79.83453709,43.21726949
-Elder_Centric,Retirement_Home,,The Village of Wentworth Heights,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,-79.8736997,43.19887338
-Elder_Centric,Retirement_Home,,Heritage Green Retirement Home,,351,Issac Brock,Drive ,Hamilton,ON,L8J1Y1,-79.79095937,43.19301208
-Elder_Centric,Retirement_Home,,Residence on Aikman,,19,Aikman,Avenue ,Hamilton,ON,L8M1P6,-79.8485333,43.25129329
-Elder_Centric,Retirement_Home,,Kingsberry Place Seniors Residence,,1221,Limeridge,Road East,Hamilton,ON,L8W1Y1,-79.83081579,43.20702509
-Elder_Centric,Retirement_Home,,Seasons Stoney Creek,,8,Shoreview,Place ,Hamilton,ON,L8E0J6,-79.71585545,43.2375435
-Elder_Centric,Retirement_Home,,Westmount Terrace I,,723,Rymal,Road West,Hamilton,ON,L9B2W1,-79.92649742,43.20988658
-Elder_Centric,Retirement_Home,,Chartwell Deerview Crossing Retirement Residence,,460,Rymal,Road West,Hamilton,ON,L9B0B2,-79.91323761,43.20775968
-Elder_Centric,Retirement_Home,,Orchard Terrace Care Centre,,199,Glover,Road ,Hamilton,ON,L8E5J2,-79.68331444,43.21035969
-Elder_Centric,Retirement_Home,,Villa Italia Retirement Residence,,530,Upper Paradise,Road Road,Hamilton,ON,L9C7W2,-79.91456852,43.23116679
-Elder_Centric,Retirement_Home,,The Wellington,,1430,Upper Wellington,Street Street,Hamilton,ON,L9A5H3,-79.879518,43.20931458
-Elder_Centric,Retirement_Home,,Grandview Retirement Living,,83,Centennial,Parkway South,Hamilton,ON,L8G2C7,-79.76593097,43.22502549
-Elder_Centric,Retirement_Home,,Waterdown Manor,,335,Dundas,Street East,Hamilton,ON,L0R2H0,-79.89141602,43.33527221
-Elder_Centric,Retirement_Home,,Residence on Catharine,,236,Catharine,Street North,Hamilton,ON,L8L4S6,-79.8619548,43.26233739
-Elder_Centric,Retirement_Home,,Residence on Main Street,,1605,Main,Street East,Hamilton,ON,L8H1C4,-79.80137298,43.23825689
-Errand_Centric,Library,,Ancaster Library,,300,Wilson,Street East,Ancaster,ON,,-79.97666063,43.22530917
-Errand_Centric,Library,,Barton Library,,571,Barton,Street East,Hamilton,ON,,-79.84121898,43.2580317
-Errand_Centric,Library,,Binbrook Library,,2641,Regional Road 65,,Glanbrook,ON,,-79.80342947,43.12170438
-Errand_Centric,Library,,Carlisle Library,,1496,Centre,Road,Flamborough,ON,,-79.98108621,43.39605339
-Errand_Centric,Library,,Concession Library,,565,Concession,Street,Hamilton,ON,,-79.85136825,43.2410416
-Errand_Centric,Library,,Dundas Library,,18,Oglivie,Street,Dundas,ON,,-79.95494871,43.26548389
-Errand_Centric,Library,,Freelton Library,,1803,Brock,Road,Flamborough,ON,,-80.03876645,43.39793341
-Errand_Centric,Library,,Greensville Library,,59,Kirby,Avenue,Flamborough,ON,,-79.99612469,43.27528027
-Errand_Centric,Library,,Hamilton Central Library,,55,York,Boulevard,Hamilton,ON,,-79.87069972,43.25894156
-Errand_Centric,Library,,Kenilworth Library,,103,Kenilworth,Avenue North,Hamilton,ON,,-79.80884163,43.24349824
-Errand_Centric,Library,,Locke Library,,285,Locke,Street South,Hamilton,ON,,-79.88702204,43.25182285
-Errand_Centric,Library,,Lynden Library,,110,Lynden,Road,Flamborough,ON,,-80.14659537,43.23656021
-Errand_Centric,Library,,Mount Hope Library,,3027,Homestead,Drive,Glanbrook,ON,,-79.9120622,43.16057987
-Errand_Centric,Library,,Red Hill Library,,695,Queenston,Road,Hamilton,ON,,-79.77194472,43.23028211
-Errand_Centric,Library,,Saltfleet Library,,131,Gray,Road,Stoney Creek,ON,,-79.74507509,43.22229245
-Errand_Centric,Library,,Sherwood Library,,467,Upper Ottawa,Street,Hamilton,ON,,-79.82861769,43.22656913
-Errand_Centric,Library,,Stoney Creek Library,,777,Highway 8,,Stoney Creek,ON,,-79.6914053,43.21286435
-Errand_Centric,Library,,Terryberry Library,,100,Mohawk,Road West,Hamilton,ON,,-79.88674908,43.23031428
-Errand_Centric,Library,,Turner Park Library,,352,Rymal,Road East,Hamilton,ON,,-79.87862786,43.19846705
-Errand_Centric,Library,,Valley Park Library,Unit 12,1050,Paramount,Drive,Stoney Creek,ON,,-79.79790001,43.19309594
-Errand_Centric,Library,,Waterdown Library,,163,Dundas,Street East,Flamborough,ON,,-79.90479819,43.3236294
-Errand_Centric,Library,,Westdale Library,,955,King,Street West,Hamilton,ON,,-79.90347677,43.26256862
+Elder_Centric,Senior_Centre,,Flamborough Seniors Centre,,,,,,,,43.32371612,-79.90491466
+Elder_Centric,Senior_Centre,,Warden Park Seniors Club,,,,,,,,43.24592797,-79.79196212
+Elder_Centric,Senior_Centre,,Rosedale Seniors Club,,,,,,,,43.21898572,-79.80719808
+Elder_Centric,Senior_Centre,,Seniors Activities of Southwest Hamilton (SASH),,,,,,,,43.25377389,-79.8821645
+Elder_Centric,Senior_Centre,,Main Hess Senior's Activity Club,,,,,,,,43.25650256,-79.87775938
+Elder_Centric,Senior_Centre,,"Ada Bland ""Club 60"" Seniors",,,,,,,,43.21735504,-79.75834236
+Elder_Centric,Senior_Centre,,Ancaster Senior Achievement Centre (ASAC),,,,,,,,43.18453818,-80.07058372
+Elder_Centric,Senior_Centre,,Winona Senior Citizens Centre,,,,,,,,43.20874439,-79.65308487
+Elder_Centric,Seniors_Active_Living_Centre,,Jewish Social Services,,30,King,Street East,Hamilton,ON,L9H5G6,43.26570659,-79.95217563
+Elder_Centric,Seniors_Active_Living_Centre,,Bernie Morelli Recreation Centre,,876,Cannon,Street East,Hamilton,ON,L8L0C6,43.24990859,-79.82994039
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Sackville Seniors Centre,,780,Upper,Wentworth Street,Hamilton,ON,L9A4V5,43.22452919,-79.8624985
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ada Bland (Club 60) Senior Citizens' Centre,,6,King,Street West,Hamilton,ON,L8G1G8,43.21732069,-79.75839697
+Elder_Centric,Seniors_Active_Living_Centre,,St. Matthew's House,,705,Main,Street East,Hamilton,ON,L8M1K8,43.24822369,-79.84047509
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Winona Seniors' Club,,1239,Highway 8, ,Hamilton,ON,L8E5S4,43.20875249,-79.65306473
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ancaster Senior Achievement Centre,,622,Alberton,Road South,Hamilton,ON,L0R1A0,43.18462327,-80.07054506
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Main-Hess Seniors' Centre,,200,Jackson,Street West,Hamilton,ON,L8P4R9,43.25655479,-79.87754941
+Elder_Centric,Seniors_Active_Living_Centre,,Dundas Senior Citizen's Club,,10,Market,Street South,Hamilton,ON,L9H5G4,43.26748039,-79.96360033
+Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Active Living Centre 55+ - MacNab Street,,75,MacNab,Street South,Hamilton,ON,L8P3C1,43.25436299,-79.8714247
+Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Seniors Active Living Centre 55+ - Putman Family YWCA,,52,Ottawa,Street North,Hamilton,ON,L8H3Y7,43.24383289,-79.81890959
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Rosedale Seniors' Club,,100,Greenhill,Avenue ,Hamilton,ON,L8K4T9,43.21900079,-79.80706068
+Elder_Centric,Long-Term_Care_Home,,Hamilton Continuing Care,,125,Wentworth,Street South,Hamilton,ON,L8N2Z1,43.24787249,-79.850529
+Elder_Centric,Long-Term_Care_Home,,Extendicare Hamilton,,90,Chedmac,Drive ,Hamilton,ON,L9C7S6,43.23726139,-79.92145992
+Elder_Centric,Long-Term_Care_Home,,Shalom Village Nursing Home,,70,Macklin,Street North,Hamilton,ON,L8S3S1,43.26422089,-79.89517751
+Elder_Centric,Long-Term_Care_Home,,The Meadows,,12,Tranquility,Avenue ,Ancaster,ON,L9G5C2,43.21114908,-80.00729304
+Elder_Centric,Long-Term_Care_Home,,"St. Joseph's Villa, Dundas",,56,Governor's,Road ,Dundas,ON,L9H5G7,43.26175889,-79.95770113
+Elder_Centric,Long-Term_Care_Home,,Chartwell Willowgrove Long Term Care Residence,,1217,Old Mohawk,Road ,Ancaster,ON,L9K1P6,43.23324649,-79.93527582
+Elder_Centric,Long-Term_Care_Home,,BayWoods Place,,330,Main,Street East,Hamilton,ON,L8N3T9,43.25176169,-79.8569424
+Elder_Centric,Long-Term_Care_Home,,St. Peter's Residence at Chedoke,,125,Redfern,Avenue ,Hamilton,ON,L9C7W9,43.24013109,-79.92006072
+Elder_Centric,Long-Term_Care_Home,,The Wellington Nursing Home,,1430,Upper Wellington,Street ,Hamilton,ON,L9A5H3,43.20931458,-79.879518
+Elder_Centric,Long-Term_Care_Home,,Idlewyld Manor,,449,Sanatorium,Road ,Hamilton,ON,L9C2A7,43.23618909,-79.91485732
+Elder_Centric,Long-Term_Care_Home,,Dundurn Place Care Centre,,39,Mary,Street ,Hamilton,ON,L8R3L8,43.25642639,-79.8639432
+Elder_Centric,Long-Term_Care_Home,,Queen's Garden,,80,Queen,Street North,Hamilton,ON,L8R3P6,43.26115109,-79.87697411
+Elder_Centric,Long-Term_Care_Home,,Victoria Gardens Long Term Care,,176,Victoria,Avenue North,Hamilton,ON,L8L5G1,43.25818539,-79.8542889
+Elder_Centric,Long-Term_Care_Home,,Regina Gardens,,536,Upper Paradise,Road Road,Hamilton,ON,L9C5E3,43.23102399,-79.91358922
+Elder_Centric,Long-Term_Care_Home,,Macassa  Lodge,,701,Upper Sherman,Avenue ,Hamilton,ON,L8V3M7,43.22556189,-79.84805939
+Elder_Centric,Long-Term_Care_Home,,Parkview Nursing Centre,,545,King,Street West,Hamilton,ON,L8P1C1,43.26103249,-79.88486411
+Elder_Centric,Long-Term_Care_Home,,The Village of Wentworth Heights,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,43.19887338,-79.8736997
+Elder_Centric,Long-Term_Care_Home,,Grace Villa Nursing Home,,45,Lockton,Crescent ,Hamilton,ON,L8V4V5,43.21147629,-79.84709659
+Elder_Centric,Long-Term_Care_Home,,Blackadar Continuing Care Centre,,101,Creighton,Road ,Dundas,ON,L9H3B7,43.26136689,-79.96732934
+Elder_Centric,Long-Term_Care_Home,,Wentworth Lodge,,41,South,Street West,Dundas,ON,L9H4C4,43.25986449,-79.94895843
+Elder_Centric,Long-Term_Care_Home,,Arbour Creek Long-Term Care Centre,,2717,King,Street East,Hamilton,ON,L8G1J3,43.22145709,-79.77683127
+Elder_Centric,Retirement_Home,,Bertram Place Retirement Living Centre,,21,Hatt,Street ,Hamilton,ON,L9H2E9,43.26505339,-79.95508463
+Elder_Centric,Retirement_Home,,Lakeview Retirement Centre,,339,Highway 8, ,Hamilton,ON,L8G1E7,43.22722669,-79.71956205
+Elder_Centric,Retirement_Home,,First Place Hamilton,,360,King,Street East,Hamilton,ON,L8N3Y2,43.25310479,-79.858999
+Elder_Centric,Retirement_Home,,Summit Heights Retirement Residence,,2126,Rymal,Road East,Hamilton,ON,L0R1P0,43.17536178,-79.79243827
+Elder_Centric,Retirement_Home,,Aberdeen Gardens Retirement Residence,,330,Dundurn,Street South,Hamilton,ON,L8P4L6,43.25165109,-79.89294461
+Elder_Centric,Retirement_Home,,Caroline Place Retirement Residence,,118,Market,Street ,Hamilton,ON,L8R3P9,43.25974649,-79.87474961
+Elder_Centric,Retirement_Home,,Meadowlands Retirement Residence,,1248,Mohawk,Road ,Hamilton,ON,L9K1P5,43.23242849,-79.93348352
+Elder_Centric,Retirement_Home,,The Cardinal Retirement Residence,,10,Herkimer,Street ,Hamilton,ON,L8P2G2,43.24921979,-79.873109
+Elder_Centric,Retirement_Home,,St. Elizabeth Retirement Residence,,391,Rymal,Road West,Hamilton,ON,L9B1V2,43.20620238,-79.90930361
+Elder_Centric,Retirement_Home,,Valley Town Residence,,33,Main,Street ,Hamilton,ON,L9H2P7,43.26507529,-79.95289233
+Elder_Centric,Retirement_Home,,Highgate Residence,,325,Fiddlers Green,Road ,Hamilton,ON,L9G1W9,43.20915888,-79.98401634
+Elder_Centric,Retirement_Home,,Ressam Gardens,,1041,West Fifth,Street ,Hamilton,ON,L9B1J5,43.21098918,-79.89378891
+Elder_Centric,Retirement_Home,,Carrington Place Retirement Residence,,75,Dunham,Drive ,Hamilton,ON,L9G1X7,43.21614648,-79.99125764
+Elder_Centric,Retirement_Home,,Abington Court Retirement Residence,,1500,Main,Street East,Hamilton,ON,L8K1E1,43.23895649,-79.80579118
+Elder_Centric,Retirement_Home,,Chartwell Georgian Retirement Residence,,255,Governors,Road ,Hamilton,ON,L9H3K4,43.26028359,-79.97063634
+Elder_Centric,Retirement_Home,,Amica Stoney Creek,,135,King,Street East,Hamilton,ON,L8G1J8,43.21764529,-79.74832566
+Elder_Centric,Retirement_Home,,Village Manor,,57,John,Street West,Hamilton,ON,L0R2H0,43.33537581,-79.89800812
+Elder_Centric,Retirement_Home,,The Carlisle Retirement Residence,,467,Main,Street East,Hamilton,ON,L8N1K1,43.25094969,-79.8514999
+Elder_Centric,Retirement_Home,,Amica Dundas,,50,Hatt,Street ,Hamilton,ON,L9H0A1,43.26448929,-79.95503713
+Elder_Centric,Retirement_Home,,Tara Retirement Home,,843,Mohawk,Road East,Hamilton,ON,L8T2R4,43.21726949,-79.83453709
+Elder_Centric,Retirement_Home,,The Village of Wentworth Heights,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,43.19887338,-79.8736997
+Elder_Centric,Retirement_Home,,Heritage Green Retirement Home,,351,Issac Brock,Drive ,Hamilton,ON,L8J1Y1,43.19301208,-79.79095937
+Elder_Centric,Retirement_Home,,Residence on Aikman,,19,Aikman,Avenue ,Hamilton,ON,L8M1P6,43.25129329,-79.8485333
+Elder_Centric,Retirement_Home,,Kingsberry Place Seniors Residence,,1221,Limeridge,Road East,Hamilton,ON,L8W1Y1,43.20702509,-79.83081579
+Elder_Centric,Retirement_Home,,Seasons Stoney Creek,,8,Shoreview,Place ,Hamilton,ON,L8E0J6,43.2375435,-79.71585545
+Elder_Centric,Retirement_Home,,Westmount Terrace I,,723,Rymal,Road West,Hamilton,ON,L9B2W1,43.20988658,-79.92649742
+Elder_Centric,Retirement_Home,,Chartwell Deerview Crossing Retirement Residence,,460,Rymal,Road West,Hamilton,ON,L9B0B2,43.20775968,-79.91323761
+Elder_Centric,Retirement_Home,,Orchard Terrace Care Centre,,199,Glover,Road ,Hamilton,ON,L8E5J2,43.21035969,-79.68331444
+Elder_Centric,Retirement_Home,,Villa Italia Retirement Residence,,530,Upper Paradise,Road Road,Hamilton,ON,L9C7W2,43.23116679,-79.91456852
+Elder_Centric,Retirement_Home,,The Wellington,,1430,Upper Wellington,Street Street,Hamilton,ON,L9A5H3,43.20931458,-79.879518
+Elder_Centric,Retirement_Home,,Grandview Retirement Living,,83,Centennial,Parkway South,Hamilton,ON,L8G2C7,43.22502549,-79.76593097
+Elder_Centric,Retirement_Home,,Waterdown Manor,,335,Dundas,Street East,Hamilton,ON,L0R2H0,43.33527221,-79.89141602
+Elder_Centric,Retirement_Home,,Residence on Catharine,,236,Catharine,Street North,Hamilton,ON,L8L4S6,43.26233739,-79.8619548
+Elder_Centric,Retirement_Home,,Residence on Main Street,,1605,Main,Street East,Hamilton,ON,L8H1C4,43.23825689,-79.80137298
+Errand_Centric,Library,,Ancaster Library,,300,Wilson,Street East,Ancaster,ON,,43.22530917,-79.97666063
+Errand_Centric,Library,,Barton Library,,571,Barton,Street East,Hamilton,ON,,43.2580317,-79.84121898
+Errand_Centric,Library,,Binbrook Library,,2641,Regional Road 65,,Glanbrook,ON,,43.12170438,-79.80342947
+Errand_Centric,Library,,Carlisle Library,,1496,Centre,Road,Flamborough,ON,,43.39605339,-79.98108621
+Errand_Centric,Library,,Concession Library,,565,Concession,Street,Hamilton,ON,,43.2410416,-79.85136825
+Errand_Centric,Library,,Dundas Library,,18,Oglivie,Street,Dundas,ON,,43.26548389,-79.95494871
+Errand_Centric,Library,,Freelton Library,,1803,Brock,Road,Flamborough,ON,,43.39793341,-80.03876645
+Errand_Centric,Library,,Greensville Library,,59,Kirby,Avenue,Flamborough,ON,,43.27528027,-79.99612469
+Errand_Centric,Library,,Hamilton Central Library,,55,York,Boulevard,Hamilton,ON,,43.25894156,-79.87069972
+Errand_Centric,Library,,Kenilworth Library,,103,Kenilworth,Avenue North,Hamilton,ON,,43.24349824,-79.80884163
+Errand_Centric,Library,,Locke Library,,285,Locke,Street South,Hamilton,ON,,43.25182285,-79.88702204
+Errand_Centric,Library,,Lynden Library,,110,Lynden,Road,Flamborough,ON,,43.23656021,-80.14659537
+Errand_Centric,Library,,Mount Hope Library,,3027,Homestead,Drive,Glanbrook,ON,,43.16057987,-79.9120622
+Errand_Centric,Library,,Red Hill Library,,695,Queenston,Road,Hamilton,ON,,43.23028211,-79.77194472
+Errand_Centric,Library,,Saltfleet Library,,131,Gray,Road,Stoney Creek,ON,,43.22229245,-79.74507509
+Errand_Centric,Library,,Sherwood Library,,467,Upper Ottawa,Street,Hamilton,ON,,43.22656913,-79.82861769
+Errand_Centric,Library,,Stoney Creek Library,,777,Highway 8,,Stoney Creek,ON,,43.21286435,-79.6914053
+Errand_Centric,Library,,Terryberry Library,,100,Mohawk,Road West,Hamilton,ON,,43.23031428,-79.88674908
+Errand_Centric,Library,,Turner Park Library,,352,Rymal,Road East,Hamilton,ON,,43.19846705,-79.87862786
+Errand_Centric,Library,,Valley Park Library,Unit 12,1050,Paramount,Drive,Stoney Creek,ON,,43.19309594,-79.79790001
+Errand_Centric,Library,,Waterdown Library,,163,Dundas,Street East,Flamborough,ON,,43.3236294,-79.90479819
+Errand_Centric,Library,,Westdale Library,,955,King,Street West,Hamilton,ON,,43.26256862,-79.90347677
 Errand_Centric,Post_Office,,Canada Post,,27,Legend,Court,Ancaster,ON,,,
 Errand_Centric,Post_Office,,Canada Post,,2621,Hiway 56,,Binbrook,ON,,,
 Errand_Centric,Post_Office,,Canada Post,,1462,Centre,Road,Carlisle,ON,,,
@@ -1171,15 +1171,15 @@ Grocery_Centric,Grocer_ConvenienceStore,,Gas Rite Variety,,1294,Hwy 6 N, ,Hamilt
 Grocery_Centric,Grocer_ConvenienceStore,,Select Food Mart,,303,York,Boulevard,Hamilton,ON,L8R3K5,,
 Grocery_Centric,Grocer_ConvenienceStore,,Shell Canada,,1580,Main,Street West,Hamilton,ON,L8S1E9,,
 Grocery_Centric,Grocer_ConvenienceStore,,Good Convenience Mart,,128,Dundurn,Street North,Hamilton,ON,L8R3E8,,
-Health_Centric,Hosptial,,Juravinski Cancer Centre,,699,Concession,Street,Hamilton,ON,,-79.84659073,43.24010159
-Health_Centric,Hosptial,,Chedoke Hospital,,565,Sanatorium,Road,Hamilton,ON,,-79.91710597,43.23855776
-Health_Centric,Hosptial,,Hamilton General Hospital,,237,Barton,Street East,Hamilton,ON,,-79.85433493,43.26194349
-Health_Centric,Hosptial,,Juravinski Hospital,,711,Concession,Street,Hamilton,ON,,-79.84500134,43.24013058
-Health_Centric,Hosptial,,McMaster University Medical Centre,,1200,Main,Street West,Hamilton,ON,,-79.91763222,43.25961549
-Health_Centric,Hosptial,,St. Joseph's Hospital - Charlton Campus,,50,Charlton,Avenue East,Hamilton,ON,,-79.87091913,43.24860154
-Health_Centric,Hosptial,Chronic_Care,St. Peter's Hospital,,88,Maplewood,Avenue,Hamilton,ON,,-79.83687057,43.24475759
-Health_Centric,Hosptial,Psychiatric,St. Joseph's Centre for Mountain Health Services - West 5th Campus,,100,West 5th,Street,Hamilton,ON,,-79.88311786,43.24233704
-Health_Centric,Hosptial,Urgent_Care,St. Joseph's Hospital - Urgent Care at King Campus,,2757,King,Street East,Hamilton,ON,,-79.77384804,43.22172295
+Health_Centric,Hosptial,,Juravinski Cancer Centre,,699,Concession,Street,Hamilton,ON,,43.24010159,-79.84659073
+Health_Centric,Hosptial,,Chedoke Hospital,,565,Sanatorium,Road,Hamilton,ON,,43.23855776,-79.91710597
+Health_Centric,Hosptial,,Hamilton General Hospital,,237,Barton,Street East,Hamilton,ON,,43.26194349,-79.85433493
+Health_Centric,Hosptial,,Juravinski Hospital,,711,Concession,Street,Hamilton,ON,,43.24013058,-79.84500134
+Health_Centric,Hosptial,,McMaster University Medical Centre,,1200,Main,Street West,Hamilton,ON,,43.25961549,-79.91763222
+Health_Centric,Hosptial,,St. Joseph's Hospital - Charlton Campus,,50,Charlton,Avenue East,Hamilton,ON,,43.24860154,-79.87091913
+Health_Centric,Hosptial,Chronic_Care,St. Peter's Hospital,,88,Maplewood,Avenue,Hamilton,ON,,43.24475759,-79.83687057
+Health_Centric,Hosptial,Psychiatric,St. Joseph's Centre for Mountain Health Services - West 5th Campus,,100,West 5th,Street,Hamilton,ON,,43.24233704,-79.88311786
+Health_Centric,Hosptial,Urgent_Care,St. Joseph's Hospital - Urgent Care at King Campus,,2757,King,Street East,Hamilton,ON,,43.22172295,-79.77384804
 Health_Centric,Clinics,,Binbrook Family Health,B6,2537,Hamilton Regional Road 56,,Binbrook,ON,L0R 1C0,,
 Health_Centric,Clinics,,Bonavista Medical Centre,3,360,Queenston,Road,Hamilton,ON,L8K 1H9,,
 Health_Centric,Clinics,,Dundas Medical Centre and Walk-in,1,252,Dundas,Street East,Waterdown,ON,L0R 2H6,,
@@ -1329,266 +1329,266 @@ Health_Centric,Dentist,,Hamilton Orthodontics,,605,Upper Wellington,Street,Hamil
 Health_Centric,Dentist,,Dr. Natalie Gaik,203,883,Upper Wentworth,Street,Hamilton,ON,,,
 Health_Centric,Dentist,,Royal East Dental - Dundas,6A,49,King,Street East,Hamilton,ON,,,
 Health_Centric,Dentist,,The Tooth Corner Dundas,8,33,King,Street east,Hamilton,ON,,,
-Health_Centric,Pharmacy,,North End Farmacia,,3,Colbourne,Street ,Hamilton,ON,L8R2G2,-79.8663835,43.26334409
-Health_Centric,Pharmacy,,Upper Gage Pharmacy,,558,Upper Gage,Avenue ,Hamilton,ON,L8V4J6,-79.83939419,43.22845489
-Health_Centric,Pharmacy,,Health Care Sys Outpatient Phcy,,50,Charlton,Avenue East,Hamilton,ON,L8N4A6,-79.8711936,43.24935879
-Health_Centric,Pharmacy,,Mountain View Pharmacy Clinic,,1070,Stone Church,Road East,Hamilton,ON,L8W3K8,-79.84197629,43.19899988
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy #3096,,500,Centennial,Parkway North,Hamilton,ON,L8E0G2,-79.75366007,43.2414823
-Health_Centric,Pharmacy,,Shoppers Drug Mart #975,,1599,Upper James,Street ,Hamilton,ON,L9B0H7,-79.89226891,43.20301708
-Health_Centric,Pharmacy,,Stoney Creek Medical Pharmacy,,980,Queenston,Road ,Hamilton,ON,L8G1B9,-79.74947716,43.22434359
-Health_Centric,Pharmacy,,Hamilton Compounding Pharmacy,,260,Nebo,Road ,Hamilton,ON,L8W3K5,-79.83905109,43.19159588
-Health_Centric,Pharmacy,,Westdale Wellness Pharmacy,,701,Main,Street West,Hamilton,ON,L8P1H1,-79.89788201,43.25983589
-Health_Centric,Pharmacy,,Shoppers Drug Mart #756,,999,Upper Wentworth,Street ,Hamilton,ON,L9A4X5,-79.8615368,43.21763239
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,90,Dundas,Street East,Hamilton,ON,L9H0C2,-79.90860402,43.3156194
-Health_Centric,Pharmacy,,Rastin's Wilson St Pharmacy,,323,Wilson,Street East,Hamilton,ON,L9G4A8,-79.97693454,43.22632578
-Health_Centric,Pharmacy,,St. Peter's Residence at Ched,,125,Redfern,Avenue ,Hamilton,ON,L9C7S6,-79.92006072,43.24013109
-Health_Centric,Pharmacy,,Main Medical Centre Pharmacy,,554,Main,Street East,Hamilton,ON,L8M1J3,-79.8480159,43.24961779
-Health_Centric,Pharmacy,,Ugm Pharmacy,,724,Mohawk,Road East,Hamilton,ON,L8T2P8,-79.84202189,43.21853619
-Health_Centric,Pharmacy,,Guardian Hamilton Care Phmcy,,969,Upper Ottawa,Street ,Hamilton,ON,L8T4V9,-79.83530209,43.20995369
-Health_Centric,Pharmacy,,James St Medical Pharmacy,,206,James,Street South,Hamilton,ON,L8P3A9,-79.8720202,43.25049559
-Health_Centric,Pharmacy,,Orchard Terrace Care Centre,,199,Glover,Road ,Hamilton,ON,L8E5J2,-79.68331444,43.21035969
-Health_Centric,Pharmacy,,Queenston Pharmacy,,631,Queenston,Road ,Hamilton,ON,L8K6R5,-79.77515797,43.23081089
-Health_Centric,Pharmacy,,Extendicare/hamilton,,90,Chedmac,Drive ,Hamilton,ON,L9C7S6,-79.92146742,43.23726989
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1052,,1900,King,Street East,Hamilton,ON,L8K1W1,-79.80717698,43.23065809
-Health_Centric,Pharmacy,,Truwell Pharmacy,,90,Wellington,Street North,Hamilton,ON,L8R1N1,-79.8580991,43.26032149
-Health_Centric,Pharmacy,,Mcmaster Health Campus Pharmacy,,100,Main,Street West,Hamilton,ON,L8P1H6,-79.87352471,43.25694419
-Health_Centric,Pharmacy,,New Day Barton Ida Pharmacy,,664,Barton,Street East,Hamilton,ON,L8L3A4,-79.83671719,43.25651109
-Health_Centric,Pharmacy,,Idlewyld Manor,,449,Sanatorium,Road ,Hamilton,ON,L9C2A7,-79.91485642,43.23619849
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4365,,50,Dundurn,Street ,Hamilton,ON,L8P4W3,-79.88966241,43.26157709
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,1115,Barton,Street East,Hamilton,ON,L8H2V2,-79.81409419,43.25215459
-Health_Centric,Pharmacy,,Shoppers Drug Mart #755,,75,Centennial,Parkway North,Hamilton,ON,L8E2P2,-79.76557497,43.23118319
-Health_Centric,Pharmacy,,Shoppers Drug Mart #742,,101,Osler,Drive ,Hamilton,ON,L9H4H4,-79.94235783,43.25744739
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1547,,181,Main,Street West,Hamilton,ON,L8P4S1,-79.87765781,43.25695429
-Health_Centric,Pharmacy,,Shoppers Drug Mart #692,,399,Greenhill,Avenue ,Hamilton,ON,L8K6N5,-79.79636238,43.21692549
-Health_Centric,Pharmacy,,Prisms Pharmasave,,155,James,Street South,Hamilton,ON,L8P3A4,-79.8709224,43.25206809
-Health_Centric,Pharmacy,,Mcknight's Pharmacy,,685,Main,Street East,Hamilton,ON,L8M1K4,-79.84121369,43.24838889
-Health_Centric,Pharmacy,,Hd Pharmacy,,77,Hunter,Street East,Hamilton,ON,L8N1M4,-79.8671481,43.25298099
-Health_Centric,Pharmacy,,Grace Villa Nursing Home,,45,Lockton,Crescent ,Hamilton,ON,L8V4V5,-79.84711229,43.21150269
-Health_Centric,Pharmacy,,Health-Wise Pharmacy,,15,Lockport,Way ,Hamilton,ON,L8E0H8,-79.63389723,43.2181932
-Health_Centric,Pharmacy,,The Medicine Shoppe,,836,Upper James,Street ,Hamilton,ON,L9C3A4,-79.88275511,43.22809549
-Health_Centric,Pharmacy,,Medical Arts Pharmacy,,179,James,Street South,Hamilton,ON,L8P3A3,-79.8709459,43.25144769
-Health_Centric,Pharmacy,,Riverview Pharmacy,,303,King,Street East,Hamilton,ON,L8N1C1,-79.8601909,43.25398689
-Health_Centric,Pharmacy,,Samy's Drug Mart,,847,Barton,Street East,Hamilton,ON,L8L3B4,-79.82816099,43.25479429
-Health_Centric,Pharmacy,,Chartwell Willowgrove Ltc Resi,,1217,Old Mohawk,Mohawk Road,Hamilton,ON,L9K1P6,-79.93526252,43.23325609
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4070,,75,Centennial,Parkway North,Hamilton,ON,L8E2P2,-79.76557497,43.23118319
-Health_Centric,Pharmacy,,Mediserve Pharmacy,,591,King,Street East,Hamilton,ON,L8N1E4,-79.8511726,43.25256369
-Health_Centric,Pharmacy,,Supercare Pharmacy,,410,Highway 8, ,Hamilton,ON,L8G1G2,-79.72303315,43.21787479
-Health_Centric,Pharmacy,,Dundas Community Pharmacy,,92,Main,Street ,Hamilton,ON,L9H2R1,-79.95267003,43.26267969
-Health_Centric,Pharmacy,,Rexall #204,,1395,Upper Ottawa,Street ,Hamilton,ON,L8W3L5,-79.83965619,43.19955648
-Health_Centric,Pharmacy,,Rexall #202,13,930,Upper Paradise,Paradise Road,Hamilton,ON,L9B2N1,-79.91989912,43.21841478
-Health_Centric,Pharmacy,,Mobilrx Pharmacy,,4206,Governors,Road ,Hamilton,ON,L0R1T0,-80.15370359,43.22635837
-Health_Centric,Pharmacy,,Vitacare Pharmacy,,198,Barton,Street East,Hamilton,ON,L8E2K2,-79.73674086,43.23149779
-Health_Centric,Pharmacy,,Cedar Haven Inc,,169,Delaware,Avenue ,Hamilton,ON,L8M1V7,-79.84304859,43.24657359
-Health_Centric,Pharmacy,,Upper Ottawa Pharmacy,,1447,Upper Ottawa,Street ,Hamilton,ON,L8W3J6,-79.84094259,43.19599818
-Health_Centric,Pharmacy,,Limegrath Pharmacy,,310,Limeridge,Road West,Hamilton,ON,L9C2V2,-79.89858691,43.22405949
-Health_Centric,Pharmacy,,Pine Villa Nursing Home,,490,Highway 8, ,Hamilton,ON,L8G1G6,-79.71616365,43.21627849
-Health_Centric,Pharmacy,,Queen York Pharmacy,,103,Queen,Street North,Hamilton,ON,L8R2V5,-79.87801661,43.26259179
-Health_Centric,Pharmacy,,Medicine Place Pharmacy,,360,Highway 8, ,Hamilton,ON,L8G1E8,-79.72697716,43.21875549
-Health_Centric,Pharmacy,,Kohler Drug Store,,574,James,Street North,Hamilton,ON,L8L1J7,-79.8621278,43.272111
-Health_Centric,Pharmacy,,Remedy's Healthcare Plus Phrmy,,60,Centennial,Parkway South,Hamilton,ON,L8G2C5,-79.76520067,43.22475999
-Health_Centric,Pharmacy,,St. Joseph's Healthcare Hamilt,,100,West 5th,Street ,Hamilton,ON,L8N3K7,-79.88411121,43.24045349
-Health_Centric,Pharmacy,,St. Joseph's Villa (Dundas),,56,Governors,Road ,Hamilton,ON,L9H5G7,-79.95802823,43.26198059
-Health_Centric,Pharmacy,,Alexander Place,,329,Parkside,Drive ,Hamilton,ON,L0R2H0,-79.90081952,43.34234541
-Health_Centric,Pharmacy,,St George Ancasterpharmacyinc,,1144,Wilson,Street West,Hamilton,ON,L9G3K9,-80.01860585,43.19697398
-Health_Centric,Pharmacy,,Mcknight's Pharmacy,,460,Main,Street East,Hamilton,ON,L8N1K4,-79.8519145,43.25058169
-Health_Centric,Pharmacy,,Arbour Creek Ltc Centre,,2717,King,Street East,Hamilton,ON,L8G1J3,-79.77680967,43.22146789
-Health_Centric,Pharmacy,,Costco Pharmacy #1105,,100,Legend,Court ,Hamilton,ON,L9K1J3,-79.94607343,43.23057178
-Health_Centric,Pharmacy,,Charlton Health Inc.,,25,Charlton,Avenue East,Hamilton,ON,L8N1Y2,-79.8711318,43.24982389
-Health_Centric,Pharmacy,,Chafford Pharmacy Inc,,1104,Fennell,Avenue East,Hamilton,ON,L8T1R9,-79.83059689,43.22545969
-Health_Centric,Pharmacy,,Sherman Ida Pharmacy,,675,Rymal,Road East,Hamilton,ON,L8W1B5,-79.8626935,43.19539848
-Health_Centric,Pharmacy,,Parkdale Medical Pharmacy,,132,Parkdale,Avenue South,Hamilton,ON,L8K3P3,-79.79382268,43.23316349
-Health_Centric,Pharmacy,,Rexall #8211,,730,Upper James,Street ,Hamilton,ON,L9C2Z9,-79.88122411,43.23099059
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4254,,1579,Main,Street West,Hamilton,ON,L8S1E6,-79.92854302,43.25547549
-Health_Centric,Pharmacy,,Shoppers Drug Mart #691,,210,Mohawk,Road East,Hamilton,ON,L9A2H6,-79.8715122,43.22555919
-Health_Centric,Pharmacy,,Victoria Pharmacy,,304,Victoria,Avenue North,Hamilton,ON,L8L5G4,-79.8524791,43.26221019
-Health_Centric,Pharmacy,,Samy's Mountain Pharmacy,,550,Fennell,Avenue East,Hamilton,ON,L8V4S9,-79.8570832,43.23189599
-Health_Centric,Pharmacy,,Seven Star Pharmacy,,726,Upper Gage,Avenue ,Hamilton,ON,L8V4K1,-79.84061969,43.22557049
-Health_Centric,Pharmacy,,Regina Gardens,,536,Upper Paradise,Road ,Hamilton,ON,L9C5E3,-79.91361202,43.23103199
-Health_Centric,Pharmacy,,Kingmount Pharmacy,,34,King,Street East,Hamilton,ON,L8G1J8,-79.75674846,43.21648539
-Health_Centric,Pharmacy,,Rexall #0204,,1070,Stone Church,Road East,Hamilton,ON,L8W3K8,-79.84197629,43.19899988
-Health_Centric,Pharmacy,,Food Basics Pharmacy #541,,2500,Barton,Street East,Hamilton,ON,L8E4A2,-79.75882917,43.23469079
-Health_Centric,Pharmacy,,Pharmasave Waterdown Vlg Pharm,,287,Dundas,Street East,Hamilton,ON,L0R2H0,-79.89511952,43.3318831
-Health_Centric,Pharmacy,,Hamilton Continuing Care,,125,Wentworth,Street South,Hamilton,ON,L8N2Z1,-79.8505537,43.24789909
-Health_Centric,Pharmacy,,Rexall #1743,,640,Mohawk,Road West,Hamilton,ON,L9C1X6,-79.91066511,43.23398139
-Health_Centric,Pharmacy,,Total Health Pharmacy #102,,1461,Main,Street West,Hamilton,ON,L8S1C9,-79.92413672,43.25745089
-Health_Centric,Pharmacy,,Calea Pharmacy,,41,Brockley,Drive ,Hamilton,ON,L8E3P1,-79.74621266,43.23579379
-Health_Centric,Pharmacy,,Shoppers Drug Mart #752,,661,Upper James,Street ,Hamilton,ON,L9C5R8,-79.8772609,43.23706179
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4065,,65,Mall,Road ,Hamilton,ON,L8V1B8,-79.8585813,43.22081319
-Health_Centric,Pharmacy,,Laguisma Residential Home,,170,Wentworth,Street South,Hamilton,ON,L8N2Z2,-79.851308,43.24736339
-Health_Centric,Pharmacy,,Crown Point Pharmacy,,45,Kenilworth,Avenue North,Hamilton,ON,L8H4R4,-79.80978268,43.24197479
-Health_Centric,Pharmacy,,Centennial Pharmacy,,140,Centennial,Parkway North,Hamilton,ON,L8E1H9,-79.76094487,43.23308889
-Health_Centric,Pharmacy,,John Drug Mart Ida Pharmacy,,225,John,Street South,Hamilton,ON,L8N2C7,-79.8679247,43.25001079
-Health_Centric,Pharmacy,,Healthmax Pharmacy,,2,King,Street West,Hamilton,ON,L8P1A1,-79.870915,43.25836319
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1299,,1411,Upper Sherman,Avenue ,Hamilton,ON,L8W1C4,-79.8593394,43.20284328
-Health_Centric,Pharmacy,,Westmount Pharmacy,,723,Rymal,Road West,Hamilton,ON,L9B2N9,-79.92649742,43.20988658
-Health_Centric,Pharmacy,,Clarion Nursing Home,,337,Highway 8, ,Hamilton,ON,L8G1E7,-79.72817146,43.22037979
-Health_Centric,Pharmacy,,Aid Plus Pharmacy,,252,Dundas,Street East,Hamilton,ON,L8B0E7,-79.89703632,43.3292919
-Health_Centric,Pharmacy,,Pharma Center,,581,Main,Street East,Hamilton,ON,L8M1H9,-79.8477811,43.25004779
-Health_Centric,Pharmacy,,Park Pharmacy,,72,King,Street West,Hamilton,ON,L8G1H9,-79.76481627,43.21868619
-Health_Centric,Pharmacy,,Canadian Quest Pharmacy,,554,Concession,Street ,Hamilton,ON,L8V1A9,-79.8525338,43.24092069
-Health_Centric,Pharmacy,,King Street Medical Pharmacy,,987,King,Street East,Hamilton,ON,L8M1C6,-79.83462369,43.25119539
-Health_Centric,Pharmacy,,The Md Pharmacy,,754,Queenston,Road ,Hamilton,ON,L8G1A4,-79.76916657,43.22813909
-Health_Centric,Pharmacy,,Cancer Centre Pharmacy,,699,Concession,Street ,Hamilton,ON,L8V5C2,-79.846333,43.24009279
-Health_Centric,Pharmacy,,Right Care Pharmacy,,2,Castlewood,Boulevard ,Hamilton,ON,L9H7M8,-79.97881514,43.25877379
-Health_Centric,Pharmacy,,The Wellington Nursing Home,,1430,Upper Wellington,Street ,Hamilton,ON,L9A5H3,-79.879518,43.20931458
-Health_Centric,Pharmacy,,Rexall #8207,,370,Wilson,Street East,Hamilton,ON,L9G4S4,-79.97588023,43.22721588
-Health_Centric,Pharmacy,,Tender Loving Care Rest Home,,190,Delaware,Avenue ,Hamilton,ON,L8M1W1,-79.84165459,43.24581399
-Health_Centric,Pharmacy,,Hamilton Downtown Pharmacy,,52,Cannon,Street West,Hamilton,ON,L8R2B5,-79.8695059,43.26152959
-Health_Centric,Pharmacy,,Village Pharmacies,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,-79.8736997,43.19887338
-Health_Centric,Pharmacy,,C and Dc Pharmacy,,276,Barton,Street East,Hamilton,ON,L8L2X3,-79.8537949,43.26098459
-Health_Centric,Pharmacy,,Baywoods Place,,330,Main,Street East,Hamilton,ON,L8N3T9,-79.8569424,43.25176169
-Health_Centric,Pharmacy,,Hamilton Community Pharmacy,,414,Victoria,Avenue North,Hamilton,ON,L8L5G8,-79.8505975,43.2655201
-Health_Centric,Pharmacy,,Rexall #8210,,234,Parkdale,Avenue North,Hamilton,ON,L8H5X5,-79.78885978,43.24297289
-Health_Centric,Pharmacy,,Dundurn Place Care Centre,,39,Mary,Street ,Hamilton,ON,L8R3L8,-79.8639432,43.25642639
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1043,,963,Fennell,Avenue East,Hamilton,ON,L8T1R1,-79.83786239,43.22872949
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4115,,21,Upper Centennial,Parkway ,Hamilton,ON,L8J3W2,-79.77772667,43.17552758
-Health_Centric,Pharmacy,,Mountain Clinic Pharmacy,,880,Upper Wentworth,Wentworth Street,Hamilton,ON,L9A5H2,-79.8635494,43.22133059
-Health_Centric,Pharmacy,,Tls Regal Care Drug Mart,,480,Stone Church,Road East,Hamilton,ON,L8W0B1,-79.869106,43.20569088
-Health_Centric,Pharmacy,,Medical Pharmacy,,597,Barton,Street East,Hamilton,ON,L8L2Z6,-79.83999979,43.25764779
-Health_Centric,Pharmacy,,Lopresti Pharmacy,,770,Concession,Street ,Hamilton,ON,L8V1C8,-79.84329499,43.23847309
-Health_Centric,Pharmacy,,Midtown Medical Pharmacy,,130,Wilson,Street ,Hamilton,ON,L8R1E2,-79.8619305,43.25706969
-Health_Centric,Pharmacy,,Shoppers Drug Mart #698,,1000,Golf Links,Road ,Hamilton,ON,L9G3K9,-79.94126502,43.22730148
-Health_Centric,Pharmacy,,Drugstore Pharmacy #4072,,54,Wilson,Street West,Hamilton,ON,L9G1N2,-79.98911954,43.21554118
-Health_Centric,Pharmacy,,M-Line Pharmacy,,1289,Upper James,Street ,Hamilton,ON,L9C3B3,-79.88738611,43.21298738
-Health_Centric,Pharmacy,,Riverdale East Pharmacy,,168,Barton,Street ,Hamilton,ON,L8V4E6,-79.73950896,43.23193699
-Health_Centric,Pharmacy,,Heritage Green Nursing Home,,353,Isaac Brock,Drive ,Hamilton,ON,L8J1Y1,-79.78959737,43.19352179
-Health_Centric,Pharmacy,,646 Main Pharmacy,,646,Main,Street East,Hamilton,ON,L8M1J8,-79.8447116,43.24877979
-Health_Centric,Pharmacy,,Parkview Nursing Centre,,545,King,Street West,Hamilton,ON,L8P1C1,-79.88486411,43.26103249
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1458,,620,King,Street West,Hamilton,ON,L8P1C2,-79.88726061,43.26228219
-Health_Centric,Pharmacy,,Marchese Pharmacy,,316,James,Street North,Hamilton,ON,L8L1H2,-79.8655402,43.26436719
-Health_Centric,Pharmacy,,Shalom Village Nursing Home,,60,Macklin,Street North,Hamilton,ON,L8S3S1,-79.89521351,43.26415849
-Health_Centric,Pharmacy,,First Place Pharmacy,,350,King,Street East,Hamilton,ON,L8N3Y3,-79.858999,43.25310489
-Health_Centric,Pharmacy,,Eastmount Pharmacy,,788,Upper Ottawa,Street ,Hamilton,ON,L8T3V2,-79.83313149,43.21744039
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1487,,3027,Binbrook,Road ,Hamilton,ON,L0R1C0,-79.80584167,43.12090997
-Health_Centric,Pharmacy,,Pharmasave #953,,1575,Upper Otttawa,Street ,Hamilton,ON,L8W3E2,-79.84355179,43.19075208
-Health_Centric,Pharmacy,,Henderson Arts Pharmacy,,662,Concession,Street ,Hamilton,ON,L8V1B8,-79.8475796,43.23968219
-Health_Centric,Pharmacy,,Danmar Pharmacy,,205,Quigley,Road ,Hamilton,ON,L8K5M8,-79.78370707,43.21627459
-Health_Centric,Pharmacy,,Queenlake Pharmacy,,910,Queenston,Road ,Hamilton,ON,L8G1B5,-79.75580657,43.22562529
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1184,,140,Highway 8, ,Hamilton,ON,L8G1C2,-79.74014436,43.22202259
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1180,,377,Highway 8, ,Hamilton,ON,L8G1E7,-79.72536285,43.21956369
-Health_Centric,Pharmacy,,Center for Ambulatory Health,,2757,King,Street East,Hamilton,ON,L8G5E4,-79.77370847,43.22180539
-Health_Centric,Pharmacy,,Costco Pharmacy # 1273,,1330,South Service,Road ,Hamilton,ON,L8E5C5,-79.64284543,43.2152679
-Health_Centric,Pharmacy,,Whitney Plaza Pharmacy,,1819,Main,Street West,Hamilton,ON,L8S1H6,-79.93866643,43.25291999
-Health_Centric,Pharmacy,,The Mdcne Shoppe Phrmcy #299,,840,Queenston,Road ,Hamilton,ON,L8G4A8,-79.76154507,43.22647949
-Health_Centric,Pharmacy,,Pharmasave #955,,105,King,Street West,Hamilton,ON,L9H6Y6,-79.95818093,43.26685199
-Health_Centric,Pharmacy,,Life Care Medical Pharmacy,,280,Queenston,Road ,Hamilton,ON,L8K1H1,-79.79246528,43.23382729
-Health_Centric,Pharmacy,,Shoppers Drug Mart 1041,,753,Main,Street East,Hamilton,ON,L8M1L2,-79.83921919,43.24789589
-Health_Centric,Pharmacy,,Petrovich Residential Home,,90,Wentworth,Street South,Hamilton,ON,L8N2Y9,-79.8503945,43.24957969
-Health_Centric,Pharmacy,,Joy of Hearts Pharmacy,,1125,Main,Street East,Hamilton,ON,L8M1P2,-79.82251009,43.24343539
-Health_Centric,Pharmacy,,City Centre Ida Pharmacy,,77,James,Street North,Hamilton,ON,L8R2K3,-79.8692372,43.25843219
-Health_Centric,Pharmacy,,Waterdown Pharmacy,,145,Hamilton,Street North,Hamilton,ON,L8B0Y7,-79.90501792,43.3361457
-Health_Centric,Pharmacy,,Rexall #6946,,126,Queenston,Road ,Hamilton,ON,L8K1G4,-79.79813558,43.23535349
-Health_Centric,Pharmacy,,Ancaster Village Pharmacy,,81,Wilson,Street West,Hamilton,ON,L9G1N1,-79.99074524,43.21594618
-Health_Centric,Pharmacy,,Fletcher Pharmacy,,1962,Rymal,Road East,Hamilton,ON,L0R1P0,-79.80564458,43.17956638
-Health_Centric,Pharmacy,,Pharmacycorner,,521,Highway 8, ,Hamilton,ON,L8G1G4,-79.71371535,43.21614539
-Health_Centric,Pharmacy,,West Harbour Pharmacy,,554,John,Street North,Hamilton,ON,L8L4S1,-79.8584169,43.2727646
-Health_Centric,Pharmacy,,Daniel Drug Mart,,547,Upper James,Street ,Hamilton,ON,L9C2Y5,-79.8761406,43.24091459
-Health_Centric,Pharmacy,,Sobeys Pharmacy #7213,,977,Golf,Road ,Hamilton,ON,L8G3T9,-79.94420412,43.22758428
-Health_Centric,Pharmacy,,Total Health Pharmacy #135,,1685,Main,Street West,Hamilton,ON,L8S1G5,-79.93408922,43.25697869
-Health_Centric,Pharmacy,,Metro Pharmacy #504,,1161,Barton,Street East,Hamilton,ON,L8H2V2,-79.81276109,43.25341029
-Health_Centric,Pharmacy,,Pop Rx Ancaster Central Pharma,,1015,Golf Links,Road ,Hamilton,ON,L9K1L6,-79.94183322,43.22881158
-Health_Centric,Pharmacy,,Victoria Gardens Ltc,,176,Victoria,Avenue ,Hamilton,ON,L8L5G1,-79.8542889,43.25818539
-Health_Centric,Pharmacy,,Limeridge Medical Pharmacy,,849,Upper Wentworth,Street ,Hamilton,ON,L9A5H4,-79.8609534,43.22181019
-Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,908,Garth,Street ,Hamilton,ON,L9C4L2,-79.90103841,43.23339519
-Health_Centric,Pharmacy,,Pharmasave #9749,,640,Queenston,Road ,Hamilton,ON,L8K1K2,-79.77529847,43.22943959
-Health_Centric,Pharmacy,,Rukavina Residence,,40,Ontario,Avenue ,Hamilton,ON,L8N2X2,-79.8522384,43.24967689
-Health_Centric,Pharmacy,,Barton Medical Pharmacy,,293,Barton,Street East,Hamilton,ON,L8L2X4,-79.8528755,43.26102549
-Health_Centric,Pharmacy,,Stonechurch Pharmacy,,25,Redmond,Drive ,Hamilton,ON,L8W3K7,-79.864862,43.20579908
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1233,,2110,Rymal,Road East,Hamilton,ON,L0R1P0,-79.79196167,43.17622138
-Health_Centric,Pharmacy,,Mount Hope Pharmasave,,3055,Homestead,Drive ,Hamilton,ON,L0R1W0,-79.91260991,43.15981027
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1050,,1,King,Street East,Hamilton,ON,L8G1J7,-79.75747126,43.21709329
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1044,,47,Wilson,Street West,Hamilton,ON,L9G1N1,-79.98946904,43.21781858
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,675,Upper James,Street ,Hamilton,ON,L9C2Z5,-79.8778119,43.23420449
-Health_Centric,Pharmacy,,People's Pharmachoice,,35,Stone Church,Road ,Hamilton,ON,L9K1S4,-79.93595412,43.22787408
-Health_Centric,Pharmacy,,Parkdale Pharmasave,,205,Melvin,Avenue ,Hamilton,ON,L8H2J9,-79.78870218,43.24341139
-Health_Centric,Pharmacy,,Charlton Pharmacy,,230,James,Street South,Hamilton,ON,L8P3B3,-79.8724993,43.24966739
-Health_Centric,Pharmacy,,Healthshare Medical Pharmacy,,574,Upper James,Street ,Hamilton,ON,L9C2Y6,-79.877279,43.24016519
-Health_Centric,Pharmacy,,Shoppers Drug Mart # 1204,,270,Mud,Street West,Hamilton,ON,L8J3Z6,-79.79299067,43.19674369
-Health_Centric,Pharmacy,,Carlisle Pharmacy,,1493,Centre,Road ,Hamilton,ON,L0R1H0,-79.98253465,43.39506971
-Health_Centric,Pharmacy,,Rexall #201,,60,Hatt,Street ,Hamilton,ON,L9H7T6,-79.95742253,43.26525749
-Health_Centric,Pharmacy,,People's Pharmachoice,,30,Rymal,Road East,Hamilton,ON,L9B1T7,-79.89154721,43.20166088
-Health_Centric,Pharmacy,,Rexall #8204,,331,Dundurn,Street ,Hamilton,ON,L8P4L5,-79.89240011,43.25131179
-Health_Centric,Pharmacy,,Ridgeview Long Term Care Centr,,385,Highland,Road West,Hamilton,ON,L8J3E7,-79.80317768,43.18766828
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1054,,255,Dundas,Street East,Hamilton,ON,L0R2H6,-79.89820732,43.3300073
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1046,,991,King,Street West,Hamilton,ON,L8S1K9,-79.90453692,43.26213549
-Health_Centric,Pharmacy,,Westdale Pharmacy,,1309,Main,Street West,Hamilton,ON,L8S1C5,-79.91796552,43.25727319
-Health_Centric,Pharmacy,,Fruitland Pharmacy,,311,Fruitland,Road ,Hamilton,ON,L8E5M8,-79.70046155,43.22282779
-Health_Centric,Pharmacy,,Nebo Medical Pharmacy,,260,Nebo,Drive ,Hamilton,ON,L8W3K5,-79.83905109,43.19159588
-Health_Centric,Pharmacy,,West End Pharmacy,,690,Main,Street West,Hamilton,ON,L8S1A4,-79.89819541,43.26033749
-Health_Centric,Pharmacy,,Lakeside Health Pharmacy,,825,North Service,Road ,Hamilton,ON,L8E0J7,-79.68097494,43.2286067
-Health_Centric,Pharmacy,,Cannon Pharmacy,,15,Cannon,Street ,Hamilton,ON,L8L1Z6,-79.8668309,43.26087319
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1049,,902,Mohawk,Road East,Hamilton,ON,L8T2R8,-79.83274419,43.21604779
-Health_Centric,Pharmacy,,Binbrook Pharmacy,,3011,Highway 56, ,Hamilton,ON,L0R1C0,-79.80448527,43.12042777
-Health_Centric,Pharmacy,,East Waterdown Pharmacy,,419,Dundas,Street East,Hamilton,ON,L8B0K4,-79.88441742,43.34099801
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1460,,1341,Main,Street West,Hamilton,ON,L8S1C6,-79.91935322,43.25739449
-Health_Centric,Pharmacy,,Nadia's Pharmacy,,625,Greenhill,Avenue ,Hamilton,ON,L8K5N8,-79.78618967,43.21035779
-Health_Centric,Pharmacy,,Shoppers Drug Mart 1319,,510,Concession,Street ,Hamilton,ON,L9A1C4,-79.8546233,43.24119149
-Health_Centric,Pharmacy,,Rexall #8205,,1119,Fennell,Avenue ,Hamilton,ON,L8T1S2,-79.82783939,43.22607359
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1056,,133,King,Street West,Hamilton,ON,L9H1V3,-79.95957953,43.26712519
-Health_Centric,Pharmacy,,Friendly Pharmacy,,800,Queenston,Road ,Hamilton,ON,L8G1A7,-79.76636337,43.22803629
-Health_Centric,Pharmacy,,Paramount Pharmasave,,1795,Stone Church,Road East,Hamilton,ON,L8J0B4,-79.81050428,43.19292368
-Health_Centric,Pharmacy,,Medical Pharmacy,,1221,Limeridge,Road East,Hamilton,ON,L8W1Y1,-79.83081579,43.20702509
-Health_Centric,Pharmacy,,Rockhaven Pharmacy Rx Hlthmed,,170,Rockhaven,Lane ,Hamilton,ON,L8B1B5,-79.90191292,43.3344131
-Health_Centric,Pharmacy,,Pharmaserve,,68,Centennial,Parkway North,Hamilton,ON,L8E1H6,-79.76287767,43.23017149
-Health_Centric,Pharmacy,,Southmount Pharmacy,,35,Upper Centennial,Parkway ,Hamilton,ON,L8J3W2,-79.77670427,43.17691468
-Health_Centric,Pharmacy,,Upper James Clinic Pharmacy,,609,Upper James,Street ,Hamilton,ON,L9C2Y9,-79.8767609,43.23933939
-Health_Centric,Pharmacy,,Sutherland's Pharmacy Limited,,180,James,Street South,Hamilton,ON,L8P4V1,-79.8717178,43.25125069
-Health_Centric,Pharmacy,,Smile Drug Store,,517,Concession,Street ,Hamilton,ON,L8V1A6,-79.8532748,43.24141119
-Health_Centric,Pharmacy,,Trc Pharmacy Hamilton John St.,,14,John,Street North,Hamilton,ON,L8R1G9,-79.8660652,43.25633519
-Health_Centric,Pharmacy,,City Pharmacy,,1523,Barton,Street East,Hamilton,ON,L8H2X5,-79.79805358,43.24748389
-Health_Centric,Pharmacy,,Blackadar Nursing Home,,101,Creighton,Road ,Hamilton,ON,L9H3B7,-79.96759974,43.26125949
-Health_Centric,Pharmacy,,Belle Pharmacy,,148,Parkdale,Avenue North,Hamilton,ON,L8H5X2,-79.78998418,43.24031059
-Health_Centric,Pharmacy,,Hauser's Pharmacy,,1010,Upper Wentworth,Street Street,Hamilton,ON,L9A4V9,-79.8655183,43.21697689
-Health_Centric,Pharmacy,,Wentworth Lodge,,41,South,Street West,Hamilton,ON,L9H4C4,-79.94895843,43.25986449
-Health_Centric,Pharmacy,,King Elm Pharmacy,,49,King,Street East,Hamilton,ON,L8G1J9,-79.75582076,43.21657009
-Health_Centric,Pharmacy,,Rexall,,447,Main,Street East,Hamilton,ON,L8N1K1,-79.8519978,43.25128269
-Health_Centric,Pharmacy,,Lee's Dundas Pharmacy,,49,King,Street East,Hamilton,ON,L9H1B7,-79.95098483,43.26599839
-Health_Centric,Pharmacy,,The Village of Wentworth Heigh,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,-79.8736997,43.19887338
-Health_Centric,Pharmacy,,St Michael's Pharmacy,,839,Main,Street East,Hamilton,ON,L8M1L8,-79.83596339,43.24692249
-Health_Centric,Pharmacy,,Loblaw Pharmacy,,115,Hamilton,Street North,Hamilton,ON,L0R2H6,-79.90388522,43.3352796
-Health_Centric,Pharmacy,,Gordon's Pharmacy (Ida),,1511,Main,Street East,Hamilton,ON,L8K1E2,-79.80479088,43.23940529
-Health_Centric,Pharmacy,,Mcmaster Drugstore,,1200,Main,Street West,Hamilton,ON,L8N3Z5,-79.91698142,43.25885639
-Health_Centric,Pharmacy,,Rexall #203,,505,Rymal,Road East,Hamilton,ON,L8W3X1,-79.8715997,43.19823678
-Health_Centric,Pharmacy,,Pharmasave #9791 University Ce,,1280,Main,Street West,Hamilton,ON,L8S4S4,-79.92028962,43.26225299
-Health_Centric,Pharmacy,,Hamilton General Drugstore,,237,Barton,Street East,Hamilton,ON,L8L2X2,-79.8540902,43.26247809
-Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,1079,Barton,Street East,Hamilton,ON,L8L3E2,-79.81653769,43.25167569
-Health_Centric,Pharmacy,,Loblaw Pharmacy #4912,,102,Highway 8 , ,Hamilton,ON,L8G4H3,-79.74678196,43.22346389
-Health_Centric,Pharmacy,,Eastside Medical Pharmacy,,229,King,Street East,Hamilton,ON,L8N1B6,-79.8624104,43.25462219
-Health_Centric,Pharmacy,,Rexall #1560,,102,Highway 8, ,Hamilton,ON,L8G1C2,-79.74678196,43.22346389
-Health_Centric,Pharmacy,,Shoppers Drug Mart #754,,801,Mohawk,Road West,Hamilton,ON,L9C6C2,-79.92303402,43.23305969
-Health_Centric,Pharmacy,,Silver Creek Guardian Pharmacy,,325,Winterberry,Drive ,Hamilton,ON,L8J0B6,-79.80704568,43.19392408
-Health_Centric,Pharmacy,,Rexall,,2,King,Street West,Hamilton,ON,L8P1A1,-79.870915,43.25836319
-Health_Centric,Pharmacy,,Truwell Pharmacy,,838,King,Street East,Hamilton,ON,L8M1B4,-79.84129219,43.25112069
-Health_Centric,Pharmacy,,Rymal Gage Pharmacy,,905,Rymal,Road East,Hamilton,ON,L8W3M2,-79.85226029,43.19299088
-Health_Centric,Pharmacy,,Food Basics Pharmacy #580,,751,Upper James,Street South,Hamilton,ON,L9C3A1,-79.8792118,43.22983829
-Health_Centric,Pharmacy,,Medsmart Pharmacy,,2732,Barton,Street East,Hamilton,ON,L8E4M6,-79.74622456,43.23315619
-Health_Centric,Pharmacy,,The Hamilton Clinic Pharmacy,,200,Main,Street East,Hamilton,ON,L8N1H3,-79.8618353,43.25302939
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,2190,Rymal,Road East,Hamilton,ON,L0R1P0,-79.78261287,43.17357878
-Health_Centric,Pharmacy,,Shoppers Drug Mart #750,,1183,Barton,Street East,Hamilton,ON,L8H2V4,-79.81208039,43.25100149
-Health_Centric,Pharmacy,,Macassa Lodge,,701,Upper Sherman,Avenue South,Hamilton,ON,L8V3M7,-79.84806809,43.22557059
-Health_Centric,Pharmacy,,Binbrook Family Health Phcy,,2537,Hamilton Regional Road 56, ,Hamilton,ON,L0R1C0,-79.80201067,43.12478487
-Health_Centric,Pharmacy,,Mohawk Drug Mart,,1000,Upper Gage,Avenue  Avenue,Hamilton,ON,L8V4R5,-79.84622139,43.21364419
-Health_Centric,Pharmacy,,Rosedale Pharmacy,,870,Lawrence,Road ,Hamilton,ON,L8K2A3,-79.80326528,43.22882099
-Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,1051,Garner,Road West,Hamilton,ON,L9G3K9,-80.01427954,43.19761638
-Health_Centric,Pharmacy,,Barton Pharmacy,,1130,Barton,Street East,Hamilton,ON,L8H7P9,-79.81466329,43.25082169
-Health_Centric,Pharmacy,,Village Pharmacy,,393,Rymal,Road West,Hamilton,ON,L9B1V2,-79.91004401,43.20605948
-Health_Centric,Pharmacy,,Hess Village Pharamcy,,340,York,Boulevard ,Hamilton,ON,L8R3L2,-79.87852761,43.26394949
-Health_Centric,Pharmacy,,Barton Street Pharmacy,,707,Barton,Street East,Hamilton,ON,L8L3A5,-79.83466809,43.25638489
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1053,,232,Cannon,Street East,Hamilton,ON,L8L0A6,-79.8570737,43.25802009
-Health_Centric,Pharmacy,,Community Residential Care,,153,George,Street ,Hamilton,ON,L8P1E4,-79.88054601,43.25874809
-Health_Centric,Pharmacy,,Nash Pharmacy,,691,Queenston,Road ,Hamilton,ON,L8G1A1,-79.77178647,43.23031959
-Health_Centric,Pharmacy,,Shoppers Drug Mart #1047,,113,Herkimer,Street ,Hamilton,ON,L8P2G8,-79.87899241,43.25021849
-Health_Centric,Pharmacy,,Metro Pharmacy #515,,1370,South Service,Road ,Hamilton,ON,L8E5C5,-79.64162343,43.2149585
-Health_Centric,Pharmacy,,King Medical Pharmacy,,505,King,Street West,Hamilton,ON,L8P1B9,-79.88408891,43.26069839
-Health_Centric,Pharmacy,,Meadowlands Pharmasave,,737,Golf Links,Road ,Hamilton,ON,L9K1L5,-79.95382873,43.22605668
-Health_Centric,Pharmacy,,Daniel Drug Mart,,1394,Upper Gage,Avenue ,Hamilton,ON,L8W1E7,-79.85129759,43.20121838
-Health_Centric,Pharmacy,,"Greenbaum, Joseph Dr",,25,Charlton,Avenue East,Hamilton,ON,L8N1Y2,-79.8711318,43.24982389
-Health_Centric,Pharmacy,,Queen's Garden,,80,Queen,Street North,Hamilton,ON,L8R3P6,-79.87697911,43.26116089
-Health_Centric,Pharmacy,,N.L. Gibson's Drug Ltd.,,377,Main,Street East,Hamilton,ON,L8N1J4,-79.8550118,43.25177549
-Health_Centric,Pharmacy,,The Hamilton Pharmacy,,335,Queenston,Road ,Hamilton,ON,L8K1H7,-79.78945508,43.23373999
-Health_Centric,Pharmacy,,Shoppers Drug Mart 1045,,1300,Garth,Street ,Hamilton,ON,L9C4L7,-79.90707341,43.22119998
-Health_Centric,Pharmacy,,Montgomery Pharmacy,,1440,Main,Street East,Hamilton,ON,L8K6M3,-79.80862178,43.23973029
-Health_Centric,Pharmacy,,The Meadows Long Term Care Cen,,12,Tranquility,Avenue ,Hamilton,ON,L9G5C2,-80.00729304,43.21114908
-Health_Centric,Pharmacy,,San Rafael Pharmacy,,146,Ottawa,Street North,Hamilton,ON,L8H3Z3,-79.81757449,43.24650029
-Health_Centric,Pharmacy,,Gage Pharmacy,,1050,Upper Gage,Avenue ,Hamilton,ON,L8V5B7,-79.84657149,43.21277709
-Health_Centric,Pharmacy,,West End Pharmacy,,174,King,Street West,Hamilton,ON,L8P1A5,-79.87437781,43.25834809
+Health_Centric,Pharmacy,,North End Farmacia,,3,Colbourne,Street ,Hamilton,ON,L8R2G2,43.26334409,-79.8663835
+Health_Centric,Pharmacy,,Upper Gage Pharmacy,,558,Upper Gage,Avenue ,Hamilton,ON,L8V4J6,43.22845489,-79.83939419
+Health_Centric,Pharmacy,,Health Care Sys Outpatient Phcy,,50,Charlton,Avenue East,Hamilton,ON,L8N4A6,43.24935879,-79.8711936
+Health_Centric,Pharmacy,,Mountain View Pharmacy Clinic,,1070,Stone Church,Road East,Hamilton,ON,L8W3K8,43.19899988,-79.84197629
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy #3096,,500,Centennial,Parkway North,Hamilton,ON,L8E0G2,43.2414823,-79.75366007
+Health_Centric,Pharmacy,,Shoppers Drug Mart #975,,1599,Upper James,Street ,Hamilton,ON,L9B0H7,43.20301708,-79.89226891
+Health_Centric,Pharmacy,,Stoney Creek Medical Pharmacy,,980,Queenston,Road ,Hamilton,ON,L8G1B9,43.22434359,-79.74947716
+Health_Centric,Pharmacy,,Hamilton Compounding Pharmacy,,260,Nebo,Road ,Hamilton,ON,L8W3K5,43.19159588,-79.83905109
+Health_Centric,Pharmacy,,Westdale Wellness Pharmacy,,701,Main,Street West,Hamilton,ON,L8P1H1,43.25983589,-79.89788201
+Health_Centric,Pharmacy,,Shoppers Drug Mart #756,,999,Upper Wentworth,Street ,Hamilton,ON,L9A4X5,43.21763239,-79.8615368
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,90,Dundas,Street East,Hamilton,ON,L9H0C2,43.3156194,-79.90860402
+Health_Centric,Pharmacy,,Rastin's Wilson St Pharmacy,,323,Wilson,Street East,Hamilton,ON,L9G4A8,43.22632578,-79.97693454
+Health_Centric,Pharmacy,,St. Peter's Residence at Ched,,125,Redfern,Avenue ,Hamilton,ON,L9C7S6,43.24013109,-79.92006072
+Health_Centric,Pharmacy,,Main Medical Centre Pharmacy,,554,Main,Street East,Hamilton,ON,L8M1J3,43.24961779,-79.8480159
+Health_Centric,Pharmacy,,Ugm Pharmacy,,724,Mohawk,Road East,Hamilton,ON,L8T2P8,43.21853619,-79.84202189
+Health_Centric,Pharmacy,,Guardian Hamilton Care Phmcy,,969,Upper Ottawa,Street ,Hamilton,ON,L8T4V9,43.20995369,-79.83530209
+Health_Centric,Pharmacy,,James St Medical Pharmacy,,206,James,Street South,Hamilton,ON,L8P3A9,43.25049559,-79.8720202
+Health_Centric,Pharmacy,,Orchard Terrace Care Centre,,199,Glover,Road ,Hamilton,ON,L8E5J2,43.21035969,-79.68331444
+Health_Centric,Pharmacy,,Queenston Pharmacy,,631,Queenston,Road ,Hamilton,ON,L8K6R5,43.23081089,-79.77515797
+Health_Centric,Pharmacy,,Extendicare/hamilton,,90,Chedmac,Drive ,Hamilton,ON,L9C7S6,43.23726989,-79.92146742
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1052,,1900,King,Street East,Hamilton,ON,L8K1W1,43.23065809,-79.80717698
+Health_Centric,Pharmacy,,Truwell Pharmacy,,90,Wellington,Street North,Hamilton,ON,L8R1N1,43.26032149,-79.8580991
+Health_Centric,Pharmacy,,Mcmaster Health Campus Pharmacy,,100,Main,Street West,Hamilton,ON,L8P1H6,43.25694419,-79.87352471
+Health_Centric,Pharmacy,,New Day Barton Ida Pharmacy,,664,Barton,Street East,Hamilton,ON,L8L3A4,43.25651109,-79.83671719
+Health_Centric,Pharmacy,,Idlewyld Manor,,449,Sanatorium,Road ,Hamilton,ON,L9C2A7,43.23619849,-79.91485642
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4365,,50,Dundurn,Street ,Hamilton,ON,L8P4W3,43.26157709,-79.88966241
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,1115,Barton,Street East,Hamilton,ON,L8H2V2,43.25215459,-79.81409419
+Health_Centric,Pharmacy,,Shoppers Drug Mart #755,,75,Centennial,Parkway North,Hamilton,ON,L8E2P2,43.23118319,-79.76557497
+Health_Centric,Pharmacy,,Shoppers Drug Mart #742,,101,Osler,Drive ,Hamilton,ON,L9H4H4,43.25744739,-79.94235783
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1547,,181,Main,Street West,Hamilton,ON,L8P4S1,43.25695429,-79.87765781
+Health_Centric,Pharmacy,,Shoppers Drug Mart #692,,399,Greenhill,Avenue ,Hamilton,ON,L8K6N5,43.21692549,-79.79636238
+Health_Centric,Pharmacy,,Prisms Pharmasave,,155,James,Street South,Hamilton,ON,L8P3A4,43.25206809,-79.8709224
+Health_Centric,Pharmacy,,Mcknight's Pharmacy,,685,Main,Street East,Hamilton,ON,L8M1K4,43.24838889,-79.84121369
+Health_Centric,Pharmacy,,Hd Pharmacy,,77,Hunter,Street East,Hamilton,ON,L8N1M4,43.25298099,-79.8671481
+Health_Centric,Pharmacy,,Grace Villa Nursing Home,,45,Lockton,Crescent ,Hamilton,ON,L8V4V5,43.21150269,-79.84711229
+Health_Centric,Pharmacy,,Health-Wise Pharmacy,,15,Lockport,Way ,Hamilton,ON,L8E0H8,43.2181932,-79.63389723
+Health_Centric,Pharmacy,,The Medicine Shoppe,,836,Upper James,Street ,Hamilton,ON,L9C3A4,43.22809549,-79.88275511
+Health_Centric,Pharmacy,,Medical Arts Pharmacy,,179,James,Street South,Hamilton,ON,L8P3A3,43.25144769,-79.8709459
+Health_Centric,Pharmacy,,Riverview Pharmacy,,303,King,Street East,Hamilton,ON,L8N1C1,43.25398689,-79.8601909
+Health_Centric,Pharmacy,,Samy's Drug Mart,,847,Barton,Street East,Hamilton,ON,L8L3B4,43.25479429,-79.82816099
+Health_Centric,Pharmacy,,Chartwell Willowgrove Ltc Resi,,1217,Old Mohawk,Mohawk Road,Hamilton,ON,L9K1P6,43.23325609,-79.93526252
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4070,,75,Centennial,Parkway North,Hamilton,ON,L8E2P2,43.23118319,-79.76557497
+Health_Centric,Pharmacy,,Mediserve Pharmacy,,591,King,Street East,Hamilton,ON,L8N1E4,43.25256369,-79.8511726
+Health_Centric,Pharmacy,,Supercare Pharmacy,,410,Highway 8, ,Hamilton,ON,L8G1G2,43.21787479,-79.72303315
+Health_Centric,Pharmacy,,Dundas Community Pharmacy,,92,Main,Street ,Hamilton,ON,L9H2R1,43.26267969,-79.95267003
+Health_Centric,Pharmacy,,Rexall #204,,1395,Upper Ottawa,Street ,Hamilton,ON,L8W3L5,43.19955648,-79.83965619
+Health_Centric,Pharmacy,,Rexall #202,13,930,Upper Paradise,Paradise Road,Hamilton,ON,L9B2N1,43.21841478,-79.91989912
+Health_Centric,Pharmacy,,Mobilrx Pharmacy,,4206,Governors,Road ,Hamilton,ON,L0R1T0,43.22635837,-80.15370359
+Health_Centric,Pharmacy,,Vitacare Pharmacy,,198,Barton,Street East,Hamilton,ON,L8E2K2,43.23149779,-79.73674086
+Health_Centric,Pharmacy,,Cedar Haven Inc,,169,Delaware,Avenue ,Hamilton,ON,L8M1V7,43.24657359,-79.84304859
+Health_Centric,Pharmacy,,Upper Ottawa Pharmacy,,1447,Upper Ottawa,Street ,Hamilton,ON,L8W3J6,43.19599818,-79.84094259
+Health_Centric,Pharmacy,,Limegrath Pharmacy,,310,Limeridge,Road West,Hamilton,ON,L9C2V2,43.22405949,-79.89858691
+Health_Centric,Pharmacy,,Pine Villa Nursing Home,,490,Highway 8, ,Hamilton,ON,L8G1G6,43.21627849,-79.71616365
+Health_Centric,Pharmacy,,Queen York Pharmacy,,103,Queen,Street North,Hamilton,ON,L8R2V5,43.26259179,-79.87801661
+Health_Centric,Pharmacy,,Medicine Place Pharmacy,,360,Highway 8, ,Hamilton,ON,L8G1E8,43.21875549,-79.72697716
+Health_Centric,Pharmacy,,Kohler Drug Store,,574,James,Street North,Hamilton,ON,L8L1J7,43.272111,-79.8621278
+Health_Centric,Pharmacy,,Remedy's Healthcare Plus Phrmy,,60,Centennial,Parkway South,Hamilton,ON,L8G2C5,43.22475999,-79.76520067
+Health_Centric,Pharmacy,,St. Joseph's Healthcare Hamilt,,100,West 5th,Street ,Hamilton,ON,L8N3K7,43.24045349,-79.88411121
+Health_Centric,Pharmacy,,St. Joseph's Villa (Dundas),,56,Governors,Road ,Hamilton,ON,L9H5G7,43.26198059,-79.95802823
+Health_Centric,Pharmacy,,Alexander Place,,329,Parkside,Drive ,Hamilton,ON,L0R2H0,43.34234541,-79.90081952
+Health_Centric,Pharmacy,,St George Ancasterpharmacyinc,,1144,Wilson,Street West,Hamilton,ON,L9G3K9,43.19697398,-80.01860585
+Health_Centric,Pharmacy,,Mcknight's Pharmacy,,460,Main,Street East,Hamilton,ON,L8N1K4,43.25058169,-79.8519145
+Health_Centric,Pharmacy,,Arbour Creek Ltc Centre,,2717,King,Street East,Hamilton,ON,L8G1J3,43.22146789,-79.77680967
+Health_Centric,Pharmacy,,Costco Pharmacy #1105,,100,Legend,Court ,Hamilton,ON,L9K1J3,43.23057178,-79.94607343
+Health_Centric,Pharmacy,,Charlton Health Inc.,,25,Charlton,Avenue East,Hamilton,ON,L8N1Y2,43.24982389,-79.8711318
+Health_Centric,Pharmacy,,Chafford Pharmacy Inc,,1104,Fennell,Avenue East,Hamilton,ON,L8T1R9,43.22545969,-79.83059689
+Health_Centric,Pharmacy,,Sherman Ida Pharmacy,,675,Rymal,Road East,Hamilton,ON,L8W1B5,43.19539848,-79.8626935
+Health_Centric,Pharmacy,,Parkdale Medical Pharmacy,,132,Parkdale,Avenue South,Hamilton,ON,L8K3P3,43.23316349,-79.79382268
+Health_Centric,Pharmacy,,Rexall #8211,,730,Upper James,Street ,Hamilton,ON,L9C2Z9,43.23099059,-79.88122411
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4254,,1579,Main,Street West,Hamilton,ON,L8S1E6,43.25547549,-79.92854302
+Health_Centric,Pharmacy,,Shoppers Drug Mart #691,,210,Mohawk,Road East,Hamilton,ON,L9A2H6,43.22555919,-79.8715122
+Health_Centric,Pharmacy,,Victoria Pharmacy,,304,Victoria,Avenue North,Hamilton,ON,L8L5G4,43.26221019,-79.8524791
+Health_Centric,Pharmacy,,Samy's Mountain Pharmacy,,550,Fennell,Avenue East,Hamilton,ON,L8V4S9,43.23189599,-79.8570832
+Health_Centric,Pharmacy,,Seven Star Pharmacy,,726,Upper Gage,Avenue ,Hamilton,ON,L8V4K1,43.22557049,-79.84061969
+Health_Centric,Pharmacy,,Regina Gardens,,536,Upper Paradise,Road ,Hamilton,ON,L9C5E3,43.23103199,-79.91361202
+Health_Centric,Pharmacy,,Kingmount Pharmacy,,34,King,Street East,Hamilton,ON,L8G1J8,43.21648539,-79.75674846
+Health_Centric,Pharmacy,,Rexall #0204,,1070,Stone Church,Road East,Hamilton,ON,L8W3K8,43.19899988,-79.84197629
+Health_Centric,Pharmacy,,Food Basics Pharmacy #541,,2500,Barton,Street East,Hamilton,ON,L8E4A2,43.23469079,-79.75882917
+Health_Centric,Pharmacy,,Pharmasave Waterdown Vlg Pharm,,287,Dundas,Street East,Hamilton,ON,L0R2H0,43.3318831,-79.89511952
+Health_Centric,Pharmacy,,Hamilton Continuing Care,,125,Wentworth,Street South,Hamilton,ON,L8N2Z1,43.24789909,-79.8505537
+Health_Centric,Pharmacy,,Rexall #1743,,640,Mohawk,Road West,Hamilton,ON,L9C1X6,43.23398139,-79.91066511
+Health_Centric,Pharmacy,,Total Health Pharmacy #102,,1461,Main,Street West,Hamilton,ON,L8S1C9,43.25745089,-79.92413672
+Health_Centric,Pharmacy,,Calea Pharmacy,,41,Brockley,Drive ,Hamilton,ON,L8E3P1,43.23579379,-79.74621266
+Health_Centric,Pharmacy,,Shoppers Drug Mart #752,,661,Upper James,Street ,Hamilton,ON,L9C5R8,43.23706179,-79.8772609
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4065,,65,Mall,Road ,Hamilton,ON,L8V1B8,43.22081319,-79.8585813
+Health_Centric,Pharmacy,,Laguisma Residential Home,,170,Wentworth,Street South,Hamilton,ON,L8N2Z2,43.24736339,-79.851308
+Health_Centric,Pharmacy,,Crown Point Pharmacy,,45,Kenilworth,Avenue North,Hamilton,ON,L8H4R4,43.24197479,-79.80978268
+Health_Centric,Pharmacy,,Centennial Pharmacy,,140,Centennial,Parkway North,Hamilton,ON,L8E1H9,43.23308889,-79.76094487
+Health_Centric,Pharmacy,,John Drug Mart Ida Pharmacy,,225,John,Street South,Hamilton,ON,L8N2C7,43.25001079,-79.8679247
+Health_Centric,Pharmacy,,Healthmax Pharmacy,,2,King,Street West,Hamilton,ON,L8P1A1,43.25836319,-79.870915
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1299,,1411,Upper Sherman,Avenue ,Hamilton,ON,L8W1C4,43.20284328,-79.8593394
+Health_Centric,Pharmacy,,Westmount Pharmacy,,723,Rymal,Road West,Hamilton,ON,L9B2N9,43.20988658,-79.92649742
+Health_Centric,Pharmacy,,Clarion Nursing Home,,337,Highway 8, ,Hamilton,ON,L8G1E7,43.22037979,-79.72817146
+Health_Centric,Pharmacy,,Aid Plus Pharmacy,,252,Dundas,Street East,Hamilton,ON,L8B0E7,43.3292919,-79.89703632
+Health_Centric,Pharmacy,,Pharma Center,,581,Main,Street East,Hamilton,ON,L8M1H9,43.25004779,-79.8477811
+Health_Centric,Pharmacy,,Park Pharmacy,,72,King,Street West,Hamilton,ON,L8G1H9,43.21868619,-79.76481627
+Health_Centric,Pharmacy,,Canadian Quest Pharmacy,,554,Concession,Street ,Hamilton,ON,L8V1A9,43.24092069,-79.8525338
+Health_Centric,Pharmacy,,King Street Medical Pharmacy,,987,King,Street East,Hamilton,ON,L8M1C6,43.25119539,-79.83462369
+Health_Centric,Pharmacy,,The Md Pharmacy,,754,Queenston,Road ,Hamilton,ON,L8G1A4,43.22813909,-79.76916657
+Health_Centric,Pharmacy,,Cancer Centre Pharmacy,,699,Concession,Street ,Hamilton,ON,L8V5C2,43.24009279,-79.846333
+Health_Centric,Pharmacy,,Right Care Pharmacy,,2,Castlewood,Boulevard ,Hamilton,ON,L9H7M8,43.25877379,-79.97881514
+Health_Centric,Pharmacy,,The Wellington Nursing Home,,1430,Upper Wellington,Street ,Hamilton,ON,L9A5H3,43.20931458,-79.879518
+Health_Centric,Pharmacy,,Rexall #8207,,370,Wilson,Street East,Hamilton,ON,L9G4S4,43.22721588,-79.97588023
+Health_Centric,Pharmacy,,Tender Loving Care Rest Home,,190,Delaware,Avenue ,Hamilton,ON,L8M1W1,43.24581399,-79.84165459
+Health_Centric,Pharmacy,,Hamilton Downtown Pharmacy,,52,Cannon,Street West,Hamilton,ON,L8R2B5,43.26152959,-79.8695059
+Health_Centric,Pharmacy,,Village Pharmacies,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,43.19887338,-79.8736997
+Health_Centric,Pharmacy,,C and Dc Pharmacy,,276,Barton,Street East,Hamilton,ON,L8L2X3,43.26098459,-79.8537949
+Health_Centric,Pharmacy,,Baywoods Place,,330,Main,Street East,Hamilton,ON,L8N3T9,43.25176169,-79.8569424
+Health_Centric,Pharmacy,,Hamilton Community Pharmacy,,414,Victoria,Avenue North,Hamilton,ON,L8L5G8,43.2655201,-79.8505975
+Health_Centric,Pharmacy,,Rexall #8210,,234,Parkdale,Avenue North,Hamilton,ON,L8H5X5,43.24297289,-79.78885978
+Health_Centric,Pharmacy,,Dundurn Place Care Centre,,39,Mary,Street ,Hamilton,ON,L8R3L8,43.25642639,-79.8639432
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1043,,963,Fennell,Avenue East,Hamilton,ON,L8T1R1,43.22872949,-79.83786239
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4115,,21,Upper Centennial,Parkway ,Hamilton,ON,L8J3W2,43.17552758,-79.77772667
+Health_Centric,Pharmacy,,Mountain Clinic Pharmacy,,880,Upper Wentworth,Wentworth Street,Hamilton,ON,L9A5H2,43.22133059,-79.8635494
+Health_Centric,Pharmacy,,Tls Regal Care Drug Mart,,480,Stone Church,Road East,Hamilton,ON,L8W0B1,43.20569088,-79.869106
+Health_Centric,Pharmacy,,Medical Pharmacy,,597,Barton,Street East,Hamilton,ON,L8L2Z6,43.25764779,-79.83999979
+Health_Centric,Pharmacy,,Lopresti Pharmacy,,770,Concession,Street ,Hamilton,ON,L8V1C8,43.23847309,-79.84329499
+Health_Centric,Pharmacy,,Midtown Medical Pharmacy,,130,Wilson,Street ,Hamilton,ON,L8R1E2,43.25706969,-79.8619305
+Health_Centric,Pharmacy,,Shoppers Drug Mart #698,,1000,Golf Links,Road ,Hamilton,ON,L9G3K9,43.22730148,-79.94126502
+Health_Centric,Pharmacy,,Drugstore Pharmacy #4072,,54,Wilson,Street West,Hamilton,ON,L9G1N2,43.21554118,-79.98911954
+Health_Centric,Pharmacy,,M-Line Pharmacy,,1289,Upper James,Street ,Hamilton,ON,L9C3B3,43.21298738,-79.88738611
+Health_Centric,Pharmacy,,Riverdale East Pharmacy,,168,Barton,Street ,Hamilton,ON,L8V4E6,43.23193699,-79.73950896
+Health_Centric,Pharmacy,,Heritage Green Nursing Home,,353,Isaac Brock,Drive ,Hamilton,ON,L8J1Y1,43.19352179,-79.78959737
+Health_Centric,Pharmacy,,646 Main Pharmacy,,646,Main,Street East,Hamilton,ON,L8M1J8,43.24877979,-79.8447116
+Health_Centric,Pharmacy,,Parkview Nursing Centre,,545,King,Street West,Hamilton,ON,L8P1C1,43.26103249,-79.88486411
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1458,,620,King,Street West,Hamilton,ON,L8P1C2,43.26228219,-79.88726061
+Health_Centric,Pharmacy,,Marchese Pharmacy,,316,James,Street North,Hamilton,ON,L8L1H2,43.26436719,-79.8655402
+Health_Centric,Pharmacy,,Shalom Village Nursing Home,,60,Macklin,Street North,Hamilton,ON,L8S3S1,43.26415849,-79.89521351
+Health_Centric,Pharmacy,,First Place Pharmacy,,350,King,Street East,Hamilton,ON,L8N3Y3,43.25310489,-79.858999
+Health_Centric,Pharmacy,,Eastmount Pharmacy,,788,Upper Ottawa,Street ,Hamilton,ON,L8T3V2,43.21744039,-79.83313149
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1487,,3027,Binbrook,Road ,Hamilton,ON,L0R1C0,43.12090997,-79.80584167
+Health_Centric,Pharmacy,,Pharmasave #953,,1575,Upper Otttawa,Street ,Hamilton,ON,L8W3E2,43.19075208,-79.84355179
+Health_Centric,Pharmacy,,Henderson Arts Pharmacy,,662,Concession,Street ,Hamilton,ON,L8V1B8,43.23968219,-79.8475796
+Health_Centric,Pharmacy,,Danmar Pharmacy,,205,Quigley,Road ,Hamilton,ON,L8K5M8,43.21627459,-79.78370707
+Health_Centric,Pharmacy,,Queenlake Pharmacy,,910,Queenston,Road ,Hamilton,ON,L8G1B5,43.22562529,-79.75580657
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1184,,140,Highway 8, ,Hamilton,ON,L8G1C2,43.22202259,-79.74014436
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1180,,377,Highway 8, ,Hamilton,ON,L8G1E7,43.21956369,-79.72536285
+Health_Centric,Pharmacy,,Center for Ambulatory Health,,2757,King,Street East,Hamilton,ON,L8G5E4,43.22180539,-79.77370847
+Health_Centric,Pharmacy,,Costco Pharmacy # 1273,,1330,South Service,Road ,Hamilton,ON,L8E5C5,43.2152679,-79.64284543
+Health_Centric,Pharmacy,,Whitney Plaza Pharmacy,,1819,Main,Street West,Hamilton,ON,L8S1H6,43.25291999,-79.93866643
+Health_Centric,Pharmacy,,The Mdcne Shoppe Phrmcy #299,,840,Queenston,Road ,Hamilton,ON,L8G4A8,43.22647949,-79.76154507
+Health_Centric,Pharmacy,,Pharmasave #955,,105,King,Street West,Hamilton,ON,L9H6Y6,43.26685199,-79.95818093
+Health_Centric,Pharmacy,,Life Care Medical Pharmacy,,280,Queenston,Road ,Hamilton,ON,L8K1H1,43.23382729,-79.79246528
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1041,,753,Main,Street East,Hamilton,ON,L8M1L2,43.24789589,-79.83921919
+Health_Centric,Pharmacy,,Petrovich Residential Home,,90,Wentworth,Street South,Hamilton,ON,L8N2Y9,43.24957969,-79.8503945
+Health_Centric,Pharmacy,,Joy of Hearts Pharmacy,,1125,Main,Street East,Hamilton,ON,L8M1P2,43.24343539,-79.82251009
+Health_Centric,Pharmacy,,City Centre Ida Pharmacy,,77,James,Street North,Hamilton,ON,L8R2K3,43.25843219,-79.8692372
+Health_Centric,Pharmacy,,Waterdown Pharmacy,,145,Hamilton,Street North,Hamilton,ON,L8B0Y7,43.3361457,-79.90501792
+Health_Centric,Pharmacy,,Rexall #6946,,126,Queenston,Road ,Hamilton,ON,L8K1G4,43.23535349,-79.79813558
+Health_Centric,Pharmacy,,Ancaster Village Pharmacy,,81,Wilson,Street West,Hamilton,ON,L9G1N1,43.21594618,-79.99074524
+Health_Centric,Pharmacy,,Fletcher Pharmacy,,1962,Rymal,Road East,Hamilton,ON,L0R1P0,43.17956638,-79.80564458
+Health_Centric,Pharmacy,,Pharmacycorner,,521,Highway 8, ,Hamilton,ON,L8G1G4,43.21614539,-79.71371535
+Health_Centric,Pharmacy,,West Harbour Pharmacy,,554,John,Street North,Hamilton,ON,L8L4S1,43.2727646,-79.8584169
+Health_Centric,Pharmacy,,Daniel Drug Mart,,547,Upper James,Street ,Hamilton,ON,L9C2Y5,43.24091459,-79.8761406
+Health_Centric,Pharmacy,,Sobeys Pharmacy #7213,,977,Golf,Road ,Hamilton,ON,L8G3T9,43.22758428,-79.94420412
+Health_Centric,Pharmacy,,Total Health Pharmacy #135,,1685,Main,Street West,Hamilton,ON,L8S1G5,43.25697869,-79.93408922
+Health_Centric,Pharmacy,,Metro Pharmacy #504,,1161,Barton,Street East,Hamilton,ON,L8H2V2,43.25341029,-79.81276109
+Health_Centric,Pharmacy,,Pop Rx Ancaster Central Pharma,,1015,Golf Links,Road ,Hamilton,ON,L9K1L6,43.22881158,-79.94183322
+Health_Centric,Pharmacy,,Victoria Gardens Ltc,,176,Victoria,Avenue ,Hamilton,ON,L8L5G1,43.25818539,-79.8542889
+Health_Centric,Pharmacy,,Limeridge Medical Pharmacy,,849,Upper Wentworth,Street ,Hamilton,ON,L9A5H4,43.22181019,-79.8609534
+Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,908,Garth,Street ,Hamilton,ON,L9C4L2,43.23339519,-79.90103841
+Health_Centric,Pharmacy,,Pharmasave #9749,,640,Queenston,Road ,Hamilton,ON,L8K1K2,43.22943959,-79.77529847
+Health_Centric,Pharmacy,,Rukavina Residence,,40,Ontario,Avenue ,Hamilton,ON,L8N2X2,43.24967689,-79.8522384
+Health_Centric,Pharmacy,,Barton Medical Pharmacy,,293,Barton,Street East,Hamilton,ON,L8L2X4,43.26102549,-79.8528755
+Health_Centric,Pharmacy,,Stonechurch Pharmacy,,25,Redmond,Drive ,Hamilton,ON,L8W3K7,43.20579908,-79.864862
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1233,,2110,Rymal,Road East,Hamilton,ON,L0R1P0,43.17622138,-79.79196167
+Health_Centric,Pharmacy,,Mount Hope Pharmasave,,3055,Homestead,Drive ,Hamilton,ON,L0R1W0,43.15981027,-79.91260991
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1050,,1,King,Street East,Hamilton,ON,L8G1J7,43.21709329,-79.75747126
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1044,,47,Wilson,Street West,Hamilton,ON,L9G1N1,43.21781858,-79.98946904
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,675,Upper James,Street ,Hamilton,ON,L9C2Z5,43.23420449,-79.8778119
+Health_Centric,Pharmacy,,People's Pharmachoice,,35,Stone Church,Road ,Hamilton,ON,L9K1S4,43.22787408,-79.93595412
+Health_Centric,Pharmacy,,Parkdale Pharmasave,,205,Melvin,Avenue ,Hamilton,ON,L8H2J9,43.24341139,-79.78870218
+Health_Centric,Pharmacy,,Charlton Pharmacy,,230,James,Street South,Hamilton,ON,L8P3B3,43.24966739,-79.8724993
+Health_Centric,Pharmacy,,Healthshare Medical Pharmacy,,574,Upper James,Street ,Hamilton,ON,L9C2Y6,43.24016519,-79.877279
+Health_Centric,Pharmacy,,Shoppers Drug Mart # 1204,,270,Mud,Street West,Hamilton,ON,L8J3Z6,43.19674369,-79.79299067
+Health_Centric,Pharmacy,,Carlisle Pharmacy,,1493,Centre,Road ,Hamilton,ON,L0R1H0,43.39506971,-79.98253465
+Health_Centric,Pharmacy,,Rexall #201,,60,Hatt,Street ,Hamilton,ON,L9H7T6,43.26525749,-79.95742253
+Health_Centric,Pharmacy,,People's Pharmachoice,,30,Rymal,Road East,Hamilton,ON,L9B1T7,43.20166088,-79.89154721
+Health_Centric,Pharmacy,,Rexall #8204,,331,Dundurn,Street ,Hamilton,ON,L8P4L5,43.25131179,-79.89240011
+Health_Centric,Pharmacy,,Ridgeview Long Term Care Centr,,385,Highland,Road West,Hamilton,ON,L8J3E7,43.18766828,-79.80317768
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1054,,255,Dundas,Street East,Hamilton,ON,L0R2H6,43.3300073,-79.89820732
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1046,,991,King,Street West,Hamilton,ON,L8S1K9,43.26213549,-79.90453692
+Health_Centric,Pharmacy,,Westdale Pharmacy,,1309,Main,Street West,Hamilton,ON,L8S1C5,43.25727319,-79.91796552
+Health_Centric,Pharmacy,,Fruitland Pharmacy,,311,Fruitland,Road ,Hamilton,ON,L8E5M8,43.22282779,-79.70046155
+Health_Centric,Pharmacy,,Nebo Medical Pharmacy,,260,Nebo,Drive ,Hamilton,ON,L8W3K5,43.19159588,-79.83905109
+Health_Centric,Pharmacy,,West End Pharmacy,,690,Main,Street West,Hamilton,ON,L8S1A4,43.26033749,-79.89819541
+Health_Centric,Pharmacy,,Lakeside Health Pharmacy,,825,North Service,Road ,Hamilton,ON,L8E0J7,43.2286067,-79.68097494
+Health_Centric,Pharmacy,,Cannon Pharmacy,,15,Cannon,Street ,Hamilton,ON,L8L1Z6,43.26087319,-79.8668309
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1049,,902,Mohawk,Road East,Hamilton,ON,L8T2R8,43.21604779,-79.83274419
+Health_Centric,Pharmacy,,Binbrook Pharmacy,,3011,Highway 56, ,Hamilton,ON,L0R1C0,43.12042777,-79.80448527
+Health_Centric,Pharmacy,,East Waterdown Pharmacy,,419,Dundas,Street East,Hamilton,ON,L8B0K4,43.34099801,-79.88441742
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1460,,1341,Main,Street West,Hamilton,ON,L8S1C6,43.25739449,-79.91935322
+Health_Centric,Pharmacy,,Nadia's Pharmacy,,625,Greenhill,Avenue ,Hamilton,ON,L8K5N8,43.21035779,-79.78618967
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1319,,510,Concession,Street ,Hamilton,ON,L9A1C4,43.24119149,-79.8546233
+Health_Centric,Pharmacy,,Rexall #8205,,1119,Fennell,Avenue ,Hamilton,ON,L8T1S2,43.22607359,-79.82783939
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1056,,133,King,Street West,Hamilton,ON,L9H1V3,43.26712519,-79.95957953
+Health_Centric,Pharmacy,,Friendly Pharmacy,,800,Queenston,Road ,Hamilton,ON,L8G1A7,43.22803629,-79.76636337
+Health_Centric,Pharmacy,,Paramount Pharmasave,,1795,Stone Church,Road East,Hamilton,ON,L8J0B4,43.19292368,-79.81050428
+Health_Centric,Pharmacy,,Medical Pharmacy,,1221,Limeridge,Road East,Hamilton,ON,L8W1Y1,43.20702509,-79.83081579
+Health_Centric,Pharmacy,,Rockhaven Pharmacy Rx Hlthmed,,170,Rockhaven,Lane ,Hamilton,ON,L8B1B5,43.3344131,-79.90191292
+Health_Centric,Pharmacy,,Pharmaserve,,68,Centennial,Parkway North,Hamilton,ON,L8E1H6,43.23017149,-79.76287767
+Health_Centric,Pharmacy,,Southmount Pharmacy,,35,Upper Centennial,Parkway ,Hamilton,ON,L8J3W2,43.17691468,-79.77670427
+Health_Centric,Pharmacy,,Upper James Clinic Pharmacy,,609,Upper James,Street ,Hamilton,ON,L9C2Y9,43.23933939,-79.8767609
+Health_Centric,Pharmacy,,Sutherland's Pharmacy Limited,,180,James,Street South,Hamilton,ON,L8P4V1,43.25125069,-79.8717178
+Health_Centric,Pharmacy,,Smile Drug Store,,517,Concession,Street ,Hamilton,ON,L8V1A6,43.24141119,-79.8532748
+Health_Centric,Pharmacy,,Trc Pharmacy Hamilton John St.,,14,John,Street North,Hamilton,ON,L8R1G9,43.25633519,-79.8660652
+Health_Centric,Pharmacy,,City Pharmacy,,1523,Barton,Street East,Hamilton,ON,L8H2X5,43.24748389,-79.79805358
+Health_Centric,Pharmacy,,Blackadar Nursing Home,,101,Creighton,Road ,Hamilton,ON,L9H3B7,43.26125949,-79.96759974
+Health_Centric,Pharmacy,,Belle Pharmacy,,148,Parkdale,Avenue North,Hamilton,ON,L8H5X2,43.24031059,-79.78998418
+Health_Centric,Pharmacy,,Hauser's Pharmacy,,1010,Upper Wentworth,Street Street,Hamilton,ON,L9A4V9,43.21697689,-79.8655183
+Health_Centric,Pharmacy,,Wentworth Lodge,,41,South,Street West,Hamilton,ON,L9H4C4,43.25986449,-79.94895843
+Health_Centric,Pharmacy,,King Elm Pharmacy,,49,King,Street East,Hamilton,ON,L8G1J9,43.21657009,-79.75582076
+Health_Centric,Pharmacy,,Rexall,,447,Main,Street East,Hamilton,ON,L8N1K1,43.25128269,-79.8519978
+Health_Centric,Pharmacy,,Lee's Dundas Pharmacy,,49,King,Street East,Hamilton,ON,L9H1B7,43.26599839,-79.95098483
+Health_Centric,Pharmacy,,The Village of Wentworth Heigh,,1620,Upper Wentworth,Street ,Hamilton,ON,L9B2W3,43.19887338,-79.8736997
+Health_Centric,Pharmacy,,St Michael's Pharmacy,,839,Main,Street East,Hamilton,ON,L8M1L8,43.24692249,-79.83596339
+Health_Centric,Pharmacy,,Loblaw Pharmacy,,115,Hamilton,Street North,Hamilton,ON,L0R2H6,43.3352796,-79.90388522
+Health_Centric,Pharmacy,,Gordon's Pharmacy (Ida),,1511,Main,Street East,Hamilton,ON,L8K1E2,43.23940529,-79.80479088
+Health_Centric,Pharmacy,,Mcmaster Drugstore,,1200,Main,Street West,Hamilton,ON,L8N3Z5,43.25885639,-79.91698142
+Health_Centric,Pharmacy,,Rexall #203,,505,Rymal,Road East,Hamilton,ON,L8W3X1,43.19823678,-79.8715997
+Health_Centric,Pharmacy,,Pharmasave #9791 University Ce,,1280,Main,Street West,Hamilton,ON,L8S4S4,43.26225299,-79.92028962
+Health_Centric,Pharmacy,,Hamilton General Drugstore,,237,Barton,Street East,Hamilton,ON,L8L2X2,43.26247809,-79.8540902
+Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,1079,Barton,Street East,Hamilton,ON,L8L3E2,43.25167569,-79.81653769
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4912,,102,Highway 8 , ,Hamilton,ON,L8G4H3,43.22346389,-79.74678196
+Health_Centric,Pharmacy,,Eastside Medical Pharmacy,,229,King,Street East,Hamilton,ON,L8N1B6,43.25462219,-79.8624104
+Health_Centric,Pharmacy,,Rexall #1560,,102,Highway 8, ,Hamilton,ON,L8G1C2,43.22346389,-79.74678196
+Health_Centric,Pharmacy,,Shoppers Drug Mart #754,,801,Mohawk,Road West,Hamilton,ON,L9C6C2,43.23305969,-79.92303402
+Health_Centric,Pharmacy,,Silver Creek Guardian Pharmacy,,325,Winterberry,Drive ,Hamilton,ON,L8J0B6,43.19392408,-79.80704568
+Health_Centric,Pharmacy,,Rexall,,2,King,Street West,Hamilton,ON,L8P1A1,43.25836319,-79.870915
+Health_Centric,Pharmacy,,Truwell Pharmacy,,838,King,Street East,Hamilton,ON,L8M1B4,43.25112069,-79.84129219
+Health_Centric,Pharmacy,,Rymal Gage Pharmacy,,905,Rymal,Road East,Hamilton,ON,L8W3M2,43.19299088,-79.85226029
+Health_Centric,Pharmacy,,Food Basics Pharmacy #580,,751,Upper James,Street South,Hamilton,ON,L9C3A1,43.22983829,-79.8792118
+Health_Centric,Pharmacy,,Medsmart Pharmacy,,2732,Barton,Street East,Hamilton,ON,L8E4M6,43.23315619,-79.74622456
+Health_Centric,Pharmacy,,The Hamilton Clinic Pharmacy,,200,Main,Street East,Hamilton,ON,L8N1H3,43.25302939,-79.8618353
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,2190,Rymal,Road East,Hamilton,ON,L0R1P0,43.17357878,-79.78261287
+Health_Centric,Pharmacy,,Shoppers Drug Mart #750,,1183,Barton,Street East,Hamilton,ON,L8H2V4,43.25100149,-79.81208039
+Health_Centric,Pharmacy,,Macassa Lodge,,701,Upper Sherman,Avenue South,Hamilton,ON,L8V3M7,43.22557059,-79.84806809
+Health_Centric,Pharmacy,,Binbrook Family Health Phcy,,2537,Hamilton Regional Road 56, ,Hamilton,ON,L0R1C0,43.12478487,-79.80201067
+Health_Centric,Pharmacy,,Mohawk Drug Mart,,1000,Upper Gage,Avenue  Avenue,Hamilton,ON,L8V4R5,43.21364419,-79.84622139
+Health_Centric,Pharmacy,,Rosedale Pharmacy,,870,Lawrence,Road ,Hamilton,ON,L8K2A3,43.22882099,-79.80326528
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,1051,Garner,Road West,Hamilton,ON,L9G3K9,43.19761638,-80.01427954
+Health_Centric,Pharmacy,,Barton Pharmacy,,1130,Barton,Street East,Hamilton,ON,L8H7P9,43.25082169,-79.81466329
+Health_Centric,Pharmacy,,Village Pharmacy,,393,Rymal,Road West,Hamilton,ON,L9B1V2,43.20605948,-79.91004401
+Health_Centric,Pharmacy,,Hess Village Pharamcy,,340,York,Boulevard ,Hamilton,ON,L8R3L2,43.26394949,-79.87852761
+Health_Centric,Pharmacy,,Barton Street Pharmacy,,707,Barton,Street East,Hamilton,ON,L8L3A5,43.25638489,-79.83466809
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1053,,232,Cannon,Street East,Hamilton,ON,L8L0A6,43.25802009,-79.8570737
+Health_Centric,Pharmacy,,Community Residential Care,,153,George,Street ,Hamilton,ON,L8P1E4,43.25874809,-79.88054601
+Health_Centric,Pharmacy,,Nash Pharmacy,,691,Queenston,Road ,Hamilton,ON,L8G1A1,43.23031959,-79.77178647
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1047,,113,Herkimer,Street ,Hamilton,ON,L8P2G8,43.25021849,-79.87899241
+Health_Centric,Pharmacy,,Metro Pharmacy #515,,1370,South Service,Road ,Hamilton,ON,L8E5C5,43.2149585,-79.64162343
+Health_Centric,Pharmacy,,King Medical Pharmacy,,505,King,Street West,Hamilton,ON,L8P1B9,43.26069839,-79.88408891
+Health_Centric,Pharmacy,,Meadowlands Pharmasave,,737,Golf Links,Road ,Hamilton,ON,L9K1L5,43.22605668,-79.95382873
+Health_Centric,Pharmacy,,Daniel Drug Mart,,1394,Upper Gage,Avenue ,Hamilton,ON,L8W1E7,43.20121838,-79.85129759
+Health_Centric,Pharmacy,,"Greenbaum, Joseph Dr",,25,Charlton,Avenue East,Hamilton,ON,L8N1Y2,43.24982389,-79.8711318
+Health_Centric,Pharmacy,,Queen's Garden,,80,Queen,Street North,Hamilton,ON,L8R3P6,43.26116089,-79.87697911
+Health_Centric,Pharmacy,,N.L. Gibson's Drug Ltd.,,377,Main,Street East,Hamilton,ON,L8N1J4,43.25177549,-79.8550118
+Health_Centric,Pharmacy,,The Hamilton Pharmacy,,335,Queenston,Road ,Hamilton,ON,L8K1H7,43.23373999,-79.78945508
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1045,,1300,Garth,Street ,Hamilton,ON,L9C4L7,43.22119998,-79.90707341
+Health_Centric,Pharmacy,,Montgomery Pharmacy,,1440,Main,Street East,Hamilton,ON,L8K6M3,43.23973029,-79.80862178
+Health_Centric,Pharmacy,,The Meadows Long Term Care Cen,,12,Tranquility,Avenue ,Hamilton,ON,L9G5C2,43.21114908,-80.00729304
+Health_Centric,Pharmacy,,San Rafael Pharmacy,,146,Ottawa,Street North,Hamilton,ON,L8H3Z3,43.24650029,-79.81757449
+Health_Centric,Pharmacy,,Gage Pharmacy,,1050,Upper Gage,Avenue ,Hamilton,ON,L8V5B7,43.21277709,-79.84657149
+Health_Centric,Pharmacy,,West End Pharmacy,,174,King,Street West,Hamilton,ON,L8P1A5,43.25834809,-79.87437781

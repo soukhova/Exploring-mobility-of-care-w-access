@@ -1,0 +1,1594 @@
+Care_Category,Care_Category_Specific,Care_Category_Speciality,Name,Unit,F_Address,Postal_Code,LATITUDE,LONGITUDE
+Chid_Centric,Daycare_EarlyON,,St. Thomas the Apostle Catholic Elementary School,,"170 Skinner Road,Hamilton,ON",,43.3384614,-79.87711719
+Chid_Centric,Daycare_EarlyON,,Waterdown EarlyON Child and Family Centre,,"315 Dundas Street East,Hamilton,ON",,43.3338473,-79.892598
+Chid_Centric,Daycare_EarlyON,,Dundas Driving Park,,"71 Cross Street,Hamilton,ON",,43.2698936,-79.9528447
+Chid_Centric,Daycare_EarlyON,,Dundas Lions Memorial Community Centre,,"10 Market Street South,Hamilton,ON",,43.2671252,-79.9632694
+Chid_Centric,Daycare_EarlyON,,1900 Main West,,"1900 Main Street West,Hamilton,ON",,43.2502,-79.94178008
+Chid_Centric,Daycare_EarlyON,,Fieldcote EarlyON,,"64 Sulphur Spring Road,Hamilton,ON",,43.2267185,-79.98032492
+Chid_Centric,Daycare_EarlyON,,Westmount EarlyON,,"35 Lynbrook Drive,Hamilton,ON",,43.2283827,-79.89432466
+Chid_Centric,Daycare_EarlyON,,Greendale,,"44 Greendale Drive,Hamilton,ON",,43.22099547,-79.90749068
+Chid_Centric,Daycare_EarlyON,,Gourley Park,,"142 Duncairn Crescent,Hamilton,ON",,43.2188672,-79.9050683
+Chid_Centric,Daycare_EarlyON,,Hamilton Mountain Helen Detwiler EarlyON Child and Family Centre,,"320 Brigade Drive,Hamilton,ON",,43.20250875,-79.87791345
+Chid_Centric,Daycare_EarlyON,,Huntington Park Recreation Centre,,"87 Brentwood Drive,Hamilton,ON",,43.2212936,-79.829987
+Chid_Centric,Daycare_EarlyON,,Cecil B. Stirling School,,"340 Queen Victoria Drive,Hamilton,ON",,43.2039736,-79.84270619
+Chid_Centric,Daycare_EarlyON,,Binbrook Memorial Hall EarlyON Child and Family Centre,,"2600 Hwy 56 ,Hamilton,ON",,43.0979824,-79.814192
+Chid_Centric,Daycare_EarlyON,,Winona Community Centre EarlyON,,"255 Winona Road,Hamilton,ON",,43.2086245,-79.65095738
+Chid_Centric,Daycare_EarlyON,,Valley Park EarlyON,,"970 Paramount Drive,Hamilton,ON",,43.1944172,-79.7964696
+Chid_Centric,Daycare_EarlyON,,Woodland EarlyON at Green Venture,,"22 Veevers Drive,Hamilton,ON",,43.2107671,-79.7855561
+Chid_Centric,Daycare_EarlyON,,St. David EarlyON Child and Family Centre,,"33 Cromwell Crescent,Hamilton,ON",,43.22489155,-79.76733076
+Chid_Centric,Daycare_EarlyON,,Dominic Agostino Community Centre/Riverdale,,"150 Violet Drive,Hamilton,ON",,43.2324559,-79.75693132
+Chid_Centric,Daycare_EarlyON,,James Street EarlyON Child and Family Centre,,"79 James Street South,Hamilton,ON",,43.2474409,-79.8731866
+Chid_Centric,Daycare_EarlyON,,Beasley EarlyON Child and Family Centre,,"145 Wilson Street,Hamilton,ON",,43.2573424,-79.8612472
+Chid_Centric,Daycare_EarlyON,,St. Patrick EarlyON,,"20 East Avenue South,Hamilton,ON",,43.2527837,-79.8556832
+Chid_Centric,Daycare_EarlyON,,George L. Armstrong Public School,,"460 Concession Street,Hamilton,ON",,43.240988,-79.85629967
+Chid_Centric,Daycare_EarlyON,,On y va de Notre-Dame Hamilton,,"400 Cumberland Ave,Hamilton,ON",,43.24171215,-79.83638147
+Chid_Centric,Daycare_EarlyON,,Bernie Morelli Recreation Centre,,"876 Cannon Street East,Hamilton,ON",,43.2513709,-79.8317729
+Chid_Centric,Daycare_EarlyON,,Gage Park ON y va (French),,"1000 Main Street East,Hamilton,ON",,43.24073455,-79.82907992
+Chid_Centric,Daycare_EarlyON,,Ellis EarlyON Child and Family Centre,,"45 Ellis Ave,Hamilton,ON",,43.2483028,-79.8106052
+Chid_Centric,Daycare_EarlyON,,On y va du CSCHN rue Barton Est,,"1320 Barton Street East,Hamilton,ON",,43.24918682,-79.80661078
+Chid_Centric,Daycare_EarlyON,,Niwasa Kendaaswin Teg EarlyON Child and Family Centre/Akwè:kon Wà:ke,,"785 Britannia Ave,Hamilton,ON",,43.2394245,-79.7812376
+Chid_Centric,Daycare_EarlyON,,Hillcrest School,,"40 Eastwood Street,Hamilton,ON",,43.23979825,-79.77726642
+Chid_Centric,Daycare_EarlyON,,Woodland at the Red Hill Valley Trail,," Melvin Avenue and Talbot Street ,Hamilton,ON",,43.23942678,-79.77739536
+Child_Centric,Community_Centre,,Carlisle Memorial Hall,,"  ,,",,43.3939429,-79.98147986
+Child_Centric,Community_Centre,,Eastmount Community Centre,,"  ,,",,43.23643372,-79.84866004
+Child_Centric,Community_Centre,,Dundas Community Pool,,"  ,,",,43.26547443,-79.96355633
+Child_Centric,Community_Centre,,Dominic Agostino Riverdale Community Centre,,"  ,,",,43.23251479,-79.75676735
+Child_Centric,Community_Centre,,Ancaster Old Town Hall,,"  ,,",,43.2255123,-79.97626454
+Child_Centric,Community_Centre,,Simone Hall (Old Beasley),,"  ,,",,43.25805638,-79.8617716
+Child_Centric,Community_Centre,,Victoria Park Clubhouse,,"  ,,",,43.26172199,-79.88476462
+Child_Centric,Community_Centre,,Sealey Park Scout Hall,,"  ,,",,43.33081521,-79.88922044
+Child_Centric,Community_Centre,,Greensville Community Centre,,"  ,,",,43.28142637,-79.98361176
+Child_Centric,Community_Centre,,Beverly Community Centre,,"  ,,",,43.29679939,-80.11130346
+Child_Centric,Community_Centre,,Winona Community Centre,,"  ,,",,43.20851478,-79.65092457
+Child_Centric,Community_Centre,,Churchill Park Clubhouse,,"  ,,",,43.26472182,-79.90483412
+Child_Centric,Community_Centre,,Ancaster Rotary Centre,,"  ,,",,43.21785936,-80.00837916
+Child_Centric,Community_Centre,,Beasley Community Centre,,"  ,,",,43.25729934,-79.86107224
+Child_Centric,Community_Centre,,Bennetto Community Centre,,"  ,,",,43.2702725,-79.8608651
+Child_Centric,Community_Centre,,Beverly Township Hall,,"  ,,",,43.30047207,-80.12663304
+Child_Centric,Community_Centre,,Binbrook Memorial Hall,,"  ,,",,43.12300553,-79.80403785
+Child_Centric,Community_Centre,,Dundas Lions Memorial Community Centre,,"  ,,",,43.26737906,-79.9635936
+Child_Centric,Community_Centre,,Stoney Creek Lions Fruitland Community Centre,,"  ,,",,43.21853664,-79.704599
+Child_Centric,Community_Centre,,Millgrove Community Centre,,"  ,,",,43.33515359,-79.95942803
+Child_Centric,Community_Centre,,Mount Hope Community Hall / Youth Centre,,"  ,,",,43.16022469,-79.91142878
+Child_Centric,Community_Centre,,Eva Rothwell Resource Centre,,"  ,,",,43.26486367,-79.84285308
+Child_Centric,Community_Centre,,Sheffield Community Hall,,"  ,,",,43.29704068,-80.20074399
+Child_Centric,Community_Centre,,Stoney Creek Optimist Community Centre,,"  ,,",,43.22574089,-79.75852769
+Child_Centric,Community_Centre,,Valens Community Hall,,"  ,,",,43.38363316,-80.13076988
+Child_Centric,Community_Centre,,Lynden Lions Community Centre,,"  ,,",,43.2269158,-80.14780871
+Child_Centric,Community_Centre,,Valley Park Community Centre,,"  ,,",,43.19290424,-79.79810584
+Child_Centric,Community_Centre,,Waterdown Memorial Hall,,"  ,,",,43.33408713,-79.89259153
+Child_Centric,Community_Centre,,Winona Scout Hall,,"  ,,",,43.2096953,-79.64564257
+Child_Centric,Community_Centre,,Woodburn Centennial Hall,,"  ,,",,43.14656891,-79.74280634
+Child_Centric,Community_Centre,,Mountsberg Hall,,"  ,,",,43.43422646,-80.04209172
+Child_Centric,Community_Centre,,Spring Valley Community Centre,,"  ,,",,43.21717805,-79.99803249
+Child_Centric,Community_Centre,,Greensville (West Flamborough Township) Hall,,"  ,,",,43.27684613,-79.98836484
+Child_Centric,Community_Centre,,Hamilton Regional Native Learning Centre,,"712 Main Street East,Hamilton,ON",,43.2479705,-79.8413956
+Child_Centric,Community_Centre,,Hamilton Literacy Council,Suite 329,"75 Macnab Street South,Hamilton,ON",,43.2543541,-79.8715544
+Child_Centric,Community_Centre,,City Centre Learning Centre,3rd Level,"77 James Street North,Hamilton,ON",,43.258357,-79.8684779
+Child_Centric,Community_Centre,,SHAE School,,"34 Ottawa Street North,Hamilton,ON",,43.243644,-79.8191026
+Child_Centric,Daycare_Centre,,Delaware Early learning Centre,,"162 Delaware Avenue,Hamilton,ON",L8M 1V6,43.24631903,-79.8433846
+Child_Centric,Daycare_Centre,,First Class Children's Centre,,"139 Rebecca Street,Hamilton,ON",L8R 1B9,43.2567447,-79.8623671
+Child_Centric,Daycare_Centre,,Little Learning House Child Care Centre,,"198 Fennell Avenue,Hamilton,ON",L9A 1S7,43.2353635,-79.8693887
+Child_Centric,Daycare_Centre,,Little Learning House Child Care Centre - Locke Street,,"86 Homewood Avenue,Hamilton,ON",L8P 2M4,43.2509154,-79.88680176
+Child_Centric,Daycare_Centre,,Little Learning House Infant and Toddler Centre,,"192 Allenby Avenue,Hamilton,ON",L9A 2V2,43.2305784,-79.8799562
+Child_Centric,Daycare_Centre,,Birch Avenue Child Care Centre,,"138 Birch Avenue,Hamilton,ON",L8L 6H7,43.2572419,-79.8396957
+Child_Centric,Daycare_Centre,,Higher Learning Montessori Preschool,,"211 Stonehenge Drive,Hamilton,ON",L9K 1R4,43.2165114,-79.9510694
+Child_Centric,Daycare_Centre,,Little Sprouts Hamilton,,"689 West 5th Street,Hamilton,ON",L9C 3R3,43.22287843,-79.88916724
+Child_Centric,Daycare_Centre,,"Oxford Learning, Little Readers",,"520 Highway # 8 ,Hamilton,ON",L8G 1G6,43.215618,-79.7133977
+Child_Centric,Daycare_Centre,,Cornerstone Preschool,,"2247 Rymal Road,Hamilton,ON",L8J 2V8,43.1746794,-79.7791722
+Child_Centric,Daycare_Centre,,Dundas Valley Montessori School,,"14 Kemp Drive,Hamilton,ON",L9H 2M9,43.26331942,-79.96454332
+Child_Centric,Daycare_Centre,,Creative Me Preschool,,"21 Mill Street North,Hamilton,ON",L0R 2H0,43.3345831,-79.8921816
+Child_Centric,Daycare_Centre,,Tiny Hoppers Early Learning Centres Stoney Creek Paramount,,"1050 Paramount Drive,Hamilton,ON",L8J 1P8,43.199503,-79.7938339
+Child_Centric,Daycare_Centre,,TINY HOPPERS EARLY LEARNING CENTRE STONEY CREEK RYMAL,,"1976 Rymal Road,Hamilton,ON",L0R 1P0,43.1793137,-79.8046473
+Child_Centric,Daycare_Centre,,Quality Foundations Childcare,,"221 Dundas Street,Hamilton,ON",L0R 2H6,43.2650906,-79.9445918
+Child_Centric,Daycare_Centre,,Spring Creek Learn & Play Childcare,,"473 Dundas Street,Hamilton,ON",L8B 1W1,43.2650906,-79.9445918
+Child_Centric,Daycare_Centre,,Austin Academy for Early Learners,,"288 Barton Street,Hamilton,ON",L8E 2K6,43.22951362,-79.72844887
+Child_Centric,Daycare_Centre,,Ancaster Small Fry Pre-School,,"20 Gilbert Avenue,Hamilton,ON",L9G 1R4,43.2139612,-79.9863448
+Child_Centric,Daycare_Centre,,Awesome Beginnings Co-operative Nursery School,,"1496 Centre Road,Hamilton,ON",L0R 1H2,43.39605855,-79.98106754
+Child_Centric,Daycare_Centre,,Blossoms Child Care Centre,,"2605 Highway 56 ,Hamilton,ON",L0R 1C0,43.0979824,-79.814192
+Child_Centric,Daycare_Centre,,BrightPath Waterdown,,"89 Hamilton Street,Hamilton,ON",L0R 2H0,43.3310038,-79.8955474
+Child_Centric,Daycare_Centre,,St. Martin's Manor Early Learning Centre,,"500 Mohawk Road,Hamilton,ON",L9C 1X4,43.2291208,-79.9648564
+Child_Centric,Daycare_Centre,,Red Hill Family Centre,,"25 Mount Albion Road,Hamilton,ON",L8K 5S4,43.2255269,-79.7920017
+Child_Centric,Daycare_Centre,,Temple Playhouse Enrichment School,,"215 Cline Avenue,Hamilton,ON",L8S 4A1,43.2634353,-79.9025743
+Child_Centric,Daycare_Centre,,Central Day Care Centre,,"101 Catharine Street,Hamilton,ON",L8N 2J5,43.2521471,-79.8665777
+Child_Centric,Daycare_Centre,,Childventures Early Learning Academy - Ancaster,,"1281 Mohawk Road,Hamilton,ON",L9G 3K9,43.2334912,-79.9301425
+Child_Centric,Daycare_Centre,,Daycare on Delaware,,"162 Delaware Avenue,Hamilton,ON",L8M 1V6,43.24631903,-79.8433846
+Child_Centric,Daycare_Centre,,Church of St. Peter's Children's Day Care Centre,,"705 Main Street,Hamilton,ON",L8M 1K8,40.12611695,-86.01905258
+Child_Centric,Daycare_Centre,,St. Peter's Day Care Before and After School Program,,"71 Maplewood Avenue,Hamilton,ON",L8M 1W7,43.24579395,-79.8370187
+Child_Centric,Daycare_Centre,,Dundas Valley Co-operative Preschool,,"1 Lynndale Drive,Hamilton,ON",L9H 3L4,43.25960745,-79.96907569
+Child_Centric,Daycare_Centre,,Dundas Valley Co-operative Preschool,,"86 Cameron Avenue,Hamilton,ON",L9H 1P8,43.27443385,-79.94507999
+Child_Centric,Daycare_Centre,,Ancaster Montessori School,,"265 Wilson Street,Hamilton,ON",L9G 2B8,43.259008,-79.8665037
+Child_Centric,Daycare_Centre,,Village Gate Montessori School,,"442 Wilson Street,Hamilton,ON",L9G 2C3,43.25445065,-79.85064617
+Child_Centric,Daycare_Centre,,Fan-Tastic Scholars Child Learning Centre,,"1960 Main Street,Hamilton,ON",L8S 4N5,43.2659749,-79.9537768
+Child_Centric,Daycare_Centre,,East End Scholars,,"138 Birch Avenue,Hamilton,ON",L8L 6H7,43.2572419,-79.8396957
+Child_Centric,Daycare_Centre,,Farmer's Dell Co-operative Preschool,,"1062 Golf Club Road,Hamilton,ON",L0R 1C0,43.1459541,-79.74185968
+Child_Centric,Daycare_Centre,,Wee Watch Enriched Home Child Care - Stoney Creek,,"60 King Street West,Hamilton,ON",L8G 1H7,43.26627749,-79.95624772
+Child_Centric,Daycare_Centre,,Garside Day Care Centre,,"47 Garside Avenue,Hamilton,ON",L8H 7K6,43.2415807,-79.8074875
+Child_Centric,Daycare_Centre,,Graystone Children's Early Learning Academy,,"1910 Rymal Road,Hamilton,ON",L0R 1P0,43.17991063,-79.80644043
+Child_Centric,Daycare_Centre,,Boys and Girls Clubs of Hamilton -Strathcona Site,,"10 Lamoreaux Street,Hamilton,ON",L8R 1V1,43.2640656,-79.88478365
+Child_Centric,Daycare_Centre,,Boys and Girls Clubs of Hamilton- Prince of Wales,,"77 Melrose Avenue,Hamilton,ON",L8L 6X4,43.3292609,-80.0445069
+Child_Centric,Daycare_Centre,,Boys and Girls Clubs of Hamilton-Viscount Montgomery site,,"1525 Lucerne Avenue,Hamilton,ON",L8K 1R3,43.23262195,-79.79675974
+Child_Centric,Daycare_Centre,,Boys and Girls of Hamilton - Parkdale Site,,"139 Parkdale Avenue,Hamilton,ON",L8H 5X3,43.24051805,-79.79116649
+Child_Centric,Daycare_Centre,,"Early Learning and Care Centre, Hamilton East Kiwanis Boys' & Girls' Club",,"45 Ellis Avenue,Hamilton,ON",L8H 4L8,43.2483028,-79.8106052
+Child_Centric,Daycare_Centre,,Hamilton East Kiwanis Boys and Girls Club - ELCC - Queen Mary Site,,"1292 Cannon Street,Hamilton,ON",L8H 1V6,43.2561073,-79.8486183
+Child_Centric,Daycare_Centre,,Hamilton Early Learning Centre,,"10 George Street,Hamilton,ON",L8P 1C8,43.2576852,-79.8758562
+Child_Centric,Daycare_Centre,,Hamilton Hebrew Academy,,"60 Dow Avenue,Hamilton,ON",L8S 1W4,43.2563902,-79.9101473
+Child_Centric,Daycare_Centre,,End of Day Club,,"407 Charlton Avenue,Hamilton,ON",L8P 2E6,43.25424911,-79.89098068
+Child_Centric,Daycare_Centre,,Annunciation of Our Lord Before and After School Program,,"250 Limeridge Road,Hamilton,ON",L9C 2V2,43.2232494,-79.89575579
+Child_Centric,Daycare_Centre,,Blessed Sacrament Before and After School Program,,"315 East 37th Street,Hamilton,ON",L8V 4B5,43.22716965,-79.84160227
+Child_Centric,Daycare_Centre,,Canadian Martyrs Before and After School Program,,"1355 Main Street,Hamilton,ON",L8S 4M7,43.2659749,-79.9537768
+Child_Centric,Daycare_Centre,,Cathedral Children's Centre,,"30 Wentworth Street,Hamilton,ON",L8L 8H5,43.25314395,-79.84748757
+Child_Centric,Daycare_Centre,,Corpus Christi Before and After School Program,,"25 Alderson Drive,Hamilton,ON",L9B 1G3,43.1989725,-79.8953087
+Child_Centric,Daycare_Centre,,Guardian Angels Before and After School Program,,"705 Centre Road,Hamilton,ON",L8N 2Z7,43.3436462,-79.91487882
+Child_Centric,Daycare_Centre,,Holy Name of Jesus Early Learning and Care Centre,,"181 Belmont Avenue,Hamilton,ON",L8L 7M5,43.249389,-79.82297333
+Child_Centric,Daycare_Centre,,Holy Name of Mary - Before and After School Program,,"161 Meadowlands Boulevard,Hamilton,ON",L9K 1H8,43.2205616,-79.94533537
+Child_Centric,Daycare_Centre,,Immaculate Conception Before and After School Program,,"470 Kitty Murray Lane,Hamilton,ON",L9K 1C3,43.2093049,-79.95438628
+Child_Centric,Daycare_Centre,,Immaculate Heart of Mary Early Learning and Care Centre,,"190 Glover Road,Hamilton,ON",L8E 0A1,43.20857365,-79.68228962
+Child_Centric,Daycare_Centre,,Our Lady of Lourdes Before and After School Program,,"420 Mohawk Road,Hamilton,ON",L8V 2H7,43.2291208,-79.9648564
+Child_Centric,Daycare_Centre,,Our Lady of Mount Carmel Children's Centre,,"1624 Centre Road,Hamilton,ON",L0R 1H0,43.4042111,-79.99435731
+Child_Centric,Daycare_Centre,,Our Lady of Peace Before and After Program,,"252 Dewitt Road,Hamilton,ON",L8E 2R1,43.2209828,-79.71014957
+Child_Centric,Daycare_Centre,,Our Lady of the Assumption Before and After School Program,,"55 Highway #20 ,Hamilton,ON",L8E 2R1,43.149394,-79.8188736
+Child_Centric,Daycare_Centre,,Our Lady of the Assumption Before and After School Program,,"103 Fletcher Road,Hamilton,ON",L0R 1P0,43.149394,-79.8188736
+Child_Centric,Daycare_Centre,,Regina Mundi Before and After School Program,,"675 Mohawk Road,Hamilton,ON",L9C 1X7,43.23165467,-79.95847928
+Child_Centric,Daycare_Centre,,Sacred Heart of Jesus Before and After School Program,,"5 Hamilton Avenue,Hamilton,ON",L8V 2S3,43.24129675,-79.84920335
+Child_Centric,Daycare_Centre,,St. Ann - Ancaster Before and After School Program,,"24 Fiddlers Green Road,Hamilton,ON",L9G 1W1,43.2186648,-79.987808
+Child_Centric,Daycare_Centre,,St. Ann Early Learning and Care Centre,,"118 Sherman Avenue,Hamilton,ON",L8L 6M6,43.2551191,-79.8365377
+Child_Centric,Daycare_Centre,,St. Ann Early Learning and Care Centre,,"15 St. Ann Street,Hamilton,ON",L8L 0B8,43.2555521,-79.8356483
+Child_Centric,Daycare_Centre,,St. Bernadette Early Learning and Care Centre,,"270 Governors Road,Hamilton,ON",L9H 5E3,43.2586072,-79.9763477
+Child_Centric,Daycare_Centre,,St. Clare Before and After School Program,,"185 Glenashton Drive,Hamilton,ON",L8G 4E7,43.2145103,-79.71534451
+Child_Centric,Daycare_Centre,,St. David Early Learning and Care Centre,,"33 Cromwell Crescent,Hamilton,ON",L8G 2E9,43.22489155,-79.76733076
+Child_Centric,Daycare_Centre,,St. Eugene Before and After School Program,,"120 Parkdale Avenue,Hamilton,ON",L8K 3P3,43.2337355,-79.79410678
+Child_Centric,Daycare_Centre,,St. Francis Early Learning and Care Centre,,"298 Highway # 8 ,Hamilton,ON",L8G 1E6,43.2199681,-79.73267564
+Child_Centric,Daycare_Centre,,St. Gabriel Early Learning and Care Centre,,"1361 Barton Street,Hamilton,ON",L8E 5L1,43.2096058,-79.6401789
+Child_Centric,Daycare_Centre,,St. Helen Early Learning and Care Centre,,"785 Britannia Avenue,Hamilton,ON",L8H 2B6,43.2394245,-79.7812376
+Child_Centric,Daycare_Centre,,St. John Paul II Before and After School Program,,"600 Acadia Drive,Hamilton,ON",L8W 3A8,43.2032474,-79.8689382
+Child_Centric,Daycare_Centre,,St. Joseph Before and After School Program,,"270 Locke Street,Hamilton,ON",L8P 4C1,43.2524532,-79.88794991
+Child_Centric,Daycare_Centre,,St. Kateri Tekakwitha Before and After School Program,,"22 Queensbury Drive,Hamilton,ON",L8W 1Z6,43.2020564,-79.8410927
+Child_Centric,Daycare_Centre,,St. Luke Before and After School Program,,"345 Albright Road,Hamilton,ON",L8K 6N3,43.2189669,-79.7959287
+Child_Centric,Daycare_Centre,,St. Margaret Mary Before and After School Program,,"25 Brentwood Drive,Hamilton,ON",L8T 3V9,43.22343025,-79.82853266
+Child_Centric,Daycare_Centre,,St. Marguerite d'Youville Children's Centre,,"20 Bonaparte Way,Hamilton,ON",L9B 2E3,43.20377275,-79.87817471
+Child_Centric,Daycare_Centre,,St. Mark Before and After School Program,,"43 Whitedeer Road,Hamilton,ON",L8J 3T1,43.1783891,-79.7854854
+Child_Centric,Daycare_Centre,,St. Martin of Tours Before and After School Program,,"60 Gray Road,Hamilton,ON",L8G 2X5,43.21608255,-79.74594893
+Child_Centric,Daycare_Centre,,St. Matthew Child and Family Centre,,"200 Windwood Drive,Hamilton,ON",L0R 1C0,43.11745785,-79.81360016
+Child_Centric,Daycare_Centre,,St. Michael Before and After School Program,,"135 Hester Street,Hamilton,ON",L9A 2N9,43.2242173,-79.87450656
+Child_Centric,Daycare_Centre,,St. Patrick Before and After School Program,,"24 Smith Avenue,Hamilton,ON",L8L 5P1,43.2574724,-79.84964372
+Child_Centric,Daycare_Centre,,St. Paul Before and After School Program,,"24 Amberwood Street,Hamilton,ON",L8J 2H9,43.1989888,-79.7963461
+Child_Centric,Daycare_Centre,,St. Teresa of Avila Before and After School Program,,"171 San Remo Drive,Hamilton,ON",L9C 6P8,43.2378565,-79.92630141
+Child_Centric,Daycare_Centre,,St. Teresa of Calcutta Before and After School Program,,"1 Rexford Drive,Hamilton,ON",L8W 2E8,43.2081976,-79.8560119
+Child_Centric,Daycare_Centre,,St. Therese of Lisieux Before and After School Program,,"1760 Garth Street,Hamilton,ON",L8L 3A6,43.2021375,-79.9154561
+Child_Centric,Daycare_Centre,,St. Thomas - Waterdown Before and After School Program,,"170 Skinner Road,Hamilton,ON",L0R 2H7,43.3384614,-79.87711719
+Child_Centric,Daycare_Centre,,St. Thomas More Children's Centre,,"1045 Upper Paradise Road,Hamilton,ON",L9B 2N4,43.2133753,-79.91771308
+Child_Centric,Daycare_Centre,,St. Vincent de Paul Children's Centre,,"295 Greencedar Drive,Hamilton,ON",L9C 7M9,43.22279,-79.92247638
+Child_Centric,Daycare_Centre,,Sts. Peter and Paul Before and After School Program,,"49 Fennell Avenue,Hamilton,ON",L9A 1R5,43.23746565,-79.87483453
+Child_Centric,Daycare_Centre,,Heritage Green Child Care,,"360 Isaac Brock Drive,Hamilton,ON",L8J 2R2,43.1940337,-79.7880293
+Child_Centric,Daycare_Centre,,Heritage Green Mount Albion,,"24 Kennard Street,Hamilton,ON",L8J 2E5,43.1888812,-79.79158334
+Child_Centric,Daycare_Centre,,Heritage Green School Age Program,,"349 Isaac Brock Drive,Hamilton,ON",L8J 3S2,43.1930661,-79.78982378
+Child_Centric,Daycare_Centre,,Heritage Green St.James,,"29 John Murray Street,Hamilton,ON",L8J 1C5,43.1911602,-79.7832835
+Child_Centric,Daycare_Centre,,Heritage Green Tapleytown,,"390 Mud Street,Hamilton,ON",L8J 3C6,43.18087325,-79.73462705
+Child_Centric,Daycare_Centre,,Hillfield Strathallan College,,"299 Fennell Avenue,Hamilton,ON",L9C 1G3,43.2411246,-79.8920991
+Child_Centric,Daycare_Centre,,"Jacks' & Jills' Cooperative Preschool of Ancaster, Inc.",,"263 Jerseyville Road,Hamilton,ON",L9G 3K8,43.21863815,-79.9966587
+Child_Centric,Daycare_Centre,,Jamesville Bennetto Community Care,,"47 Simcoe Street,Hamilton,ON",L8N 3N2,43.26806215,-79.86189106
+Child_Centric,Daycare_Centre,,Jamesville Children's Centre,,"252 James Street,Hamilton,ON",L8R 2L3,43.2694572,-79.9690244
+Child_Centric,Daycare_Centre,,Ancaster Little Gems Children's Centre,,"339 Wilson Street,Hamilton,ON",L9G 2C1,40.12531065,-86.01800982
+Child_Centric,Daycare_Centre,,KIDS & COMPANY HAMILTON,,"701 Main Street,Hamilton,ON",L8S 1A1,40.1261418,-86.01905225
+Child_Centric,Daycare_Centre,,Kindertown Child Care Centre,,"110 Gordon Drummond Avenue,Hamilton,ON",L8J 1P5,43.1895877,-79.7982353
+Child_Centric,Daycare_Centre,,Dundas Daycare,,"252 Governors Road,Hamilton,ON",L9H 3K3,43.25998508,-79.96937153
+Child_Centric,Daycare_Centre,,Scenicview Childcare,,"1194 Scenic Drive,Hamilton,ON",L9K 1J6,43.2455196,-79.9309131
+Child_Centric,Daycare_Centre,,LITERACY AND MATHEMATICS ACADEMY,,"1 King Street,Hamilton,ON",L8G 1G7,43.2564542,-79.8694356
+Child_Centric,Daycare_Centre,,Le Ballon Rouge,,"135 Bendamere Avenue (French),Hamilton,ON",L9C 1N4,43.23414069,-79.89190266
+Child_Centric,Daycare_Centre,,La Garderie le Petit Navire,,"400 Cumberland Avenue (French),Hamilton,ON",L8M 2A2,43.24196473,-79.83622887
+Child_Centric,Daycare_Centre,,Little Mountaineers Co-operative Preschool Corporation,,"835 Stonechurch Road,Hamilton,ON",L8W 1R8,43.20250812,-79.8523557
+Child_Centric,Daycare_Centre,,Little Peoples Day Care Centre,,"510 Mohawk Road,Hamilton,ON",L9C 1X4,43.2291208,-79.9648564
+Child_Centric,Daycare_Centre,,Lucky Day Nursery,,"120 Crosthwaite Avenue,Hamilton,ON",L8H 4V5,43.2437717,-79.8073214
+Child_Centric,Daycare_Centre,,Lyonsgate Montessori School,,"375 Aberdeen Avenue,Hamilton,ON",L8P 2R7,43.2502559,-79.8901093
+Child_Centric,Daycare_Centre,,Imagineer's Early Learning Centre,,"430 West 5th Street,Hamilton,ON",L9C 3P6,43.2311556,-79.88625532
+Child_Centric,Daycare_Centre,,McMaster Children's Centre,,"1280 Main Street,Hamilton,ON",L8S 4K1,43.2636011,-79.9173761
+Child_Centric,Daycare_Centre,,McMaster Students Union Day Care Centre,,"1145 King Street,Hamilton,ON",L8S 1L9,43.2482569,-79.8287717
+Child_Centric,Daycare_Centre,,Meadowlands Preschool,,"900 Golf Links Road,Hamilton,ON",L9K 1L5,43.2268353,-79.9445548
+Child_Centric,Daycare_Centre,,Mother Goose Co-operative Preschool,,"407 Charlton Avenue,Hamilton,ON",L8P 2E6,43.25424911,-79.89098068
+Child_Centric,Daycare_Centre,,Noah's Ark Children's Centre,,"118 Limeridge Road,Hamilton,ON",L9A 2S3,43.218288,-79.8795239
+Child_Centric,Daycare_Centre,,Pumpkin Patch Day Care Centre,,"440 Upper Wentworth Street,Hamilton,ON",L9A 4T7,43.2380652,-79.8558306
+Child_Centric,Daycare_Centre,,Pumpkin Patch Infant Centre,,"450 Inverness Avenue,Hamilton,ON",L9A 1J4,43.2381212,-79.8558693
+Child_Centric,Daycare_Centre,,West Mountain Montessori School,,"93 Sanatorium Road,Hamilton,ON",L9C 1Y6,43.2320113,-79.89633318
+Child_Centric,Daycare_Centre,,The Nesting Nook,,"3200 Highway 56 ,Hamilton,ON",L0R 1C0,43.0979824,-79.814192
+Child_Centric,Daycare_Centre,,Niwasa Early Learning and Care Centre,,"93 Delena Avenue,Hamilton,ON",L8H 6B6,43.23895,-79.7878066
+Child_Centric,Daycare_Centre,,Niwasa Early Learning and Child Care Centre,,"785 Britannia Avenue,Hamilton,ON",L8H 2B6,43.2394245,-79.7812376
+Child_Centric,Daycare_Centre,,Niwasa Head Start Preschool,,"1869 Main Street,Hamilton,ON",L8H 1G2,43.2659749,-79.9537768
+Child_Centric,Daycare_Centre,,Paramount Family Centre,,"1035 Paramount Drive,Hamilton,ON",L8J 2L6,43.1964728,-79.7959226
+Child_Centric,Daycare_Centre,,Parkside Daycare Inc.,,"145 Hamilton Street,Hamilton,ON",L0R 2H6,43.3310038,-79.8955474
+Child_Centric,Daycare_Centre,,Peter Pan Co-operative Preschool,,"435 Mohawk Road,Hamilton,ON",L9C 1X3,43.2291208,-79.9648564
+Child_Centric,Daycare_Centre,,Pied Piper Co-operative Pre-school,,"21 Stonechurch Road,Hamilton,ON",L9B 1A1,43.21114864,-79.89056359
+Child_Centric,Daycare_Centre,,Lyonsgate Montessori School,,"86 Homewood Avenue,Hamilton,ON",L8P 2M4,43.2509154,-79.88680176
+Child_Centric,Daycare_Centre,,Redeemer Child Care Centre,,"777 Garner Road,Hamilton,ON",L9K 1J4,43.2109615,-79.95053098
+Child_Centric,Daycare_Centre,,Riverside Sunshine Daycare of Hamilton,,"1221 Wilson Street,Hamilton,ON",L8S 4K6,43.259008,-79.8665037
+Child_Centric,Daycare_Centre,,St. Matthew's Children's Centre,,"414 Barton Street,Hamilton,ON",L8L 2Y3,43.22693187,-79.71916892
+Child_Centric,Daycare_Centre,,Kinderseeds,,"9023 Airport Road,Hamilton,ON",L0R 1W0,43.15642143,-79.9152715
+Child_Centric,Daycare_Centre,,St. James Co-operative Nursery School of Dundas Inc.,,"137 Melville Street,Hamilton,ON",L9H 2A6,43.2692205,-79.9613341
+Child_Centric,Daycare_Centre,,St. Joachim Children's Centre of Ancaster,,"75 Concerto Court,Hamilton,ON",L9G 4V6,43.20837945,-79.98895433
+Child_Centric,Daycare_Centre,,Stoney Creek Child Care Centre,,"3 Lockport Way,Hamilton,ON",L6J 6P1,43.2194111,-79.6327653
+Child_Centric,Daycare_Centre,,Stoney Creek Co-operative Pre-School,,"79 Collegiate Avenue,Hamilton,ON",L8G 3L5,43.2197971,-79.7458026
+Child_Centric,Daycare_Centre,,Stoney Creek Montessori,,"178 Barton Street,Hamilton,ON",L8E 4W2,43.23208136,-79.73851486
+Child_Centric,Daycare_Centre,,Sunny Days Nursery,,"998 Upper Sherman Avenue,Hamilton,ON",L8V 4Y9,43.2165453,-79.8542392
+Child_Centric,Daycare_Centre,,Sunshine & Rainbows Christian Daycare Centre,,"440 Highway #8 ,Hamilton,ON",L8G 1G3,43.2173881,-79.7204638
+Child_Centric,Daycare_Centre,,Winona Children's Centre,,"1296 Barton Street,Hamilton,ON",L8E 5L4,43.21108708,-79.64815042
+Child_Centric,Daycare_Centre,,Early Scholars,,"689 West 5th Street,Hamilton,ON",L9C 3R3,43.22287843,-79.88916724
+Child_Centric,Daycare_Centre,,Stanley Avenue Children's Centre,,"20 Stanley Avenue,Hamilton,ON",L8P 2L1,43.25088677,-79.88332143
+Child_Centric,Daycare_Centre,,Tapawingo Day Care,,"9 Clarendon Avenue,Hamilton,ON",L9A 2Z9,43.2364505,-79.8738845
+Child_Centric,Daycare_Centre,,Mountain Nursery School,,"1279 Upper Gage Avenue,Hamilton,ON",L8W 1E5,43.20479906,-79.8487238
+Child_Centric,Daycare_Centre,,The Chestnut Tree Pre-School - Stoney Creek,,"288 Barton Street,Hamilton,ON",L8E 2K6,43.22951362,-79.72844887
+Child_Centric,Daycare_Centre,,Infant Jesus Day Care (Waterdown),,"717 Centre Road,Hamilton,ON",L0R 2H0,43.3435001,-79.91240777
+Child_Centric,Daycare_Centre,,Infant Jesus Kindergarten & Nursery,,"329 Mohawk Road,Hamilton,ON",L9C 1W4,43.2291208,-79.9648564
+Child_Centric,Daycare_Centre,,R L Hyslop Before and After School Program,,"20 Lake Avenue,Hamilton,ON",L8G 1P3,43.21570265,-79.75915261
+Child_Centric,Daycare_Centre,,Today's Family - Caring For Your Child - St. Paul's,,"29 Park Street,Hamilton,ON",L9H 1X3,43.2309233,-80.14245153
+Child_Centric,Daycare_Centre,,Today's Family - Collegiate Avenue,,"49 Collegiate Avenue,Hamilton,ON",L8G 3L5,43.22107215,-79.74930711
+Child_Centric,Daycare_Centre,,Today's Family - Early Learning and Child Care Program - Eastmount Public School,,"155 East 26th Street,Hamilton,ON",L8V 3C5,43.2351566,-79.8493682
+Child_Centric,Daycare_Centre,,Today's Family - Early Learning and Child Care Program - Linden Park,,"4 Vickers Road,Hamilton,ON",L9A 1Y1,43.2299869,-79.8638786
+Child_Centric,Daycare_Centre,,Today's Family - Huntington Park,,"80 Kingslea Drive,Hamilton,ON",L8T 4A5,43.22026355,-79.82762248
+Child_Centric,Daycare_Centre,,Today's Family Adventure Camp - Delta United,,"47 Ottawa Street,Hamilton,ON",L8K 2C9,43.2410362,-79.8201497
+Child_Centric,Daycare_Centre,,Today's Family Children's Centre - Dundas,,"23 Melville Street,Hamilton,ON",L9H 1Z7,43.2683579,-79.9548486
+Child_Centric,Daycare_Centre,,Today's Family Children's Centre - Hamilton,,"44 Greendale Drive,Hamilton,ON",L9C 5Z4,43.22099547,-79.90749068
+Child_Centric,Daycare_Centre,,Today's Family Children's Centre - Saltfleet,,"108 Highland Road,Hamilton,ON",L8J 2T2,43.18410765,-79.77850774
+Child_Centric,Daycare_Centre,,Today's Family Huntington Park Before and After School Progam,,"87 Brentwood Drive,Hamilton,ON",L8T 3W4,43.2212936,-79.829987
+Child_Centric,Daycare_Centre,,Today's Family R.A. Riddell School Age Program,,"200 Cranbrook Drive,Hamilton,ON",L9C 4Z9,43.2216808,-79.9101351
+Child_Centric,Daycare_Centre,,Today's Family St.Augustine's,,"25 Alma Street,Hamilton,ON",L9H 2C9,43.2706892,-79.95543567
+Child_Centric,Daycare_Centre,,Today's Family- Franklin Road,,"500 Franklin Road,Hamilton,ON",L8V 2A4,43.22526445,-79.85144091
+Child_Centric,Daycare_Centre,,Today's Family-C.B. Stirling,,"340 Queen Victoria Drive,Hamilton,ON",L8W 1T9,43.2039736,-79.84270619
+Child_Centric,Daycare_Centre,,Today's Family-George L. Armstrong,,"460 Concession Street,Hamilton,ON",L9A 1C3,43.240988,-79.85629967
+Child_Centric,Daycare_Centre,,Today's Family-Tiffany Hills,,"255 Raymond Road,Hamilton,ON",L8K 3W7,43.2128355,-79.93654747
+Child_Centric,Daycare_Centre,,Today's Family Private Home Day Care,,"44 Greendale Drive,Hamilton,ON",L9C 5Z4,43.22099547,-79.90749068
+Child_Centric,Daycare_Centre,,Sir Isaac Brock,,"130 Greenford Drive,Hamilton,ON",L8G 2G8,43.2252812,-79.77175873
+Child_Centric,Daycare_Centre,,Umbrella Family - Ancaster Meadow,,"93 Kitty Murray Lane,Hamilton,ON",L9K 1S3,43.2213656,-79.95177164
+Child_Centric,Daycare_Centre,,Umbrella Family - Balaclava,,"280 10th Concession ,Hamilton,ON",L0R 1K0,43.40564003,-79.99532936
+Child_Centric,Daycare_Centre,,Umbrella Family - Bellmoore,,"35 Pumpkin Pass,Hamilton,ON",L0R 1C0,43.1255583,-79.81292394
+Child_Centric,Daycare_Centre,,Umbrella Family - Cathy Wever,,"160 Wentworth Street,Hamilton,ON",L8L 5V7,43.25705095,-79.84612034
+Child_Centric,Daycare_Centre,,Umbrella Family - Dundana,,"23 Dundana Avenue,Hamilton,ON",L9H 4E5,43.258087,-79.95186011
+Child_Centric,Daycare_Centre,,Umbrella Family - Dundas Central,,"73 Melville Street,Hamilton,ON",L9H 2A2,43.2691185,-79.95816305
+Child_Centric,Daycare_Centre,,Umbrella Family - Elizabeth Bagshaw,,"350 Albright Road,Hamilton,ON",L8K 5J4,43.21922925,-79.79767276
+Child_Centric,Daycare_Centre,,Umbrella Family - Gatestone,,"127 Gatestone Drive,Hamilton,ON",L8J 3Z5,43.18181805,-79.78940882
+Child_Centric,Daycare_Centre,,Umbrella Family - Glen Echo,,"140 Glen Echo Drive,Hamilton,ON",L8K 4J1,43.22459515,-79.77897345
+Child_Centric,Daycare_Centre,,Umbrella Family - Gordon Price,,"11 Guildwood Drive,Hamilton,ON",L9C 7K2,43.2233211,-79.92046142
+Child_Centric,Daycare_Centre,,Umbrella Family - Greensville,,"625 Harvest Road,Hamilton,ON",L9H 5K8,43.2814219,-79.9836764
+Child_Centric,Daycare_Centre,,Umbrella Family - Helen Detwiler,,"320 Brigade Drive,Hamilton,ON",L9B 2E3,43.20250875,-79.87791345
+Child_Centric,Daycare_Centre,,Umbrella Family - Hillcrest,,"40 Eastwood Street,Hamilton,ON",L8H 6R7,43.23979825,-79.77726642
+Child_Centric,Daycare_Centre,,Umbrella Family - James MacDonald,,"200 Chester Avenue,Hamilton,ON",L9C 2X1,43.2169876,-79.8970805
+Child_Centric,Daycare_Centre,,Umbrella Family - L'Ecole Michaelle Jean,,"2121 #56 Highway ,Hamilton,ON",L0R 1C0,43.13497936,-79.7983679
+Child_Centric,Daycare_Centre,,Umbrella Family - Lawfield,,"45 Berko Avenue,Hamilton,ON",L8V 2R3,43.21573545,-79.849785
+Child_Centric,Daycare_Centre,,Umbrella Family - Lincoln Alexander,,"50 Ravenbury Drive,Hamilton,ON",L8W 2B5,43.2059277,-79.85272961
+Child_Centric,Daycare_Centre,,Umbrella Family - Memorial,,"211 Memorial Avenue,Hamilton,ON",L8G 3B2,43.21663945,-79.72787632
+Child_Centric,Daycare_Centre,,Umbrella Family - Mount Hope,,"9149 Airport Road,Hamilton,ON",L0R 1W0,43.15778095,-79.92121432
+Child_Centric,Daycare_Centre,,Umbrella Family - Mountain View (Stoney Creek),,"299 Barton Street,Hamilton,ON",L8E 2K7,43.2300853,-79.72712152
+Child_Centric,Daycare_Centre,,Umbrella Family - Mountview,,"59 Karen Crescent,Hamilton,ON",L9C 5M5,43.24046235,-79.92538347
+Child_Centric,Daycare_Centre,,Umbrella Family - Prince of Wales,,"77 Melrose Avenue,Hamilton,ON",L8L 6X4,43.3292609,-80.0445069
+Child_Centric,Daycare_Centre,,Umbrella Family - Queensdale,,"67 Queensdale Avenue,Hamilton,ON",L9A 1K4,43.24208775,-79.8726759
+Child_Centric,Daycare_Centre,,Umbrella Family - Ray Lewis,,"27 Jessica Street,Hamilton,ON",L8W 4A1,43.19406705,-79.87116474
+Child_Centric,Daycare_Centre,,Umbrella Family - Sir Wilfrid Laurier,,"70 Albright Road,Hamilton,ON",L8K 5J3,43.21808225,-79.78773863
+Child_Centric,Daycare_Centre,,Umbrella Family - Templemead,,"62 Templemead Drive,Hamilton,ON",L8W 2B6,43.19687985,-79.84817267
+Child_Centric,Daycare_Centre,,Umbrella Family - Winona,,"301 Lewis Road,Hamilton,ON",L8E 5H1,43.2134272,-79.66106057
+Child_Centric,Daycare_Centre,,Umbrella Family at Rosedale,,"25 Erindale Avenue,Hamilton,ON",L8K 4R2,43.22480965,-79.80778081
+Child_Centric,Daycare_Centre,,Umbrella Family- Spencer Valley,,"441 Old Brock Road,Hamilton,ON",L9H 6A7,43.2888759,-79.99881938
+Child_Centric,Daycare_Centre,,Umbrella Family-Eastdale,,"275 Lincoln Road,Hamilton,ON",L8E 1Z4,43.2291004,-79.7337998
+Child_Centric,Daycare_Centre,,Umbrella Family-Shannen Koostachin,,"110 Bellegio Avenue,Hamilton,ON",L0R 1P0,43.17683718,-79.80219392
+Child_Centric,Daycare_Centre,,Paradise Corner Children's Centre,,"634 Rymal Road,Hamilton,ON",L9B 1B8,43.2095594,-79.9221641
+Child_Centric,Daycare_Centre,,Village Children's Centre of Waterdown,,"132 Dundas Street,Hamilton,ON",L9H 7K6,43.2650906,-79.9445918
+Child_Centric,Daycare_Centre,,Village Treehouse Childcare,,"126 Wilson Street,Hamilton,ON",L9G 2B7,40.12546759,-86.01570288
+Child_Centric,Daycare_Centre,,Flamborough Centre,,"922 Centre Road,Hamilton,ON",L8N 3L1,43.35898795,-79.93196498
+Child_Centric,Daycare_Centre,,Waterdown District Children's Centre,,"215 Parkside Drive,Hamilton,ON",L0R 2H1,43.33522565,-79.90988548
+Child_Centric,Daycare_Centre,,Waterdown District School Age Program - Guy Brown Location,,"55 Braeheid Avenue,Hamilton,ON",L0R 2H5,43.32824735,-79.90896767
+Child_Centric,Daycare_Centre,,Waterdown District School Age Program - Mary Hopkins,,"200 Main Street,Hamilton,ON",L0R 2H0,40.13124828,-86.01919255
+Child_Centric,Daycare_Centre,,Way to Learn Daycare - Hamilton,,"331 Strathearne Avenue,Hamilton,ON",L8H 5K9,43.24759337,-79.79656173
+Child_Centric,Daycare_Centre,,Little Angels' Infant and Toddler Centre,,"374 Fifth Concession Road,Hamilton,ON",L0R 1V0,43.33591165,-79.95992696
+Child_Centric,Daycare_Centre,,The Millgrove Children's Centre,,"370 Fifth Concession Road,Hamilton,ON",L0R 1V0,43.33599683,-79.9595244
+Child_Centric,Daycare_Centre,,The Millgrove Children's Centre,,"271 6th Concession Road East,Hamilton,ON",L0R 2H0,43.35988568,-79.93578527
+Child_Centric,Daycare_Centre,,The Millgrove Majors Children's Centre,,"369 Fifth Concession Road,Hamilton,ON",L0R 1V0,43.34073401,-79.96018561
+Child_Centric,Daycare_Centre,,Wesley Child Care Centre,,"340 York Boulevard,Hamilton,ON",L8R 3L2,43.2639114,-79.8785381
+Child_Centric,Daycare_Centre,,Wesley Child Care Centre,,"80 Queen Street,Hamilton,ON",L8R 3P6,43.2269022,-79.9783772
+Child_Centric,Daycare_Centre,,Wesley Licensed School Age Program - Dr. J Seaton School,,"1279 Seaton Road,Hamilton,ON",L0R 1Z0,43.32831125,-80.20087676
+Child_Centric,Daycare_Centre,,Wesley Licensed School Age Program - Lake Avenue School,,"157 Lake Avenue,Hamilton,ON",L8E 1L5,43.23180435,-79.7565229
+Child_Centric,Daycare_Centre,,Wesley Licensed School Age Program- Dr. J. Davey school,,"99 Ferguson Avenue,Hamilton,ON",L8R 1L6,43.25760565,-79.86110072
+Child_Centric,Daycare_Centre,,Wesley School Age Program-Beverly Central Site,,"1346 4th Concession Road,Hamilton,ON",L0R 2B0,43.29873614,-80.07387682
+Child_Centric,Daycare_Centre,,Wesley School Age Program-Hess Street Site,,"107 Hess Street,Hamilton,ON",L8R 2T1,43.26324515,-79.87582856
+Child_Centric,Daycare_Centre,,Wesley Urban Ministries' School Age Program,,"155 Queen Street,Hamilton,ON",L8R 2V6,43.2269022,-79.9783772
+Child_Centric,Daycare_Centre,,Westdale Children's School,,"2 Bond Street,Hamilton,ON",L8S 3W1,43.2718245,-79.9708319
+Child_Centric,Daycare_Centre,,Westdale Co-operative Preschool,,"99 North Oval,Hamilton,ON",L8S 3Z2,43.2623556,-79.9068117
+Child_Centric,Daycare_Centre,,Sunshine Daycare Centre,,"1221 Wilson Street,Hamilton,ON",L8S 4K6,43.259008,-79.8665037
+Child_Centric,Daycare_Centre,,Flamborough Family YMCA Child Care Centre,,"207 Parkside Drive,Hamilton,ON",L0R 2H1,43.33291775,-79.91169385
+Child_Centric,Daycare_Centre,,Hamilton Downtown YMCA Child Care Centre,,"79 James Street,Hamilton,ON",L8P 2Z1,43.2694572,-79.9690244
+Child_Centric,Daycare_Centre,,Les Chater YMCA Child Care Centre,,"356 Rymal Road,Hamilton,ON",L8P 2Z1,43.20669972,-79.90993965
+Child_Centric,Daycare_Centre,,Mountain YMCA Child Care Centre,,"626 Upper Wentworth Street,Hamilton,ON",L9A 4V3,43.2317008,-79.85855917
+Child_Centric,Daycare_Centre,,Queen Victoria YMCA Child Care Centre,,"166 Forest Avenue,Hamilton,ON",L8N 0A6,43.2483673,-79.86534754
+Child_Centric,Daycare_Centre,,Queens Garden YMCA Child Care Centre,,"80 Queen Street,Hamilton,ON",L8P 3P6,43.2269022,-79.9783772
+Child_Centric,Daycare_Centre,,Sir William Osler YMCA Child Care,,"330 Governor's Road,Hamilton,ON",L9H 0A3,43.2576878,-79.97949727
+Child_Centric,Daycare_Centre,,Stoney Creek YMCA Child Care Centre,,"105 King Street,Hamilton,ON",L8G 1L1,43.2171138,-79.7509753
+Child_Centric,Daycare_Centre,,Wellington YMCA Early Learning and Child Care Centre,,"1430 Upper Wellington Street,Hamilton,ON",L9A 5H3,43.20944805,-79.87954746
+Child_Centric,Daycare_Centre,,YMCA SACC - Allan A. Greenleaf,,"211 Parkside Drive,Hamilton,ON",L0R 2H1,43.3340673,-79.91260611
+Child_Centric,Daycare_Centre,,YMCA SACC - Billy Green,,"1105 Paramount Drive,Hamilton,ON",L8J 1W2,43.2015352,-79.79591196
+Child_Centric,Daycare_Centre,,YMCA SACC - CH Bray,,"99 Dunham Avenue,Hamilton,ON",L9G 1X7,43.21693147,-79.99213207
+Child_Centric,Daycare_Centre,,YMCA SACC - Chedoke,,"500 Bendamere Avenue,Hamilton,ON",L9C 1R3,43.23871075,-79.90637334
+Child_Centric,Daycare_Centre,,YMCA SACC - Cootes Paradise,,"900 King Street,Hamilton,ON",L8S 1K6,43.2640292,-79.90231695
+Child_Centric,Daycare_Centre,,YMCA SACC - Earl Kitchener,,"300 Dundurn Street,Hamilton,ON",L8P 4L3,43.2526609,-79.89277492
+Child_Centric,Daycare_Centre,,YMCA SACC - Frank Panabaker North,,"168 Huron Avenue,Hamilton,ON",L9G 1V7,43.2093429,-79.99159157
+Child_Centric,Daycare_Centre,,YMCA SACC - Frank Panabaker South,,"295 Nakoma Road,Hamilton,ON",L8G 1T2,43.20812205,-79.99187871
+Child_Centric,Daycare_Centre,,YMCA SACC - Highview,,"1060 Queensdale Avenue,Hamilton,ON",L8T 1J4,43.2305864,-79.8309312
+Child_Centric,Daycare_Centre,,YMCA SACC - Holbrook,,"450 Sanatorium Road,Hamilton,ON",L9C 2B1,43.23752735,-79.91371381
+Child_Centric,Daycare_Centre,,YMCA SACC - Janet Lee,,"291 Winterberry Drive,Hamilton,ON",L8J 2N5,43.19148385,-79.80694691
+Child_Centric,Daycare_Centre,,YMCA SACC - Pauline Johnson,,"25 Hummingbird Lane,Hamilton,ON",L9A 4B1,43.21960745,-79.87017654
+Child_Centric,Daycare_Centre,,YMCA SACC - Prince Philip,,"125 Rifle Range Road,Hamilton,ON",L8S 3B1,43.2526918,-79.9289054
+Child_Centric,Daycare_Centre,,YMCA SACC - Richard Beasley,,"80 Currie Road,Hamilton,ON",L8T 3M9,43.21512047,-79.83878763
+Child_Centric,Daycare_Centre,,YMCA SACC - Ridgemount,,"65 Hester Street,Hamilton,ON",L9A 2N3,43.2250677,-79.87935559
+Child_Centric,Daycare_Centre,,YMCA SACC - Rousseau,,"103 McNiven Road,Hamilton,ON",L9C 3T7,43.22895055,-79.96210279
+Child_Centric,Daycare_Centre,,YMCA SACC - Southgate - ECC Program,,"120 Clarendon Avenue,Hamilton,ON",L9A 3A5,43.23175817,-79.87621747
+Child_Centric,Daycare_Centre,,YMCA SACC - W.H. Ballard,,"801 Dunsmure Road,Hamilton,ON",L8H 1H9,43.2416511,-79.80295467
+Child_Centric,Daycare_Centre,,YMCA SACC - Westwood,,"9 Lynbrook Drive,Hamilton,ON",L9C 2K6,43.22791265,-79.89319075
+Child_Centric,Daycare_Centre,,YMCA SACC - Yorkview,,"86 Cameron Avenue,Hamilton,ON",L9H 1P8,43.27443385,-79.94507999
+Child_Centric,Daycare_Centre,,YMCA SACC Pauline Johnson North,,"25 Hummingbird Lane,Hamilton,ON",L9A 4B1,43.21960745,-79.87017654
+Child_Centric,Daycare_Centre,,YMCA SACC Spring Valley,,"1886 Governors Road,Hamilton,ON",L0R 1J0,43.2437148,-80.04846933
+Child_Centric,Daycare_Centre,,YMCA SACC- AM Cunningham,,"100 Wexford Avenue,Hamilton,ON",L8K 2N8,43.2372646,-79.81527024
+Child_Centric,Daycare_Centre,,YMCA SACC-Norwood Park,,"165 Terrace Drive,Hamilton,ON",L9A 2Z2,43.23005695,-79.8768485
+Child_Centric,Daycare_Centre,,AM/PM Care,,"75 Hunter Street,Hamilton,ON",L8P 1P9,43.2678975,-79.9455044
+Child_Centric,Daycare_Centre,,Lisgar Before and After School Program,,"110 Anson Avenue,Hamilton,ON",L8T 2X6,43.2110998,-79.82889794
+Child_Centric,Daycare_Centre,,YWCA HAmilton West Mountain Child Care Centre,,"11 Guildwood Drive,Hamilton,ON",L9C 7K2,43.2233211,-79.92046142
+Child_Centric,Daycare_Centre,,YWCA Hamilton - Buchannan Park Before and After School Program,,"30 Laurier Avenue,Hamilton,ON",L9C 3R9,43.2339166,-79.8890718
+Child_Centric,Daycare_Centre,,YWCA Hamilton - Downtown Child Care Centre,,"75 MacNab Street,Hamilton,ON",L8P 3C1,43.2689864,-79.9744024
+Child_Centric,Daycare_Centre,,YWCA Hamilton - Green Acres School Age Program,,"45 Randall Avenue,Hamilton,ON",L8G 2K8,43.22109685,-79.76336045
+Child_Centric,Daycare_Centre,,YWCA Hamilton - Ottawa Street - Kinderclass and School Age Care,,"52 Ottawa Street,Hamilton,ON",L8H 3Y7,43.2411139,-79.8204936
+Child_Centric,Daycare_Centre,,YWCA Hamilton - Ottawa Street Child Care Centre,,"1175 Main Street,Hamilton,ON",L8M 1P3,43.2659749,-79.9537768
+Child_Centric,Daycare_Centre,,YWCA Hamilton - St. John Before and After School Program,,"115 London Street,Hamilton,ON",L8K 2G6,43.2387159,-79.81968135
+Child_Centric,Daycare_Centre,,YWCA Hamilton - West Mountain Child Care Centre,,"828 Sanatorium Road,Hamilton,ON",L8N 3Z5,43.2454166,-79.9159922
+Child_Centric,Daycare_Centre,,KINDERSEEDS INC.,,"9023 AIRPORT BOX 13 Road,Hamilton,ON",L0R 1W0,43.15772906,-79.91604675
+Child_Centric,Recreation_Centre,,Ryerson Recreation Centre,,"  ,,",,43.25381279,-79.88235644
+Child_Centric,Recreation_Centre,,David Braley Athletic & Recreation Centre - Mohawk College,,"  ,,",,43.23863344,-79.88851988
+Child_Centric,Recreation_Centre,,Carlisle Recreation Centre,,"  ,,",,43.39656408,-79.98100861
+Child_Centric,Recreation_Centre,,Sir Allan MacNab Recreation Centre,,"  ,,",,43.23107007,-79.92168666
+Child_Centric,Recreation_Centre,,YWCA Hamilton Active Living Centre - Putman Family Ottawa St,,"  ,,",,43.24393825,-79.81891277
+Child_Centric,Recreation_Centre,,YMCA - Les Chater Family,,"  ,,",,43.19836189,-79.87804501
+Child_Centric,Recreation_Centre,,Ancaster Aquatic Centre,,"  ,,",,43.2151688,-80.00628298
+Child_Centric,Recreation_Centre,,H.G. Brewster Pool,,"  ,,",,43.21809991,-79.71154334
+Child_Centric,Recreation_Centre,,Central Memorial Recreation Centre,,"  ,,",,43.24954329,-79.85924282
+Child_Centric,Recreation_Centre,,Dalewood Recreation Centre,,"  ,,",,43.25836395,-79.91315458
+Child_Centric,Recreation_Centre,,Glanbrook Arena & Auditorium,,"  ,,",,43.12972015,-79.83885903
+Child_Centric,Recreation_Centre,,Huntington Park Recreation Centre,,"  ,,",,43.22074723,-79.82939339
+Child_Centric,Recreation_Centre,,Jimmy Thompson Pool,,"  ,,",,43.24939123,-79.83025856
+Child_Centric,Recreation_Centre,,East Kiwanis BGC Hamilton-Halton,,"  ,,",,43.24855415,-79.81073839
+Child_Centric,Recreation_Centre,,Kiwanis Club of Hamilton,,"  ,,",,43.2134815,-79.69127601
+Child_Centric,Recreation_Centre,,Ancaster Lion's Outdoor Pool,,"  ,,",,43.2182325,-79.99969967
+Child_Centric,Recreation_Centre,,Sir Wilfrid Laurier Recreation Centre,,"  ,,",,43.2178171,-79.78676166
+Child_Centric,Recreation_Centre,,Sir Winston Churchill Recreation Centre,,"  ,,",,43.2375585,-79.79571434
+Child_Centric,Recreation_Centre,,Redeemer Sports Complex,,"  ,,",,43.2121063,-79.95200162
+Child_Centric,Recreation_Centre,,Westmount Recreation Centre,,"  ,,",,43.22837266,-79.89431613
+Child_Centric,Recreation_Centre,,YMCA - Hamilton Downtown Family,,"  ,,",,43.25432327,-79.86988423
+Child_Centric,Recreation_Centre,,Sackville Hill Seniors Recreation Centre,,"  ,,",,43.22447691,-79.86260427
+Child_Centric,Recreation_Centre,,YMCA - Flamborough Family,,"  ,,",,43.33286414,-79.91157215
+Child_Centric,Recreation_Centre,,YWCA Hamilton Active Living Centre - MacNab Street,,"  ,,",,43.25423089,-79.87156481
+Child_Centric,Recreation_Centre,,Soccer World,,"  ,,",,43.25721965,-79.89413985
+Child_Centric,Recreation_Centre,,Mountain Sports Complex,,"  ,,",,43.19887195,-79.83707187
+Child_Centric,Recreation_Centre,,United Soccer Centre,,"  ,,",,43.23107028,-79.70248013
+Child_Centric,Recreation_Centre,,Lakeland Centre,,"  ,,",,43.26209559,-79.76832328
+Child_Centric,Recreation_Centre,,Stoney Creek Recreation Centre,,"  ,,",,43.21763051,-79.76306025
+Child_Centric,Recreation_Centre,,David Braley Athletic Centre - McMaster University,,"  ,,",,43.26504364,-79.91616539
+Child_Centric,Recreation_Centre,,Norman Pinky Lewis Recreation Centre,,"  ,,",,43.25704669,-79.84530807
+Child_Centric,Recreation_Centre,,Bernie Morelli Recreation Centre,,"  ,,",,43.25004711,-79.82997442
+Child_Centric,Recreation_Centre,,F.H. Sherman Recreation And Learning Centre,,"  ,,",,43.19518011,-79.75400704
+Child_Centric,Recreation_Centre,,Hill Park Recreation Centre,,"  ,,",,43.22781851,-79.86312511
+Child_Centric,School,,George L. Armstrong Elementary School,,"460 Concession Street,Hamilton,ON",,43.240988,-79.85629967
+Child_Centric,School,,Hess Street Elementary School,,"107 Hess Street North,Hamilton,ON",,43.26324515,-79.87582856
+Child_Centric,School,,Rebecca Street Alternative Education,2nd Floor,"135 Rebecca Street,Hamilton,ON",,43.2568091,-79.8626782
+Child_Centric,School,,Waterdown District Secondary School,,"215 Parkside Drive,Hamilton,ON",,43.33522565,-79.90988548
+Child_Centric,School,,Rosedale Elementary School,,"25 Erindale Avenue,Hamilton,ON",,43.22480965,-79.80778081
+Child_Centric,School,,Sir William Osler Elementary School,,"330 Governors Road,Hamilton,ON",,43.2573082,-79.97936844
+Child_Centric,School,,Viscount Montgomery Elementary School,,"1525 Lucerne Avenue,Hamilton,ON",,43.23262195,-79.79675974
+Child_Centric,School,,Viola Desmond Elementary School,,"50 Secord Drive,Hamilton,ON",,43.2273907,-79.77862571
+Child_Centric,School,,Winona Elementary School,,"301 Lewis Road,Hamilton,ON",,43.2134272,-79.66106057
+Child_Centric,School,,St. John Henry Newman Secondary School,,"127 Gray Road,Hamilton,ON",,43.22128445,-79.74624386
+Child_Centric,School,,Annunciation of Our Lord Elementary School,,"250 Limeridge Road West,Hamilton,ON",,43.2232494,-79.89575579
+Child_Centric,School,,Corpus Christi Elementary School,,"25 Alderson Drive,Hamilton,ON",,43.1989725,-79.8953087
+Child_Centric,School,,St. Patrick Elementary School,,"20 East Avenue,Hamilton,ON",L8N 3X1,43.2527837,-79.8556832
+Child_Centric,School,,Regina Mundi Elementary School,,"675 Mohawk Road West,Hamilton,ON",,43.23282095,-79.9135977
+Child_Centric,School,,St. Ann (Hamilton) Elementary School,,"15 St. Ann Street,Hamilton,ON",,43.2555521,-79.8356483
+Child_Centric,School,,St. David Elementary School,,"33 Cromwell Crescent,Hamilton,ON",,43.22489155,-79.76733076
+Child_Centric,School,,St. Clare of Assisi Elementary School,,"185 Glenashton Drive,Hamilton,ON",,43.2145103,-79.71534451
+Child_Centric,School,,St. Marguerite D'Youville Elementary School,,"20 Bonaparte Way,Hamilton,ON",,43.20377275,-79.87817471
+Child_Centric,School,,St. Martin of Tours Elementary School,,"60 Grays Road,Hamilton,ON",,43.2367374,-79.7383913
+Child_Centric,School,,St. Lawrence Elementary School,,"88 Macaulay Street East,Hamilton,ON",,43.26937225,-79.85949286
+Child_Centric,School,,St. Margaret Mary Elementary School,,"25 Brentwood Drive,Hamilton,ON",,43.22343025,-79.82853266
+Child_Centric,School,,St. Joseph Elementary School,,"270 Locke Street South,Hamilton,ON",,43.2524532,-79.88794991
+Child_Centric,School,,St. Thomas More Secondary School,,"1045 Upper Paradise Road,Hamilton,ON",,43.2133753,-79.91771308
+Child_Centric,School,,Richard Beasley Elementary School,,"80 Currie Street,Hamilton,ON",,43.21494155,-79.83881893
+Child_Centric,School,,Bennetto Elementary School,,"47 Simcoe Street East,Hamilton,ON",,43.26806215,-79.86189106
+Child_Centric,School,,Dr. J. Edgar Davey Elementary School,,"99 Ferguson Avenue North,Hamilton,ON",,43.25760565,-79.86110072
+Child_Centric,School,,Frank Panabaker Elementary School,,"295 Nakoma Road,Hamilton,ON",,43.20812205,-79.99187871
+Child_Centric,School,,Spring Valley Elementary School,,"99 Dunham Drive,Hamilton,ON",,43.2167125,-79.992608
+Child_Centric,School,,Cecil B. Stirling Elementary School,,"340 Queen Victoria Drive,Hamilton,ON",,43.2039736,-79.84270619
+Child_Centric,School,,Earl Kitchener Elementary School,,"300 Dundurn Street South,Hamilton,ON",,43.2526609,-79.89277492
+Child_Centric,School,,Buchanan Park Elementary School,,"30 Laurier Avenue,Hamilton,ON",,43.2339166,-79.8890718
+Child_Centric,School,,A.M. Cunningham Elementary School,,"100 Wexford Avenue South,Hamilton,ON",,43.2372646,-79.81527024
+Child_Centric,School,,Southern Ontario Collegiate,,"29 Rebecca Street,Hamilton,ON",,43.258175,-79.867094
+Child_Centric,School,,Ridgemount Elementary School,,"65 Hester Street,Hamilton,ON",,43.2250677,-79.87935559
+Child_Centric,School,,Parkdale Elementary School,,"139 Parkdale Avenue North,Hamilton,ON",,43.24051805,-79.79116649
+Child_Centric,School,,Guido De Brès Christian High School,,"420 Crerar Drive,Hamilton,ON",,43.2088999,-79.8737581
+Child_Centric,School,,École secondaire Georges- P.-Vanier,,"100 Macklin Street North,Hamilton,ON",,43.26582935,-79.89455832
+Child_Centric,School,,Chedoke Elementary School,,"500 Bendamere Avenue,Hamilton,ON",,43.23871075,-79.90637334
+Child_Centric,School,,St. James the Apostle Elementary School,,"29 John Murray Street,Hamilton,ON",,43.1911602,-79.7832835
+Child_Centric,School,,St. Augustine Elementary School,,"25 Alma Street,Hamilton,ON",,43.2706892,-79.95543567
+Child_Centric,School,,Kehila Jewish Community Day School,,"215 Cline Avenue North,Hamilton,ON",,43.2634353,-79.9025743
+Child_Centric,School,,St. Ann (Ancaster) Elementary School,,"24 Fiddler's Green Road,Hamilton,ON",,43.21874241,-79.98772363
+Child_Centric,School,,Mount Albion Elementary School,,"24 Kennard Street,Hamilton,ON",,43.1888812,-79.79158334
+Child_Centric,School,,Bellmoore Elementary School,,"35 Pumpkin Pass,Hamilton,ON",,43.1255583,-79.81292394
+Child_Centric,School,,St. Luke Elementary School,,"345 Albright Road,Hamilton,ON",,43.2189669,-79.7959287
+Child_Centric,School,,Sherwood Secondary School,,"25 High Street,Hamilton,ON",,43.22757995,-79.82281037
+Child_Centric,School,,Queensdale Elementary School,,"67 Queensdale Avenue East,Hamilton,ON",,43.24208775,-79.8726759
+Child_Centric,School,,Canadian Martyrs' Elementary School,,"1355 Main Street West,Hamilton,ON",,43.2571202,-79.92106256
+Child_Centric,School,,St. Mary Secondary School,,"200 Whitney Avenue,Hamilton,ON",,43.2546545,-79.9278821
+Child_Centric,School,,Millgrove Elementary School,,"375 5th Concession West ,Hamilton,ON",,43.33657662,-79.96048307
+Child_Centric,School,,Columbia International College,,"1033 Main Street West,Hamilton,ON",,43.2582659,-79.9077967
+Child_Centric,School,,St. Michael Elementary School,,"135 Hester Street,Hamilton,ON",,43.2242173,-79.87450656
+Child_Centric,School,,Cathedral High School,,"30 Wentworth Street North,Hamilton,ON",,43.25314395,-79.84748757
+Child_Centric,School,,Memorial (Hamilton) Elementary School,,"1175 Main Street East,Hamilton,ON",,43.2434957,-79.82029794
+Child_Centric,School,,Sir Winston Churchill Secondary School,,"1715 Main Street East,Hamilton,ON",,43.2378776,-79.79521265
+Child_Centric,School,,St. Eugene Elementary School,,"120 Parkdale Avenue South,Hamilton,ON",,43.2337355,-79.79410678
+Child_Centric,School,,Ancaster Meadow Elementary School,,"93 Kitty Murray Lane,Hamilton,ON",,43.2213656,-79.95177164
+Child_Centric,School,,Gatestone Elementary School,,"127 Gatestone Drive,Hamilton,ON",,43.18181805,-79.78940882
+Child_Centric,School,,Adelaide Hoodless Elementary School,,"71 Maplewood Avenue,Hamilton,ON",,43.24579395,-79.8370187
+Child_Centric,School,,Balaclava Elementary School,,"280 10 Concession Road East,Hamilton,ON",,43.3998381,-80.0355532
+Child_Centric,School,,St. Vincent De Paul Elementary School,,"295 Green Cedar Drive,Hamilton,ON",,43.22288034,-79.92253716
+Child_Centric,School,,Sir Allan MacNab Secondary School,,"145 Magnolia Drive,Hamilton,ON",,43.2305748,-79.92145374
+Child_Centric,School,,Flamborough Centre Elementary School,,"922 Centre Road,Hamilton,ON",,43.35898795,-79.93196498
+Child_Centric,School,,Lake Avenue Elementary School,,"157 Lake Avenue North,Hamilton,ON",,43.23180435,-79.7565229
+Child_Centric,School,,Glendale Secondary School,,"145 Rainbow Drive,Hamilton,ON",,43.22604015,-79.77914621
+Child_Centric,School,,Our Lady of Mount Carmel Elementary School,,"1624 Centre Road,Hamilton,ON",,43.4042111,-79.99435731
+Child_Centric,School,,Eastdale Elementary School,,"99 Lincoln Road,Hamilton,ON",,43.2250143,-79.7352323
+Child_Centric,School,,Our Lady of the Assumption Elementary School,,"103 Fletcher Road,Hamilton,ON",,43.149394,-79.8188736
+Child_Centric,School,,Norwood Park Elementary School,,"165 Terrace Drive,Hamilton,ON",,43.23005695,-79.8768485
+Child_Centric,School,,R. A. Riddell Elementary School,,"200 Cranbrook Drive,Hamilton,ON",,43.2216808,-79.9101351
+Child_Centric,School,,Timothy Canadian Reformed School,,"430 East 25th Street,Hamilton,ON",,43.226738,-79.8540067
+Child_Centric,School,,Glenwood Special Day School,,"150 Lower Horning Road,Hamilton,ON",,43.2488161,-79.93442546
+Child_Centric,School,,Dalewood Middle School,,"1150 Main Street West,Hamilton,ON",,43.258202,-79.9131524
+Child_Centric,School,,Vincent Massey Alternative Education Centre,,"155 Macassa Avenue,Hamilton,ON",,43.224717,-79.8419962
+Child_Centric,School,,Sir Wilfrid Laurier School,,"70 Albright Road,Hamilton,ON",,43.21808225,-79.78773863
+Child_Centric,School,,Lee Academy,,"1978 2nd Concession West,Hamilton,ON",,43.24934102,-80.13977243
+Child_Centric,School,,Ray Lewis Elementary School,,"27 Jessica Street,Hamilton,ON",,43.19406705,-79.87116474
+Child_Centric,School,,Franklin Road Elementary School,,"500 Franklin Road,Hamilton,ON",,43.22526445,-79.85144091
+Child_Centric,School,,Sacred Heart Elementary School,,"5 Hamilton Avenue,Hamilton,ON",,43.24129675,-79.84920335
+Child_Centric,School,,Sts. Peter and Paul Elementary School,,"49 Fennell Avenue East,Hamilton,ON",,43.23746565,-79.87483453
+Child_Centric,School,,Bishop Ryan Secondary School,,"1824 Rymal Road East,Hamilton,ON",,43.18149155,-79.81772176
+Child_Centric,School,,Allan A. Greenleaf Elementary School,,"211 Parkside Drive,Hamilton,ON",,43.3340673,-79.91260611
+Child_Centric,School,,St. Charles Adult Education Centre,,"770 Main Street East,Hamilton,ON",,43.2473612,-79.8390513
+Child_Centric,School,,Grandview Adventist Academy,,"3975 Highway 6 ,Hamilton,ON",,43.1336391,-79.9246222
+Child_Centric,School,,Prince of Wales Elementary School,,"77 Melrose Avenue North,Hamilton,ON",,43.2524664,-79.83194566
+Child_Centric,School,,Queen Victoria Elementary School,,"166 Forest Avenue,Hamilton,ON",,43.2483673,-79.86534754
+Child_Centric,School,,Providence Christian School,,"542 Ofield Road North,Hamilton,ON",,43.30442443,-79.979117
+Child_Centric,School,,St. Thomas the Apostle Elementary School,,"170 Skinner Road,Hamilton,ON",,43.3384614,-79.87711719
+Child_Centric,School,,Calvin Christian School,,"547 West 5th Street,Hamilton,ON",,43.22764112,-79.88718237
+Child_Centric,School,,Dundana Elementary School,,"23 Dundana Avenue,Hamilton,ON",,43.258087,-79.95186011
+Child_Centric,School,,St. Kateri Tekakwitha Elementary School,,"22 Queensbury Drive,Hamilton,ON",,43.2020564,-79.8410927
+Child_Centric,School,,St. Joachim Elementary School,,"75 Concerto Crescent,Hamilton,ON",,43.20885863,-79.98870056
+Child_Centric,School,,Helen Detwiler Elementary School,,"320 Brigade Drive,Hamilton,ON",,43.20250875,-79.87791345
+Child_Centric,School,,Colin Macdonald Community School,,"201 Paradise Road North,Hamilton,ON",,43.26989245,-79.89610938
+Child_Centric,School,,Central Elementary School,,"75 Hunter Street West,Hamilton,ON",,43.25407745,-79.87457754
+Child_Centric,School,,Lisgar Elementary School,,"110 Anson Avenue,Hamilton,ON",,43.2110998,-79.82889794
+Child_Centric,School,,Holy Name of Jesus Elementary School,,"181 Belmont Avenue North,Hamilton,ON",,43.24974512,-79.82289856
+Child_Centric,School,,Westdale Secondary School,,"700 Main Street West,Hamilton,ON",,43.2609387,-79.90053007
+Child_Centric,School,,St. John the Baptist Elementary School,,"115 London Street South,Hamilton,ON",,43.2387159,-79.81968135
+Child_Centric,School,,Strathcona Elementary School,,"10 Lamoreaux Street,Hamilton,ON",,43.2640656,-79.88478365
+Child_Centric,School,,Highview Elementary School,,"1040 Queensdale Avenue East,Hamilton,ON",,43.23027955,-79.83113437
+Child_Centric,School,,Janet Lee Elementary School,,"291 Winterberry Drive,Hamilton,ON",,43.19148385,-79.80694691
+Child_Centric,School,,Rockton Elementary School,,"670 Highway 8 ,Hamilton,ON",,43.2298326,-79.773702
+Child_Centric,School,,Dundas Central Elementary School,,"73 Melville Street,Hamilton,ON",,43.2691185,-79.95816305
+Child_Centric,School,,St. Francis Xavier Elementary School,,"298 Highway 8 ,Hamilton,ON",,43.2199681,-79.73267564
+Child_Centric,School,,Saltfleet Secondary School,,"108 Highland Road West,Hamilton,ON",,43.18410765,-79.77850774
+Child_Centric,School,,Lincoln Alexander Elementary School,,"50 Ravenbury Drive,Hamilton,ON",,43.2059277,-79.85272961
+Child_Centric,School,,Hamilton Hebrew Academy,,"60 Dow Avenue,Hamilton,ON",,43.2563902,-79.9101473
+Child_Centric,School,,Ancaster High School,,"374 Jerseyville Road West,Hamilton,ON",,43.2148039,-80.00457315
+Child_Centric,School,,Islamic School of Hamilton,,"1545 Stone Church Road East,Hamilton,ON",,43.19554115,-79.8205309
+Child_Centric,School,,Yorkview Elementary School,,"86 Cameron Avenue,Hamilton,ON",,43.27443385,-79.94507999
+Child_Centric,School,,Tapleytown Elementary School,,"390 Mud Street East,Hamilton,ON",,43.18087325,-79.73462705
+Child_Centric,School,,Our Lady of Lourdes Elementary School,,"420 Mohawk Road East,Hamilton,ON",,43.22216885,-79.85781462
+Child_Centric,School,,Hillfield-Strathallan College,,"299 Fennell Avenue West,Hamilton,ON",,43.2411246,-79.8920991
+Child_Centric,School,,Mary Hopkins Elementary School,,"211 Mill Street North,Hamilton,ON",,43.3377853,-79.89799014
+Child_Centric,School,,St. Jean De Brebeuf Secondary School,,"200 Acadia Drive,Hamilton,ON",,43.20127175,-79.86488985
+Child_Centric,School,,St. Bernadette Elementary School,,"270 Governor's Road,Hamilton,ON",,43.2588048,-79.97235122
+Child_Centric,School,,Collegiate Avenue Elementary School,,"49 Collegiate Avenue,Hamilton,ON",,43.22107215,-79.74930711
+Child_Centric,School,,Orchard Park Secondary School,,"200 Dewitt Road,Hamilton,ON",,43.2172811,-79.71116519
+Child_Centric,School,,Arrell Youth Centre,,"320 Anchor Road,Hamilton,ON",,43.1933421,-79.823784
+Child_Centric,School,,Parkway Learning Centre,,"140 Centennial Parkway North,Hamilton,ON",,43.23324003,-79.76186667
+Child_Centric,School,,Hillcrest Elementary School,,"40 Eastwood Street,Hamilton,ON",,43.23979825,-79.77726642
+Child_Centric,School,,Immaculate Heart of Mary Elementary,,"190 Glover Road,Hamilton,ON",,43.20857365,-79.68228962
+Child_Centric,School,,École secondaire Académie catholique Mère-Teresa,,"50 Lisgar Court,Hamilton,ON",,43.2135421,-79.82813433
+Child_Centric,School,,Lawfield Elementary School,,"45 Berko Street,Hamilton,ON",,43.21581275,-79.850421
+Child_Centric,School,,Holbrook Elementary School,,"450 Sanatorium Road,Hamilton,ON",,43.23752735,-79.91371381
+Child_Centric,School,,Living Hope Christian School,,"1045 Garth Street,Hamilton,ON",,43.2274952,-79.9032182
+Child_Centric,School,,New Testament Academy,,"21 Jameston Avenue,Hamilton,ON",,43.2230699,-79.8855949
+Child_Centric,School,,École élémentaire Pavillon de la jeunesse,,"105 High Street,Hamilton,ON",,43.2264077,-79.82333157
+Child_Centric,School,,St. Mark Elementary School,,"43 Whitedeer Road,Hamilton,ON",,43.1783891,-79.7854854
+Child_Centric,School,,Westmount Secondary School,,"39 Montcalm Drive,Hamilton,ON",,43.2268454,-79.89484658
+Child_Centric,School,,Westview Middle School,,"60 Rolston Drive,Hamilton,ON",,43.2257885,-79.89474607
+Child_Centric,School,,Rehoboth Christian School,,"198 Inksetter Road,Hamilton,ON",,43.2646868,-80.0470921
+Child_Centric,School,,Templemead Elementary School,,"62 Templemead Drive,Hamilton,ON",,43.19687985,-79.84817267
+Child_Centric,School,,Bishop Tonnos Secondary School,,"100 Pannabaker Drive,Hamilton,ON",,43.20230788,-79.99506696
+Child_Centric,School,,Cathy Wever Elementary School,,"160 Wentworth Street North,Hamilton,ON",,43.25705095,-79.84612034
+Child_Centric,School,,Guy B. Brown Elementary School,,"55 Braeheid Avenue,Hamilton,ON",,43.32824735,-79.90896767
+Child_Centric,School,,St. Anthony Daniel Elementary School,,"75 Anson Avenue,Hamilton,ON",,43.21278635,-79.82863616
+Child_Centric,School,,St. Gabriel Elementary School,,"1361 Barton Street,Hamilton,ON",,43.2096058,-79.6401789
+Child_Centric,School,,St. Matthew Elementary School,,"200 Windwood Drive,Hamilton,ON",,43.11745785,-79.81360016
+Child_Centric,School,,Grace Christian School,,"497 Millgrove Side Road,Hamilton,ON",,43.3387908,-79.9589303
+Child_Centric,School,,Greensville Elementary School,,"625 Harvest Road,Hamilton,ON",,43.2814219,-79.9836764
+Child_Centric,School,,South Meadow Elementary School,,"23 Royce Avenue,Hamilton,ON",,43.215707,-79.728399
+Child_Centric,School,,James Street School,,"100 James Street South,Hamilton,ON",,43.25421766,-79.87034549
+Child_Centric,School,,Gateway Alt Ed Centre King William,,"225 King William Street,Hamilton,ON",,43.2555101,-79.8608288
+Child_Centric,School,,Immaculate Conception Elementary School,,"470 Kitty Murray Lane,Hamilton,ON",,43.2093049,-79.95438628
+Child_Centric,School,,St. John Paul II Elementary School,,"600 Acadia Drive,Hamilton,ON",,43.2032474,-79.8689382
+Child_Centric,School,,Dundas Valley Secondary School,,"310 Governors Road,Hamilton,ON",,43.25782965,-79.97610167
+Child_Centric,School,,Hamilton District Christian High School,,"92 Glancaster Road,Hamilton,ON",,43.2074684,-79.9288968
+Child_Centric,School,,Guardian Angels Elementary School,,"705 Centre Road,Hamilton,ON",,43.3436462,-79.91487882
+Child_Centric,School,,Holy Name of Mary Elementary School,,"161 Meadowlands Boulevard,Hamilton,ON",,43.2205616,-79.94533537
+Child_Centric,School,,Blessed Sacrament Elementary School,,"315 East 37th Street,Hamilton,ON",,43.22716965,-79.84160227
+Child_Centric,School,,Wilma's Place Alternative Education Centre,,"770 Main Street East,Hamilton,ON",,43.2473612,-79.8390513
+Child_Centric,School,,St. Teresa of Calcutta Elementary School,,"1 Rexford Drive,Hamilton,ON",,43.2081976,-79.8560119
+Child_Centric,School,,Christadelphian Heritage College,,"522 Book Road East,Hamilton,ON",,43.18772695,-79.95309526
+Child_Centric,School,,Cootes Paradise Elementary School,,"900 King Street West,Hamilton,ON",,43.2640292,-79.90231695
+Child_Centric,School,,Billy Green Elementary School,,"1105 Paramount Drive,Hamilton,ON",,43.2015352,-79.79591196
+Child_Centric,School,,Gordon Price Elementary School,,"11 Guildwood Drive,Hamilton,ON",,43.2233211,-79.92046142
+Child_Centric,School,,Huntington Park Elementary School,,"80 Kingslea Drive,Hamilton,ON",,43.22026355,-79.82762248
+Child_Centric,School,,James Macdonald Elementary School,,"200 Chester Avenue,Hamilton,ON",,43.2169876,-79.8970805
+Child_Centric,School,,Mount Hope Elementary School,,"9149 Airport Road,Hamilton,ON",,43.15778095,-79.92121432
+Child_Centric,School,,Mountview Elementary School,,"59 Karen Crescent,Hamilton,ON",,43.24046235,-79.92538347
+Child_Centric,School,,Pauline Johnson Elementary School,,"25 Hummingbird Lane,Hamilton,ON",,43.21960745,-79.87017654
+Child_Centric,School,,Queen Mary Elementary School,,"1292 Cannon Street East,Hamilton,ON",,43.24587555,-79.81352481
+Child_Centric,School,,Rousseau Elementary School,,"103 McNiven Road,Hamilton,ON",,43.22895055,-79.96210279
+Child_Centric,School,,Kanétskare Elementary School,,"222 Robinson Street,Hamilton,ON",,43.2533705,-79.88237237
+Child_Centric,School,,Tiffany Hills Elementary School,,"255 Raymond Road,Hamilton,ON",,43.2128355,-79.93654747
+Child_Centric,School,,W. H. Ballard Elementary School,,"801 Dunsmure Road,Hamilton,ON",,43.2416511,-79.80295467
+Child_Centric,School,,Westwood Elementary School,,"9 Lynbrook Drive,Hamilton,ON",,43.22791265,-79.89319075
+Child_Centric,School,,Our Lady of Peace Elementary School,,"252 Dewitt Road,Hamilton,ON",,43.2209828,-79.71014957
+Child_Centric,School,,St. Paul Catholic Elementary School,,"24 Amberwood Street,Hamilton,ON",,43.1989888,-79.7963461
+Child_Centric,School,,St. Teresa of Avila Elementary School,,"171 San Remo Drive,Hamilton,ON",,43.2378565,-79.92630141
+Child_Centric,School,,St. Agnes Elementary School,,"80 Colcrest Street,Hamilton,ON",,43.2297514,-79.74572573
+Child_Centric,School,,Beth Jacob Hebrew School,,"375 Aberdeen Avenue,Hamilton,ON",,43.2502559,-79.8901093
+Child_Centric,School,,Notre-Dame Elementary School,,"400 Cumberland Avenue,Hamilton,ON",,43.24171215,-79.83638147
+Child_Centric,School,,Frank Panabaker Elementary School - North Campus,,"168 Huron Avenue,Hamilton,ON",,43.2093429,-79.99159157
+Child_Centric,School,,École élémentaire catholique Monseigneur-de-Laval,,"135 Bendamere Avenue,Hamilton,ON",,43.2340149,-79.89206408
+Child_Centric,School,,St. Thérèse of Lisieux Elementary School,,"1760 Garth Street,Hamilton,ON",,43.2021375,-79.9154561
+Child_Centric,School,,Woodview Mental Health & Autism - Delta School,,"1284 Main Street East,Hamilton,ON",,43.2410964,-79.8138714
+Child_Centric,School,,King William Learning Centre,3rd Floor,"225 King William Street,Hamilton,ON",,43.2555101,-79.8608288
+Child_Centric,School,,Dundas Valley Montessori School,,"14 Kemp Drive,Hamilton,ON",,43.26331942,-79.96454332
+Child_Centric,School,,Nora Frances Henderson Secondary School,,"1770 Upper Sherman Avenue,Hamilton,ON",,43.2077017,-79.8579458
+Child_Centric,School,,École Élémentaire Michaelle Jean,,"2121 Regional Road 56 ,Hamilton,ON",,43.13509,-79.79705618
+Child_Centric,School,,Cairn Christian School,,"795 Highway 8 ,Hamilton,ON",,43.2121861,-79.6910755
+Child_Centric,School,,Our Lady of Hope,,"400 Pumpkin Pass,Hamilton,ON",,43.1269026,-79.8137294
+Child_Centric,School,,Bernie Custis Secondary School,,"1055 King Street East,Hamilton,ON",,43.250321,-79.83135541
+Child_Centric,School,,Oak Hill Academy,,"557 Garner Road West,Hamilton,ON",,43.198081,-80.0084011
+Child_Centric,School,,Shannen Koostachin Elementary School,,"110 Bellagio Avenue,Hamilton,ON",,43.17595945,-79.80319964
+Elder_Centric,Long-Term_Care_Home,,Hamilton Continuing Care,,"125 Wentworth Street South,Hamilton,ON",L8N2Z1,43.24787249,-79.850529
+Elder_Centric,Long-Term_Care_Home,,Extendicare Hamilton,,"90 Chedmac Drive ,Hamilton,ON",L9C7S6,43.23726139,-79.92145992
+Elder_Centric,Long-Term_Care_Home,,Shalom Village Nursing Home,,"70 Macklin Street North,Hamilton,ON",L8S3S1,43.26422089,-79.89517751
+Elder_Centric,Long-Term_Care_Home,,The Meadows,,"12 Tranquility Avenue ,Hamilton,ON",L9G5C2,43.21114908,-80.00729304
+Elder_Centric,Long-Term_Care_Home,,"St. Joseph's Villa, Dundas",,"56 Governor's Road ,Hamilton,ON",L9H5G7,43.26175889,-79.95770113
+Elder_Centric,Long-Term_Care_Home,,Chartwell Willowgrove Long Term Care Residence,,"1217 Old Mohawk Road ,Hamilton,ON",L9K1P6,43.23324649,-79.93527582
+Elder_Centric,Long-Term_Care_Home,,BayWoods Place,,"330 Main Street East,Hamilton,ON",L8N3T9,43.25176169,-79.8569424
+Elder_Centric,Long-Term_Care_Home,,St. Peter's Residence at Chedoke,,"125 Redfern Avenue ,Hamilton,ON",L9C7W9,43.24013109,-79.92006072
+Elder_Centric,Long-Term_Care_Home,,The Wellington Nursing Home,,"1430 Upper Wellington Street ,Hamilton,ON",L9A5H3,43.20931458,-79.879518
+Elder_Centric,Long-Term_Care_Home,,Idlewyld Manor,,"449 Sanatorium Road ,Hamilton,ON",L9C2A7,43.23618909,-79.91485732
+Elder_Centric,Long-Term_Care_Home,,Dundurn Place Care Centre,,"39 Mary Street ,Hamilton,ON",L8R3L8,43.25642639,-79.8639432
+Elder_Centric,Long-Term_Care_Home,,Queen's Garden,,"80 Queen Street North,Hamilton,ON",L8R3P6,43.26115109,-79.87697411
+Elder_Centric,Long-Term_Care_Home,,Victoria Gardens Long Term Care,,"176 Victoria Avenue North,Hamilton,ON",L8L5G1,43.25818539,-79.8542889
+Elder_Centric,Long-Term_Care_Home,,Regina Gardens,,"536 Upper Paradise Road Road,Hamilton,ON",L9C5E3,43.23102399,-79.91358922
+Elder_Centric,Long-Term_Care_Home,,Macassa  Lodge,,"701 Upper Sherman Avenue ,Hamilton,ON",L8V3M7,43.22556189,-79.84805939
+Elder_Centric,Long-Term_Care_Home,,Parkview Nursing Centre,,"545 King Street West,Hamilton,ON",L8P1C1,43.26103249,-79.88486411
+Elder_Centric,Long-Term_Care_Home,,The Village of Wentworth Heights,,"1620 Upper Wentworth Street ,Hamilton,ON",L9B2W3,43.19887338,-79.8736997
+Elder_Centric,Long-Term_Care_Home,,Grace Villa Nursing Home,,"45 Lockton Crescent ,Hamilton,ON",L8V4V5,43.21147629,-79.84709659
+Elder_Centric,Long-Term_Care_Home,,Blackadar Continuing Care Centre,,"101 Creighton Road ,Hamilton,ON",L9H3B7,43.26136689,-79.96732934
+Elder_Centric,Long-Term_Care_Home,,Wentworth Lodge,,"41 South Street West,Hamilton,ON",L9H4C4,43.25986449,-79.94895843
+Elder_Centric,Long-Term_Care_Home,,Arbour Creek Long-Term Care Centre,,"2717 King Street East,Hamilton,ON",L8G1J3,43.22145709,-79.77683127
+Elder_Centric,Retirement_Home,,Bertram Place Retirement Living Centre,,"21 Hatt Street ,Hamilton,ON",L9H2E9,43.26505339,-79.95508463
+Elder_Centric,Retirement_Home,,Lakeview Retirement Centre,,"339 Highway 8  ,Hamilton,ON",L8G1E7,43.22722669,-79.71956205
+Elder_Centric,Retirement_Home,,First Place Hamilton,,"360 King Street East,Hamilton,ON",L8N3Y2,43.25310479,-79.858999
+Elder_Centric,Retirement_Home,,Summit Heights Retirement Residence,,"2126 Rymal Road East,Hamilton,ON",L0R1P0,43.17536178,-79.79243827
+Elder_Centric,Retirement_Home,,Aberdeen Gardens Retirement Residence,,"330 Dundurn Street South,Hamilton,ON",L8P4L6,43.25165109,-79.89294461
+Elder_Centric,Retirement_Home,,Caroline Place Retirement Residence,,"118 Market Street ,Hamilton,ON",L8R3P9,43.25974649,-79.87474961
+Elder_Centric,Retirement_Home,,Meadowlands Retirement Residence,,"1248 Mohawk Road ,Hamilton,ON",L9K1P5,43.23242849,-79.93348352
+Elder_Centric,Retirement_Home,,The Cardinal Retirement Residence,,"10 Herkimer Street ,Hamilton,ON",L8P2G2,43.24921979,-79.873109
+Elder_Centric,Retirement_Home,,St. Elizabeth Retirement Residence,,"391 Rymal Road West,Hamilton,ON",L9B1V2,43.20620238,-79.90930361
+Elder_Centric,Retirement_Home,,Valley Town Residence,,"33 Main Street ,Hamilton,ON",L9H2P7,43.26507529,-79.95289233
+Elder_Centric,Retirement_Home,,Highgate Residence,,"325 Fiddlers Green Road ,Hamilton,ON",L9G1W9,43.20915888,-79.98401634
+Elder_Centric,Retirement_Home,,Ressam Gardens,,"1041 West Fifth Street ,Hamilton,ON",L9B1J5,43.21098918,-79.89378891
+Elder_Centric,Retirement_Home,,Carrington Place Retirement Residence,,"75 Dunham Drive ,Hamilton,ON",L9G1X7,43.21614648,-79.99125764
+Elder_Centric,Retirement_Home,,Abington Court Retirement Residence,,"1500 Main Street East,Hamilton,ON",L8K1E1,43.23895649,-79.80579118
+Elder_Centric,Retirement_Home,,Chartwell Georgian Retirement Residence,,"255 Governors Road ,Hamilton,ON",L9H3K4,43.26028359,-79.97063634
+Elder_Centric,Retirement_Home,,Amica Stoney Creek,,"135 King Street East,Hamilton,ON",L8G1J8,43.21764529,-79.74832566
+Elder_Centric,Retirement_Home,,Village Manor,,"57 John Street West,Hamilton,ON",L0R2H0,43.33537581,-79.89800812
+Elder_Centric,Retirement_Home,,The Carlisle Retirement Residence,,"467 Main Street East,Hamilton,ON",L8N1K1,43.25094969,-79.8514999
+Elder_Centric,Retirement_Home,,Amica Dundas,,"50 Hatt Street ,Hamilton,ON",L9H0A1,43.26448929,-79.95503713
+Elder_Centric,Retirement_Home,,Tara Retirement Home,,"843 Mohawk Road East,Hamilton,ON",L8T2R4,43.21726949,-79.83453709
+Elder_Centric,Retirement_Home,,The Village of Wentworth Heights,,"1620 Upper Wentworth Street ,Hamilton,ON",L9B2W3,43.19887338,-79.8736997
+Elder_Centric,Retirement_Home,,Heritage Green Retirement Home,,"351 Issac Brock Drive ,Hamilton,ON",L8J1Y1,43.19301208,-79.79095937
+Elder_Centric,Retirement_Home,,Residence on Aikman,,"19 Aikman Avenue ,Hamilton,ON",L8M1P6,43.25129329,-79.8485333
+Elder_Centric,Retirement_Home,,Kingsberry Place Seniors Residence,,"1221 Limeridge Road East,Hamilton,ON",L8W1Y1,43.20702509,-79.83081579
+Elder_Centric,Retirement_Home,,Seasons Stoney Creek,,"8 Shoreview Place ,Hamilton,ON",L8E0J6,43.2375435,-79.71585545
+Elder_Centric,Retirement_Home,,Westmount Terrace I,,"723 Rymal Road West,Hamilton,ON",L9B2W1,43.20988658,-79.92649742
+Elder_Centric,Retirement_Home,,Chartwell Deerview Crossing Retirement Residence,,"460 Rymal Road West,Hamilton,ON",L9B0B2,43.20775968,-79.91323761
+Elder_Centric,Retirement_Home,,Orchard Terrace Care Centre,,"199 Glover Road ,Hamilton,ON",L8E5J2,43.21035969,-79.68331444
+Elder_Centric,Retirement_Home,,Villa Italia Retirement Residence,,"530 Upper Paradise Road Road,Hamilton,ON",L9C7W2,43.23116679,-79.91456852
+Elder_Centric,Retirement_Home,,The Wellington,,"1430 Upper Wellington Street Street,Hamilton,ON",L9A5H3,43.20931458,-79.879518
+Elder_Centric,Retirement_Home,,Grandview Retirement Living,,"83 Centennial Parkway South,Hamilton,ON",L8G2C7,43.22502549,-79.76593097
+Elder_Centric,Retirement_Home,,Waterdown Manor,,"335 Dundas Street East,Hamilton,ON",L0R2H0,43.33527221,-79.89141602
+Elder_Centric,Retirement_Home,,Residence on Catharine,,"236 Catharine Street North,Hamilton,ON",L8L4S6,43.26233739,-79.8619548
+Elder_Centric,Retirement_Home,,Residence on Main Street,,"1605 Main Street East,Hamilton,ON",L8H1C4,43.23825689,-79.80137298
+Elder_Centric,Senior_Centre,,Flamborough Seniors Centre,,"  ,,",,43.32371612,-79.90491466
+Elder_Centric,Senior_Centre,,Warden Park Seniors Club,,"  ,,",,43.24592797,-79.79196212
+Elder_Centric,Senior_Centre,,Rosedale Seniors Club,,"  ,,",,43.21898572,-79.80719808
+Elder_Centric,Senior_Centre,,Seniors Activities of Southwest Hamilton (SASH),,"  ,,",,43.25377389,-79.8821645
+Elder_Centric,Senior_Centre,,Main Hess Senior's Activity Club,,"  ,,",,43.25650256,-79.87775938
+Elder_Centric,Senior_Centre,,"Ada Bland ""Club 60"" Seniors",,"  ,,",,43.21735504,-79.75834236
+Elder_Centric,Senior_Centre,,Ancaster Senior Achievement Centre (ASAC),,"  ,,",,43.18453818,-80.07058372
+Elder_Centric,Senior_Centre,,Winona Senior Citizens Centre,,"  ,,",,43.20874439,-79.65308487
+Elder_Centric,Seniors_Active_Living_Centre,,Jewish Social Services,,"30 King Street East,Hamilton,ON",L9H5G6,43.26570659,-79.95217563
+Elder_Centric,Seniors_Active_Living_Centre,,Bernie Morelli Recreation Centre,,"876 Cannon Street East,Hamilton,ON",L8L0C6,43.24990859,-79.82994039
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Sackville Seniors Centre,,"780 Upper Wentworth Street,Hamilton,ON",L9A4V5,43.22452919,-79.8624985
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ada Bland (Club 60) Senior Citizens' Centre,,"6 King Street West,Hamilton,ON",L8G1G8,43.21732069,-79.75839697
+Elder_Centric,Seniors_Active_Living_Centre,,St. Matthew's House,,"705 Main Street East,Hamilton,ON",L8M1K8,43.24822369,-79.84047509
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Winona Seniors' Club,,"1239 Highway 8  ,Hamilton,ON",L8E5S4,43.20875249,-79.65306473
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Ancaster Senior Achievement Centre,,"622 Alberton Road South,Hamilton,ON",L0R1A0,43.18462327,-80.07054506
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Main-Hess Seniors' Centre,,"200 Jackson Street West,Hamilton,ON",L8P4R9,43.25655479,-79.87754941
+Elder_Centric,Seniors_Active_Living_Centre,,Dundas Senior Citizen's Club,,"10 Market Street South,Hamilton,ON",L9H5G4,43.26748039,-79.96360033
+Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Active Living Centre 55+ - MacNab Street,,"75 MacNab Street South,Hamilton,ON",L8P3C1,43.25436299,-79.8714247
+Elder_Centric,Seniors_Active_Living_Centre,,YWCA Hamilton Seniors Active Living Centre 55+ - Putman Family YWCA,,"52 Ottawa Street North,Hamilton,ON",L8H3Y7,43.24383289,-79.81890959
+Elder_Centric,Seniors_Active_Living_Centre,,City of Hamilton - Rosedale Seniors' Club,,"100 Greenhill Avenue ,Hamilton,ON",L8K4T9,43.21900079,-79.80706068
+Errand_Centric,Banks,,BMO Bank Of Montreal,55,"737 Golf Links Road,Hamilton,ON",,43.225278,-79.9548577
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"1128 Fennell Avenue East,Hamilton,ON",,43.225272,-79.8287053
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"1587 Upper James Street,Hamilton,ON",,43.20344495,-79.89231522
+Errand_Centric,Banks,,BMO Bank Of Montreal,200,"50 Bay Street South,Hamilton,ON",,43.25643115,-79.87503061
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"275 James Street North,Hamilton,ON",,43.2637122,-79.8661965
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"290 Queenston Road,Hamilton,ON",,43.234056,-79.79178239
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"303 James Street North,Hamilton,ON",,43.2640437,-79.8661435
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"375 Upper Paradise Road,Hamilton,ON",,43.2339434,-79.911158
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"886 Barton Street East,Hamilton,ON",,43.2537213,-79.8264777
+Errand_Centric,Banks,,BMO Bank Of Montreal,,"999 Upper Wentworth Street,Hamilton,ON",,43.218294,-79.8621942
+Errand_Centric,Banks,,CIBC,,"1015 Golf Links Road,Hamilton,ON",,43.22873105,-79.94189991
+Errand_Centric,Banks,,CIBC,,"30 Wilson Street West,Hamilton,ON",,43.2169521,-79.9877634
+Errand_Centric,Banks,,CIBC,,"1015 King Street West,Hamilton,ON",,43.26188904,-79.90548854
+Errand_Centric,Banks,,CIBC,,"1273 Barton Street East,Hamilton,ON",,43.2498738,-79.8084186
+Errand_Centric,Banks,,CIBC,150,"905 Rymal Road East,Hamilton,ON",,43.1930934,-79.8522329
+Errand_Centric,Banks,,CIBC,,"1550 Upper James Street,Hamilton,ON",,43.2044058,-79.8924584
+Errand_Centric,Banks,,CIBC,,"1882 King Street East,Hamilton,ON",,43.2315678,-79.8079538
+Errand_Centric,Banks,,CIBC,,"251 Parkdale Avenue North,Hamilton,ON",,43.2435199,-79.7891455
+Errand_Centric,Banks,,CIBC,,"399 Greenhill Avenue,Hamilton,ON",,43.2165691,-79.7964517
+Errand_Centric,Banks,,CIBC,500,"1 King Street West,Hamilton,ON",,43.2564542,-79.8694356
+Errand_Centric,Banks,,CIBC,,"630 Mohawk Road West,Hamilton,ON",,43.23321403,-79.91111523
+Errand_Centric,Banks,,CIBC,,"667 Upper James Street,Hamilton,ON",,43.23551445,-79.87828064
+Errand_Centric,Banks,,CIBC,,"75 Centennial Parkway North,Hamilton,ON",,43.2307222,-79.7654367
+Errand_Centric,Banks,,CIBC,,"997 Fennell Avenue,Hamilton,ON",,43.22787024,-79.8378559
+Errand_Centric,Banks,,Continental Currency Exchange,132B,"999 Upper Wentworth Street,Hamilton,ON",,43.218294,-79.8621942
+Errand_Centric,Banks,,Continental Currency Exchange,138,"2 King Street West,Hamilton,ON",,43.2584366,-79.8727588
+Errand_Centric,Banks,,Continental Currency Exchange,E2,"75 Centennial Parkway North,Hamilton,ON",,43.2307222,-79.7654367
+Errand_Centric,Banks,,Continental Currency Exchange,," Jackson Square ,Hamilton,ON",,43.256897,-79.8693485
+Errand_Centric,Banks,,Continental Currency Exchange,," Limeridge Mall ,Hamilton,ON",,43.21761745,-79.86149243
+Errand_Centric,Banks,,Effort Trust Co,,"223 Jackson Street West,Hamilton,ON",,43.2564598,-79.87949926
+Errand_Centric,Banks,,Effort Trust Co,,"300 Mohawk Road East,Hamilton,ON",,43.2249765,-79.8671685
+Errand_Centric,Banks,,Effort Trust Co,,"179 George Street,Hamilton,ON",,43.25909708,-79.8812715
+Errand_Centric,Banks,,Effort Trust Co,,"242 Main Street East,Hamilton,ON",,43.2528705,-79.8605198
+Errand_Centric,Banks,,Effort Trust Co,,"250 Main Street East,Hamilton,ON",,43.2526952,-79.8598874
+Errand_Centric,Banks,,Effort Trust Co,,"270 Mohawk Road East,Hamilton,ON",,43.2252313,-79.8682013
+Errand_Centric,Banks,,Effort Trust Co,,"333 Quigley Road,Hamilton,ON",,43.2110596,-79.78657527
+Errand_Centric,Banks,,Effort Trust Co,,"801 Mohawk Road West,Hamilton,ON",,43.2331452,-79.9222912
+Errand_Centric,Banks,,HSBC Bank,,"40 King Street East,Hamilton,ON",,43.2559041,-79.8681872
+Errand_Centric,Banks,,National Bank Of Canada,,"123 James Street North,Hamilton,ON",,43.2601717,-79.8677372
+Errand_Centric,Banks,,National Bank Of Canada,,"447 Main Street West,Hamilton,ON",,43.2592587,-79.8879379
+Errand_Centric,Banks,,National Bank Of Canada,,"880 Upper Wentworth Street,Hamilton,ON",,43.2208345,-79.8632434
+Errand_Centric,Banks,,President's Choice Financial,,"1579 Main Street West,Hamilton,ON",,43.2553011,-79.92885885
+Errand_Centric,Banks,,RBC Royal Bank,,"1100 Golf Links Road,Hamilton,ON",,43.2274765,-79.9386335
+Errand_Centric,Banks,,RBC Royal Bank,,"59 Wilson Street West,Hamilton,ON",,43.2174392,-79.9898515
+Errand_Centric,Banks,,RBC Royal Bank,111,"1280 Main Street West,Hamilton,ON",,43.2639397,-79.91782523
+Errand_Centric,Banks,,RBC Royal Bank,,"1145 Barton Street East,Hamilton,ON",,43.2512074,-79.8135188
+Errand_Centric,Banks,,RBC Royal Bank,,"1282 Highway 8 ,Hamilton,ON",,43.2075455,-79.6507537
+Errand_Centric,Banks,,RBC Royal Bank,,"1803 Stone Church Road East,Hamilton,ON",,43.19207123,-79.81122642
+Errand_Centric,Banks,,RBC Royal Bank,,"1845 Main Street West,Hamilton,ON",,43.2520124,-79.9394867
+Errand_Centric,Banks,,RBC Royal Bank,,"21 King Street West,Hamilton,ON",,43.2567921,-79.8701083
+Errand_Centric,Banks,,RBC Royal Bank,,"2132 King Street East,Hamilton,ON",,43.23099607,-79.8022259
+Errand_Centric,Banks,,RBC Royal Bank,,"545 Rymal Road East,Hamilton,ON",,43.1967016,-79.8689903
+Errand_Centric,Banks,,RBC Royal Bank,,"555 Concession Street,Hamilton,ON",,43.2410698,-79.8518822
+Errand_Centric,Banks,,RBC Royal Bank,,"65 Locke Street South,Hamilton,ON",,43.2584759,-79.88410176
+Errand_Centric,Banks,,RBC Royal Bank,,"730 Main Street East,Hamilton,ON",,43.24768784,-79.84030284
+Errand_Centric,Banks,,RBC Royal Bank,,"752 Upper James Street,Hamilton,ON",,43.2298013,-79.8814157
+Errand_Centric,Banks,,RBC Royal Bank,,"810 Upper Gage Avenue,Hamilton,ON",,43.2193311,-79.8429938
+Errand_Centric,Banks,,Scotiabank,,"851 Golf Links Road,Hamilton,ON",,43.2265559,-79.9485576
+Errand_Centric,Banks,,Scotiabank,,"1070 Stone Church Road East,Hamilton,ON",,43.1991633,-79.8408005
+Errand_Centric,Banks,,Scotiabank,,"12 King Street East,Hamilton,ON",,43.25592975,-79.8689318
+Errand_Centric,Banks,,Scotiabank,,"1255 Barton Street East,Hamilton,ON",,43.25004227,-79.80918167
+Errand_Centric,Banks,,Scotiabank,,"135 Fennell Avenue West,Hamilton,ON",,43.2388127,-79.882946
+Errand_Centric,Banks,,Scotiabank,1402,"1 King Street West,Hamilton,ON",,43.2564542,-79.8694356
+Errand_Centric,Banks,,Scotiabank,,"149 Benvenuto Crescent,Hamilton,ON",,43.21037953,-79.91500022
+Errand_Centric,Banks,,Scotiabank,,"1550 Upper James Street,Hamilton,ON",,43.2044058,-79.8924584
+Errand_Centric,Banks,,Scotiabank,,"18 Bevan Court,Hamilton,ON",,43.22689616,-79.80767032
+Errand_Centric,Banks,,Scotiabank,,"276 Barton Street East,Hamilton,ON",,43.26104555,-79.85402465
+Errand_Centric,Banks,,Scotiabank,,"600 James Street North,Hamilton,ON",,43.2728867,-79.8618768
+Errand_Centric,Banks,,Scotiabank,,"630 Upper James Street,Hamilton,ON",,43.2380216,-79.8780265
+Errand_Centric,Banks,,Scotiabank,,"670 Queenston Rd Road,Hamilton,ON",,43.2298326,-79.773702
+Errand_Centric,Banks,,Scotiabank,,"859 Upper Wentworth Street,Hamilton,ON",,43.22163613,-79.86243872
+Errand_Centric,Banks,,Scotiabank,,"924 King Street East,Hamilton,ON",,43.2511763,-79.838207
+Errand_Centric,Banks,,Scotiabank,,"997 Fennell Avenue East,Hamilton,ON",,43.22787024,-79.8378559
+Errand_Centric,Banks,,Scotiabank,,"999 King Street West,Hamilton,ON",,43.26214,-79.9048801
+Errand_Centric,Banks,,TD Bank Financial Group,202,"540 Concession Street,Hamilton,ON",,43.2410429,-79.8529558
+Errand_Centric,Banks,,TD Canada Trust,,"977 Golf Links Road,Hamilton,ON",,43.2272757,-79.9444493
+Errand_Centric,Banks,,TD Canada Trust,,"98 Wilson Street West,Hamilton,ON",,43.2151023,-79.9911269
+Errand_Centric,Banks,,TD Canada Trust,,"100 King Street West,Hamilton,ON",,43.257343,-79.8701933
+Errand_Centric,Banks,,TD Canada Trust,,"1119 Fennell Avenue East,Hamilton,ON",,43.2254158,-79.8281298
+Errand_Centric,Banks,,TD Canada Trust,,"1311 Barton Street East,Hamilton,ON",,43.24950108,-79.80678096
+Errand_Centric,Banks,,TD Canada Trust,,"1565 Upper James Street,Hamilton,ON",,43.2043591,-79.892101
+Errand_Centric,Banks,,TD Canada Trust,,"1900 King Street East,Hamilton,ON",,43.2312697,-79.8064708
+Errand_Centric,Banks,,TD Canada Trust,,"194 James Street South,Hamilton,ON",,43.25096285,-79.87186609
+Errand_Centric,Banks,,TD Canada Trust,,"46 King Street East,Hamilton,ON",,43.2656925,-79.9516102
+Errand_Centric,Banks,,TD Canada Trust,,"54 King Street East,Hamilton,ON",,43.2161646,-79.7549512
+Errand_Centric,Banks,,TD Canada Trust,,"550 Fennell Avenue East,Hamilton,ON",,43.2320271,-79.8560644
+Errand_Centric,Banks,,TD Canada Trust,,"65 Mall Road,Hamilton,ON",,43.2204891,-79.8608744
+Errand_Centric,Banks,,TD Canada Trust,,"781 Mohawk Road West,Hamilton,ON",,43.2331351,-79.921757
+Errand_Centric,Banks,,TD Canada Trust,,"830 Upper James Street,Hamilton,ON",,43.2286632,-79.8819122
+Errand_Centric,Banks,,TD Canada Trust,,"867 Rymal Road East,Hamilton,ON",,43.1930914,-79.8545398
+Errand_Centric,Banks,,TD Canada Trust,,"938 King Street West,Hamilton,ON",,43.2632142,-79.9029875
+Errand_Centric,Library,,Ancaster Library,,"300 Wilson Street East,Hamilton,ON",,43.22530917,-79.97666063
+Errand_Centric,Library,,Barton Library,,"571 Barton Street East,Hamilton,ON",,43.2580317,-79.84121898
+Errand_Centric,Library,,Binbrook Library,,"2641 Regional Road 65 ,Hamilton,ON",,43.12170438,-79.80342947
+Errand_Centric,Library,,Carlisle Library,,"1496 Centre Road,Hamilton,ON",,43.39605339,-79.98108621
+Errand_Centric,Library,,Concession Library,,"565 Concession Street,Hamilton,ON",,43.2410416,-79.85136825
+Errand_Centric,Library,,Dundas Library,,"18 Oglivie Street,Hamilton,ON",,43.26548389,-79.95494871
+Errand_Centric,Library,,Freelton Library,,"1803 Brock Road,Hamilton,ON",,43.39793341,-80.03876645
+Errand_Centric,Library,,Greensville Library,,"59 Kirby Avenue,Hamilton,ON",,43.27528027,-79.99612469
+Errand_Centric,Library,,Hamilton Central Library,,"55 York Boulevard,Hamilton,ON",,43.25894156,-79.87069972
+Errand_Centric,Library,,Kenilworth Library,,"103 Kenilworth Avenue North,Hamilton,ON",,43.24349824,-79.80884163
+Errand_Centric,Library,,Locke Library,,"285 Locke Street South,Hamilton,ON",,43.25182285,-79.88702204
+Errand_Centric,Library,,Lynden Library,,"110 Lynden Road,Hamilton,ON",,43.23656021,-80.14659537
+Errand_Centric,Library,,Mount Hope Library,,"3027 Homestead Drive,Hamilton,ON",,43.16057987,-79.9120622
+Errand_Centric,Library,,Red Hill Library,,"695 Queenston Road,Hamilton,ON",,43.23028211,-79.77194472
+Errand_Centric,Library,,Saltfleet Library,,"131 Gray Road,Hamilton,ON",,43.22229245,-79.74507509
+Errand_Centric,Library,,Sherwood Library,,"467 Upper Ottawa Street,Hamilton,ON",,43.22656913,-79.82861769
+Errand_Centric,Library,,Stoney Creek Library,,"777 Highway 8 ,Hamilton,ON",,43.21286435,-79.6914053
+Errand_Centric,Library,,Terryberry Library,,"100 Mohawk Road West,Hamilton,ON",,43.23031428,-79.88674908
+Errand_Centric,Library,,Turner Park Library,,"352 Rymal Road East,Hamilton,ON",,43.19846705,-79.87862786
+Errand_Centric,Library,,Valley Park Library,Unit 12,"1050 Paramount Drive,Hamilton,ON",,43.19309594,-79.79790001
+Errand_Centric,Library,,Waterdown Library,,"163 Dundas Street East,Hamilton,ON",,43.3236294,-79.90479819
+Errand_Centric,Library,,Westdale Library,,"955 King Street West,Hamilton,ON",,43.26256862,-79.90347677
+Errand_Centric,Post_Office,,Canada Post,,"27 Legend Court,Hamilton,ON",,43.2273266,-79.9493551
+Errand_Centric,Post_Office,,Canada Post,,"2621 Hiway 56 ,Hamilton,ON",,43.12244137,-79.80343027
+Errand_Centric,Post_Office,,Canada Post,,"1462 Centre Road,Hamilton,ON",,43.3932274,-79.9788541
+Errand_Centric,Post_Office,,Canada Post,,"232 Cannon Street East,Hamilton,ON",,43.2580075,-79.8568819
+Errand_Centric,Post_Office,,Canada Post,,"60 Kenilworth Avenue North,Hamilton,ON",,43.2422001,-79.8089928
+Errand_Centric,Post_Office,,Canada Post,,"991 King Street West,Hamilton,ON",,43.26232773,-79.90441419
+Errand_Centric,Post_Office,,Canada Post,,"94 Lynden Road,Hamilton,ON",,43.23522263,-80.14637003
+Errand_Centric,Post_Office,,Canada Post,,"3055 Homestead Drive,Hamilton,ON",,43.16011577,-79.9125469
+Errand_Centric,Post_Office,,Canada Post,,"1280 Highway 8 ,Hamilton,ON",,43.2076061,-79.6511037
+Errand_Centric,Post_Office,,Canada Post,,"17 Main Street North,Hamilton,ON",,43.33371054,-79.89357425
+Errand_Centric,Post_Office,,Canada Post,,"133 King Street West,Hamilton,ON",,43.26714075,-79.95951224
+Errand_Centric,Post_Office,,Canada Post,102,"101 Osler Drive,Hamilton,ON",,43.2583735,-79.9430996
+Errand_Centric,Post_Office,,Canada Post,,"620 King Street West,Hamilton,ON",,43.262314,-79.8871553
+Errand_Centric,Post_Office,,Canada Post,,"331 Dundurn Street South,Hamilton,ON",,43.25131055,-79.89241258
+Errand_Centric,Post_Office,,Canada Post,117,"350 King Street East,Hamilton,ON",,43.2533681,-79.8590923
+Errand_Centric,Post_Office,,Canada Post,,"510 Concession Street,Hamilton,ON",,43.241413,-79.8544484
+Errand_Centric,Post_Office,,Canada Post,,"753 Main Street East,Hamilton,ON",,43.2477991,-79.8396504
+Errand_Centric,Post_Office,,Canada Post,,"1183 Barton Street East,Hamilton,ON",,43.2596157,-79.8478733
+Errand_Centric,Post_Office,,Canada Post,,"663 Upper James Street,Hamilton,ON",,43.236083,-79.8782326
+Errand_Centric,Post_Office,,Canada Post,1,"210 Mohawk Road Esat,Hamilton,ON",,43.22583859,-79.87143185
+Errand_Centric,Post_Office,,Canada Post,,"1119 Fennell Avenue East,Hamilton,ON",,43.2254158,-79.8281298
+Errand_Centric,Post_Office,,Canada Post,,"999 Upper Wentworth Street,Hamilton,ON",,43.218294,-79.8621942
+Errand_Centric,Post_Office,,Canada Post,,"1300 Garth Street,Hamilton,ON",,43.2201955,-79.9067357
+Errand_Centric,Post_Office,,Canada Post,,"47 Wilson Street West,Hamilton,ON",,43.2176398,-79.9893884
+Errand_Centric,Post_Office,,Canada Post,,"270 Mud Street West,Hamilton,ON",,43.196545,-79.7928417
+Errand_Centric,Post_Office,,Canada Post,,"1447 Upper Ottawa Street,Hamilton,ON",,43.196241,-79.8415418
+Errand_Centric,Post_Office,,Canada Post,,"377 Hiway 8 ,Hamilton,ON",,43.21969737,-79.72507259
+Errand_Centric,Post_Office,,Dundurn Postal Outlet,,"50 Dundurn Street South,Hamilton,ON",,43.2616844,-79.8895955
+Errand_Centric,Post_Office,,Eastgate Postal Outlet,,"75 Centennial Parkway North,Hamilton,ON",,43.2307222,-79.7654367
+Errand_Centric,Post_Office,,Fiesta Postal Svc Plus,1,"312 Grays Road,Hamilton,ON",,43.2323452,-79.7401075
+Errand_Centric,Post_Office,,Gagemount Postal Outlet,,"712 Mohawk Road East,Hamilton,ON",,43.2189345,-79.8427235
+Errand_Centric,Post_Office,,Jackson Station,7,"2 King Street West,Hamilton,ON",,43.2584366,-79.8727588
+Errand_Centric,Post_Office,,Canada Post,,"1000 Golf Links Road,Hamilton,ON",,43.2268997,-79.9417494
+Errand_Centric,Post_Office,,Stoney Creek Postal Outlet,,"38 King Street East,Hamilton,ON",,43.2164518,-79.7564103
+Errand_Centric,Post_Office,,Strathbarton Postal Outlet,,"1565 Barton Street East,Hamilton,ON",,43.2466815,-79.7953142
+Errand_Centric,Post_Office,,Uno Stop Convenience,77,"1447 Upper Ottawa Street,Hamilton,ON",,43.196241,-79.8415418
+Errand_Centric,Post_Office,,UPS Store,33,"35 Stone Church Road,Hamilton,ON",,43.2281132,-79.936787
+Errand_Centric,Post_Office,,UPS Store,,"155 Main Street East,Hamilton,ON",,43.2406089,-79.8107088
+Errand_Centric,Post_Office,,UPS Store,1,"1439 Upper Ottawa Street,Hamilton,ON",,43.1966047,-79.84139747
+Errand_Centric,Post_Office,,UPS Store,,"1063 King Street West,Hamilton,ON",,43.2611036,-79.9073379
+Errand_Centric,Post_Office,,UPS Store,2,"558 Upper Gage Avenue,Hamilton,ON",,43.2286747,-79.8389177
+Errand_Centric,Post_Office,,UPS Store,22,"2 King Street East,Hamilton,ON",,43.2168123,-79.7579185
+Errand_Centric,Post_Office,,UPS Store,,"762 Upper James Street,Hamilton,ON",,43.22935536,-79.88161248
+Errand_Centric,Post_Office,,UPS Store,4,"168 Barton Street,Hamilton,ON",,43.2322715,-79.739485
+Errand_Centric,Post_Office,,UPS Store,12,"255 Dundas Street East,Hamilton,ON",,43.33002185,-79.8970287
+Grocery_Centric,Grocer_ConvenienceStore,,Upper Wentworth Convenience,77,"1216 Upper Wentworth Street ,Hamilton,ON",L9A4W2,43.210053,-79.8677882
+Grocery_Centric,Grocer_ConvenienceStore,,Wellington Variety,105,"125 Wellington Street North,Hamilton,ON",L8R3J4,43.25694975,-79.85822787
+Grocery_Centric,Grocer_ConvenienceStore,,Uno Stop Convenience,77,"1447 Upper Ottawa Street ,Hamilton,ON",L8W3J6,43.196241,-79.8415418
+Grocery_Centric,Grocer_ConvenienceStore,,Your Choice Variety,,"11 Hatton Drive ,Hamilton,ON",L9G2H5,43.20661084,-79.98336061
+Grocery_Centric,Grocer_ConvenienceStore,,12208679 Canada Inc O,,"108 Cumberland Avenue ,Hamilton,ON",L8M1Z3,43.2448809,-79.8470441
+Grocery_Centric,Grocer_ConvenienceStore,,1246333 Ontario Inc,,"264 Kenilworth Avenue North,Hamilton,ON",,43.2483324,-79.8063518
+Grocery_Centric,Grocer_ConvenienceStore,,2206420 Ontario Inc,,"163 James Street South,Hamilton,ON",L8P3A3,43.2519027,-79.8709985
+Grocery_Centric,Grocer_ConvenienceStore,,2454915 Ontario Inc,,"82 Wellington Street North,Hamilton,ON",L8R1N1,43.25584097,-79.85811036
+Grocery_Centric,Grocer_ConvenienceStore,,4 Seasons Convenience,2,"990 Upper Wentworth Street ,Hamilton,ON",L9A5E9,43.21752797,-79.86465061
+Grocery_Centric,Grocer_ConvenienceStore,,7-Eleven,,"415 Melvin Avenue ,Hamilton,ON",L8H2L4,43.2412956,-79.779279
+Grocery_Centric,Grocer_ConvenienceStore,,Daisy Mart,104,"181 Main Street West,Hamilton,ON",L8P4S1,43.2571054,-79.8774892
+Grocery_Centric,Grocer_ConvenienceStore,,7-Eleven,,"622 Upper Street ,Hamilton,ON",L9A3R1,43.2369713,-79.86789068
+Grocery_Centric,Grocer_ConvenienceStore,,A Z Mini Mart,,"1141 Main Street East,Hamilton,ON",L8M1P2,43.2432475,-79.82205968
+Grocery_Centric,Grocer_ConvenienceStore,,Ace Food Market Inc,,"483 King Street East,Hamilton,ON",L8N1C7,43.2528851,-79.8544767
+Grocery_Centric,Grocer_ConvenienceStore,,Alif Newsgroup,452,"2 King Street West,Hamilton,ON",L8P1A1,43.2584366,-79.8727588
+Grocery_Centric,Grocer_ConvenienceStore,,Almanar Food Market,,"388 Concession Street ,Hamilton,ON",L9A1B7,43.2426537,-79.8593921
+Grocery_Centric,Grocer_ConvenienceStore,,Any Time Convenience,1,"659 Upper James Street ,Hamilton,ON",L9C2Y9,43.23670805,-79.87768145
+Grocery_Centric,Grocer_ConvenienceStore,,Anytime Convenience,,"878 King Street West,Hamilton,ON",L8S4S6,43.2633417,-79.9009843
+Grocery_Centric,Grocer_ConvenienceStore,,Anytime Food Mart,,"180 Queen Street South,Hamilton,ON",L8P3S7,43.2488332,-79.8830139
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"12 Garner Road East,Hamilton,ON",L9G2J8,43.20169133,-79.9817229
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"38 Wilson Street West,Hamilton,ON",L9G1N2,43.21661801,-79.98882449
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"1120 Upper Sherman Avenue ,Hamilton,ON",L8W3W1,43.21191623,-79.8562662
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"205 Quigley Road ,Hamilton,ON",L8K5M8,43.2162076,-79.7843935
+Grocery_Centric,Grocer_ConvenienceStore,,City Mart Inc,,"23 King Street East,Hamilton,ON",L8N1A1,43.2566245,-79.8681915
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"2327 King Street East,Hamilton,ON",L8K1X6,43.2293263,-79.7952381
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,,"2732 Barton Street East,Hamilton,ON",L8E4M6,43.2335269,-79.7462707
+Grocery_Centric,Grocer_ConvenienceStore,,Avondale Food Stores,44,"399 Greenhill Avenue ,Hamilton,ON",L8K6N5,43.2165691,-79.7964517
+Grocery_Centric,Grocer_ConvenienceStore,,B B Variety Store,,"538 Upper James Street ,Hamilton,ON",L9C2Y2,43.2415374,-79.8763258
+Grocery_Centric,Grocer_ConvenienceStore,,Beach Convenience,,"92 Stapleton Avenue ,Hamilton,ON",L8H3N6,43.2557699,-79.8044827
+Grocery_Centric,Grocer_ConvenienceStore,,Beavers Convenience,,"21 Panabaker Drive ,Hamilton,ON",L9GL9G,43.1997278,-79.9956139
+Grocery_Centric,Grocer_ConvenienceStore,,Becker's,,"564 Barton Street East,Hamilton,ON",L8L2Z3,43.2578045,-79.8415897
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear,,"82a Wellington Street North,Hamilton,ON",L8R1N1,43.2582707,-79.8572927
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"1003 Mohawk Road West,Hamilton,ON",L9C7P5,43.2332535,-79.9297477
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"1393 Upper Gage Avenue ,Hamilton,ON",L8W1E6,43.2012574,-79.8502904
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"310 Limeridge Road West,Hamilton,ON",L9C2V2,43.2239154,-79.8992522
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"580 Fennell Avenue East,Hamilton,ON",L8V1T1,43.2319441,-79.855723
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"744 Concession Street ,Hamilton,ON",L8V1C1,43.2404062,-79.8496106
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"838 King Street East,Hamilton,ON",L8M1B4,43.251236,-79.8413693
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Foodmart,,"1150 King Street East,Hamilton,ON",L8M1E8,43.2479976,-79.8289014
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Foodmart Inc Head Ofc,,"11 Honeysuckle Crescent ,Hamilton,ON",L9K1A9,43.2344608,-79.93295215
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Variety,B,"45 Kenilworth Avenue North,Hamilton,ON",L8H4R4,43.2420286,-79.8094447
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience,,"1528 Barton Street East,Hamilton,ON",L8H2X4,43.2470823,-79.7980499
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"412 Wilson Street East,Hamilton,ON",L9G2C3,43.22894725,-79.97499675
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,1,"270 King Street West,Hamilton,ON",L8P1A9,43.2591195,-79.87710096
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"1014 Barton Street East,Hamilton,ON",L8L3E1,43.2521298,-79.8194094
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"1016 King Street West,Hamilton,ON",L8S1L4,43.26209513,-79.9057212
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"155 Hunter Street West,Hamilton,ON",L8P1R3,43.255059,-79.87740202
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"1557 Main Street East,Hamilton,ON",L8K1E5,43.2388451,-79.8028176
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"17 King Street East,Hamilton,ON",L8N1A1,43.25670485,-79.8683747
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"180 Kenilworth Avenue North,Hamilton,ON",L8H4S1,43.2458376,-79.8074256
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,1B,"66 Mall Road ,Hamilton,ON",L8V5B9,43.2211704,-79.8608208
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"212 John Street South,Hamilton,ON",L8N2C8,43.2505344,-79.8690223
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"215 King Street West,Hamilton,ON",L8P1A7,43.2583845,-79.8760946
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,22,"810 Main Street East,Hamilton,ON",L8M1L6,43.2468349,-79.8372779
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"350 King Street East, Hamilton,ON",,43.2535432,-79.85892098
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,4,"558 Upper Gage Avenue ,Hamilton,ON",L8V4J6,43.2286747,-79.8389177
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"440 Cannon Street East,Hamilton,ON",L8L2C8,43.2557511,-79.8476201
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"447 Concession Street ,Hamilton,ON",L9A1C1,43.24207717,-79.85602215
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"483 King Street East,Hamilton,ON",L8N1C7,43.2528851,-79.8544767
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"535 Upper Wellington Street ,Hamilton,ON",L9A3P7,43.2393795,-79.8661721
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"55 Parkdale Avenue North,Hamilton,ON",L8H5W7,43.2378555,-79.7916048
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"561 Queenston Road ,Hamilton,ON",L8K1J7,43.230987,-79.7773916
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"784 Concession Street ,Hamilton,ON",L8V1C9,43.2384265,-79.8424664
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"800 Barton Street East,Hamilton,ON",L8L3B3,43.2549529,-79.830589
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"856 Lawrence Road ,Hamilton,ON",L8K2A2,43.2290238,-79.8036879
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"862 Mohawk Road East,Hamilton,ON",L8T2R5,43.21668928,-79.83376659
+Grocery_Centric,Grocer_ConvenienceStore,,Glow Groceteria,,"177 Glow Avenue ,Hamilton,ON",L8H3W4,43.25389331,-79.77775464
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,9,"25 Redmond Drive ,Hamilton,ON",L8W3K7,43.2059863,-79.8649637
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bonus,,"653 Barton Street East,Hamilton,ON",L8L3A3,43.256921,-79.8373051
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bonus Convenience Store,,"601 Upper James Street ,Hamilton,ON",L9C2Y7,43.2395943,-79.8767524
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bonus Group,,"78 Queenston Road ,Hamilton,ON",L8K6R6,43.2364067,-79.8003391
+Grocery_Centric,Grocer_ConvenienceStore,,Big Fortune,,"1291 Main Street East,Hamilton,ON",L8K1B3,43.24148844,-79.81445214
+Grocery_Centric,Grocer_ConvenienceStore,,Bug Bee Convenience,A,"1466 Main Street East,Hamilton,ON",,43.23975178,-79.80771094
+Grocery_Centric,Grocer_ConvenienceStore,,Busy Bee Convenience,,"478 Upper Wellington Street ,Hamilton,ON",L9A3P4,43.2413,-79.8657263
+Grocery_Centric,Grocer_ConvenienceStore,,Busy Bee Food Mart,,"1146 Barton Street East,Hamilton,ON",L8H2V1,43.2507493,-79.8136113
+Grocery_Centric,Grocer_ConvenienceStore,,C & C Variety,22,"96 Main Street East,Hamilton,ON",L8N1G3,43.2541689,-79.86607072
+Grocery_Centric,Grocer_ConvenienceStore,,Centennial Big Bear,5,"160 Centennial Parkway North,Hamilton,ON",L8E1H9,43.2340857,-79.7615001
+Grocery_Centric,Grocer_ConvenienceStore,,Charline Variety Store,,"142 Charlton Avenue West,Hamilton,ON",L8P2C7,43.2515375,-79.8789169
+Grocery_Centric,Grocer_ConvenienceStore,,Chen F,,"33 Argyle Avenue ,Hamilton,ON",L8H2S5,43.25042719,-79.81480952
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1136 Golf Links Road ,Hamilton,ON",L9K1J8,43.2281687,-79.9371888
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"33 Wilson Street West,Hamilton,ON",L9G1N1,43.2171438,-79.9888821
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1070 Stone Church Road East,Hamilton,ON",L8W3K8,43.1991633,-79.8408005
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1110 Fennell Avenue East,Hamilton,ON",L8T1R8,43.22537975,-79.83012379
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1300 Garth Street ,Hamilton,ON",L9C4L7,43.2201955,-79.9067357
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1445 Main Street West,Hamilton,ON",L8S1C8,43.2575544,-79.9232086
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1460 King Street East,Hamilton,ON",L8K1S7,43.2387822,-79.8210127
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"1660 Upper James Street ,Hamilton,ON",L9B1K5,43.2012849,-79.8941941
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"2471 Barton Street East,Hamilton,ON",L8E2X1,43.2369199,-79.7601948
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"528 Mohawk Road East,Hamilton,ON",L8V2J6,43.2211721,-79.8517995
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"648 King Street West,Hamilton,ON",L8P1C5,43.2626993,-79.8884323
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"801 Mohawk Road West,Hamilton,ON",L9C6C2,43.2331452,-79.9222912
+Grocery_Centric,Grocer_ConvenienceStore,,Circle K,,"917 Upper James Street ,Hamilton,ON",L9C3A3,43.22555295,-79.88253664
+Grocery_Centric,Grocer_ConvenienceStore,,City Convenience,,"380 Crockett Street ,Hamilton,ON",L8V1H9,43.2357381,-79.8399922
+Grocery_Centric,Grocer_ConvenienceStore,,City Mart Inc,,"23 King Street East,Hamilton,ON",L8N1A1,43.2566245,-79.8681915
+Grocery_Centric,Grocer_ConvenienceStore,,Computer Convenience Plus,,"225 Kenilworth Avenue North,Hamilton,ON",L8H4S3,43.24702584,-79.80728979
+Grocery_Centric,Grocer_ConvenienceStore,,Corktown General Store,1,"150 Charlton Avenue East,Hamilton,ON",L8N3X3,43.248149,-79.86689789
+Grocery_Centric,Grocer_ConvenienceStore,,Crazy Bills,,"580 Upper Ottawa Street ,Hamilton,ON",L8T3T2,43.2257997,-79.829594
+Grocery_Centric,Grocer_ConvenienceStore,,Cwnberland Market,,"108 Cumberland Avenue ,Hamilton,ON",L8M1Z3,43.2448809,-79.8470441
+Grocery_Centric,Grocer_ConvenienceStore,,D & J Convenience Store,,"182 Ottawa Street North,Hamilton,ON",L8H3Z5,43.2477183,-79.8174518
+Grocery_Centric,Grocer_ConvenienceStore,,Dad's Variety Store,,"40 Depew Street ,Hamilton,ON",L8L7H8,43.2581246,-79.8187302
+Grocery_Centric,Grocer_ConvenienceStore,,Daisy Mart,104,"181 Main Street West,Hamilton,ON",L8P4S1,43.2571054,-79.8774892
+Grocery_Centric,Grocer_ConvenienceStore,,Danny's Convenience,,"1654 Wilson Street West,Hamilton,ON",L9G3K9,43.1914049,-80.0406849
+Grocery_Centric,Grocer_ConvenienceStore,,Dc's Variety & Subs,,"540 Wentworth Street North,Hamilton,ON",L8L5X3,43.2681195,-79.8419353
+Grocery_Centric,Grocer_ConvenienceStore,,Dollar Plus Convenience,,"1120 Main Street West,Hamilton,ON",L8S1C1,43.2598507,-79.8984672
+Grocery_Centric,Grocer_ConvenienceStore,,Dollar Tree,,"1110 Wilson Street West,Hamilton,ON",L9G3K9,43.1989382,-80.01692995
+Grocery_Centric,Grocer_ConvenienceStore,,Dollar Tree,102,"640 Queenston Road ,Hamilton,ON",L8K1K2,43.2299324,-79.7741619
+Grocery_Centric,Grocer_ConvenienceStore,,Dollar Tree,,"1070 Stone Church Road East,Hamilton,ON",L8W3K8,43.1991633,-79.8408005
+Grocery_Centric,Grocer_ConvenienceStore,,Dollar Tree,B,"502 Centennial Parkway North,Hamilton,ON",L8E0G2,43.2300824,-79.7634781
+Grocery_Centric,Grocer_ConvenienceStore,,Durand Milk,,"12 Robinson Street ,Hamilton,ON",L8P1Y5,43.2510609,-79.8723945
+Grocery_Centric,Grocer_ConvenienceStore,,Easy In & Out Convenience,,"475 Main Street West,Hamilton,ON",L8P1K8,43.2596097,-79.88953971
+Grocery_Centric,Grocer_ConvenienceStore,,Esso,,"1816 Rymal Road East,Hamilton,ON",L8EL8E,43.2026859,-79.8939696
+Grocery_Centric,Grocer_ConvenienceStore,,Ever Convenience,,"675 Barton Street East,Hamilton,ON",L8L3A5,43.2565409,-79.8358635
+Grocery_Centric,Grocer_ConvenienceStore,,Everything Convenience-Food,,"1022 Barton Street East,Hamilton,ON",L8L3E4,43.25202293,-79.81899746
+Grocery_Centric,Grocer_ConvenienceStore,,EZ Mart,,"1565 Barton Street East,Hamilton,ON",L8H2Y3,43.2466815,-79.7953142
+Grocery_Centric,Grocer_ConvenienceStore,,Farooq Convenience Store-Food,,"4 Newton Avenue ,Hamilton,ON",L8S1V7,43.2744326,-79.9886009
+Grocery_Centric,Grocer_ConvenienceStore,,Fas Gas Plus,,"475 Main Street West,Hamilton,ON",L8P1K8,43.2596097,-79.88953971
+Grocery_Centric,Grocer_ConvenienceStore,,Fennell Convenience,6,"1119 Fennell Avenue East,Hamilton,ON",L8T1S2,43.2254158,-79.8281298
+Grocery_Centric,Grocer_ConvenienceStore,,Flamborough General Store,,"947 Centre Road ,Hamilton,ON",L8N2Z7,43.3599761,-79.9348908
+Grocery_Centric,Grocer_ConvenienceStore,,Gas Rite Variety,,"1294 Hiway 6 N  ,Hamilton,ON",L8N2Z7,43.36521467,-79.9894342
+Grocery_Centric,Grocer_ConvenienceStore,,Get N Go,,"597 Barton Street East,Hamilton,ON",L8L2Z6,43.2576382,-79.8399533
+Grocery_Centric,Grocer_ConvenienceStore,,Golf Link's Esso,,"1136 Golf Links Road ,Hamilton,ON",L9K1J8,43.2281687,-79.9371888
+Grocery_Centric,Grocer_ConvenienceStore,,Grab N Go Green Deli,104,"1 Young Street ,Hamilton,ON",L8N1T8,43.2514818,-79.8711953
+Grocery_Centric,Grocer_ConvenienceStore,,Gray's Convenience Store,,"309 Grays Road ,Hamilton,ON",L8E1V6,43.2324123,-79.7404558
+Grocery_Centric,Grocer_ConvenienceStore,,Handy Market,,"963 Burlington Street East,Hamilton,ON",L8L4K6,43.2630558,-79.8225034
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Cigar,,"77 James Street North,Hamilton,ON",L8R2K3,43.258357,-79.8684779
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Food Group,,"24 Parkdale Avenue North,Hamilton,ON",L8H5W8,43.23701654,-79.79158709
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,1,"387 Barton Street East,Hamilton,ON",L8L2Y2,43.2600268,-79.8487988
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"1160 Upper Paradise Road ,Hamilton,ON",L9B0A5,43.2102252,-79.9223143
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"122 Queen Street South,Hamilton,ON",L8P3S2,43.2555912,-79.8804995
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"130 Queenston Road ,Hamilton,ON",L8K1G6,43.2354173,-79.79761
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"1850 Main Street West,Hamilton,ON",L8S4P7,43.2521598,-79.9400653
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"210 Mohawk Road East,Hamilton,ON",L9A2H6,43.2261246,-79.871764
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"217 Cannon Street East,Hamilton,ON",L8L2A9,43.25880085,-79.85750701
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"225 John Street South,Hamilton,ON",L8N2C7,43.2502721,-79.8679349
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"2372 Barton Street East,Hamilton,ON",L8E2W7,43.2375398,-79.7638469
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"239 Kenilworth Avenue North,Hamilton,ON",L8H4S4,43.24754395,-79.8070638
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"392 Concession Street ,Hamilton,ON",L9A1B7,43.24260627,-79.85920184
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,5,"1309 Main Street West,Hamilton,ON",L8S1C5,43.2573008,-79.9181155
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,5,"581 Main Street East,Hamilton,ON",L8M1H9,43.2497913,-79.8474563
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,7,"574 James Street North,Hamilton,ON",L8L1J7,43.2723554,-79.8617594
+Grocery_Centric,Grocer_ConvenienceStore,,Hasty Market,,"732 Queenston Road ,Hamilton,ON",L8G1A4,43.2290947,-79.7699515
+Grocery_Centric,Grocer_ConvenienceStore,,Hess Variety,,"25 Hess Street North,Hamilton,ON",L8R2S5,43.2598081,-79.87720955
+Grocery_Centric,Grocer_ConvenienceStore,,Hiba Convenience,,"490 James Street North,Hamilton,ON",L8L1J1,43.26946378,-79.86329196
+Grocery_Centric,Grocer_ConvenienceStore,,High Times Books & Gifts,,"187 King Street East,Hamilton,ON",L8N1B3,43.25501137,-79.8635367
+Grocery_Centric,Grocer_ConvenienceStore,,Holiday Variety,,"671 Main Street East,Hamilton,ON",L8M1K1,43.24869067,-79.84311723
+Grocery_Centric,Grocer_ConvenienceStore,,Hope's Convenience,,"230 Kenilworth Avenue North,Hamilton,ON",L8H4S2,43.2470059,-79.8069211
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"1 Parkdale Avenue North,Hamilton,ON",L8H5W7,43.2365456,-79.7921658
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"1050 Main Street West,Hamilton,ON",L8S1B3,43.2586287,-79.908401
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"220 Centennial Parkway North,Hamilton,ON",L8E4A1,43.236641,-79.7603784
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"221 Limeridge Road East,Hamilton,ON",L9A2S6,43.2175426,-79.8755849
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"321 Grays Road ,Hamilton,ON",L8E2Z1,43.2327474,-79.7403121
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"55 Cannon Street East,Hamilton,ON",L8L1Z7,43.2603188,-79.8649651
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"615 Mohawk Road East,Hamilton,ON",L9C1X5,43.2202229,-79.8466062
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"869 Mohawk Road East,Hamilton,ON",L8T2R6,43.2167539,-79.8328719
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"878 Upper James Street ,Hamilton,ON",L9C3A4,43.2266236,-79.8827743
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"963 Burlington Street East,Hamilton,ON",L8L4K6,43.2630558,-79.8225034
+Grocery_Centric,Grocer_ConvenienceStore,,Husky Gas Station,,"965 Upper Ottawa Street ,Hamilton,ON",L8T4V9,43.2117706,-79.8350112
+Grocery_Centric,Grocer_ConvenienceStore,,Ins Market,,"135 Fennell Avenue West,Hamilton,ON",L9C0E5,43.2388127,-79.882946
+Grocery_Centric,Grocer_ConvenienceStore,,International News,,"640 Mohawk Road West,Hamilton,ON",L9C1X6,43.2334662,-79.9086134
+Grocery_Centric,Grocer_ConvenienceStore,,Jug City,1,"1394 Upper Gage Avenue ,Hamilton,ON",L8W1E7,43.2013367,-79.8506333
+Grocery_Centric,Grocer_ConvenienceStore,,K C Convenience,,"128 Parkdale Avenue North,Hamilton,ON",L8H5X2,43.2398079,-79.7903934
+Grocery_Centric,Grocer_ConvenienceStore,,Keon's Super Convenience,,"77 King Street East,Hamilton,ON",L8N1A5,43.25621895,-79.86675939
+Grocery_Centric,Grocer_ConvenienceStore,,King & James Convenience,,"1 King Street East,Hamilton,ON",L8N1A1,43.2661894,-79.9535404
+Grocery_Centric,Grocer_ConvenienceStore,,Laly's Smoke Shop,9,"1005 Fennell Avenue East,Hamilton,ON",L8T1R1,43.2276639,-79.83710355
+Grocery_Centric,Grocer_ConvenienceStore,,Loyd Variety,,"264 Kenilworth Avenue North,Hamilton,ON",L8H4S7,43.2483324,-79.8063518
+Grocery_Centric,Grocer_ConvenienceStore,,M & L Variety,,"112 Melvin Avenue ,Hamilton,ON",L8H2J6,43.24408175,-79.79244897
+Grocery_Centric,Grocer_ConvenienceStore,,Mac's Convenience Store,,"119 Herkimer Street ,Hamilton,ON",L8P2G8,43.250298,-79.8790533
+Grocery_Centric,Grocer_ConvenienceStore,,Mac's Convenience Store,,"642 Stone Church Road West,Hamilton,ON",L9B1A7,43.2185325,-79.9181795
+Grocery_Centric,Grocer_ConvenienceStore,,Macy's Food Mart,,"511 Cannon Street East,Hamilton,ON",L8L2E6,43.2550403,-79.8437175
+Grocery_Centric,Grocer_ConvenienceStore,,Main Convenience,,"353 Main Street West,Hamilton,ON",L8P1K3,43.25842235,-79.88360582
+Grocery_Centric,Grocer_ConvenienceStore,,Mainway Hunter Creighton Ins,,"154 Main Street East,Hamilton,ON",L8EL8E,43.2536887,-79.8634528
+Grocery_Centric,Grocer_ConvenienceStore,,Mega Family Convenience,,"195 John Street South,Hamilton,ON",L8N2C5,43.2557682,-79.8665757
+Grocery_Centric,Grocer_ConvenienceStore,,Mills Convenience,,"205 Melvin Avenue ,Hamilton,ON",L8H2J9,43.2436719,-79.78862522
+Grocery_Centric,Grocer_ConvenienceStore,,My Convenience Store,,"53 King Street East,Hamilton,ON",L8N1A5,43.2562856,-79.8673131
+Grocery_Centric,Grocer_ConvenienceStore,,National Convenience & Smoke,,"314 Queenston Road ,Hamilton,ON",L8K1H5,43.2337889,-79.7907982
+Grocery_Centric,Grocer_ConvenienceStore,,New York News,,"2 Kings Court ,Hamilton,ON",L8E1A1,43.231755,-79.7697605
+Grocery_Centric,Grocer_ConvenienceStore,,Nickey's Convenience,,"40 Depew Street ,Hamilton,ON",L8L7H8,43.2581246,-79.8187302
+Grocery_Centric,Grocer_ConvenienceStore,,On The Run,,"1341 Upper James Street ,Hamilton,ON",L9C3B3,43.2112271,-79.8889636
+Grocery_Centric,Grocer_ConvenienceStore,,On The Run,,"642 Stone Church Road West,Hamilton,ON",L9B1A7,43.2185325,-79.9181795
+Grocery_Centric,Grocer_ConvenienceStore,,On The Run,,"799 Barton Street East,Hamilton,ON",L8L3B2,43.2547445,-79.8288256
+Grocery_Centric,Grocer_ConvenienceStore,,Paradise Market,,"1160 Upper Paradise Road ,Hamilton,ON",,43.2102252,-79.9223143
+Grocery_Centric,Grocer_ConvenienceStore,,Parkdale Convenience Store,,"634 Parkdale Avenue North,Hamilton,ON",L8H5Z3,43.2535617,-79.7846771
+Grocery_Centric,Grocer_ConvenienceStore,,Min-A-Mart,,"180 James Street South,Hamilton,ON",L8P4V1,43.2511981,-79.8716871
+Grocery_Centric,Grocer_ConvenienceStore,,Payless Convenience,,"146 Kenilworth Avenue North,Hamilton,ON",L8H4R8,43.2446991,-79.8079084
+Grocery_Centric,Grocer_ConvenienceStore,,Perveen Inc,,"180 Queen Street South,Hamilton,ON",L8P3S7,43.2488332,-79.8830139
+Grocery_Centric,Grocer_ConvenienceStore,,Peter's Convenience,2,"1050 Upper Gage Avenue ,Hamilton,ON",L8V5B7,43.2119847,-79.8460248
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Canada,,"1366 Main Street East,Hamilton,ON",L8K1B7,43.2405612,-79.8111385
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Canada,,"1464 Hiway 6 N  ,Hamilton,ON",L8N2Z7,43.3768323,-80.00474668
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Canada,,"2711 Barton Street East,Hamilton,ON",L8E2J5,43.2338507,-79.7465189
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Canada,,"564 Barton Street East,Hamilton,ON",L8L2Z3,43.2578045,-79.8415897
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Canada,,"813 Upper James Street ,Hamilton,ON",L9C3A3,43.2285767,-79.8815722
+Grocery_Centric,Grocer_ConvenienceStore,,Petro-Pass Truck Stop,,"740 Parkdale Avenue North,Hamilton,ON",L8H3Y2,43.2448125,-79.7883645
+Grocery_Centric,Grocer_ConvenienceStore,,Phone & Ipad Repair Ctr,,"412 Wilson Street East,Hamilton,ON",L9G2C3,43.22894725,-79.97499675
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1180 Wilson Street West,Hamilton,ON",L9G3K9,43.1958836,-80.021174
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,1,"919 Upper Paradise Road ,Hamilton,ON",L9B2M9,43.2182553,-79.9183684
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1092 Hiway 6 N  ,Hamilton,ON",L8N2Z7,43.35220071,-79.97150376
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1160 Fennell Avenue East,Hamilton,ON",L8T1S5,43.2250201,-79.8276015
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,119,"610 King Street West,Hamilton,ON",L8P1C2,43.2621214,-79.8863628
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1489 Hiway 6 N  ,Hamilton,ON",L8N2Z7,43.37729384,-80.00671481
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1551 Main Street West,Hamilton,ON",L8S1E2,43.2574066,-79.926744
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1594 Barton Street East,Hamilton,ON",L8H2X9,43.2463767,-79.795194
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"160 John Street South,Hamilton,ON",L8N2C4,43.252115,-79.8684027
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1800 Burlington Street East,Hamilton,ON",L8H3L4,43.25667681,-79.78787633
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"1822 Upper James Street ,Hamilton,ON",L9B1K9,43.1960877,-79.8965696
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"315 Centennial Parkway North,Hamilton,ON",L8E2X3,43.2395494,-79.7595249
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"439 Mohawk Road West,Hamilton,ON",L9C1X3,43.2311963,-79.9019927
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"545 Woodward Avenue ,Hamilton,ON",L8H6P2,43.2476905,-79.7769466
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"603 King Street East,Hamilton,ON",L8N1E4,43.2524995,-79.8506286
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"711 Queenston Road ,Hamilton,ON",L8G1A1,43.22977425,-79.7709232
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,77,"386 Upper Gage Avenue ,Hamilton,ON",L8V4H9,43.2346747,-79.8365016
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"859 Upper James Street ,Hamilton,ON",L9C3A3,43.2271017,-79.88219585
+Grocery_Centric,Grocer_ConvenienceStore,,Pioneer,,"927 Rymal Road East,Hamilton,ON",L8W3M2,43.1926203,-79.85161493
+Grocery_Centric,Grocer_ConvenienceStore,,Q Stop Convenience,1,"140 King Street East,Hamilton,ON",L8N1B2,43.2670882,-79.9428806
+Grocery_Centric,Grocer_ConvenienceStore,,Qstop Convenience,,"1 Wilson Street ,Hamilton,ON",L8R1C4,43.2593524,-79.8666833
+Grocery_Centric,Grocer_ConvenienceStore,,Queensdale Convenience,,"953 Queensdale Avenue East,Hamilton,ON",L8T1H5,43.2325318,-79.8368242
+Grocery_Centric,Grocer_ConvenienceStore,,R & K Retail Store LTD,,"44 Francis Street ,Hamilton,ON",L8L3V3,43.2651291,-79.8467211
+Grocery_Centric,Grocer_ConvenienceStore,,Radsan Convenience,1,"11 Strathcona Avenue North,Hamilton,ON",L8R3B8,43.26169132,-79.88531712
+Grocery_Centric,Grocer_ConvenienceStore,,Rainbow Esso,,"2808 King Street East,Hamilton,ON",L8G1J5,43.2198057,-79.7721989
+Grocery_Centric,Grocer_ConvenienceStore,,Rick's Convenience LTD,22,"625 Greenhill Avenue ,Hamilton,ON",L8K5W9,43.21023195,-79.78626089
+Grocery_Centric,Grocer_ConvenienceStore,,Royal Convenience Store,,"524 Main Street East,Hamilton,ON",L8M1J1,43.2500551,-79.8496043
+Grocery_Centric,Grocer_ConvenienceStore,,Select Convenience,,"54 Queen Street South,Hamilton,ON",L8P3R5,43.2578857,-79.8795409
+Grocery_Centric,Grocer_ConvenienceStore,,Select Food Mart,,"303 York Boulevard ,Hamilton,ON",L8R3K5,43.2628548,-79.877658
+Grocery_Centric,Grocer_ConvenienceStore,,Shell Select,,"10 Legend Court ,Hamilton,ON",L9K1J3,43.2266492,-79.9482805
+Grocery_Centric,Grocer_ConvenienceStore,,Snack Express,,"1363 Hiway 6 N  ,Hamilton,ON",L8N2Z7,43.36896966,-79.9957786
+Grocery_Centric,Grocer_ConvenienceStore,,Stadium Esso,,"799 Barton Street East,Hamilton,ON",L8L3B2,43.2547445,-79.8288256
+Grocery_Centric,Grocer_ConvenienceStore,,Sunrise Convenience,11,"134 Ottawa Street North,Hamilton,ON",L8H3Z3,43.2462382,-79.8180551
+Grocery_Centric,Grocer_ConvenienceStore,,Tabby's Variety,,"437 King Street West,Hamilton,ON",L8P1B8,43.2663033,-79.9555592
+Grocery_Centric,Grocer_ConvenienceStore,,Tops Discount Foods,3,"3-969 Upper Ottawa Street St,Hamilton,ON",L8T4V9,43.21006683,-79.8352391
+Grocery_Centric,Grocer_ConvenienceStore,,Town Convenience,,"212 John Street South,Hamilton,ON",L8N2C8,43.2505344,-79.8690223
+Grocery_Centric,Grocer_ConvenienceStore,,Transit Shops,4383,"2 King Street West,Hamilton,ON",L8P1A1,43.2584366,-79.8727588
+Grocery_Centric,Grocer_ConvenienceStore,,Upper Wentworth Convenience,77,"1216 Upper Wentworth Street ,Hamilton,ON",L9A4W2,43.210053,-79.8677882
+Grocery_Centric,Grocer_ConvenienceStore,,Vivos Web Inc,1600,"21 King Street West,Hamilton,ON",L8P4W7,43.2567921,-79.8701083
+Grocery_Centric,Grocer_ConvenienceStore,,Water Convenience,,"2138 King Street East,Hamilton,ON",L8K1W6,43.2308479,-79.8016439
+Grocery_Centric,Grocer_ConvenienceStore,,Welcone Mart,,"890 Barton Street East,Hamilton,ON",L8L3B9,43.2536981,-79.8259904
+Grocery_Centric,Grocer_ConvenienceStore,,Wellington Variety,105,"125 Wellington Street North,Hamilton,ON",L8R3J4,43.25694975,-79.85822787
+Grocery_Centric,Grocer_ConvenienceStore,,Won Kyon Shin 365 Convenience,,"981 King Street East,Hamilton,ON",L8M1C6,43.2512758,-79.8349772
+Grocery_Centric,Grocer_ConvenienceStore,,Your Choice Variety,,"11 Hatton Drive ,Hamilton,ON",L9G2H5,43.20661084,-79.98336061
+Grocery_Centric,Grocer_ConvenienceStore,,Best Convenience,,"39 William Street ,Hamilton,ON",L8R1A1,43.26052305,-79.84639562
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear,,"417 Aberdeen Avenue ,Hamilton,ON",L8P2S1,43.2508641,-79.8926757
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"1393 Upper Gage Avenue,Hamilton,ON",L8W1E6,43.2012574,-79.8502904
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bear Food Mart,,"2579 King Street East,Hamilton,ON",L8K1Y4,43.223755,-79.7837308
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,4,"558 Upper Gage Avenue,Hamilton,ON",L8V4J6,43.2286747,-79.8389177
+Grocery_Centric,Grocer_ConvenienceStore,,Big Bee Convenience & Foodmart,,"25,Sep Redmond Drive ,Hamilton,ON",L8W3K7,43.20632707,-79.86449609
+Grocery_Centric,Grocer_ConvenienceStore,,Gas Rite Variety,,"1294 Hwy 6 N  ,Hamilton,ON",L8N2Z7,"43.36534866815935,",-79.98952027
+Grocery_Centric,Grocer_ConvenienceStore,,Select Food Mart,,"303 York Boulevard,Hamilton,ON",L8R3K5,43.2628548,-79.877658
+Grocery_Centric,Grocer_ConvenienceStore,,Shell Canada,,"1580 Main Street West,Hamilton,ON",L8S1E9,43.2576239,-79.9282102
+Grocery_Centric,Grocer_ConvenienceStore,,Good Convenience Mart,,"128 Dundurn Street North,Hamilton,ON",L8R3E8,43.2664849,-79.8859306
+Grocery_Centric,Grocer_Retail,,Africco Global Food-Beauty Mkt,,"1428 Main Street East,Hamilton,ON",L8EL8E,43.24015278,-79.8092588
+Grocery_Centric,Grocer_Retail,,Afrocan Food Market,,"454 King Street East,Hamilton,ON",L8N1C8,43.2527792,-79.8553697
+Grocery_Centric,Grocer_Retail,,Afrocan Foods,16-18,"1439 Upper Ottawa Street ,Hamilton,ON",L8W3S6,43.1966047,-79.84139747
+Grocery_Centric,Grocer_Retail,,Al-Amin Grocery & Halal Meat,,"295 James Street North,Hamilton,ON",L8R2L4,43.26386575,-79.86615686
+Grocery_Centric,Grocer_Retail,,Alamal Halal Meat,,"90 Victoria Avenue North,Hamilton,ON",L8L5E5,43.2559027,-79.8553868
+Grocery_Centric,Grocer_Retail,,Almanar Food Market,,"388 Concession Street ,Hamilton,ON",L9A1B7,43.2426537,-79.8593921
+Grocery_Centric,Grocer_Retail,,Asian Market,,"2 King Street West,Hamilton,ON",L8P1A1,43.2584366,-79.8727588
+Grocery_Centric,Grocer_Retail,,Au Pays Afro-Carribbean Store,3,"581 Main Street East,Hamilton,ON",L8M1H9,43.2497913,-79.8474563
+Grocery_Centric,Grocer_Retail,,B & T Food,,"103 Queen Street North,Hamilton,ON",L8R2V5,43.262458,-79.877875
+Grocery_Centric,Grocer_Retail,,Becker's,,"564 Barton Street East,Hamilton,ON",L8L2Z3,43.2578045,-79.8415897
+Grocery_Centric,Grocer_Retail,,Beckey's Grocery Shoppe,,"445 Ferguson Avenue North,Hamilton,ON",L8L4Z1,43.2679535,-79.8558841
+Grocery_Centric,Grocer_Retail,,Bosnian Specialties,2,"2-298 Grays Road ,Hamilton,ON",L8E1V5,43.2367374,-79.7383913
+Grocery_Centric,Grocer_Retail,,Bulkbarn,,"1187 Barton Street East,Hamilton,ON",L8H2V4,43.2596157,-79.8478733
+Grocery_Centric,Grocer_Retail,,Bulkbarn,,"1400 Upper James Street ,Hamilton,ON",L9B1K3,43.21087866,-79.88949487
+Grocery_Centric,Grocer_Retail,,Bulkbarn,,"659 Upper James Street ,Hamilton,ON",L9C5R8,43.23670805,-79.87768145
+Grocery_Centric,Grocer_Retail,,Compton & Greenland Fine Foods,,"   ,Hamilton,ON",L8EL8E,43.2560802,-79.8728583
+Grocery_Centric,Grocer_Retail,,Costco Wholesale,,"100 Legend Court ,Hamilton,ON",L9K1J3,43.2290196,-79.9478762
+Grocery_Centric,Grocer_Retail,,Direct To Home Grocers,,"499 King Street East,Hamilton,ON",L8N1E1,43.2530877,-79.8537947
+Grocery_Centric,Grocer_Retail,,Diva Supermarket,,"2493 Barton Street East,Hamilton,ON",L8E2X1,43.23650348,-79.75846196
+Grocery_Centric,Grocer_Retail,,Duarte Supermarket,,"417 Barton Street East,Hamilton,ON",L8L2Y4,43.2597239,-79.8477549
+Grocery_Centric,Grocer_Retail,,Eastern Food Market,,"1004 Upper Wentworth Street ,Hamilton,ON",L9A4V9,43.2171784,-79.8656207
+Grocery_Centric,Grocer_Retail,,Food 4 Kids,,"407 Whitney Avenue ,Hamilton,ON",L8S2H6,43.252045,-79.9350022
+Grocery_Centric,Grocer_Retail,,Food Basics,,"71 Wilson Street West,Hamilton,ON",L9G1N1,43.2171303,-79.9903975
+Grocery_Centric,Grocer_Retail,,Food Basics,,"135 Barton Street East,Hamilton,ON",L8L8A8,43.262918,-79.8604876
+Grocery_Centric,Grocer_Retail,,Food Basics,,"2500 Barton Street East,Hamilton,ON",L8E4A2,43.2366691,-79.7603033
+Grocery_Centric,Grocer_Retail,,Food Basics,,"640 Mohawk Road West,Hamilton,ON",L9C1X6,43.2334662,-79.9086134
+Grocery_Centric,Grocer_Retail,,Food Basics,,"724 Mohawk Road East,Hamilton,ON",L8T2P8,43.2185877,-79.8413785
+Grocery_Centric,Grocer_Retail,,Food Basics,,"751 Upper James James St,Hamilton,ON",L9C3A1,43.2298848,-79.8810007
+Grocery_Centric,Grocer_Retail,,Food Basics,,"845 King Street West,Hamilton,ON",L8S1K4,43.262646,-79.899495
+Grocery_Centric,Grocer_Retail,,Food Basics,906,"505 Rymal Road East,Hamilton,ON",L8W3X1,43.1976636,-79.8728831
+Grocery_Centric,Grocer_Retail,,Food Town James St Deliveries,,"163 James Street South,Hamilton,ON",L8P3A3,43.2519027,-79.8709985
+Grocery_Centric,Grocer_Retail,,Fortinos,,"54 Wilson Street West,Hamilton,ON",L9G3T8,43.2151524,-79.9902503
+Grocery_Centric,Grocer_Retail,,Fortinos,,"1550 Upper James James St,Hamilton,ON",L9B2L6,43.2052169,-79.8953837
+Grocery_Centric,Grocer_Retail,,Fortinos,,"1579 Main Street West,Hamilton,ON",L8S1E6,43.2553011,-79.92885885
+Grocery_Centric,Grocer_Retail,,Fortinos,,"50 Dundurn Street South,Hamilton,ON",L8P4W3,43.2616844,-79.8895955
+Grocery_Centric,Grocer_Retail,,Fortinos,,"65 Mall Road ,Hamilton,ON",L8V5B8,43.2204891,-79.8608744
+Grocery_Centric,Grocer_Retail,,Franco's No Frills,1,"640 Queenston Road ,Hamilton,ON",L8K1K2,43.2299324,-79.7741619
+Grocery_Centric,Grocer_Retail,,Franco's No Frills,,"435 Main Street East,Hamilton,ON",L8N1K1,43.25181505,-79.85236964
+Grocery_Centric,Grocer_Retail,,Frank Longo & Brothers Sprmrkt,,"525 Concession Street ,Hamilton,ON",L8V1A7,43.2413495,-79.8530707
+Grocery_Centric,Grocer_Retail,,Fresh Co,,"1565 Barton Street East,Hamilton,ON",L8H2Y3,43.2466815,-79.7953142
+Grocery_Centric,Grocer_Retail,,Fresh Co,,"601 Upper Gage Avenue ,Hamilton,ON",L8V4J7,43.2271192,-79.8392285
+Grocery_Centric,Grocer_Retail,,Fresh Co,,"700 Queenston Road ,Hamilton,ON",L8G1A3,43.22946038,-79.7718115
+Grocery_Centric,Grocer_Retail,,Fresh Co,,"869 Barton Street East,Hamilton,ON",L8L3B4,43.2542097,-79.8268529
+Grocery_Centric,Grocer_Retail,,Fresh Co,,"905 Rymal Road East,Hamilton,ON",L8W3M2,43.1930934,-79.8522329
+Grocery_Centric,Grocer_Retail,,Giant Tiger,3,"120 Portia Drive ,Hamilton,ON",L9G0G1,43.19939005,-80.02153387
+Grocery_Centric,Grocer_Retail,,Giant Tiger,,"1211 Barton Street East,Hamilton,ON",L8H2V4,43.25055724,-79.81152298
+Grocery_Centric,Grocer_Retail,,Giant Tiger,,"33 Cannon Street East,Hamilton,ON",L8L1Z7,43.26060575,-79.86557365
+Grocery_Centric,Grocer_Retail,,Giant Tiger,,"969 Upper Ottawa Street ,Hamilton,ON",L8T4V9,43.2113053,-79.8342367
+Grocery_Centric,Grocer_Retail,,Goodness Me Natural Foods,,"176 Locke Street South,Hamilton,ON",L8P4A9,43.2557339,-79.8856556
+Grocery_Centric,Grocer_Retail,,Greek Corner Store & Bakery,1,"633 King Street East,Hamilton,ON",L8N1E5,43.25236325,-79.8500783
+Grocery_Centric,Grocer_Retail,,Grocers Ali Mman,,"1-1384 Main Street East,Hamilton,ON",L8K1C1,43.2406089,-79.8107088
+Grocery_Centric,Grocer_Retail,,Hamilton Farm Market,15,"969 Upper Ottawa Street ,Hamilton,ON",L8T4V9,43.2113053,-79.8342367
+Grocery_Centric,Grocer_Retail,,Hamilton Farmers' Market,,"35 York Blvd ,Hamilton,ON",L8R3K7,43.2589177,-79.8701446
+Grocery_Centric,Grocer_Retail,,Hamilton Korean Food,,"16 Parkdale Avenue North,Hamilton,ON",L8H5W8,43.23680093,-79.79167946
+Grocery_Centric,Grocer_Retail,,Hani Meat & Grocery,,"82 Queen Street North,Hamilton,ON",L8R2V4,43.2623058,-79.8773365
+Grocery_Centric,Grocer_Retail,,Hickory Farms,,"999 Upper Wentworth Street ,Hamilton,ON",L9A4X5,43.218294,-79.8621942
+Grocery_Centric,Grocer_Retail,,It's A Food Thing,,"49 King William Street ,Hamilton,ON",L8R1A2,43.2571613,-79.8669365
+Grocery_Centric,Grocer_Retail,,Chris & Jenn's No Frills,,"675 Rymal Road East,Hamilton,ON",,43.19606705,-79.86240562
+Grocery_Centric,Grocer_Retail,,Kenny & Cindy's No Frills,1,"930 Upper Paradise Road ,Hamilton,ON",L9B2N1,43.2183387,-79.9187095
+Grocery_Centric,Grocer_Retail,,Korean Food Market,,"16 Parkdale Avenue North,Hamilton,ON",L8H5W8,43.23680093,-79.79167946
+Grocery_Centric,Grocer_Retail,,Laly's Smoke Shop,9,"1005 Fennell Avenue East,Hamilton,ON",L8T1R1,43.2276639,-79.83710355
+Grocery_Centric,Grocer_Retail,,Lococo's Fruits & Veggies,,"400 Nebo Road ,Hamilton,ON",L8W3P3,43.1884143,-79.8398369
+Grocery_Centric,Grocer_Retail,,Longo's,,"1191 Wilson Street West,Hamilton,ON",L9G0E8,43.1971062,-80.0219765
+Grocery_Centric,Grocer_Retail,,Lyn Linstead Market,1,"1000 Upper Gage Avenue ,Hamilton,ON",L8V4R5,43.2140024,-79.8452008
+Grocery_Centric,Grocer_Retail,,M&M Food Market,,"2732 Barton Street East,Hamilton,ON",L8E4M6,43.2335269,-79.7462707
+Grocery_Centric,Grocer_Retail,,Macy's Food Mart,,"511 Cannon Street East,Hamilton,ON",L8L2E6,43.2550403,-79.8437175
+Grocery_Centric,Grocer_Retail,,Maplewood Grocery,,"150 Maplewood Ave Avenue ,Hamilton,ON",L8M1X4,43.24446117,-79.83467689
+Grocery_Centric,Grocer_Retail,,Marci's Bakery,,"927 Barton Street East,Hamilton,ON",L8L3C4,43.2534487,-79.8237321
+Grocery_Centric,Grocer_Retail,,Matias Supermercado,,"450 Wellington Street North,Hamilton,ON",L8L5B3,43.2674211,-79.8532288
+Grocery_Centric,Grocer_Retail,,Mazza Lounge,,"1837 Main Street West,Hamilton,ON",L8S1H6,43.252321,-79.9392585
+Grocery_Centric,Grocer_Retail,,Meat Depot,,"18 Thresher Drive ,Hamilton,ON",L9A4Z4,43.2187796,-79.8679596
+Grocery_Centric,Grocer_Retail,,Medina Fine Foods,,"581 Concession Street ,Hamilton,ON",L8V1B2,43.2407966,-79.8507277
+Grocery_Centric,Grocer_Retail,,Metro,,"1070 Stone Church Road East,Hamilton,ON",L8W2C7,43.1991633,-79.8408005
+Grocery_Centric,Grocer_Retail,,Metro,,"1161 Barton Street East,Hamilton,ON",L8H2V4,43.2596157,-79.8478733
+Grocery_Centric,Grocer_Retail,,Metro,,"1900 King Street East,Hamilton,ON",L8K1W1,43.2312697,-79.8064708
+Grocery_Centric,Grocer_Retail,,Metro,,"967 Fennell Avenue East,Hamilton,ON",L8T1R1,43.22804331,-79.8385114
+Grocery_Centric,Grocer_Retail,,Mountain Fine Foods,A,"301 Crockett Street ,Hamilton,ON",L8V1H5,43.23647555,-79.84174703
+Grocery_Centric,Grocer_Retail,,Nations Fresh Food Market,455,"2 King Street West,Hamilton,ON",L8P1A1,43.2584366,-79.8727588
+Grocery_Centric,Grocer_Retail,,Giorgio's No Frills,,"801 Mohawk Road West,Hamilton,ON",L9C6C2,43.2331452,-79.9222912
+Grocery_Centric,Grocer_Retail,,Oceans Fresh Food Market,,"81 Elgin Street ,Hamilton,ON",L8L4X9,43.25962031,-79.8609168
+Grocery_Centric,Grocer_Retail,,Pale Blue Dot,,"240 James Street North,Hamilton,ON",L8R2L3,43.2627204,-79.8662489
+Grocery_Centric,Grocer_Retail,,Parsa Supermarket,,"10 Brucedale Avenue West,Hamilton,ON",L9C1C2,43.23969585,-79.87738845
+Grocery_Centric,Grocer_Retail,,Rama Tropical Foods,,"346 James Street North,Hamilton,ON",L8L1H2,43.2649559,-79.8652773
+Grocery_Centric,Grocer_Retail,,Rawlicious,,"1044 King Street West,Hamilton,ON",L8S1L5,43.26160515,-79.90691003
+Grocery_Centric,Grocer_Retail,,Real Food Market & Kitchen,,"1008a King Street West,Hamilton,ON",L8S1L4,43.2663033,-79.9555592
+Grocery_Centric,Grocer_Retail,,Sange's Sweets,,"7 Gage Avenue North,Hamilton,ON",L8L6Z5,43.24847513,-79.82864529
+Grocery_Centric,Grocer_Retail,,Scolys Hometown Market,,"178 Nebo Road ,Hamilton,ON",L8W2E4,43.19326119,-79.83717989
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1000 Golf Links Road ,Hamilton,ON",L9G3K9,43.2268997,-79.9417494
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"47 Wilson Street West,Hamilton,ON",L9G1N1,43.2176398,-79.9893884
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,131,"999 Upper Wentworth Street ,Hamilton,ON",L9A4X5,43.218294,-79.8621942
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,11,"210 Mohawk Road East,Hamilton,ON",L9A2H6,43.2261246,-79.871764
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"113 Herkimer Street ,Hamilton,ON",L8P2G8,43.2502737,-79.8789169
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1183 Barton Street East,Hamilton,ON",L8H2V4,43.2596157,-79.8478733
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1300 Garth Street ,Hamilton,ON",L9C4L7,43.2201955,-79.9067357
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1341 Main Street West,Hamilton,ON",L8S1C6,43.2575644,-79.9193875
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1411 Upper Sherman Avenue ,Hamilton,ON",L8W1C4,43.2027886,-79.85940847
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1599 Upper James Street ,Hamilton,ON",L9B0H7,43.2026793,-79.8930319
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"181 Main Street West,Hamilton,ON",L8P4S1,43.2571054,-79.8774892
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"1900 King Street East,Hamilton,ON",L8K1W1,43.2312697,-79.8064708
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"232 Cannon Street East,Hamilton,ON",L8L0A9,43.2580075,-79.8568819
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"399 Greenhill Avenue ,Hamilton,ON",L8K6N5,43.2165691,-79.7964517
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"510 Concession Street ,Hamilton,ON",L9A1C4,43.241413,-79.8544484
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"620 King Street West,Hamilton,ON",L8P1C2,43.262314,-79.8871553
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"661 Upper James Street ,Hamilton,ON",L9C5R8,43.2360281,-79.8780289
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"75 Centennial Parkway North,Hamilton,ON",L8E2P2,43.2307222,-79.7654367
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"753 Main Street East,Hamilton,ON",L8M1L2,43.2477991,-79.8396504
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"801 Mohawk Road West,Hamilton,ON",L9C6C2,43.2331452,-79.9222912
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"902 Mohawk Road East,Hamilton,ON",L8T2R8,43.21599425,-79.83267886
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"963 Fennell Avenue East,Hamilton,ON",L8T1R1,43.22806639,-79.8385988
+Grocery_Centric,Grocer_Retail,,Shoppers Drug Mart,,"991 King Street West,Hamilton,ON",L8S1K9,43.26232773,-79.90441419
+Grocery_Centric,Grocer_Retail,,Sobeys Stone Church,,"1770 Stone Church Road East,Hamilton,ON",L8J 2V4,43.1927968,-79.8155304
+Grocery_Centric,Grocer_Retail,,Sobeys Extra,,"977 Golf Links Road ,Hamilton,ON",L9K1K1,43.2272757,-79.9444493
+Grocery_Centric,Grocer_Retail,,Starsky Fine Foods,,"685 Queenston Road ,Hamilton,ON",L8G1A1,43.2304859,-79.7727113
+Grocery_Centric,Grocer_Retail,,Stinson Grocery Store,,"142 Stinson Street ,Hamilton,ON",L8N1S6,43.2481053,-79.8551826
+Grocery_Centric,Grocer_Retail,,Sweet Paradise Bakery,,"630 Stone Church Road West,Hamilton,ON",L9B1A7,43.2182065,-79.9168352
+Grocery_Centric,Grocer_Retail,,Tan Thanh Supermarket,,"115 Park Street North,Hamilton,ON",L8R2N2,43.2612251,-79.8708821
+Grocery_Centric,Grocer_Retail,,Tolton Food Place,,"125 Tolton Avenue ,Hamilton,ON",L8H5N9,43.2412769,-79.7964764
+Grocery_Centric,Grocer_Retail,,Tony's No Frills,,"770 Upper James Street ,Hamilton,ON",L9C3A2,43.2289986,-79.8817699
+Grocery_Centric,Grocer_Retail,,Upper Wellington African Food,,"615 Upper Wellington Street ,Hamilton,ON",L9A3P8,43.23723904,-79.86708996
+Grocery_Centric,Grocer_Retail,,Uttam Foods & Spices Inc,,"2493 Barton Street East,Hamilton,ON",L8E2X1,43.23650348,-79.75846196
+Grocery_Centric,Grocer_Retail,,Walmart Supercentre,,"1051 Garner Road West,Hamilton,ON",L9G3K9,43.1968928,-80.012318
+Grocery_Centric,Grocer_Retail,,Walmart Supercentre,,"1115 Barton Street East,Hamilton,ON",L8H2V2,43.2522681,-79.81454795
+Grocery_Centric,Grocer_Retail,,Walmart Supercentre,,"510 Centennial Parkway North,Hamilton,ON",L8E0G2,43.2300824,-79.7634781
+Grocery_Centric,Grocer_Retail,,Walmart Supercentre,,"675 Upper James Street ,Hamilton,ON",L9C2Z5,43.2346901,-79.8788435
+Grocery_Centric,Grocer_Retail,,Webb's Better Food,,"140 Caroline Street South,Hamilton,ON",L8P3K8,43.2545355,-79.8775763
+Grocery_Centric,Grocer_Retail,,Welcone Mart,,"890 Barton Street East,Hamilton,ON",L8L3B9,43.2536981,-79.8259904
+Grocery_Centric,Grocer_Retail,,Wholesale Club,,"2255 Barton Street East,Hamilton,ON",L8H7T4,43.2403904,-79.7715681
+Grocery_Centric,Grocer_Retail,,Yasmeen Food Mart,,"525 Mohawk Road East,Hamilton,ON",L8V2J5,43.2214235,-79.8516933
+Grocery_Centric,Grocer_Retail,,Zam Zam Food Mart,1,"10 Cannon Street East,Hamilton,ON",L8L1Z5,43.2605367,-79.866902
+Grocery_Centric,Grocer_Retail,,Zarky's Fine Foods,,"558 Concession Street ,Hamilton,ON",L8V1A9,43.24089954,-79.85233284
+Grocery_Centric,Grocer_Retail,,Zarky's Fine Foods LTD,,"264 Dundurn Street South,Hamilton,ON",L8P4K9,43.2539479,-79.8917065
+Grocery_Centric,Grocer_Retail,,Zarkys Fine Foods,,"20 Hempstead Drive ,Hamilton,ON",L8W2E7,43.19464222,-79.83956849
+Grocery_Centric,Grocer_Retail,,Golden Mill Bakery,,"1275 Rymal Road East,Hamilton,ON",L8W3N1,43.18839149,-79.83506936
+Grocery_Centric,Grocer_Retail,,Greek Corner Store & Bakery,1,"633 King Street East,Hamilton,ON",L8N1E5,43.25236325,-79.8500783
+Health_Centric,Clinics,,Binbrook Family Health,B6,"2537 Hamilton Regional Road 56 ,Hamilton,ON",L0R 1C0,43.12475324,-79.80216175
+Health_Centric,Clinics,,Bonavista Medical Centre,3,"360 Queenston Road,Hamilton,ON",L8K 1H9,43.2331468,-79.7883208
+Health_Centric,Clinics,,Dundas Medical Centre and Walk-in,1,"252 Dundas Street East,Hamilton,ON",L0R 2H6,43.33003547,-79.89654299
+Health_Centric,Clinics,,Binbrook Family Health,B6,"2537 Hamilton Regional Road 56 ,Hamilton,ON",L0R 1C0,43.12475324,-79.80216175
+Health_Centric,Clinics,,Dundurn Medical Centre,B8,"50 Dundurn Street South,Hamilton,ON",L8P 4W3,43.2616844,-79.8895955
+Health_Centric,Clinics,,West-End Urgent Care Centre,,"690 Main Street West,Hamilton,ON",L8S 1A4,43.26031205,-79.89821334
+Health_Centric,Clinics,,Whitney Medical Clinic,,"1827 Main Street West,Hamilton,ON",L8S 1H6,43.2525942,-79.9384906
+Health_Centric,Clinics,,Waterdown Walk-in Clinic,,"90 Dundas Street East,Hamilton,ON",L0R 2H2,43.315603,-79.9137866
+Health_Centric,Clinics,,Stoney Creek Medical Walk-in Clinic,2A,"140 Centennial Parkway North,Hamilton,ON",L8E 1H9,43.23324003,-79.76186667
+Health_Centric,Clinics,,Urgent Care Centre- St. Josephs Healthcare Hamilton King Campus,,"2757 King Street East,Hamilton,ON",L8G 5E4,43.221392,-79.77400341
+Health_Centric,Clinics,,Queenston Medical Walk-in Clinic,103,"631 Queenston Road,Hamilton,ON",L8K 6R5,43.2303626,-79.77479857
+Health_Centric,Clinics,,Parkside Medical Clinic,E2,"145 Hamilton Street North,Hamilton,ON",L8B 0Y7,43.3312215,-79.8957824
+Health_Centric,Clinics,,Nebo Medical Centre,,"260 Nebo Road,Hamilton,ON",L8W 3K5,43.1912602,-79.8387369
+Health_Centric,Clinics,,Mountain Medical Walk-in Clinic,,"880 Upper Wentworth Street,Hamilton,ON",L9A 5H2,43.2208345,-79.8632434
+Health_Centric,Clinics,,Hamilton Medical Centre and Walk-in Clinic ,103,"52 Cannon Street West,Hamilton,ON",L8R 2B5,43.2614371,-79.8696124
+Health_Centric,Clinics,,Hamilton Medical Clinic ,,"836 Upper James Street,Hamilton,ON",L9C 3A4,43.22840825,-79.88201996
+Health_Centric,Clinics,,Health-Wise Medical Clinic,2,"15 Lockport Way,Hamilton,ON",L8E 0H8,43.2194111,-79.6327653
+Health_Centric,Clinics,,Jack Nathan Hamilton,,"675 Upper James Street,Hamilton,ON",L9C 2Z5,43.2346901,-79.8788435
+Health_Centric,Clinics,,John Street Medical Walk-in Clinic,,"225 John Street South,Hamilton,ON",L8N 2C7,43.2502721,-79.8679349
+Health_Centric,Clinics,,Locke Street Medical Clinic,,"206 Locke Street South,Hamilton,ON",L8P 4B4,43.254679,-79.8861222
+Health_Centric,Clinics,,Main West Clinic,135,"1685 Main Street West,Hamilton,ON",L8S 1G5,43.2566539,-79.9344911
+Health_Centric,Clinics,,Mar-Care Clinic,,"1461 Main Street West,Hamilton,ON",L8S 1C9,43.25748681,-79.92409678
+Health_Centric,Clinics,,MCI The Doctor's Office,,"340 York Boulevard,Hamilton,ON",L8R 3L2,43.2639114,-79.8785381
+Health_Centric,Dentist,,Dentistry on 7th,4,"726 Upper Gage Avenue,Hamilton,ON",,43.2255722,-79.8402772
+Health_Centric,Dentist,,Golf Links Dental,401B,"1015 Golf Links Road,Hamilton,ON",,43.22873105,-79.94189991
+Health_Centric,Dentist,,Hamilton Dental,,"50 Dundurn Street South,Hamilton,ON",,43.2616844,-79.8895955
+Health_Centric,Dentist,,Jackson Square Dental,1,"1058 Main Street West,Hamilton,ON",,43.258493,-79.908713
+Health_Centric,Dentist,,Altima Hamilton Dental Centre,300,"340 York Boulevard,Hamilton,ON",,43.2639114,-79.8785381
+Health_Centric,Dentist,,Hess Village Dental Group,,"206 Main Street West,Hamilton,ON",,43.2577219,-79.8782927
+Health_Centric,Dentist,,Downtown Dental of Hamilton,1111,"105 Main Street East,Hamilton,ON",,43.2545392,-79.8655093
+Health_Centric,Dentist,,Mountain Mall Dental Office,,"681 Upper James Street,Hamilton,ON",,43.2036814,-79.892603
+Health_Centric,Dentist,,Westdale Dental Care,,"1043 King Street West,Hamilton,ON",,43.26141795,-79.90663141
+Health_Centric,Dentist,,Campus Dentist,,"1280 Main Street West,Hamilton,ON",,43.2639397,-79.91782523
+Health_Centric,Dentist,,Sagewood Dental Care,100,"848 Main Street East,Hamilton,ON",,43.246448,-79.8356942
+Health_Centric,Dentist,,King Street Dental,,"870 King Street West,Hamilton,ON",,43.2631067,-79.9005169
+Health_Centric,Dentist,,Westdale Dentistry,,"875 Main Street West,Hamilton,ON",,43.2589383,-79.9015618
+Health_Centric,Dentist,,Smile Design Dental Care,,"183 Hughson Street South,Hamilton,ON",,43.2499847,-79.8704118
+Health_Centric,Dentist,,Dr. Jarecka Agnieska,,"17 Dundurn Street South,Hamilton,ON",,43.2615987,-79.88788323
+Health_Centric,Dentist,,Century Stone Dental,,"684 Main Street East,Hamilton,ON",,43.2482958,-79.8426716
+Health_Centric,Dentist,,Queen King Dental Clinic,,"17 Queen Street South,Hamilton,ON",,43.2586003,-79.8788683
+Health_Centric,Dentist,,Whitney Plaza Dentistry,,"1821 Main Street West,Hamilton,ON",,43.25308511,-79.93867099
+Health_Centric,Dentist,,Spinel Dental | Dentist in Hamilton Mountain,,"93 Sanatorium Road,Hamilton,ON",,43.2320113,-79.89633318
+Health_Centric,Dentist,,Garth Dental,10,"1300 Garth Street,Hamilton,ON",,43.2201955,-79.9067357
+Health_Centric,Dentist,,Dr. Adina Radulescu Dental Office,,"505 King Street West,Hamilton,ON",,43.2607043,-79.8842114
+Health_Centric,Dentist,,Excel Dental: Dr. R Pan DDS,,"49 East Avenue South,Hamilton,ON",,43.251344,-79.856059
+Health_Centric,Dentist,,Upper Paradise Dental,,"634 Stone Church Road West,Hamilton,ON",,43.21831517,-79.9172833
+Health_Centric,Dentist,,Harvard Square Dental Care,201,"801 Mohawk Road West,Hamilton,ON",,43.2331452,-79.9222912
+Health_Centric,Dentist,,Martindale Dental,270,"2 King Street West,Hamilton,ON",,43.2584366,-79.8727588
+Health_Centric,Dentist,,City Place Dental,1115,"105 Main Street East,Hamilton,ON",,43.2545392,-79.8655093
+Health_Centric,Dentist,,Dr. Kwong W Lo,,"289 York Boulevard,Hamilton,ON",,43.2624914,-79.8771206
+Health_Centric,Dentist,,Dr. Jas Syan Family Dentistry,,"1 Young Street,Hamilton,ON",,43.2514818,-79.8711953
+Health_Centric,Dentist,,Dr. Susan Mah and Associates,,"804 Upper Gage Avenue,Hamilton,ON",,43.21970044,-79.84283465
+Health_Centric,Dentist,,Monarch Dentistry - Fennell Gage,,"989 Fennell Avenue East,Hamilton,ON",,43.2277224,-79.8364403
+Health_Centric,Dentist,,Dentistry on the Mountain,105,"651 Upper James Street,Hamilton,ON",,43.2374249,-79.8776593
+Health_Centric,Dentist,,King West Smiles Dentistry,,"288 King Street West,Hamilton,ON",,43.2692973,-79.9669587
+Health_Centric,Dentist,,Dr. E. Jan Chithalen Dentistry,,"118 Stinson Street,Hamilton,ON",,43.2483965,-79.8563342
+Health_Centric,Dentist,,Dr. A Jarecka Dental Clinic,,"17 Dundurn Street South,Hamilton,ON",,43.2615987,-79.88788323
+Health_Centric,Dentist,,Fenworth Dental,,"550 Fennell Fennell Avenue East,Hamilton,ON",,43.23203,-79.85606
+Health_Centric,Dentist,,Mountain Dental Arts,,"410 Concession Street,Hamilton,ON",,43.2424019,-79.8583859
+Health_Centric,Dentist,,Garach Dentistry,,"841 Upper Wentworth Street,Hamilton,ON",,43.222093,-79.8622561
+Health_Centric,Dentist,,Go Dental - Dr. Jan Hanna,,"134 Jackson Street East,Hamilton,ON",,43.25320207,-79.86514707
+Health_Centric,Dentist,,Lincoln Dental Care,,"1036 Upper James Street,Hamilton,ON",,43.2215268,-79.8849022
+Health_Centric,Dentist,,Grover Dental Care - Rebecca,,"11 Rebecca Street,Hamilton,ON",,43.25832565,-79.86760257
+Health_Centric,Dentist,,Chiesa Dental Care,,"297 Mohawk Road East,Hamilton,ON",,43.2250031,-79.8661553
+Health_Centric,Dentist,,Downtown Main Dental,,"153 Main Street West,Hamilton,ON",,43.2567742,-79.8761762
+Health_Centric,Dentist,,Gage Park Dental,,"921 Main Street East,Hamilton,ON",,43.24589785,-79.83263285
+Health_Centric,Dentist,,Family Dentist,5,"930 Upper Paradise Road,Hamilton,ON",,43.2183387,-79.9187095
+Health_Centric,Dentist,,Mountcrest Dental,4,"865 Upper James Street,Hamilton,ON",,43.2266966,-79.8813597
+Health_Centric,Dentist,,McDonough Dental,,"575 Upper James Street,Hamilton,ON",,43.2403651,-79.8764328
+Health_Centric,Dentist,,Dr. Abudaqa Dental Clinic,,"636 Upper James Street,Hamilton,ON",,43.23738149,-79.87805478
+Health_Centric,Dentist,,Dr. Kwong Lo,102,"701 Main Street West,Hamilton,ON",,43.2599333,-79.8975676
+Health_Centric,Dentist,,Wentworth Dental Care,2,"880 Upper Wentworth Street,Hamilton,ON",,43.2208345,-79.8632434
+Health_Centric,Dentist,,Dr. Ron Barzilay - Dental Surgeon,8,"990 Upper Wentworth Street,Hamilton,ON",,43.21752797,-79.86465061
+Health_Centric,Dentist,,EJC Dentistry,,"118 Stinson Street,Hamilton,ON",,43.2483965,-79.8563342
+Health_Centric,Dentist,,Gore Park Dentistry,,"73 King Street East,Hamilton,ON",,43.25622285,-79.86682902
+Health_Centric,Dentist,,Charlton Dentistry,,"230 James Street South,Hamilton,ON",,43.2496521,-79.8724844
+Health_Centric,Dentist,,Filice Dentistry,,"1685 Main Street,Hamilton,ON",,43.2566539,-79.9344911
+Health_Centric,Dentist,,Dr. R Wardrope,,"640 Mohawk Road West,Hamilton,ON",,43.2334662,-79.9086134
+Health_Centric,Dentist,,Gulati Family Dentistry,401,"460 Main Street East,Hamilton,ON",,43.2506004,-79.8520131
+Health_Centric,Dentist,,Limeridge Mall Dental,,"999 Upper Wentworth Street,Hamilton,ON",,43.218294,-79.8621942
+Health_Centric,Dentist,,The Dental place,,"642 Upper James Street,Hamilton,ON",,43.23698756,-79.87822241
+Health_Centric,Dentist,,Dr. Dave the Dentist,,"575 Upper James Street,Hamilton,ON",,43.2403651,-79.8764328
+Health_Centric,Dentist,,Red Rose Dentistry,,"135 James Street South,Hamilton,ON",,43.25261235,-79.870282
+Health_Centric,Dentist,,Teeth First Dental Network,,"2 King Street West,Hamilton,ON",,43.2584366,-79.8727588
+Health_Centric,Dentist,,Dr. Alyna Lin Dentistry,401,"180 James Street South,Hamilton,ON",,43.2511981,-79.8716871
+Health_Centric,Dentist,,Dr. Bohm-Lee Barbara,,"17 Queen Street South,Hamilton,ON",,43.2586003,-79.8788683
+Health_Centric,Dentist,,Areej Wellington Dental,,"90 Wellington Street North,Hamilton,ON",,43.2561456,-79.8579823
+Health_Centric,Dentist,,Durand Dental/ Dr. Vladimir Dim,,"51 Herkimer Street,Hamilton,ON",,43.2493876,-79.8754214
+Health_Centric,Dentist,,Dr. Macrogliese Family Dentistry,,"792 Upper Gage Avenue,Hamilton,ON",,43.22043913,-79.84251635
+Health_Centric,Dentist,,860 Dental,,"860 Upper Wentworth Street,Hamilton,ON",,43.2215213,-79.8628593
+Health_Centric,Dentist,,Dr. Araceli Silva O,,"920 Upper Wentworth Street,Hamilton,ON",,43.2192051,-79.8644475
+Health_Centric,Dentist,,Grover Dental Care - Hayden,,"1 Hayden Street,Hamilton,ON",,43.228001,-79.8791827
+Health_Centric,Dentist,,Dr. H J MscIsaac and Associates,,"212 James Street South,Hamilton,ON",,43.25035665,-79.87218415
+Health_Centric,Dentist,,Dr. Bryan Leon,,"694 Upper James Street,Hamilton,ON",,43.2331457,-79.8799275
+Health_Centric,Dentist,,De Benetti Dentistry Professionals,,"182 Jackson Street East,Hamilton,ON",,43.25259004,-79.86298043
+Health_Centric,Dentist,,Healing Roots,,"209 Homewood Avenue,Hamilton,ON",,43.2517329,-79.8922831
+Health_Centric,Dentist,,Chapel Hill Family Dentistry,,"669 Barton Street East,Hamilton,ON",,43.2567123,-79.8365128
+Health_Centric,Dentist,,Eastmount Family Dentistry,,"788 Upper Ottawa Street,Hamilton,ON",,43.2168903,-79.833254
+Health_Centric,Dentist,,Dr. Frank D'Alvise,1112,"105 Main Street East,Hamilton,ON",,43.2545392,-79.8655093
+Health_Centric,Dentist,,Dr. Laura Adams and Dr. Larry Yaksich,,"668 Concession Street,Hamilton,ON",,43.23961985,-79.84715183
+Health_Centric,Dentist,,Hamilton Dental Hygiene Care,,"269 Main Street West,Hamilton,ON",,43.2578205,-79.8809193
+Health_Centric,Dentist,,Dentistry 870 - Dr. Gabor Filo,,"870 Upper James Street,Hamilton,ON",,43.2270601,-79.8830505
+Health_Centric,Dentist,,Passion Dental Hygiene,,"556 Upper Wentworth Street,Hamilton,ON",,43.2344976,-79.8573645
+Health_Centric,Dentist,,DiNardo Denture Clinic Hamilton,,"678 Upper James Street,Hamilton,ON",,43.2036814,-79.892603
+Health_Centric,Dentist,,Hamilton Pediatric Dental Care,,"212 James Street South,Hamilton,ON",,43.25035665,-79.87218415
+Health_Centric,Dentist,,Pathways Dental Care,,"1281 Mohawk Road,Hamilton,ON",,43.2334912,-79.9301425
+Health_Centric,Dentist,,"Dr. Peter Pannozzo, Dr. Sarah Pannozzo, Dentistry for Children",310,"883 Upper Wentworth Street,Hamilton,ON",,43.2209476,-79.8626874
+Health_Centric,Dentist,,Uppper James Denture Clinic,,"644 Upper James Street,Hamilton,ON",,43.23685624,-79.87827829
+Health_Centric,Dentist,,Ancaster Dental Care,202,"34 Stone Church Road,Hamilton,ON",,43.2281514,-79.9371013
+Health_Centric,Dentist,,Dr. Joseph Cipolla,,"460 Main Street East,Hamilton,ON",,43.2506004,-79.8520131
+Health_Centric,Dentist,,Cabai Denture Clinic,,"644 Upper James Street,Hamilton,ON",,43.23685624,-79.87827829
+Health_Centric,Dentist,,J.D.S Denture Clinic,,"552 Upper James Street,Hamilton,ON",,43.2407227,-79.8766678
+Health_Centric,Dentist,,Dr. Steele Andrew,4,"954 Upper James Street,Hamilton,ON",,43.2243131,-79.8840232
+Health_Centric,Dentist,,Gilmour Denture Clinic,,"545 Upper Wellington Street,Hamilton,ON",,43.2390219,-79.8663219
+Health_Centric,Dentist,,Meneses Dentistry,C3,"770 770 Mohawk Road West,Hamilton,ON",,43.2335533,-79.9206087
+Health_Centric,Dentist,,Dr. Yole M F,,"700 Main Street East,Hamilton,ON",,43.2481161,-79.8419665
+Health_Centric,Dentist,,Dr. Michalec M,,"460 Main Street East,Hamilton,ON",,43.2506004,-79.8520131
+Health_Centric,Dentist,,Larry Levin DDS,,"105 Main Street East,Hamilton,ON",,43.2545392,-79.8655093
+Health_Centric,Dentist,,Dr. Ron Giedraitis,,"65 Mall Road,Hamilton,ON",,43.2204891,-79.8608744
+Health_Centric,Dentist,,Dr. Eugene Lee Dentist,,"792 Upper Gage Avenue,Hamilton,ON",,43.22043913,-79.84251635
+Health_Centric,Dentist,,J Destaphanis DDS,,"1104 Fennell Avenue East,Hamilton,ON",,43.22559922,-79.83009997
+Health_Centric,Dentist,,Dr. A W Gusenbauer,,"875 Upper Wentworth Street,Hamilton,ON",,43.2212826,-79.8625832
+Health_Centric,Dentist,,Khalil Dental Hygiene Services,,"670 Upper James Street,Hamilton,ON",,43.23499339,-79.8790884
+Health_Centric,Dentist,,Hygienic Smiles,,"515 Upper Sherman Avenue,Hamilton,ON",,43.23244681,-79.84695139
+Health_Centric,Dentist,,Rymal Family Dental - Hamilton,,"8 Kingsborough Drive,Hamilton,ON",,43.1761199,-79.7962173
+Health_Centric,Dentist,,Olivieri Dental Care,,"117 Queenston Road,Hamilton,ON",,43.23581305,-79.79814335
+Health_Centric,Dentist,,Lily Dental,,"1451 Main Street East,Hamilton,ON",,43.2401456,-79.8081654
+Health_Centric,Dentist,,The Tooth Corner Hamlton Main St E,,"1208 Main Street East,Hamilton,ON",,43.2423765,-79.8195528
+Health_Centric,Dentist,,Eastgate Dental Centre,,"75 Centennial Parkway North,Hamilton,ON",,43.2307222,-79.7654367
+Health_Centric,Dentist,,Dentistry on Parkdale,,"21 Parkdale Avenue South,Hamilton,ON",,43.23548834,-79.79224393
+Health_Centric,Dentist,,Queenston Dental,,"321 Queenston Road,Hamilton,ON",,43.2338588,-79.7899905
+Health_Centric,Dentist,,Upper Ottawa Dental,A,"346 Upper Ottawa Street,Hamilton,ON",,43.2313102,-79.8271778
+Health_Centric,Dentist,,Rosewood Dentistry,201,"1955 King Street,Hamilton,ON",,43.2316605,-79.8045708
+Health_Centric,Dentist,,Parkway Dental Care,,"160 Centennial Parkway North,Hamilton,ON",,43.2340857,-79.7615001
+Health_Centric,Dentist,,Aya Dental Care,,"399 Greenhill Avenue,Hamilton,ON",,43.2165691,-79.7964517
+Health_Centric,Dentist,,Green Oak Dental Center,4B1,"754 Queenston Road,Hamilton,ON",,43.228839,-79.7686535
+Health_Centric,Dentist,,Smile Dental Clinic,,"1221 Limeridge Road East,Hamilton,ON",,43.206763,-79.8313568
+Health_Centric,Dentist,,The Tooth Corner Hamilton Fennell Ave,207,"1119 Fennell Avenue East,Hamilton,ON",,43.2254158,-79.8281298
+Health_Centric,Dentist,,Bellesmile Dentistry,,"148 Parkdale Avenue North,Hamilton,ON",,43.24039114,-79.79014137
+Health_Centric,Dentist,,Dentistry on Queenston,7,"700 Queenston Road,Hamilton,ON",,43.22946038,-79.7718115
+Health_Centric,Dentist,,Dr. Tupman Dentistry,A,"279 Queenston Road,Hamilton,ON",,43.2344067,-79.79205524
+Health_Centric,Dentist,,Dr. Michelle Pakozdi,,"460 Main Street East,Hamilton,ON",,43.2506004,-79.8520131
+Health_Centric,Dentist,,Legend Dental Centre,,"26 Legend Court,Hamilton,ON",,43.2276462,-79.9482675
+Health_Centric,Dentist,,Concept Dental Care,,"737 Golf Links Road,Hamilton,ON",,43.225278,-79.9548577
+Health_Centric,Dentist,,Red Hill Ortho,,"954 Upper James Street,Hamilton,ON",,43.2243131,-79.8840232
+Health_Centric,Dentist,,Hamilton Orthodontics,,"605 Upper Wellington Street,Hamilton,ON",,43.23749373,-79.86698023
+Health_Centric,Dentist,,Dr. Natalie Gaik,203,"883 Upper Wentworth Street,Hamilton,ON",,43.2209476,-79.8626874
+Health_Centric,Dentist,,Royal East Dental - Dundas,6A,"49 King Street East,Hamilton,ON",,43.265879,-79.9509528
+Health_Centric,Dentist,,The Tooth Corner Dundas,8,"33 King Street east,Hamilton,ON",,43.2659368,-79.9517112
+Health_Centric,Hosptial,,Juravinski Cancer Centre,,"699 Concession Street,Hamilton,ON",,43.24010159,-79.84659073
+Health_Centric,Hosptial,,Chedoke Hospital,,"565 Sanatorium Road,Hamilton,ON",,43.23855776,-79.91710597
+Health_Centric,Hosptial,,Hamilton General Hospital,,"237 Barton Street East,Hamilton,ON",,43.26194349,-79.85433493
+Health_Centric,Hosptial,,Juravinski Hospital,,"711 Concession Street,Hamilton,ON",,43.24013058,-79.84500134
+Health_Centric,Hosptial,,McMaster University Medical Centre,,"1200 Main Street West,Hamilton,ON",,43.25961549,-79.91763222
+Health_Centric,Hosptial,,St. Joseph's Hospital - Charlton Campus,,"50 Charlton Avenue East,Hamilton,ON",,43.24860154,-79.87091913
+Health_Centric,Hosptial,Chronic_Care,St. Peter's Hospital,,"88 Maplewood Avenue,Hamilton,ON",,43.24475759,-79.83687057
+Health_Centric,Hosptial,Psychiatric,St. Joseph's Centre for Mountain Health Services - West 5th Campus,,"100 West 5th Street,Hamilton,ON",,43.24233704,-79.88311786
+Health_Centric,Hosptial,Urgent_Care,St. Joseph's Hospital - Urgent Care at King Campus,,"2757 King Street East,Hamilton,ON",,43.22172295,-79.77384804
+Health_Centric,Pharmacy,,North End Farmacia,,"3 Colbourne Street ,Hamilton,ON",L8R2G2,43.26334409,-79.8663835
+Health_Centric,Pharmacy,,Upper Gage Pharmacy,,"558 Upper Gage Avenue ,Hamilton,ON",L8V4J6,43.22845489,-79.83939419
+Health_Centric,Pharmacy,,Health Care Sys Outpatient Phcy,,"50 Charlton Avenue East,Hamilton,ON",L8N4A6,43.24935879,-79.8711936
+Health_Centric,Pharmacy,,Mountain View Pharmacy Clinic,,"1070 Stone Church Road East,Hamilton,ON",L8W3K8,43.19899988,-79.84197629
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy #3096,,"500 Centennial Parkway North,Hamilton,ON",L8E0G2,43.2414823,-79.75366007
+Health_Centric,Pharmacy,,Shoppers Drug Mart #975,,"1599 Upper James Street ,Hamilton,ON",L9B0H7,43.20301708,-79.89226891
+Health_Centric,Pharmacy,,Stoney Creek Medical Pharmacy,,"980 Queenston Road ,Hamilton,ON",L8G1B9,43.22434359,-79.74947716
+Health_Centric,Pharmacy,,Hamilton Compounding Pharmacy,,"260 Nebo Road ,Hamilton,ON",L8W3K5,43.19159588,-79.83905109
+Health_Centric,Pharmacy,,Westdale Wellness Pharmacy,,"701 Main Street West,Hamilton,ON",L8P1H1,43.25983589,-79.89788201
+Health_Centric,Pharmacy,,Shoppers Drug Mart #756,,"999 Upper Wentworth Street ,Hamilton,ON",L9A4X5,43.21763239,-79.8615368
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,"90 Dundas Street East,Hamilton,ON",L9H0C2,43.3156194,-79.90860402
+Health_Centric,Pharmacy,,Rastin's Wilson St Pharmacy,,"323 Wilson Street East,Hamilton,ON",L9G4A8,43.22632578,-79.97693454
+Health_Centric,Pharmacy,,St. Peter's Residence at Ched,,"125 Redfern Avenue ,Hamilton,ON",L9C7S6,43.24013109,-79.92006072
+Health_Centric,Pharmacy,,Main Medical Centre Pharmacy,,"554 Main Street East,Hamilton,ON",L8M1J3,43.24961779,-79.8480159
+Health_Centric,Pharmacy,,Ugm Pharmacy,,"724 Mohawk Road East,Hamilton,ON",L8T2P8,43.21853619,-79.84202189
+Health_Centric,Pharmacy,,Guardian Hamilton Care Phmcy,,"969 Upper Ottawa Street ,Hamilton,ON",L8T4V9,43.20995369,-79.83530209
+Health_Centric,Pharmacy,,James St Medical Pharmacy,,"206 James Street South,Hamilton,ON",L8P3A9,43.25049559,-79.8720202
+Health_Centric,Pharmacy,,Orchard Terrace Care Centre,,"199 Glover Road ,Hamilton,ON",L8E5J2,43.21035969,-79.68331444
+Health_Centric,Pharmacy,,Queenston Pharmacy,,"631 Queenston Road ,Hamilton,ON",L8K6R5,43.23081089,-79.77515797
+Health_Centric,Pharmacy,,Extendicare/hamilton,,"90 Chedmac Drive ,Hamilton,ON",L9C7S6,43.23726989,-79.92146742
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1052,,"1900 King Street East,Hamilton,ON",L8K1W1,43.23065809,-79.80717698
+Health_Centric,Pharmacy,,Truwell Pharmacy,,"90 Wellington Street North,Hamilton,ON",L8R1N1,43.26032149,-79.8580991
+Health_Centric,Pharmacy,,Mcmaster Health Campus Pharmacy,,"100 Main Street West,Hamilton,ON",L8P1H6,43.25694419,-79.87352471
+Health_Centric,Pharmacy,,New Day Barton Ida Pharmacy,,"664 Barton Street East,Hamilton,ON",L8L3A4,43.25651109,-79.83671719
+Health_Centric,Pharmacy,,Idlewyld Manor,,"449 Sanatorium Road ,Hamilton,ON",L9C2A7,43.23619849,-79.91485642
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4365,,"50 Dundurn Street ,Hamilton,ON",L8P4W3,43.26157709,-79.88966241
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,"1115 Barton Street East,Hamilton,ON",L8H2V2,43.25215459,-79.81409419
+Health_Centric,Pharmacy,,Shoppers Drug Mart #755,,"75 Centennial Parkway North,Hamilton,ON",L8E2P2,43.23118319,-79.76557497
+Health_Centric,Pharmacy,,Shoppers Drug Mart #742,,"101 Osler Drive ,Hamilton,ON",L9H4H4,43.25744739,-79.94235783
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1547,,"181 Main Street West,Hamilton,ON",L8P4S1,43.25695429,-79.87765781
+Health_Centric,Pharmacy,,Shoppers Drug Mart #692,,"399 Greenhill Avenue ,Hamilton,ON",L8K6N5,43.21692549,-79.79636238
+Health_Centric,Pharmacy,,Prisms Pharmasave,,"155 James Street South,Hamilton,ON",L8P3A4,43.25206809,-79.8709224
+Health_Centric,Pharmacy,,Mcknight's Pharmacy,,"685 Main Street East,Hamilton,ON",L8M1K4,43.24838889,-79.84121369
+Health_Centric,Pharmacy,,Hd Pharmacy,,"77 Hunter Street East,Hamilton,ON",L8N1M4,43.25298099,-79.8671481
+Health_Centric,Pharmacy,,Grace Villa Nursing Home,,"45 Lockton Crescent ,Hamilton,ON",L8V4V5,43.21150269,-79.84711229
+Health_Centric,Pharmacy,,Health-Wise Pharmacy,,"15 Lockport Way ,Hamilton,ON",L8E0H8,43.2181932,-79.63389723
+Health_Centric,Pharmacy,,The Medicine Shoppe,,"836 Upper James Street ,Hamilton,ON",L9C3A4,43.22809549,-79.88275511
+Health_Centric,Pharmacy,,Medical Arts Pharmacy,,"179 James Street South,Hamilton,ON",L8P3A3,43.25144769,-79.8709459
+Health_Centric,Pharmacy,,Riverview Pharmacy,,"303 King Street East,Hamilton,ON",L8N1C1,43.25398689,-79.8601909
+Health_Centric,Pharmacy,,Samy's Drug Mart,,"847 Barton Street East,Hamilton,ON",L8L3B4,43.25479429,-79.82816099
+Health_Centric,Pharmacy,,Chartwell Willowgrove Ltc Resi,,"1217 Old Mohawk Mohawk Road,Hamilton,ON",L9K1P6,43.23325609,-79.93526252
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4070,,"75 Centennial Parkway North,Hamilton,ON",L8E2P2,43.23118319,-79.76557497
+Health_Centric,Pharmacy,,Mediserve Pharmacy,,"591 King Street East,Hamilton,ON",L8N1E4,43.25256369,-79.8511726
+Health_Centric,Pharmacy,,Supercare Pharmacy,,"410 Highway 8  ,Hamilton,ON",L8G1G2,43.21787479,-79.72303315
+Health_Centric,Pharmacy,,Dundas Community Pharmacy,,"92 Main Street ,Hamilton,ON",L9H2R1,43.26267969,-79.95267003
+Health_Centric,Pharmacy,,Rexall #204,,"1395 Upper Ottawa Street ,Hamilton,ON",L8W3L5,43.19955648,-79.83965619
+Health_Centric,Pharmacy,,Rexall #202,13,"930 Upper Paradise Paradise Road,Hamilton,ON",L9B2N1,43.21841478,-79.91989912
+Health_Centric,Pharmacy,,Mobilrx Pharmacy,,"4206 Governors Road ,Hamilton,ON",L0R1T0,43.22635837,-80.15370359
+Health_Centric,Pharmacy,,Vitacare Pharmacy,,"198 Barton Street East,Hamilton,ON",L8E2K2,43.23149779,-79.73674086
+Health_Centric,Pharmacy,,Cedar Haven Inc,,"169 Delaware Avenue ,Hamilton,ON",L8M1V7,43.24657359,-79.84304859
+Health_Centric,Pharmacy,,Upper Ottawa Pharmacy,,"1447 Upper Ottawa Street ,Hamilton,ON",L8W3J6,43.19599818,-79.84094259
+Health_Centric,Pharmacy,,Limegrath Pharmacy,,"310 Limeridge Road West,Hamilton,ON",L9C2V2,43.22405949,-79.89858691
+Health_Centric,Pharmacy,,Pine Villa Nursing Home,,"490 Highway 8  ,Hamilton,ON",L8G1G6,43.21627849,-79.71616365
+Health_Centric,Pharmacy,,Queen York Pharmacy,,"103 Queen Street North,Hamilton,ON",L8R2V5,43.26259179,-79.87801661
+Health_Centric,Pharmacy,,Medicine Place Pharmacy,,"360 Highway 8  ,Hamilton,ON",L8G1E8,43.21875549,-79.72697716
+Health_Centric,Pharmacy,,Kohler Drug Store,,"574 James Street North,Hamilton,ON",L8L1J7,43.272111,-79.8621278
+Health_Centric,Pharmacy,,Remedy's Healthcare Plus Phrmy,,"60 Centennial Parkway South,Hamilton,ON",L8G2C5,43.22475999,-79.76520067
+Health_Centric,Pharmacy,,St. Joseph's Healthcare Hamilt,,"100 West 5th Street ,Hamilton,ON",L8N3K7,43.24045349,-79.88411121
+Health_Centric,Pharmacy,,St. Joseph's Villa (Dundas),,"56 Governors Road ,Hamilton,ON",L9H5G7,43.26198059,-79.95802823
+Health_Centric,Pharmacy,,Alexander Place,,"329 Parkside Drive ,Hamilton,ON",L0R2H0,43.34234541,-79.90081952
+Health_Centric,Pharmacy,,St George Ancasterpharmacyinc,,"1144 Wilson Street West,Hamilton,ON",L9G3K9,43.19697398,-80.01860585
+Health_Centric,Pharmacy,,Mcknight's Pharmacy,,"460 Main Street East,Hamilton,ON",L8N1K4,43.25058169,-79.8519145
+Health_Centric,Pharmacy,,Arbour Creek Ltc Centre,,"2717 King Street East,Hamilton,ON",L8G1J3,43.22146789,-79.77680967
+Health_Centric,Pharmacy,,Costco Pharmacy #1105,,"100 Legend Court ,Hamilton,ON",L9K1J3,43.23057178,-79.94607343
+Health_Centric,Pharmacy,,Charlton Health Inc.,,"25 Charlton Avenue East,Hamilton,ON",L8N1Y2,43.24982389,-79.8711318
+Health_Centric,Pharmacy,,Chafford Pharmacy Inc,,"1104 Fennell Avenue East,Hamilton,ON",L8T1R9,43.22545969,-79.83059689
+Health_Centric,Pharmacy,,Sherman Ida Pharmacy,,"675 Rymal Road East,Hamilton,ON",L8W1B5,43.19539848,-79.8626935
+Health_Centric,Pharmacy,,Parkdale Medical Pharmacy,,"132 Parkdale Avenue South,Hamilton,ON",L8K3P3,43.23316349,-79.79382268
+Health_Centric,Pharmacy,,Rexall #8211,,"730 Upper James Street ,Hamilton,ON",L9C2Z9,43.23099059,-79.88122411
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4254,,"1579 Main Street West,Hamilton,ON",L8S1E6,43.25547549,-79.92854302
+Health_Centric,Pharmacy,,Shoppers Drug Mart #691,,"210 Mohawk Road East,Hamilton,ON",L9A2H6,43.22555919,-79.8715122
+Health_Centric,Pharmacy,,Victoria Pharmacy,,"304 Victoria Avenue North,Hamilton,ON",L8L5G4,43.26221019,-79.8524791
+Health_Centric,Pharmacy,,Samy's Mountain Pharmacy,,"550 Fennell Avenue East,Hamilton,ON",L8V4S9,43.23189599,-79.8570832
+Health_Centric,Pharmacy,,Seven Star Pharmacy,,"726 Upper Gage Avenue ,Hamilton,ON",L8V4K1,43.22557049,-79.84061969
+Health_Centric,Pharmacy,,Regina Gardens,,"536 Upper Paradise Road ,Hamilton,ON",L9C5E3,43.23103199,-79.91361202
+Health_Centric,Pharmacy,,Kingmount Pharmacy,,"34 King Street East,Hamilton,ON",L8G1J8,43.21648539,-79.75674846
+Health_Centric,Pharmacy,,Rexall #0204,,"1070 Stone Church Road East,Hamilton,ON",L8W3K8,43.19899988,-79.84197629
+Health_Centric,Pharmacy,,Food Basics Pharmacy #541,,"2500 Barton Street East,Hamilton,ON",L8E4A2,43.23469079,-79.75882917
+Health_Centric,Pharmacy,,Pharmasave Waterdown Vlg Pharm,,"287 Dundas Street East,Hamilton,ON",L0R2H0,43.3318831,-79.89511952
+Health_Centric,Pharmacy,,Hamilton Continuing Care,,"125 Wentworth Street South,Hamilton,ON",L8N2Z1,43.24789909,-79.8505537
+Health_Centric,Pharmacy,,Rexall #1743,,"640 Mohawk Road West,Hamilton,ON",L9C1X6,43.23398139,-79.91066511
+Health_Centric,Pharmacy,,Total Health Pharmacy #102,,"1461 Main Street West,Hamilton,ON",L8S1C9,43.25745089,-79.92413672
+Health_Centric,Pharmacy,,Calea Pharmacy,,"41 Brockley Drive ,Hamilton,ON",L8E3P1,43.23579379,-79.74621266
+Health_Centric,Pharmacy,,Shoppers Drug Mart #752,,"661 Upper James Street ,Hamilton,ON",L9C5R8,43.23706179,-79.8772609
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4065,,"65 Mall Road ,Hamilton,ON",L8V1B8,43.22081319,-79.8585813
+Health_Centric,Pharmacy,,Laguisma Residential Home,,"170 Wentworth Street South,Hamilton,ON",L8N2Z2,43.24736339,-79.851308
+Health_Centric,Pharmacy,,Crown Point Pharmacy,,"45 Kenilworth Avenue North,Hamilton,ON",L8H4R4,43.24197479,-79.80978268
+Health_Centric,Pharmacy,,Centennial Pharmacy,,"140 Centennial Parkway North,Hamilton,ON",L8E1H9,43.23308889,-79.76094487
+Health_Centric,Pharmacy,,John Drug Mart Ida Pharmacy,,"225 John Street South,Hamilton,ON",L8N2C7,43.25001079,-79.8679247
+Health_Centric,Pharmacy,,Healthmax Pharmacy,,"2 King Street West,Hamilton,ON",L8P1A1,43.25836319,-79.870915
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1299,,"1411 Upper Sherman Avenue ,Hamilton,ON",L8W1C4,43.20284328,-79.8593394
+Health_Centric,Pharmacy,,Westmount Pharmacy,,"723 Rymal Road West,Hamilton,ON",L9B2N9,43.20988658,-79.92649742
+Health_Centric,Pharmacy,,Clarion Nursing Home,,"337 Highway 8  ,Hamilton,ON",L8G1E7,43.22037979,-79.72817146
+Health_Centric,Pharmacy,,Aid Plus Pharmacy,,"252 Dundas Street East,Hamilton,ON",L8B0E7,43.3292919,-79.89703632
+Health_Centric,Pharmacy,,Pharma Center,,"581 Main Street East,Hamilton,ON",L8M1H9,43.25004779,-79.8477811
+Health_Centric,Pharmacy,,Park Pharmacy,,"72 King Street West,Hamilton,ON",L8G1H9,43.21868619,-79.76481627
+Health_Centric,Pharmacy,,Canadian Quest Pharmacy,,"554 Concession Street ,Hamilton,ON",L8V1A9,43.24092069,-79.8525338
+Health_Centric,Pharmacy,,King Street Medical Pharmacy,,"987 King Street East,Hamilton,ON",L8M1C6,43.25119539,-79.83462369
+Health_Centric,Pharmacy,,The Md Pharmacy,,"754 Queenston Road ,Hamilton,ON",L8G1A4,43.22813909,-79.76916657
+Health_Centric,Pharmacy,,Cancer Centre Pharmacy,,"699 Concession Street ,Hamilton,ON",L8V5C2,43.24009279,-79.846333
+Health_Centric,Pharmacy,,Right Care Pharmacy,,"2 Castlewood Boulevard ,Hamilton,ON",L9H7M8,43.25877379,-79.97881514
+Health_Centric,Pharmacy,,The Wellington Nursing Home,,"1430 Upper Wellington Street ,Hamilton,ON",L9A5H3,43.20931458,-79.879518
+Health_Centric,Pharmacy,,Rexall #8207,,"370 Wilson Street East,Hamilton,ON",L9G4S4,43.22721588,-79.97588023
+Health_Centric,Pharmacy,,Tender Loving Care Rest Home,,"190 Delaware Avenue ,Hamilton,ON",L8M1W1,43.24581399,-79.84165459
+Health_Centric,Pharmacy,,Hamilton Downtown Pharmacy,,"52 Cannon Street West,Hamilton,ON",L8R2B5,43.26152959,-79.8695059
+Health_Centric,Pharmacy,,Village Pharmacies,,"1620 Upper Wentworth Street ,Hamilton,ON",L9B2W3,43.19887338,-79.8736997
+Health_Centric,Pharmacy,,C and Dc Pharmacy,,"276 Barton Street East,Hamilton,ON",L8L2X3,43.26098459,-79.8537949
+Health_Centric,Pharmacy,,Baywoods Place,,"330 Main Street East,Hamilton,ON",L8N3T9,43.25176169,-79.8569424
+Health_Centric,Pharmacy,,Hamilton Community Pharmacy,,"414 Victoria Avenue North,Hamilton,ON",L8L5G8,43.2655201,-79.8505975
+Health_Centric,Pharmacy,,Rexall #8210,,"234 Parkdale Avenue North,Hamilton,ON",L8H5X5,43.24297289,-79.78885978
+Health_Centric,Pharmacy,,Dundurn Place Care Centre,,"39 Mary Street ,Hamilton,ON",L8R3L8,43.25642639,-79.8639432
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1043,,"963 Fennell Avenue East,Hamilton,ON",L8T1R1,43.22872949,-79.83786239
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4115,,"21 Upper Centennial Parkway ,Hamilton,ON",L8J3W2,43.17552758,-79.77772667
+Health_Centric,Pharmacy,,Mountain Clinic Pharmacy,,"880 Upper Wentworth Wentworth Street,Hamilton,ON",L9A5H2,43.22133059,-79.8635494
+Health_Centric,Pharmacy,,Tls Regal Care Drug Mart,,"480 Stone Church Road East,Hamilton,ON",L8W0B1,43.20569088,-79.869106
+Health_Centric,Pharmacy,,Medical Pharmacy,,"597 Barton Street East,Hamilton,ON",L8L2Z6,43.25764779,-79.83999979
+Health_Centric,Pharmacy,,Lopresti Pharmacy,,"770 Concession Street ,Hamilton,ON",L8V1C8,43.23847309,-79.84329499
+Health_Centric,Pharmacy,,Midtown Medical Pharmacy,,"130 Wilson Street ,Hamilton,ON",L8R1E2,43.25706969,-79.8619305
+Health_Centric,Pharmacy,,Shoppers Drug Mart #698,,"1000 Golf Links Road ,Hamilton,ON",L9G3K9,43.22730148,-79.94126502
+Health_Centric,Pharmacy,,Drugstore Pharmacy #4072,,"54 Wilson Street West,Hamilton,ON",L9G1N2,43.21554118,-79.98911954
+Health_Centric,Pharmacy,,M-Line Pharmacy,,"1289 Upper James Street ,Hamilton,ON",L9C3B3,43.21298738,-79.88738611
+Health_Centric,Pharmacy,,Riverdale East Pharmacy,,"168 Barton Street ,Hamilton,ON",L8V4E6,43.23193699,-79.73950896
+Health_Centric,Pharmacy,,Heritage Green Nursing Home,,"353 Isaac Brock Drive ,Hamilton,ON",L8J1Y1,43.19352179,-79.78959737
+Health_Centric,Pharmacy,,646 Main Pharmacy,,"646 Main Street East,Hamilton,ON",L8M1J8,43.24877979,-79.8447116
+Health_Centric,Pharmacy,,Parkview Nursing Centre,,"545 King Street West,Hamilton,ON",L8P1C1,43.26103249,-79.88486411
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1458,,"620 King Street West,Hamilton,ON",L8P1C2,43.26228219,-79.88726061
+Health_Centric,Pharmacy,,Marchese Pharmacy,,"316 James Street North,Hamilton,ON",L8L1H2,43.26436719,-79.8655402
+Health_Centric,Pharmacy,,Shalom Village Nursing Home,,"60 Macklin Street North,Hamilton,ON",L8S3S1,43.26415849,-79.89521351
+Health_Centric,Pharmacy,,First Place Pharmacy,,"350 King Street East,Hamilton,ON",L8N3Y3,43.25310489,-79.858999
+Health_Centric,Pharmacy,,Eastmount Pharmacy,,"788 Upper Ottawa Street ,Hamilton,ON",L8T3V2,43.21744039,-79.83313149
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1487,,"3027 Binbrook Road ,Hamilton,ON",L0R1C0,43.12090997,-79.80584167
+Health_Centric,Pharmacy,,Pharmasave #953,,"1575 Upper Otttawa Street ,Hamilton,ON",L8W3E2,43.19075208,-79.84355179
+Health_Centric,Pharmacy,,Henderson Arts Pharmacy,,"662 Concession Street ,Hamilton,ON",L8V1B8,43.23968219,-79.8475796
+Health_Centric,Pharmacy,,Danmar Pharmacy,,"205 Quigley Road ,Hamilton,ON",L8K5M8,43.21627459,-79.78370707
+Health_Centric,Pharmacy,,Queenlake Pharmacy,,"910 Queenston Road ,Hamilton,ON",L8G1B5,43.22562529,-79.75580657
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1184,,"140 Highway 8  ,Hamilton,ON",L8G1C2,43.22202259,-79.74014436
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1180,,"377 Highway 8  ,Hamilton,ON",L8G1E7,43.21956369,-79.72536285
+Health_Centric,Pharmacy,,Center for Ambulatory Health,,"2757 King Street East,Hamilton,ON",L8G5E4,43.22180539,-79.77370847
+Health_Centric,Pharmacy,,Costco Pharmacy # 1273,,"1330 South Service Road ,Hamilton,ON",L8E5C5,43.2152679,-79.64284543
+Health_Centric,Pharmacy,,Whitney Plaza Pharmacy,,"1819 Main Street West,Hamilton,ON",L8S1H6,43.25291999,-79.93866643
+Health_Centric,Pharmacy,,The Mdcne Shoppe Phrmcy #299,,"840 Queenston Road ,Hamilton,ON",L8G4A8,43.22647949,-79.76154507
+Health_Centric,Pharmacy,,Pharmasave #955,,"105 King Street West,Hamilton,ON",L9H6Y6,43.26685199,-79.95818093
+Health_Centric,Pharmacy,,Life Care Medical Pharmacy,,"280 Queenston Road ,Hamilton,ON",L8K1H1,43.23382729,-79.79246528
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1041,,"753 Main Street East,Hamilton,ON",L8M1L2,43.24789589,-79.83921919
+Health_Centric,Pharmacy,,Petrovich Residential Home,,"90 Wentworth Street South,Hamilton,ON",L8N2Y9,43.24957969,-79.8503945
+Health_Centric,Pharmacy,,Joy of Hearts Pharmacy,,"1125 Main Street East,Hamilton,ON",L8M1P2,43.24343539,-79.82251009
+Health_Centric,Pharmacy,,City Centre Ida Pharmacy,,"77 James Street North,Hamilton,ON",L8R2K3,43.25843219,-79.8692372
+Health_Centric,Pharmacy,,Waterdown Pharmacy,,"145 Hamilton Street North,Hamilton,ON",L8B0Y7,43.3361457,-79.90501792
+Health_Centric,Pharmacy,,Rexall #6946,,"126 Queenston Road ,Hamilton,ON",L8K1G4,43.23535349,-79.79813558
+Health_Centric,Pharmacy,,Ancaster Village Pharmacy,,"81 Wilson Street West,Hamilton,ON",L9G1N1,43.21594618,-79.99074524
+Health_Centric,Pharmacy,,Fletcher Pharmacy,,"1962 Rymal Road East,Hamilton,ON",L0R1P0,43.17956638,-79.80564458
+Health_Centric,Pharmacy,,Pharmacycorner,,"521 Highway 8  ,Hamilton,ON",L8G1G4,43.21614539,-79.71371535
+Health_Centric,Pharmacy,,West Harbour Pharmacy,,"554 John Street North,Hamilton,ON",L8L4S1,43.2727646,-79.8584169
+Health_Centric,Pharmacy,,Daniel Drug Mart,,"547 Upper James Street ,Hamilton,ON",L9C2Y5,43.24091459,-79.8761406
+Health_Centric,Pharmacy,,Sobeys Pharmacy #7213,,"977 Golf Road ,Hamilton,ON",L8G3T9,43.22758428,-79.94420412
+Health_Centric,Pharmacy,,Total Health Pharmacy #135,,"1685 Main Street West,Hamilton,ON",L8S1G5,43.25697869,-79.93408922
+Health_Centric,Pharmacy,,Metro Pharmacy #504,,"1161 Barton Street East,Hamilton,ON",L8H2V2,43.25341029,-79.81276109
+Health_Centric,Pharmacy,,Pop Rx Ancaster Central Pharma,,"1015 Golf Links Road ,Hamilton,ON",L9K1L6,43.22881158,-79.94183322
+Health_Centric,Pharmacy,,Victoria Gardens Ltc,,"176 Victoria Avenue ,Hamilton,ON",L8L5G1,43.25818539,-79.8542889
+Health_Centric,Pharmacy,,Limeridge Medical Pharmacy,,"849 Upper Wentworth Street ,Hamilton,ON",L9A5H4,43.22181019,-79.8609534
+Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,"908 Garth Street ,Hamilton,ON",L9C4L2,43.23339519,-79.90103841
+Health_Centric,Pharmacy,,Pharmasave #9749,,"640 Queenston Road ,Hamilton,ON",L8K1K2,43.22943959,-79.77529847
+Health_Centric,Pharmacy,,Rukavina Residence,,"40 Ontario Avenue ,Hamilton,ON",L8N2X2,43.24967689,-79.8522384
+Health_Centric,Pharmacy,,Barton Medical Pharmacy,,"293 Barton Street East,Hamilton,ON",L8L2X4,43.26102549,-79.8528755
+Health_Centric,Pharmacy,,Stonechurch Pharmacy,,"25 Redmond Drive ,Hamilton,ON",L8W3K7,43.20579908,-79.864862
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1233,,"2110 Rymal Road East,Hamilton,ON",L0R1P0,43.17622138,-79.79196167
+Health_Centric,Pharmacy,,Mount Hope Pharmasave,,"3055 Homestead Drive ,Hamilton,ON",L0R1W0,43.15981027,-79.91260991
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1050,,"1 King Street East,Hamilton,ON",L8G1J7,43.21709329,-79.75747126
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1044,,"47 Wilson Street West,Hamilton,ON",L9G1N1,43.21781858,-79.98946904
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,"675 Upper James Street ,Hamilton,ON",L9C2Z5,43.23420449,-79.8778119
+Health_Centric,Pharmacy,,People's Pharmachoice,,"35 Stone Church Road ,Hamilton,ON",L9K1S4,43.22787408,-79.93595412
+Health_Centric,Pharmacy,,Parkdale Pharmasave,,"205 Melvin Avenue ,Hamilton,ON",L8H2J9,43.24341139,-79.78870218
+Health_Centric,Pharmacy,,Charlton Pharmacy,,"230 James Street South,Hamilton,ON",L8P3B3,43.24966739,-79.8724993
+Health_Centric,Pharmacy,,Healthshare Medical Pharmacy,,"574 Upper James Street ,Hamilton,ON",L9C2Y6,43.24016519,-79.877279
+Health_Centric,Pharmacy,,Shoppers Drug Mart # 1204,,"270 Mud Street West,Hamilton,ON",L8J3Z6,43.19674369,-79.79299067
+Health_Centric,Pharmacy,,Carlisle Pharmacy,,"1493 Centre Road ,Hamilton,ON",L0R1H0,43.39506971,-79.98253465
+Health_Centric,Pharmacy,,Rexall #201,,"60 Hatt Street ,Hamilton,ON",L9H7T6,43.26525749,-79.95742253
+Health_Centric,Pharmacy,,People's Pharmachoice,,"30 Rymal Road East,Hamilton,ON",L9B1T7,43.20166088,-79.89154721
+Health_Centric,Pharmacy,,Rexall #8204,,"331 Dundurn Street ,Hamilton,ON",L8P4L5,43.25131179,-79.89240011
+Health_Centric,Pharmacy,,Ridgeview Long Term Care Centr,,"385 Highland Road West,Hamilton,ON",L8J3E7,43.18766828,-79.80317768
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1054,,"255 Dundas Street East,Hamilton,ON",L0R2H6,43.3300073,-79.89820732
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1046,,"991 King Street West,Hamilton,ON",L8S1K9,43.26213549,-79.90453692
+Health_Centric,Pharmacy,,Westdale Pharmacy,,"1309 Main Street West,Hamilton,ON",L8S1C5,43.25727319,-79.91796552
+Health_Centric,Pharmacy,,Fruitland Pharmacy,,"311 Fruitland Road ,Hamilton,ON",L8E5M8,43.22282779,-79.70046155
+Health_Centric,Pharmacy,,Nebo Medical Pharmacy,,"260 Nebo Drive ,Hamilton,ON",L8W3K5,43.19159588,-79.83905109
+Health_Centric,Pharmacy,,West End Pharmacy,,"690 Main Street West,Hamilton,ON",L8S1A4,43.26033749,-79.89819541
+Health_Centric,Pharmacy,,Lakeside Health Pharmacy,,"825 North Service Road ,Hamilton,ON",L8E0J7,43.2286067,-79.68097494
+Health_Centric,Pharmacy,,Cannon Pharmacy,,"15 Cannon Street ,Hamilton,ON",L8L1Z6,43.26087319,-79.8668309
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1049,,"902 Mohawk Road East,Hamilton,ON",L8T2R8,43.21604779,-79.83274419
+Health_Centric,Pharmacy,,Binbrook Pharmacy,,"3011 Highway 56  ,Hamilton,ON",L0R1C0,43.12042777,-79.80448527
+Health_Centric,Pharmacy,,East Waterdown Pharmacy,,"419 Dundas Street East,Hamilton,ON",L8B0K4,43.34099801,-79.88441742
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1460,,"1341 Main Street West,Hamilton,ON",L8S1C6,43.25739449,-79.91935322
+Health_Centric,Pharmacy,,Nadia's Pharmacy,,"625 Greenhill Avenue ,Hamilton,ON",L8K5N8,43.21035779,-79.78618967
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1319,,"510 Concession Street ,Hamilton,ON",L9A1C4,43.24119149,-79.8546233
+Health_Centric,Pharmacy,,Rexall #8205,,"1119 Fennell Avenue ,Hamilton,ON",L8T1S2,43.22607359,-79.82783939
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1056,,"133 King Street West,Hamilton,ON",L9H1V3,43.26712519,-79.95957953
+Health_Centric,Pharmacy,,Friendly Pharmacy,,"800 Queenston Road ,Hamilton,ON",L8G1A7,43.22803629,-79.76636337
+Health_Centric,Pharmacy,,Paramount Pharmasave,,"1795 Stone Church Road East,Hamilton,ON",L8J0B4,43.19292368,-79.81050428
+Health_Centric,Pharmacy,,Medical Pharmacy,,"1221 Limeridge Road East,Hamilton,ON",L8W1Y1,43.20702509,-79.83081579
+Health_Centric,Pharmacy,,Rockhaven Pharmacy Rx Hlthmed,,"170 Rockhaven Lane ,Hamilton,ON",L8B1B5,43.3344131,-79.90191292
+Health_Centric,Pharmacy,,Pharmaserve,,"68 Centennial Parkway North,Hamilton,ON",L8E1H6,43.23017149,-79.76287767
+Health_Centric,Pharmacy,,Southmount Pharmacy,,"35 Upper Centennial Parkway ,Hamilton,ON",L8J3W2,43.17691468,-79.77670427
+Health_Centric,Pharmacy,,Upper James Clinic Pharmacy,,"609 Upper James Street ,Hamilton,ON",L9C2Y9,43.23933939,-79.8767609
+Health_Centric,Pharmacy,,Sutherland's Pharmacy Limited,,"180 James Street South,Hamilton,ON",L8P4V1,43.25125069,-79.8717178
+Health_Centric,Pharmacy,,Smile Drug Store,,"517 Concession Street ,Hamilton,ON",L8V1A6,43.24141119,-79.8532748
+Health_Centric,Pharmacy,,Trc Pharmacy Hamilton John St.,,"14 John Street North,Hamilton,ON",L8R1G9,43.25633519,-79.8660652
+Health_Centric,Pharmacy,,City Pharmacy,,"1523 Barton Street East,Hamilton,ON",L8H2X5,43.24748389,-79.79805358
+Health_Centric,Pharmacy,,Blackadar Nursing Home,,"101 Creighton Road ,Hamilton,ON",L9H3B7,43.26125949,-79.96759974
+Health_Centric,Pharmacy,,Belle Pharmacy,,"148 Parkdale Avenue North,Hamilton,ON",L8H5X2,43.24031059,-79.78998418
+Health_Centric,Pharmacy,,Hauser's Pharmacy,,"1010 Upper Wentworth Street Street,Hamilton,ON",L9A4V9,43.21697689,-79.8655183
+Health_Centric,Pharmacy,,Wentworth Lodge,,"41 South Street West,Hamilton,ON",L9H4C4,43.25986449,-79.94895843
+Health_Centric,Pharmacy,,King Elm Pharmacy,,"49 King Street East,Hamilton,ON",L8G1J9,43.21657009,-79.75582076
+Health_Centric,Pharmacy,,Rexall,,"447 Main Street East,Hamilton,ON",L8N1K1,43.25128269,-79.8519978
+Health_Centric,Pharmacy,,Lee's Dundas Pharmacy,,"49 King Street East,Hamilton,ON",L9H1B7,43.26599839,-79.95098483
+Health_Centric,Pharmacy,,The Village of Wentworth Heigh,,"1620 Upper Wentworth Street ,Hamilton,ON",L9B2W3,43.19887338,-79.8736997
+Health_Centric,Pharmacy,,St Michael's Pharmacy,,"839 Main Street East,Hamilton,ON",L8M1L8,43.24692249,-79.83596339
+Health_Centric,Pharmacy,,Loblaw Pharmacy,,"115 Hamilton Street North,Hamilton,ON",L0R2H6,43.3352796,-79.90388522
+Health_Centric,Pharmacy,,Gordon's Pharmacy (Ida),,"1511 Main Street East,Hamilton,ON",L8K1E2,43.23940529,-79.80479088
+Health_Centric,Pharmacy,,Mcmaster Drugstore,,"1200 Main Street West,Hamilton,ON",L8N3Z5,43.25885639,-79.91698142
+Health_Centric,Pharmacy,,Rexall #203,,"505 Rymal Road East,Hamilton,ON",L8W3X1,43.19823678,-79.8715997
+Health_Centric,Pharmacy,,Pharmasave #9791 University Ce,,"1280 Main Street West,Hamilton,ON",L8S4S4,43.26225299,-79.92028962
+Health_Centric,Pharmacy,,Hamilton General Drugstore,,"237 Barton Street East,Hamilton,ON",L8L2X2,43.26247809,-79.8540902
+Health_Centric,Pharmacy,,Axis Health Care Plus Pharmacy,,"1079 Barton Street East,Hamilton,ON",L8L3E2,43.25167569,-79.81653769
+Health_Centric,Pharmacy,,Loblaw Pharmacy #4912,,"102 Highway 8   ,Hamilton,ON",L8G4H3,43.22346389,-79.74678196
+Health_Centric,Pharmacy,,Eastside Medical Pharmacy,,"229 King Street East,Hamilton,ON",L8N1B6,43.25462219,-79.8624104
+Health_Centric,Pharmacy,,Rexall #1560,,"102 Highway 8  ,Hamilton,ON",L8G1C2,43.22346389,-79.74678196
+Health_Centric,Pharmacy,,Shoppers Drug Mart #754,,"801 Mohawk Road West,Hamilton,ON",L9C6C2,43.23305969,-79.92303402
+Health_Centric,Pharmacy,,Silver Creek Guardian Pharmacy,,"325 Winterberry Drive ,Hamilton,ON",L8J0B6,43.19392408,-79.80704568
+Health_Centric,Pharmacy,,Rexall,,"2 King Street West,Hamilton,ON",L8P1A1,43.25836319,-79.870915
+Health_Centric,Pharmacy,,Truwell Pharmacy,,"838 King Street East,Hamilton,ON",L8M1B4,43.25112069,-79.84129219
+Health_Centric,Pharmacy,,Rymal Gage Pharmacy,,"905 Rymal Road East,Hamilton,ON",L8W3M2,43.19299088,-79.85226029
+Health_Centric,Pharmacy,,Food Basics Pharmacy #580,,"751 Upper James Street South,Hamilton,ON",L9C3A1,43.22983829,-79.8792118
+Health_Centric,Pharmacy,,Medsmart Pharmacy,,"2732 Barton Street East,Hamilton,ON",L8E4M6,43.23315619,-79.74622456
+Health_Centric,Pharmacy,,The Hamilton Clinic Pharmacy,,"200 Main Street East,Hamilton,ON",L8N1H3,43.25302939,-79.8618353
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,"2190 Rymal Road East,Hamilton,ON",L0R1P0,43.17357878,-79.78261287
+Health_Centric,Pharmacy,,Shoppers Drug Mart #750,,"1183 Barton Street East,Hamilton,ON",L8H2V4,43.25100149,-79.81208039
+Health_Centric,Pharmacy,,Macassa Lodge,,"701 Upper Sherman Avenue South,Hamilton,ON",L8V3M7,43.22557059,-79.84806809
+Health_Centric,Pharmacy,,Binbrook Family Health Phcy,,"2537 Hamilton Regional Road 56  ,Hamilton,ON",L0R1C0,43.12478487,-79.80201067
+Health_Centric,Pharmacy,,Mohawk Drug Mart,,"1000 Upper Gage Avenue  Avenue,Hamilton,ON",L8V4R5,43.21364419,-79.84622139
+Health_Centric,Pharmacy,,Rosedale Pharmacy,,"870 Lawrence Road ,Hamilton,ON",L8K2A3,43.22882099,-79.80326528
+Health_Centric,Pharmacy,,Wal-Mart Pharmacy,,"1051 Garner Road West,Hamilton,ON",L9G3K9,43.19761638,-80.01427954
+Health_Centric,Pharmacy,,Barton Pharmacy,,"1130 Barton Street East,Hamilton,ON",L8H7P9,43.25082169,-79.81466329
+Health_Centric,Pharmacy,,Village Pharmacy,,"393 Rymal Road West,Hamilton,ON",L9B1V2,43.20605948,-79.91004401
+Health_Centric,Pharmacy,,Hess Village Pharamcy,,"340 York Boulevard ,Hamilton,ON",L8R3L2,43.26394949,-79.87852761
+Health_Centric,Pharmacy,,Barton Street Pharmacy,,"707 Barton Street East,Hamilton,ON",L8L3A5,43.25638489,-79.83466809
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1053,,"232 Cannon Street East,Hamilton,ON",L8L0A6,43.25802009,-79.8570737
+Health_Centric,Pharmacy,,Community Residential Care,,"153 George Street ,Hamilton,ON",L8P1E4,43.25874809,-79.88054601
+Health_Centric,Pharmacy,,Nash Pharmacy,,"691 Queenston Road ,Hamilton,ON",L8G1A1,43.23031959,-79.77178647
+Health_Centric,Pharmacy,,Shoppers Drug Mart #1047,,"113 Herkimer Street ,Hamilton,ON",L8P2G8,43.25021849,-79.87899241
+Health_Centric,Pharmacy,,Metro Pharmacy #515,,"1370 South Service Road ,Hamilton,ON",L8E5C5,43.2149585,-79.64162343
+Health_Centric,Pharmacy,,King Medical Pharmacy,,"505 King Street West,Hamilton,ON",L8P1B9,43.26069839,-79.88408891
+Health_Centric,Pharmacy,,Meadowlands Pharmasave,,"737 Golf Links Road ,Hamilton,ON",L9K1L5,43.22605668,-79.95382873
+Health_Centric,Pharmacy,,Daniel Drug Mart,,"1394 Upper Gage Avenue ,Hamilton,ON",L8W1E7,43.20121838,-79.85129759
+Health_Centric,Pharmacy,,"Greenbaum, Joseph Dr",,"25 Charlton Avenue East,Hamilton,ON",L8N1Y2,43.24982389,-79.8711318
+Health_Centric,Pharmacy,,Queen's Garden,,"80 Queen Street North,Hamilton,ON",L8R3P6,43.26116089,-79.87697911
+Health_Centric,Pharmacy,,N.L. Gibson's Drug Ltd.,,"377 Main Street East,Hamilton,ON",L8N1J4,43.25177549,-79.8550118
+Health_Centric,Pharmacy,,The Hamilton Pharmacy,,"335 Queenston Road ,Hamilton,ON",L8K1H7,43.23373999,-79.78945508
+Health_Centric,Pharmacy,,Shoppers Drug Mart 1045,,"1300 Garth Street ,Hamilton,ON",L9C4L7,43.22119998,-79.90707341
+Health_Centric,Pharmacy,,Montgomery Pharmacy,,"1440 Main Street East,Hamilton,ON",L8K6M3,43.23973029,-79.80862178
+Health_Centric,Pharmacy,,The Meadows Long Term Care Cen,,"12 Tranquility Avenue ,Hamilton,ON",L9G5C2,43.21114908,-80.00729304
+Health_Centric,Pharmacy,,San Rafael Pharmacy,,"146 Ottawa Street North,Hamilton,ON",L8H3Z3,43.24650029,-79.81757449
+Health_Centric,Pharmacy,,Gage Pharmacy,,"1050 Upper Gage Avenue ,Hamilton,ON",L8V5B7,43.21277709,-79.84657149
+Health_Centric,Pharmacy,,West End Pharmacy,,"174 King Street West,Hamilton,ON",L8P1A5,43.25834809,-79.87437781

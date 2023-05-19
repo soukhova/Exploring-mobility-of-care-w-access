@@ -1,0 +1,30 @@
+---
+title: "Parks Polygon Centroid"
+output: html_document
+date: "2023-05-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("sf")
+library(sf)
+```
+
+# Parks to Centroids to Coordinates
+```{r}
+parks.shapefile <- st_read("/Users/nicholas/Downloads/Care-Destinations/Nick's Workspace/Parks/Parks.shp")
+```
+
+```{r}
+centroids <- sf:: st_centroid(parks.shapefile)
+```
+
+```{r}
+coordinates <- coordinates <- sf:: st_coordinates(centroids)
+```
+
+
+
