@@ -9,22 +9,52 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-install.packages("sf")
+#install.packages("sf")
 library(sf)
+library(tidyverse) #dplyr and tidyr are inside of the 'tidyverse' package!
+library(ggplot2) #for making maps, graphs, etc.
+library(leaflet) #for making interactive html maps
 ```
 
 # Parks to Centroids to Coordinates
 ```{r}
-parks.shapefile <- st_read("/Users/nicholas/Downloads/Care-Destinations/Nick's Workspace/Parks/Parks.shp")
+#NOTE: here it's important not to hardcode path links. When we open the Care-Destinations.RProj file, our working directory is the Care-Destinations folder (you can run the function "getwd()" to get your local path, mine is ""C:/Users/user/OneDrive - McMaster University/11. Supervised/Care-Destinations"" but yours will likely be ""C:/Users/nicholas/Downloads/Care-Destinations""). The point is, when working from the .RProj file, we are both working at the level of "Care-Destinations" so we can simply change the path to read into Nick's Workspace,
+parks.shapefile <- st_read("..//Nick's Workspace/Parks/Parks.shp")
 ```
 
+We can see that the projected CRS is NAD83. For use of with r5r and other routing tools, it's generally best to stick with WGS84. WGS84 gives us points with coordinates in the form of LAT ~43 and LONG ~-80 (matching all LAT and LONGs of the other address). So let's transform the projected CRS to WSG84:
 ```{r}
-centroids <- sf:: st_centroid(parks.shapefile)
+parks.shapefile <- parks.shapefile |> st_transform(4979)
+parks.shapefile #now we can see that the CRS is now WGS84 and the geometry filed is full of points that have ~80 and ~43 LONG and LATs)
 ```
-
+Extracting the coordinates:
 ```{r}
-coordinates <- coordinates <- sf:: st_coordinates(centroids)
+centroids <- st_centroid(parks.shapefile)
+coordinates <- st_coordinates(centroids) |> data.frame() #making it a data.frame()
 ```
 
+Plotting the coordinates (NOTE: we can plot 'sf' objects using geom_sf or we can plot non explicitly spatial objects as 'points' on the displayed x and y axises) on a 'static' map. This can be used for reports and can easily be 'knitted' into PDFs.
+```{r}
+#using the ggplot2 packae
+parks_cent_ggmap <- ggplot() +
+  geom_sf(data = parks.shapefile, aes(fill = CLASSIFICA)) + #here we also fill the polygons in with colours based on their 'classification', you could pick any variable
+  geom_point(data = coordinates, aes(x = X, y=Y), size=0.2)
+  #geom_sf(data = centroids, size=0.2) (NOTE: you could 'comment' out the geom_point() line above and use this line instead, it will yeild the same plot)
 
+parks_cent_ggmap
+```
+
+This is an example of a more interactive map! It uses the 'leaflet' package. It isn't very pretty for reports / needs a few tricks to get it to 'knit' into PDFs but is great for interaction.
+```{r}
+parks_cent_lmap <- leaflet() |>
+  addTiles() |>
+  addPolygons(data=parks.shapefile, fillColor = "Red", col="Red") |>
+  addMarkers(data=centroids, popup = ~as.character(NAME))
+#   addCircleMarkers(data=centroids, fillOpacity = 0.7, 
+#                    clusterOptions = markerClusterOptions() #NOTE: you can comment these lines back in and see the neat spatial clusters it leaflet maps. Leaflet can also make heat maps! However, the 'addCircleMarkers function does not have the option to include 'popup' to my knowledge, so I've commented it out for now.
+#                    )
+parks_cent_lmap
+```
+
+Next task: use functions from tidyverse package (see data-wrangling cheat sheet here or simply do some goolging hehe https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) to populate the database with these coordinates!
 
