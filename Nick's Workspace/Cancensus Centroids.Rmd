@@ -29,8 +29,9 @@ census_data <- get_census(dataset='CA21', regions=list(CMA="35537"),
                           level='DA', use_cache = FALSE, geo_format = 'sf', quiet = TRUE)
 ```
 
+I believe this is what I was supposed to do, get a centroid for the DA? and then the coordinates for that? I am not 100% sure if that's what I am exactly supposed to do. 
 ```{r}
-centroids <- st_centroid(census_data$geometry)
-coordinates <- st_coordinates(centroids) |> data.frame() #making it a data.frame()
+census_cent <- st_centroid(census_data$geometry)
+census_coord <- st_coordinates(centroids) |> data.frame() #making it a data.frame()
 ```
 
