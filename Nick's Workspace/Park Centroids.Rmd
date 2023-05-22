@@ -58,3 +58,22 @@ parks_cent_lmap
 
 Next task: use functions from tidyverse package (see data-wrangling cheat sheet here or simply do some goolging hehe https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) to populate the database with these coordinates!
 
+# Populating the Database with these coordinates
+```{r}
+# Combining coordinates to centroids database
+library(dplyr)
+
+new_centroids <- centroids %>%
+  bind_cols(coordinates %>% 
+              rename(Latitude = X, Longitude = Y))
+```
+
+```{r}
+write.csv(new_centroids, file = file.path("/Users/nicholas/Downloads", "Parks_Coordinates.csv"), row.names = FALSE)
+```
+
+Downloaded the data frame "new_centroids" and imported into Excel to remove the columns that aren't applicable to the finished Data Base and combined them manually to the finished database
+
+Imported the finished Database with all of the destinations and coordinates into the Care-Destinations > data-raw as "FINAL_Care_Desintations_2023"
+
+

@@ -1,0 +1,119 @@
+---
+title: "Mapping Entire Database Test"
+output: html_document
+date: "2023-05-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+I am still having trouble with not hardcoding the path links - I tried replicating the same thing you did to import the Final Care Destinations .csv file but it still wouldn't work I know its such a minor thing I should be getting my head wrapped around but for some reason I can't 
+
+```{r}
+# Mapping the Final Care Destination Database
+Care_Dest_lmap <- leaflet() |>
+  addTiles() |>
+  addMarkers(data= FINAL_Care_Destinations_2023_, popup = ~as.character(Name))
+#   addCircleMarkers(data=centroids, fillOpacity = 0.7, 
+#                    clusterOptions = markerClusterOptions() #NOTE: you can comment these lines back in and see the neat spatial clusters it leaflet maps. Leaflet can also make heat maps! However, the 'addCircleMarkers function does not have the option to include 'popup' to my knowledge, so I've commented it out for now.
+#                    )
+Care_Dest_lmap
+```
+
+When checking the leaflet map: there was an error - 4 daycares were located in Indianapolis - UH OH! So manually I retrieved the proper coordinates from Google Maps and changed them here:
+```{r}
+# Locate proper coordinates in Google Maps manually and change them here
+FINAL_Care_Destinations_2023_[276,8] <- 43.33844721300708
+FINAL_Care_Destinations_2023_[276,9] <- -79.89791083256615
+```
+
+```{r}
+# Locate what row the incorrect Day Cares are in
+daycare1 <- which(FINAL_Care_Destinations_2023_$Name == "Village Treehouse Childcare")
+# Change the coordinates for daycare1
+FINAL_Care_Destinations_2023_[272,8] <- 43.22110693690478
+FINAL_Care_Destinations_2023_[272,9] <- -79.98204947490137
+```
+
+```{r}
+# Locate what row the incorrect Day Cares are in
+daycare2 <- which(FINAL_Care_Destinations_2023_$Name == "Ancaster Little Gems Children's Centre")
+# Change the coordinates for daycare2
+FINAL_Care_Destinations_2023_[171,8] <- 43.22697433940233
+FINAL_Care_Destinations_2023_[171,9] <- -79.9769224037366
+```
+
+```{r}
+# Locate what row the incorrect Day Cares are in
+daycare3 <- which(FINAL_Care_Destinations_2023_$Name == "Church of St. Peter's Children's Day Care Centre")
+# Change the coordinates for daycare2
+FINAL_Care_Destinations_2023_[95,8] <- 43.248388018653465
+FINAL_Care_Destinations_2023_[95,9] <- -79.84054503441965
+```
+
+```{r}
+# Locate what row the incorrect Day Cares are in
+daycare4 <- which(FINAL_Care_Destinations_2023_$Name == "KIDS & COMPANY HAMILTON")
+# Change the coordinates for daycare2
+FINAL_Care_Destinations_2023_[172,8] <- 43.2600003371171
+FINAL_Care_Destinations_2023_[172,9] <- -79.89807440373485
+```
+
+```{r}
+# Replacing the FINAL_Care_Destinations_2023 csv with the proper coordinates I inputed into them
+
+write.csv(FINAL_Care_Destinations_2023_, file = file.path("/Users/nicholas/Downloads/Care-Destinations/data-raw", "FINAL_Care_Destinations_2023.csv"), row.names = FALSE)
+```
+
+# Now to get to mapping the FINAL FINAL dataset yay!
+
+I started with doing a cluster one just for fun and try out this function, nothing really special but thought I'd try it
+```{r}
+# Mapping the Final Care Destination Database again with adjusted coordinates - CLuster Map
+library(leaflet)
+library(leaflet.providers)
+
+Care_Dest_Cluster_lmap <- leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers(data = FINAL_Care_Destinations_2023,
+                   clusterOptions = markerClusterOptions(),
+                   fillColor = ~Care_Category,
+                   fillOpacity = 1,
+                   color = "black",
+                   radius = 5,
+                   popup = ~as.character(Name))
+
+Care_Dest_Cluster_lmap
+```
+I then mapped all the specific Destinations by their specific type which I thought was a bit more interesting at least to see which ones saturate the map more ... on that note it may be good to discuss if there were specific categories in the Park shapefile that we might not want and I can edit the dataset from there. 
+```{r}
+# Mapping the Final Care Destination Database again with adjusted coordinates - CLuster Map
+library(leaflet)
+library(leaflet.providers)
+
+# Creating a palette for colours 
+carepal <- colorFactor(rainbow(18), FINAL_Care_Destinations_2023$Care_Category_Specific)
+
+# Making the Map
+Care_Dest_Cat_lmap <- leaflet(data = FINAL_Care_Destinations_2023) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers(
+    radius = 4,
+    color = ~carepal(Care_Category_Specific),
+    stroke = FALSE,
+    fillOpacity = 0.5,
+    popup = ~as.character(Name),
+    lng = ~LONGITUDE,
+    lat = ~LATITUDE
+  ) %>%
+  addLegend(
+    position = "topright",
+    pal = carepal,
+    values = ~Care_Category_Specific,
+    title = "Care Category",
+    opacity = 0.7
+  )
+
+Care_Dest_Cat_lmap
+```
+

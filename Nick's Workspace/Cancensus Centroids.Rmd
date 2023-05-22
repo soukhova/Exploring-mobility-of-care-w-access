@@ -1,0 +1,36 @@
+---
+title: "Cancensus Centroid"
+output: html_document
+date: "2023-05-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("cancensus")
+library(cancensus)
+library(sf)
+install.packages('geojsonsf')
+library(geojsonsf)
+options(cancensus.api_key = "CensusMapper_1d16ff8ad5e8a65ff028959182ac4940")
+```
+Hamilton CMA: "35537"
+
+Income Vector:Income statistics in 2020 for the population aged 15 years and over in private households: "v_CA21_599"
+Education Vector: Total - Highest certificate, diploma or degree for the population aged 15 years and over in private households - "v_CA21_5817"
+Gender Vector:
+Age Vector: Total Age - "v_CA21_8"
+Ethnicity Vector: Total - Ethnic or cultural origin for the population in private households : "v_CA21_4917"]
+```{r}
+census_data <- get_census(dataset='CA21', regions=list(CMA="35537"),
+                          vectors=c("v_CA21_5817","v_CA21_599","v_CA21_8","v_CA21_4917"),
+                          level='DA', use_cache = FALSE, geo_format = 'sf', quiet = TRUE)
+```
+
+```{r}
+centroids <- st_centroid(census_data$geometry)
+coordinates <- st_coordinates(centroids) |> data.frame() #making it a data.frame()
+```
+
