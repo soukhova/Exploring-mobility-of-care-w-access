@@ -1,0 +1,113 @@
+---
+title: "01- Calc-travel-times"
+output: html_document
+---
+In this notebook, we will take the origins (X,Y centroids from the cancensus centroids) and the destinations (X,Y coords from the Geocoded addresses) and calculate the travel times for each origin to each destination for 4 modes. This is a _travel time matrix_: each origin ($i$ -- imagine them as rows) has a travel time to each destination ($j$ -- imagine these as columns). 
+
+Travel modes:
+1) Car
+2) Walk
+3) Bike
+4) Transit bus
+
+{r5r} makes calculating travel times easy in R! The package website is here: https://ipeagit.github.io/r5r/index.html, we will be using the "travel_time_matrix()" function in this step. We'll be using lines described in stages 2 and 3: https://ipeagit.github.io/r5r/articles/travel_time_matrix.html 
+
+# 1) Build routable network with setup_r5()
+
+```{r setup, include=FALSE}
+# increase Java memory
+options(java.parameters = "-Xmx2G")
+
+# load libraries
+install.packages('r5r')
+library(r5r)
+library(data.table)
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+```
+
+Here, we need to load in the origin points and destination points. You can load them in as two seperate .csv but feel free to read about different .R data types. For instance, I did some googling and found this good summary chapter: https://rstudio-education.github.io/hopr/dataio.html#r-files
+
+**Nick to complete**: loading the destination points (care destinations) and origins centroids here:
+```{r}
+dest_full <- read.csv("data-raw/FINAL_Care_Destinations_2023.csv") #care-destinations
+#orig_full <- # must complete this
+```
+
+Format the destination points as required by the {r5r} package (in this order: id, Long, Lat):
+```{r}
+# first, add a unique ID column to the care destinations so we can associate their travel times back to the original database
+dest <- dest_full %>% mutate(ID = 1:n()) 
+
+# next, rename and select just the 3 columns we need
+dest <- dest %>% 
+  rename(id = ID,
+         lon = "LONGITUDE",
+         lat = "LATITUDE") %>%
+  select(id, lon, lat)
+```
+
+**Nick to do**: Format the origin points (ID, Long, Lat):
+```{r}
+
+```
+
+Now we are ready for r5r!
+
+Download OSM Network and GTFS Data:
+```{r set up r5 path, include=FALSE}
+# the r5r package requires Java Development Kit version 11, which can be downloaded from https://www.oracle.com/java/technologies/javase-jdk11-downloads.html . See the direction given in the r5r installation here (https://ipeagit.github.io/r5r/articles/r5r.html)
+dir.create("./data-tt")
+r5_path <- file.path("./data-tt")
+```
+
+```{r download data, include=FALSE, eval=FALSE}
+# downloading ontario osm in the correct format -- this is the open street network for Ontario in the file format of a .pbf! Hopefully it's not too big of a spatial extent and doesn't cause issues. (you can explore geofabrik here: https://download.geofabrik.de/).
+
+# you want to comment this chunk out after downloading it for the first time - it takes a few minutes and saves it into the 'r5_path' . I also recommend not pushing/committing this file to github. It's too big and only needs to be downloaded locally for the person performing the travel time calculation.
+download.file(url = paste0("https://download.geofabrik.de/north-america/canada/ontario-latest.osm.pbf"),
+              destfile = file.path(r5_path, "osm.pbf"),
+              mode = "wb")
+
+```
+
+```{r}
+#download and import GTFS (Hamilton transit data) -- this comes from transitfeeds, feel free to explore the website. Also comment out after downloading for the first time. I also recommend not pushing/committing this file to github.
+download.file(url = "https://transitfeeds.com/p/hamilton-street-railway/31/latest/download", destfile = file.path(r5_path, "HSR_transit.zip"), mode = "wb")
+```
+
+Set Up R5 Routing:
+```{r build graph, include = FALSE}
+r5_HAM <- setup_r5(data_path = r5_path, verbose = FALSE)
+```
+
+Calculate the travel time matrices, first _transit_:
+```{r}
+# set the arguments for the calculation
+mode <- c("WALK", "TRANSIT")
+max_walk_time <- 30   # minutes
+max_trip_duration <- 60 # minutes
+departure_datetime <- as.POSIXct("17-05-2023 08:00:00",
+                                 format = "%d-%m-%Y %H:%M:%S")
+
+
+
+start.time <- Sys.time()
+ttm_transit <- travel_time_matrix(r5r_core = r5r_core,
+                          origins = #orig
+                          destinations = #dest
+                          mode = mode,
+                          departure_datetime = departure_datetime,
+                          max_walk_time = max_walk_time,
+                          max_trip_duration = max_trip_duration)
+end.time <- Sys.time()
+print(paste0("OD matrix calculation took ", round(difftime(end.time, start.time, units = "mins"), digits = 2), " minutes..."))
+
+ttm_transit <- as.data.frame(ttm_transit)
+
+save("ttm_transit", file = "data-tt/ttm_transit.RDS")
+#I only made the cut off 60 minutes, so centroids that have travel times greater than this time are not computed. You would have to re-run using a larger cut-off.
+```
+
+Nick, now calculate the travel time matrices for the 3 remaining modes :) 
