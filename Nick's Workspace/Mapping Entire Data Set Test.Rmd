@@ -90,7 +90,10 @@ I then mapped all the specific Destinations by their specific type which I thoug
 # Mapping the Final Care Destination Database again with adjusted coordinates - CLuster Map
 library(leaflet)
 library(leaflet.providers)
+```
 
+
+```{r}
 # Creating a palette for colours 
 carepal <- colorFactor(rainbow(18), FINAL_Care_Destinations_2023$Care_Category_Specific)
 
