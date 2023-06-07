@@ -1,0 +1,163 @@
+
+```{r}
+library(sf)
+library(tmap)
+library(dplyr)
+library(accessibility)
+```
+
+# Examples of accessibility calculations
+(code in this section taken from: https://ipeagit.github.io/accessibility/)
+```{r}
+# required data: a travel matrix and some land use data
+data_dir <- system.file("extdata", package = "accessibility")
+travel_matrix <- readRDS(file.path(data_dir, "travel_matrix.rds"))
+land_use_data <- readRDS(file.path(data_dir, "land_use_data.rds"))
+grid_bho <- readRDS(file.path(data_dir, "grid_bho.rds"))
+
+cost_closest <- cost_to_closest(
+  travel_matrix,
+  land_use_data,
+  opportunity = "schools",
+  travel_cost = "travel_time",
+  n = 1
+)
+head(cost_closest)
+```
+
+
+```{r}
+cum_cutoff <- cumulative_cutoff(
+  travel_matrix,
+  land_use_data,
+  opportunity = "jobs",
+  travel_cost = "travel_time",
+  cutoff = 45
+)
+head(cum_cutoff)
+
+# Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities).
+```
+
+```{r}
+fca <- floating_catchment_area(
+  travel_matrix,
+  land_use_data,
+  opportunity = "jobs",
+  travel_cost = "travel_time",
+  demand = "population",
+  method = "2sfca",
+  decay_function = decay_binary(cutoff = 45)
+)
+head(fca)
+
+#Interpretation. The number of jobs that are available per job-seeking population is calculated for each id. It is a 'competitive' measure, but 'unconstrained' as the resulting fca values do not sum up to any related total (not opportunities nor population).
+```
+
+```{r}
+sptl_avlblt <- spatial_availability(
+  travel_matrix,
+  land_use_data,
+  opportunity = "jobs",
+  travel_cost = "travel_time",
+  demand = "population",
+  decay_function = decay_binary(cutoff = 45)
+)
+head(sptl_avlblt)
+
+# a check: you can see that the sum of all the jobs allocated to each zone as 'spatial availability' is the same as the total number of jobs present at zone initially. This means that the total jobs proportionally allocated is _equal_. 
+sptl_avlblt$jobs %>% sum(na.rm = TRUE)
+land_use_data$jobs %>% sum(na.rm = TRUE)
+
+#interpretation: if taken that all the opportunities are available to the population in the region, the opportunities are proportionally allocated to each id based on 1) travel impedance (in this case, if within 45 mins or not), and 2) based on how demanding (i.e., large) the population center is. The allocation is proportional (i.e., relative) and totals are preserved such that the spatial availability values per id can be interpreted simply as 'the number of jobs available to that id'. This is a 'competitive' (as it considers population 'demand' recognizing that there's a finite amount of opportunities in the region and that the interpretation of accessibility is spatially relative) but also constrained (the opportunities are preserved).
+```
+
+# Visualizing
+```{r}
+#join all the accessibility calcs to the region and visualize. all are 45 min cut offs
+grid_bho_access <- grid_bho %>% merge(cum_cutoff, by="id") %>%
+  rename("cum_op_jobs" = "jobs") %>%
+  merge(fca, by = "id") %>% 
+  rename("fca_jobs" = "jobs") %>%
+  merge(sptl_avlblt, by = "id") %>%
+  rename("sptl_avlblt_jobs" = "jobs")
+```
+
+```{r}
+cum_op_jobs_plot <- tm_shape(grid_bho_access) +
+  tm_polygons("cum_op_jobs",
+              style = "cont",
+              palette = "Purples",
+              #breaks = c(0, 303, 600, 828, 1692),
+              #label = c("0", "303 (1st Qu.)", "600 (median)","828 (3rd Qu.)", "1693 (max.)"),
+              title = " ") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Cumulative opp")
+
+fca_jobs_plot <- tm_shape(grid_bho_access) +
+  tm_polygons("fca_jobs",
+              style = "cont",
+              palette = "Oranges",
+              #breaks = c(0, 303, 600, 828, 1692),
+              #label = c("0", "303 (1st Qu.)", "600 (median)","828 (3rd Qu.)", "1693 (max.)"),
+              title = " ") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "FCA")
+
+sptl_avlblt_plot <- tm_shape(grid_bho_access) +
+  tm_polygons("sptl_avlblt_jobs",
+              style = "cont",
+              palette = "Greens",
+              #breaks = c(0, 303, 600, 828, 1692),
+              #label = c("0", "303 (1st Qu.)", "600 (median)","828 (3rd Qu.)", "1693 (max.)"),
+              title = " ") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Sptl Avail")
+
+sample_access_plots <- tmap_arrange(cum_op_jobs_plot, fca_jobs_plot, sptl_avlblt_plot, ncol = 3)
+sample_access_plots
+```
+
+Relative to the population and jobs:
+```{r}
+grid_bho_access <- grid_bho_access %>% merge(land_use_data, by="id") 
+
+pop_plot <- tm_shape(grid_bho_access) +
+  tm_polygons("population",
+              style = "cont",
+              palette = "Reds",
+              #breaks = c(0, 303, 600, 828, 1692),
+              #label = c("0", "303 (1st Qu.)", "600 (median)","828 (3rd Qu.)", "1693 (max.)"),
+              title = " ") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Population")
+
+jobs_plot <- tm_shape(grid_bho_access) +
+  tm_polygons("jobs",
+              style = "cont",
+              palette = "Blues",
+              #breaks = c(0, 303, 600, 828, 1692),
+              #label = c("0", "303 (1st Qu.)", "600 (median)","828 (3rd Qu.)", "1693 (max.)"),
+              title = " ") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Jobs")
+
+sample_opp_pop_plots <- tmap_arrange(pop_plot, jobs_plot, ncol = 2)
+sample_opp_pop_plots
+```
+
