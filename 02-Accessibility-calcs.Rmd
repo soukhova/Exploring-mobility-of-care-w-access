@@ -28,6 +28,7 @@ head(cost_closest)
 
 ```{r}
 cum_cutoff <- cumulative_cutoff(
+
   travel_matrix = travel_matrix, #name of the data.frame that contains the travel times and the from_ids to to_ids
   land_use_data = land_use_data, #name of the data.frame care-destination counts per DA
   opportunity = "schools", #name of the column for 'care destination' in 'land_use_data'
@@ -167,6 +168,7 @@ sample_opp_pop_plots <- tmap_arrange(pop_plot, jobs_plot, ncol = 2)
 sample_opp_pop_plots
 ```
 
+<<<<<<< HEAD
 # TESTING ACCESSIBILITY CALCS
 
 ```{r}
@@ -208,3 +210,5 @@ head(cum_cutoff)
 
 # Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities).
 ```
+=======
+>>>>>>> 657971fa5ae6c2a3de5afe4bfec7dfeecf41aab9

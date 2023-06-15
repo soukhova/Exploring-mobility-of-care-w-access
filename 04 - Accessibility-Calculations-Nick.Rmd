@@ -86,3 +86,4 @@ head(cum_cutoff)
 # Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities).
 ```
 
+
