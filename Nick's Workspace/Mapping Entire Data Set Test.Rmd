@@ -95,10 +95,10 @@ library(leaflet.providers)
 
 ```{r}
 # Creating a palette for colours 
-carepal <- colorFactor(rainbow(18), FINAL_Care_Destinations_2023$Care_Category_Specific)
+carepal <- colorFactor(rainbow(18), dest_full$Care_Category_Specific)
 
 # Making the Map
-Care_Dest_Cat_lmap <- leaflet(data = FINAL_Care_Destinations_2023) %>%
+Care_Dest_Cat_lmap <- leaflet(data = dest_full) %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
   addCircleMarkers(
     radius = 4,
