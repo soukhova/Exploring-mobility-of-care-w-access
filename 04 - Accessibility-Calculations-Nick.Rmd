@@ -54,6 +54,9 @@ load in data:
 ```{r}
 # required data: a travel matrix and some land use data - not loading properly as an RDS so being called in from environment 
 load("data-tt/ttm_car.RDS")
+load("data-tt/ttm_walk.RDS")
+load("data-tt/ttm_bike.RDS")
+load("data-tt/ttm_transit.RDS")
 load("data-tt/land_use_data.RDS")
 ```
 
@@ -76,7 +79,7 @@ head(cost_closest)
 # land_use_data <- land_use_data
 
 cum_cutoff <- cumulative_cutoff(
-  travel_matrix = ttm_car, #name of the data.frame that contains the travel times and the from_ids to to_ids
+  travel_matrix = ttm_walk, #name of the data.frame that contains the travel times and the from_ids to to_ids
   land_use_data = land_use_data, #name of the data.frame care-destination counts per DA
   opportunity = "counts", #name of the column for 'care destination' in 'land_use_data'
   travel_cost = "travel_time_p50",  #name of the travel_time column in 'travel_matrix'
@@ -86,6 +89,7 @@ cum_cutoff <- cumulative_cutoff(
 head(cum_cutoff)
 # Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities).
 ```
+
 ```{r}
 sptl_avlblt <- spatial_availability(
   travel_matrix = ttm_car,
@@ -99,6 +103,13 @@ head(sptl_avlblt)
 
 land_use_data$counts %>% sum(na.rm=T)
 sptl_avlblt$counts %>% sum(na.rm=T) #this should add up to 2225
+```
+```{r}
+dir.create("./data-input")
+
+file_path <- "./data-input/land_use_data.RDS"
+
+saveRDS(land_use_data, file = file_path)
 ```
 
 
