@@ -74,7 +74,7 @@ list.files(r5_path)
 
 # you want to comment this chunk out after downloading it for the first time - it takes a few minutes and saves it into the 'r5_path' . I also recommend not pushing/committing this file to github. It's too big and only needs to be downloaded locally for the person performing the travel time calculation.
 # Specify the URL of the OSM file for Hamilton, Ontario
-download.file(url = "https://export.hotosm.org/downloads/3e8e3dfc-244b-418c-9499-7909be8fca96/Hamilton.osm.pbf",
+download.file(url = "https://export.hotosm.org/downloads/cdb11b01-7e29-4784-aafc-e1da681bb5f8/Hamilton.osm.pbf",
               destfile= file.path(r5_path, "Hamilton.osm.pbf"), mode = "wb")
 ```
 
@@ -158,10 +158,13 @@ save("ttm_car", file = "data-tt/ttm_car.RDS")
 # WALK Travel Times
 ```{r}
 # set the arguments for the calculation
+library(rJava)
+.jinit()
+.jinit(parameters = "/Library/Java/JavaVirtualMachines/jdk-11.jdk")
 mode <- c("WALK")
-max_walk_time <- 15 # minutes
+max_walk_time <- 30 # minutes
 max_trip_duration <- 30 # minutes
-departure_datetime <- as.POSIXct("06-06-2023 08:00:00",
+departure_datetime <- as.POSIXct("07-07-2023 08:00:00",
                                  format = "%d-%m-%Y %H:%M:%S")
 
 start.time <- Sys.time()

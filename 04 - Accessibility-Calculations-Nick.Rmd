@@ -10,106 +10,199 @@ library(tmap)
 library(dplyr)
 library(accessibility)
 ```
-<!-- I commented out the following few chunks. In this notebook we should just load in the travel time matrices and all other needed data. The commented out code can be in the 'data-prep' .Rmds when they are ultimately consolidated -->
-
-```{r}
-# setwd("/Users/nicholas/Downloads/Care-Destinations")
-```
-```{r}
-# # ran into an issue with the travel time matrix - changing observations to match the example from package 
-# ttm_car$to_id <- as.character(ttm_car$to_id)
-# ttm_car$from_id <- as.character(ttm_car$to_id)
-# ttm_car$travel_time_p50 <- as.numeric((ttm_car$travel_time_p50))
-# save("ttm_car", file = "data-tt/ttm_car.RDS")
-# 
-# ttm_transit$to_id <- as.character(ttm_transit$to_id)
-# ttm_transit$from_id <- as.character(ttm_transit$to_id)
-# ttm_transit$travel_time_p50 <- as.numeric((ttm_transit$travel_time_p50))
-# save("ttm_transit", file = "data-tt/ttm_transit.RDS")
-# 
-# ttm_walk$to_id <- as.character(ttm_walk$to_id)
-# ttm_walk$from_id <- as.character(ttm_walk$to_id)
-# ttm_walk$travel_time_p50 <- as.numeric((ttm_walk$travel_time_p50))
-# save("ttm_walk", file = "data-tt/ttm_walk.RDS")
-# 
-# ttm_bike$to_id <- as.character(ttm_bike$to_id)
-# ttm_bike$from_id <- as.character(ttm_bike$to_id)
-# ttm_bike$travel_time_p50 <- as.numeric((ttm_bike$travel_time_p50))
-# save("ttm_bike", file = "data-tt/ttm_bike.RDS")
-# 
-# 
-# land_use_data$id <- as.character(land_use_data$id)
-# land_use_data$counts <- as.integer(land_use_data$counts)
-# land_use_data <- land_use_data %>% 
-#   st_as_sf() %>%
-#   sf::st_drop_geometry()
-# save("land_use_data", file = "data-tt/land_use_data.RDS")
-```
-```{r}
-# travel_matrix <- ttm_car
-# land_use_data <- land_use_data
-```
 
 load in data:
-```{r}
+```{r, message=FALSE}
 # required data: a travel matrix and some land use data - not loading properly as an RDS so being called in from environment 
 load("data-tt/ttm_car.RDS")
 load("data-tt/ttm_walk.RDS")
 load("data-tt/ttm_bike.RDS")
 load("data-tt/ttm_transit.RDS")
 load("data-tt/land_use_data.RDS")
+
+readRDS("data-raw/census_data.RDS")
 ```
 
-# Minimum Travel Cost by Car
+<!-- # Minimum Travel Cost by Car -->
+<!-- ```{r} -->
+<!-- cost_closest <- cost_to_closest( -->
+<!--   travel_matrix = ttm_car, -->
+<!--   land_use_data = land_use_data, -->
+<!--   opportunity = "counts", -->
+<!--   travel_cost = "travel_time_p50", -->
+<!--   n = 1 -->
+<!-- ) -->
+
+<!-- head(cost_closest) -->
+<!-- ``` -->
+
+<!-- # Cumulative Cut-off by Car in 30 mins -->
+<!-- ```{r} -->
+<!-- # travel_matrix <- ttm_car -->
+<!-- # land_use_data <- land_use_data -->
+
+<!-- cum_cutoff <- cumulative_cutoff( -->
+<!--   travel_matrix = ttm_car, #name of the data.frame that contains the travel times and the from_ids to to_ids -->
+<!--   land_use_data = land_use_data, #name of the data.frame care-destination counts per DA -->
+<!--   opportunity = 'counts', #name of the column for 'care destination' in 'land_use_data' -->
+<!--   travel_cost = "travel_time_p50",  #name of the travel_time column in 'travel_matrix' -->
+<!--   cutoff = 45 #play with this value to change the travel time cutoffs -->
+<!-- ) -->
+
+<!-- head(cum_cutoff) -->
+<!-- # Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities). -->
+<!-- ``` -->
+
 ```{r}
-cost_closest <- cost_to_closest(
-  travel_matrix = ttm_car,
-  land_use_data = land_use_data,
-  opportunity = "counts",
-  travel_cost = "travel_time_p50",
-  n = 1
-)
+ttm_car_30 <- ttm_car %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_car_30
 
-head(cost_closest)
-```
+ttm_walk_30 <- ttm_walk %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_walk_30
 
-# Cumulative Cut-off by Car in 30 mins
-```{r}
-# travel_matrix <- ttm_car
-# land_use_data <- land_use_data
+ttm_bike_30 <- ttm_bike %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_bike_30
 
-cum_cutoff <- cumulative_cutoff(
-  travel_matrix = ttm_walk, #name of the data.frame that contains the travel times and the from_ids to to_ids
-  land_use_data = land_use_data, #name of the data.frame care-destination counts per DA
-  opportunity = "counts", #name of the column for 'care destination' in 'land_use_data'
-  travel_cost = "travel_time_p50",  #name of the travel_time column in 'travel_matrix'
-  cutoff = 30 #play with this value to change the travel time cutoffs
-)
-
-head(cum_cutoff)
-# Interpretation, each id can access X number of jobs within 45 minutes of travel. Population is not an input, so this is not a 'competitive' measure so this score is only based on impedance and nodes not consider the 'mass effect' (i.e., population centers that are larger demand more opportunities).
+ttm_transit_30 <- ttm_transit %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_transit_30
 ```
 
 ```{r}
-sptl_avlblt <- spatial_availability(
-  travel_matrix = ttm_car,
-  land_use_data = land_use_data,
-  opportunity = "counts",
-  travel_cost = "travel_time_p50",
-  demand = "Population",
-  decay_function = decay_binary(cutoff = 30)
-)
-head(sptl_avlblt)
+ttm_car_15 <- ttm_car %>% filter(travel_time_p50 <= 15) %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_car_15
 
-land_use_data$counts %>% sum(na.rm=T)
-sptl_avlblt$counts %>% sum(na.rm=T) #this should add up to 2225
+ttm_walk_15 <- ttm_walk %>% filter(travel_time_p50 <= 15) %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_walk_15
+
+ttm_bike_15 <- ttm_bike %>% filter(travel_time_p50 <= 15) %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_bike_15
+
+ttm_transit_15 <- ttm_transit %>% filter(travel_time_p50 <= 15) %>% group_by(from_id) %>% 
+  summarise(cum_opps = n())
+ttm_transit_15
 ```
+
+# Visualizing Cumulative Opportunies by Modes of Transport in 30mins
+```{r}
+orig_full_sf <- census_data %>% select(GeoUID, Population) %>%  #add the census variable fields that you want to pull here
+  rename("id" = "GeoUID") %>% mutate(id = 1:n()) 
+```
+
+```{r}
+HAM_access_30 <- orig_full_sf %>% merge(ttm_car_30, by.x="id", by.y="from_id", all.x=TRUE) %>%
+  rename("car_30" = "cum_opps") %>% 
+  merge(ttm_transit_30, by.x="id", by.y="from_id",all.x=TRUE) %>%
+  rename("transit_30" = "cum_opps") %>% 
+  merge(ttm_bike_30, by.x="id", by.y="from_id", all.x=TRUE) %>%
+  rename("bike_30" = "cum_opps") %>% 
+  merge(ttm_walk_30, by.x="id", by.y="from_id", all.x=TRUE) %>%
+  rename("walk_30" = "cum_opps") 
+```
+
+```{r}
+car_30_plot <- tm_shape(HAM_access_30) +
+  tm_polygons("car_30",
+              palette = "Purples",
+              breaks = c(1,40,108,228,383,829,2225),
+              border.alpha = 0,
+              title = " ",
+              colorNA = "white", 
+              colorNULL = "white" ) +
+  #tm_borders(col = "white", lwd = 0.1, lty = "transparent") +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Car (30 min)")
+
+bike_30_plot <- tm_shape(HAM_access_30) +
+  tm_polygons("bike_30",
+              palette = "Purples",
+              breaks = c(1,40,108,228,383,829,2225),
+              colorNA = "white", 
+              colorNULL = "white",
+              border.alpha=0) +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Bike (30 min)", 
+            legend.show = FALSE)
+
+walk_30_plot <- tm_shape(HAM_access_30) +
+  tm_polygons("walk_30",
+              #style = "cont",
+              palette = "Purples",
+              breaks = c(1,40,108,228,383,829,2225),
+              colorNA = "white", 
+              colorNULL = "white",
+              border.alpha = 0) +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Walk (30 min)",
+            legend.show = FALSE)
+
+transit_30_plot <- tm_shape(HAM_access_30) +
+  tm_polygons("transit_30",
+              #style = "cont",
+              palette = "Purples",
+              breaks = c(1,40,108,228,383,829,2225),
+              colorNA = "white", 
+              colorNULL = "white",
+              border.alpha=0) +
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4))+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_layout(legend.outside = FALSE,
+            legend.position = c("left", "bottom"),
+            panel.labels = "Transit (30 min)",
+            legend.show=TRUE)
+
+tmap_arrange(car_30_plot, transit_30_plot, bike_30_plot, walk_30_plot, ncol=4)
+
+transit_30_plot
+
+walk_30_plot
+
+bike_30_plot
+
+car_30_plot
+```
+
+# Visualizing Cumulative Opportunities by Modes of Transport in 15 mins
+```{r}
+
+```
+
+
+<!-- ```{r} -->
+<!-- sptl_avlblt <- spatial_availability( -->
+<!--   travel_matrix = ttm_car, -->
+<!--   land_use_data = land_use_data, -->
+<!--   opportunity = "counts", -->
+<!--   travel_cost = "travel_time_p50", -->
+<!--   demand = "Population", -->
+<!--   decay_function = decay_binary(cutoff = 30) -->
+<!-- ) -->
+<!-- head(sptl_avlblt) -->
+
+<!-- land_use_data$counts %>% sum(na.rm=T) -->
+<!-- sptl_avlblt$counts %>% sum(na.rm=T) #this should add up to 2225 -->
+<!-- ``` -->
+
 ```{r}
 dir.create("./data-input")
 
 file_path <- "./data-input/land_use_data.RDS"
 
 saveRDS(land_use_data, file = file_path)
+
 ```
-
-
