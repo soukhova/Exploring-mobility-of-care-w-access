@@ -1,0 +1,205 @@
+---
+title: "Care-access-analysis"
+output: html_document
+date: "2023-07-09"
+---
+Libraries:
+```{r libraries}
+library(sf)
+library(tmap)
+library(dplyr)
+library(biscale)
+library(ggplot2)
+```
+NOTE: Used p25 travel times for transit mode.
+
+# Load data
+```{r load packages}
+# DAs (origins)
+load("data-analysis/HAM_census_21.rda")
+
+# Care destinations 
+load("data-analysis/care_dest.rda")
+
+# travel time matrices
+load("data-analysis/ttm_care_car.rda")
+load("data-analysis/ttm_care_bus.rda")
+load("data-analysis/ttm_care_bike.rda")
+load("data-analysis/ttm_care_walk.rda")
+
+# city boundaries
+ham_bound <- read_sf("data-raw/City_Boundary/City_Boundary.shp")
+ham_comms <- read_sf("data-raw/Community_Boundaries/Community_Boundaries.shp")
+```
+
+# Cumulative opportunity calculations
+No. of care opportunities that can be reached within 30 mins or less:
+```{r 30 min cumulative opps}
+ttm_car_30 <- ttm_care_car %>% filter(travel_time_p50 <= 30) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_walk_30 <- ttm_care_walk %>% filter(travel_time_p50 <= 30) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_bike_30 <- ttm_care_bike %>% filter(travel_time_p50 <= 30) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_transit_30 <- ttm_care_transit %>% filter(travel_time_p25 <= 30) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+```
+
+No. of care opportunities that can be reached within 15 mins or less:
+```{r 15 min cumulative opps}
+ttm_car_15 <- ttm_care_car %>% filter(travel_time_p50 <= 15) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_walk_15 <- ttm_care_walk %>% filter(travel_time_p50 <= 15) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_bike_15 <- ttm_care_bike %>% filter(travel_time_p50 <= 15) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+
+ttm_transit_15 <- ttm_care_transit %>% filter(travel_time_p25 <= 15) %>%
+  group_by(from_id) %>% 
+  summarise(cum_opps = n())
+```
+
+# Visualizing - 30 minute cumulative opportunities
+```{r}
+orig_full_sf <- HAM_census_21 %>% 
+  select(GeoUID, 
+         Population, 
+         `v_CA21_1085: Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)`) %>%  #add the census variable fields that you want to pull here
+  rename("LICO_AT" = `v_CA21_1085: Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)`)
+```
+
+```{r}
+HAM_access_30_1 <- orig_full_sf %>% 
+  merge(ttm_car_30, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "a_car") 
+
+HAM_access_30_2 <-orig_full_sf %>% 
+  merge(ttm_transit_30, by.x="GeoUID", by.y="from_id",all.x=TRUE) %>%
+  mutate(mode = "b_transit") 
+
+HAM_access_30_3 <-orig_full_sf %>% 
+  merge(ttm_bike_30, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "c_bike")
+
+HAM_access_30_4 <-orig_full_sf %>% 
+  merge(ttm_walk_30, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "d_walk")
+
+HAM_access_30 <- rbind(HAM_access_30_1, HAM_access_30_2, HAM_access_30_3, HAM_access_30_4) %>%
+  mutate(cum_opps = ifelse(is.na(cum_opps), 0, cum_opps))
+
+remove(HAM_access_30_1,HAM_access_30_2,HAM_access_30_3,HAM_access_30_4)
+```
+
+```{r}
+tm_shape(HAM_access_30) +
+  tm_polygons("cum_opps",
+              palette = "Purples",
+              breaks = c(0,58,212, 665, 729, 2215),
+              border.alpha = 0,
+              title = "Cumulative care\nopportunities (30 min)") +
+  tm_facets(by=c("mode"), nrow=2, showNA = FALSE)+
+  tm_shape(ham_comms) + tm_polygons(alpha=0)+
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_legend(legend.position = c("left", "center"))+
+  tm_layout(panel.labels=c("Car",
+                           "Transit",
+                           "Bike",
+                           "Walk"),
+            panel.label.color = "black",
+            panel.label.size=1.3,
+            panel.label.fontface="bold")
+```
+
+
+# Visualizing - 15 minute cumulative opportunities
+```{r}
+HAM_access_15_1 <- orig_full_sf %>% 
+  merge(ttm_car_15, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "a_car") 
+
+HAM_access_15_2 <-orig_full_sf %>% 
+  merge(ttm_transit_15, by.x="GeoUID", by.y="from_id",all.x=TRUE) %>%
+  mutate(mode = "b_transit") 
+
+HAM_access_15_3 <-orig_full_sf %>% 
+  merge(ttm_bike_15, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "c_bike")
+
+HAM_access_15_4 <-orig_full_sf %>% 
+  merge(ttm_walk_15, by.x="GeoUID", by.y="from_id", all.x=TRUE) %>%
+  mutate(mode = "d_walk")
+
+HAM_access_15 <- rbind(HAM_access_15_1, HAM_access_15_2, HAM_access_15_3, HAM_access_15_4) %>%
+  mutate(cum_opps = ifelse(is.na(cum_opps), 0, cum_opps))
+
+remove(HAM_access_15_1,HAM_access_15_2,HAM_access_15_3,HAM_access_15_4)
+```
+
+```{r}
+tm_shape(HAM_access_15) +
+  tm_polygons("cum_opps",
+              palette = "Oranges",
+              breaks = c(0,11,41,234,329,1818),
+              border.alpha = 0,
+              title = "Cumulative care\nopportunities (15 min)",
+              colorNA = "white", 
+              colorNULL = "white" ) +
+  tm_facets(by=c("mode"), nrow=2, showNA = FALSE)+
+  tm_shape(ham_comms) + tm_polygons(alpha=0)+
+  tm_scale_bar(position = c("right", "bottom"),breaks=c(0,1,2,4) )+
+  tm_compass(position = c("left", "top"), size=1.0)+
+  tm_legend(legend.position = c("left", "center"))+
+  tm_layout(panel.labels=c("Car",
+                           "Transit",
+                           "Bike",
+                           "Walk"),
+            panel.label.color = "black",
+            panel.label.size=1.3,
+            panel.label.fontface="bold")
+```
+# Visualizing - % low income and population
+The map data:
+```{r}
+data <- bi_class(HAM_census_21 %>% mutate(Pop_den = Population/`Shape Area`), 
+                 x = Pop_den, 
+                 y = `v_CA21_1085: Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)`,
+                 style = "quantile", 
+                 dim = 3)
+```
+
+The plot and legend displayed:
+```{r}
+map <- ggplot() +
+  geom_sf(data = data, mapping = aes(fill = bi_class), 
+          color = NA, size = 0.1, show.legend = FALSE) +
+  bi_scale_fill(pal = "GrPink", dim = 3) +
+  geom_sf(data = ham_comms, fill=NA) +
+  bi_theme() +
+  ggtitle("Population density and LICO %")
+
+legend <- bi_legend(pal = "GrPink",
+                    dim = 3,
+                    xlab = "Pop D.",
+                    ylab = "LICO % ",
+                    size = 8)
+
+#the final plot all put together
+cowplot::ggdraw() +
+  cowplot::draw_plot(map, 0, 0, 1, 1) +
+  cowplot::draw_plot(legend, 0.6, .65, 0.2, 0.2)
+```
+

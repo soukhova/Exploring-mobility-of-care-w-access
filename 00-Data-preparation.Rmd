@@ -1,0 +1,245 @@
+---
+title: "Data-preparation"
+output: html_document
+date: "2023-07-07"
+---
+
+## Libraries
+```{r, message=FALSE}
+# increase Java memory
+options(java.parameters = "-Xmx6G")
+#cancensus API key, Nicks
+options(cancensus.api_key = "CensusMapper_1d16ff8ad5e8a65ff028959182ac4940")
+#changing my time zone to Toronto's time zone
+Sys.setenv(TZ='EDT')
+
+library(cancensus)
+library(sf)
+library(leaflet)
+library(r5r)
+library(dplyr)
+```
+
+# Origins (DA, their centroids, and census data)
+Pulling data from {cancensus} for the Hamilton Census Subdivision (CSD) and various census variables at the level of the Dissemination Area (DA). We can see that the Hamilton CSD has a population of 569,353 and is identified by the CSD region id of "3525005". It is part of the CMA with ID 35537.
+```{r}
+list_census_regions('CA21') %>% 
+  filter(level == "CSD", name %in% c("Hamilton"))
+```
+
+```{r, eval=FALSE}
+HAM_census_21 <- get_census(dataset='CA21', 
+                            regions=list(CSD="3525005"),
+                            vectors=c("v_CA21_11", #total - aged 0-14
+                                      "v_CA21_12", #males - aged 0-14
+                                      "v_CA21_13", #females - aged 0-14
+                                      "v_CA21_68", #total - aged 15-64
+                                      "v_CA21_69", #males - aged 15-64
+                                      "v_CA21_70", #females - aged 15-64
+                                      "v_CA21_251", #total - aged 65 and over
+                                      "v_CA21_252", #males - aged 65 and over
+                                      "v_CA21_253", #females - aged 65 and over
+                                      "v_CA21_1085", #total - prevalence of LICO-AT (%)
+                                      "v_CA21_1086", #total - prevalence of LICO-AT (%)
+                                      "v_CA21_1087"), #total - prevalence of LICO-AT (%)
+                                      level='DA', use_cache = FALSE, geo_format = 'sf', quiet = TRUE)
+
+#NOTE: LICO-AF = "The Low‑income cut‑offs, after tax refer to income thresholds, defined using 1992 expenditure data, below which economic families or persons not in economic families would likely have devoted a larger share of their after‑tax income than average to the necessities of food, shelter and clothing. More specifically, the thresholds represented income levels at which these families or persons were expected to spend 20 percentage points or more of their after‑tax income than average on food, shelter and clothing. " 
+```
+
+Check:
+```{r}
+# Mapping DAs
+leaflet() |>
+  addTiles() |>
+  addPolygons(data= HAM_census_21)
+```
+
+Save DA census data (sf object, polygons) :
+```{r, eval=FALSE}
+save(HAM_census_21, file="data-analysis/HAM_census_21.rda")
+```
+
+# Care destinations
+Load the *care destination* database that has been created and reformat it as a sf objectL
+```{r}
+care_dest <- read.csv("data-raw/FINAL_Care_Destinations_2023.csv")
+
+care_dest <- st_as_sf(care_dest, coords = c("LONGITUDE", "LATITUDE"))
+```
+
+Check:
+```{r}
+leaflet() |>
+  addTiles() |>
+  addMarkers(data= care_dest, popup = ~as.character(Name))
+```
+
+Save care destinations (sf object, points):
+```{r}
+save(care_dest, file="data-analysis/care_dest.rda")
+```
+
+# Travel time calculations - from DA centroids to care destinations, all modes.
+
+Formatting origin (centroids of DAs (from_ids)) and destination (centroids of care destinations) points for the travel time calcs using r5r:
+```{r calc centroids}
+orig <- st_centroid(HAM_census_21) #taking the geometric centroids of each DA. This will be the 'origin'
+
+orig$lon <- st_coordinates(orig)[,1] 
+orig$lat <- st_coordinates(orig)[,2]
+
+orig <- orig %>% 
+  st_drop_geometry() %>%
+  transmute(id = GeoUID,
+            lon,
+            lat)
+
+dest <- care_dest
+
+dest$lon <- st_coordinates(dest)[,1]
+dest$lat <- st_coordinates(dest)[,2]
+
+dest <- dest %>% 
+  st_drop_geometry() %>%
+  transmute(ID = as.character(ID),
+            lon,
+            lat) %>%
+  rename("id" = "ID")
+```
+
+```{r set up r5 path, include=FALSE}
+# the r5r package requires Java Development Kit version 11, which can be downloaded from https://www.oracle.com/java/technologies/javase-jdk11-downloads.html . See the direction given in the r5r installation here (https://ipeagit.github.io/r5r/articles/r5r.html)
+dir.create("./data-raw/tt") #create a folder, if it already exists - this function does nothing
+
+r5_path <- file.path("./data-raw/tt")
+list.files(r5_path)
+```
+
+Download OSM Network:
+```{r download OSM street network, eval=FALSE}
+# Specify the URL of the OSM file for Ontario - it takes a few minutes to download (~56MB)
+download.file(url = "http://download.geofabrik.de/north-america/canada/ontario-latest.osm.pbf",
+              destfile= file.path(r5_path, "Hamilton.osm.pbf"), mode = "wb")
+```
+```{r}
+#clip to the the hamilton city limits using OSM Convert .exe (). (NOTE: x = longitude)
+osmdata::getbb("Hamilton")
+```
+
+Download GTFS data:
+```{r download GTFS data, eval=FALSE}
+download.file(url = "https://transitfeeds.com/p/hamilton-street-railway/31/latest/download",
+              destfile= file.path(r5_path, "HSR_transit.zip"), mode = "wb")
+```
+
+Set-up R5 Routing:
+```{r build graph, eval = FALSE}
+#takesa few minutes
+r5_HAM <- setup_r5(data_path = r5_path, verbose = TRUE)
+```
+
+Calculate **car** travel times from centroids of DAs (from_ids) to destination points (to_ids). 60 min max travel time. 8am departure on a Tuesday. 30min +/- departure window. 
+```{r car travel time, message=FALSE, eval=FALSE}
+departure_datetime <- as.POSIXct("08-06-2023 08:00:00 EDT", # 12 GMT is 8am in Toronto
+                                 format = "%d-%m-%Y %H:%M:%S")
+
+
+start.time <- Sys.time()
+ttm_care_car <- travel_time_matrix(r5r_core = r5_HAM,
+                          origins = orig,
+                          destinations = dest,
+                          mode = c("CAR"),
+                          departure_datetime = departure_datetime,
+                          time_window = 30,
+                          percentiles = c(25,50,75),
+                          max_trip_duration = 60,
+                          verbose = TRUE)
+
+end.time <- Sys.time()
+print(paste0("OD matrix calculation took ", round(difftime(end.time, start.time, units = "mins"), digits = 2), " minutes..."))
+
+ttm_care_car <- as.data.frame(ttm_care_car)
+
+save("ttm_care_car", file = "data-raw/tt/ttm_care_car.rda")
+```
+
+Calculate **transit** travel times from centroids of DAs (from_ids) to destination points (to_ids). 60 min max travel time, 15 min max walking limit. 8am departure on a Tuesday. 30min +/- departure window.
+```{r transit travel time}
+departure_datetime <- as.POSIXct("08-06-2023 08:00:00", # 12 GMT is 8am in Toronto (EDT)
+                                 format = "%d-%m-%Y %H:%M:%S")
+
+
+start.time <- Sys.time()
+ttm_care_transit <- travel_time_matrix(r5r_core = r5_HAM,
+                          origins = orig,
+                          destinations = dest,
+                          mode = c("WALK", "TRANSIT"),
+                          departure_datetime = departure_datetime,
+                          time_window = 30,
+                          percentiles = c(25,50,75),
+                          max_trip_duration = 60,
+                          max_walk_time = 15,
+                          verbose = TRUE)
+
+end.time <- Sys.time()
+print(paste0("OD matrix calculation took ", round(difftime(end.time, start.time, units = "mins"), digits = 2), " minutes..."))
+
+ttm_care_transit <- as.data.frame(ttm_care_transit)
+
+save("ttm_care_transit", file = "data-raw/tt/ttm_care_transit.rda")
+```
+
+Calculate **walk** travel times from centroids of DAs (from_ids) to destination points (to_ids). 60 min max travel time, 15 min max walking limit. 8am departure on a Tuesday. 30min +/- departure window.
+```{r walk travel time}
+departure_datetime <- as.POSIXct("08-06-2023 08:00:00", # 12 GMT is 8am in Toronto (EDT)
+                                 format = "%d-%m-%Y %H:%M:%S")
+
+
+start.time <- Sys.time()
+ttm_care_walk <- travel_time_matrix(r5r_core = r5_HAM,
+                          origins = orig,
+                          destinations = dest,
+                          mode = c("WALK"),
+                          departure_datetime = departure_datetime,
+                          time_window = 30,
+                          percentiles = c(25,50,75),
+                          max_trip_duration = 60,
+                          verbose = TRUE)
+
+end.time <- Sys.time()
+print(paste0("OD matrix calculation took ", round(difftime(end.time, start.time, units = "mins"), digits = 2), " minutes..."))
+
+ttm_care_walk <- as.data.frame(ttm_care_walk)
+
+save("ttm_care_walk", file = "data-raw/tt/ttm_care_walk.rda")
+```
+
+Calculate **bike** travel times from centroids of DAs (from_ids) to destination points (to_ids). 60 min max travel time, 15 min max walking limit. 8am departure on a Tuesday. 30min +/- departure window.
+```{r bike travel time}
+departure_datetime <- as.POSIXct("08-06-2023 08:00:00", # 12 GMT is 8am in Toronto (EDT)
+                                 format = "%d-%m-%Y %H:%M:%S")
+
+
+start.time <- Sys.time()
+ttm_care_bike <- travel_time_matrix(r5r_core = r5_HAM,
+                          origins = orig,
+                          destinations = dest,
+                          mode = c("BICYCLE"),
+                          departure_datetime = departure_datetime,
+                          time_window = 30,
+                          percentiles = c(25,50,75),
+                          max_trip_duration = 60,
+                          verbose = TRUE)
+
+end.time <- Sys.time()
+print(paste0("OD matrix calculation took ", round(difftime(end.time, start.time, units = "mins"), digits = 2), " minutes..."))
+
+ttm_care_bike <- as.data.frame(ttm_care_bike)
+
+save("ttm_care_bike", file = "data-raw/tt/ttm_care_bike.rda")
+```
+
+Limitations of travel time calcs:
+- does not consider traffic stress (i.e., car, bike, and walk for all percentiles are identical -- the time window does not matter and no traffic is assumed)
+- for transit, the time window accounts for departures +/- 30 minutes. This accounts for transit availability variability but also does not accont for traffic stress
