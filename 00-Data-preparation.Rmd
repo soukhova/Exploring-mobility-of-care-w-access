@@ -40,11 +40,19 @@ HAM_census_21 <- get_census(dataset='CA21',
                                       "v_CA21_252", #males - aged 65 and over
                                       "v_CA21_253", #females - aged 65 and over
                                       "v_CA21_1085", #total - prevalence of LICO-AT (%)
-                                      "v_CA21_1086", #total - prevalence of LICO-AT (%)
-                                      "v_CA21_1087"), #total - prevalence of LICO-AT (%)
+                                      "v_CA21_1086", #male - prevalence of LICO-AT (%)
+                                      "v_CA21_1087",#female - prevalence of LICO-AT (%)
+                                      "v_CA21_7647", #total - walked to work
+                                      "v_CA21_7635", #total - drove or was driven to work
+                                      "v_CA21_7644", #total - used transit to get to work
+                                      "v_CA21_7650", #total - biked to work
+                                      "v_CA21_7653" #total - used some other mode to get to work
+                                      ), 
                                       level='DA', use_cache = FALSE, geo_format = 'sf', quiet = TRUE)
 
 #NOTE: LICO-AF = "The Low‑income cut‑offs, after tax refer to income thresholds, defined using 1992 expenditure data, below which economic families or persons not in economic families would likely have devoted a larger share of their after‑tax income than average to the necessities of food, shelter and clothing. More specifically, the thresholds represented income levels at which these families or persons were expected to spend 20 percentage points or more of their after‑tax income than average on food, shelter and clothing. " 
+
+#NOTE: the 'mode choice' is the count of the TOTAL population aged 15 years and over who is employed in the labour force.
 ```
 
 Check:
@@ -57,7 +65,7 @@ leaflet() |>
 
 Save DA census data (sf object, polygons) :
 ```{r, eval=FALSE}
-save(HAM_census_21, file="data-analysis/HAM_census_21.rda")
+save(HAM_census_21, file="data-intermediate/HAM_census_21.rda")
 ```
 
 # Care destinations
@@ -77,7 +85,7 @@ leaflet() |>
 
 Save care destinations (sf object, points):
 ```{r}
-save(care_dest, file="data-analysis/care_dest.rda")
+save(care_dest, file="data-intermediate/care_dest.rda")
 ```
 
 # Travel time calculations - from DA centroids to care destinations, all modes.
