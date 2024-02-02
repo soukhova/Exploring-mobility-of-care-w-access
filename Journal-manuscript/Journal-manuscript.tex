@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  super,
+  authoryear,
   preprint,
   3p]{elsarticle}
 
@@ -78,6 +78,26 @@
 \def\fps@figure{htbp}
 \makeatother
 
+\usepackage{fontspec}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{hhline}
+\newlength\Oldarrayrulewidth
+\newlength\Oldtabcolsep
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\usepackage{hyperref}
+\def\tightlist{}
+\usepackage{setspace}
+\doublespacing
+\usepackage{lineno}
+\linenumbers
 \makeatletter
 \makeatother
 \makeatletter
@@ -136,15 +156,15 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
-\bibliographystyle{elsarticle-num}
+\bibliographystyle{elsarticle-harv}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Toward Gender-Mainstreaming Transport Planning: Measuring Multimodal Access to Care},
+  pdftitle={Exploring mobility of care with measures of access: a case for gender-mainstreaming accessibility analysis},
   pdfauthor={Anastasia Soukhov; Léa Ravensbergen; Nicholas Mooney},
-  pdfkeywords={Accessibility, Mobility of Care, Gender, Equity, Travel
-Mode},
+  pdfkeywords={Accessibility, Mobility of Care, Gender, Cumulative
+Opportunity, Spatial Availability},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -156,8 +176,8 @@ Mode},
 \begin{document}
 
 \begin{frontmatter}
-\title{Toward Gender-Mainstreaming Transport Planning: Measuring
-Multimodal Access to Care \\\large{Measuring Access to Care} }
+\title{Exploring mobility of care with measures of access: a case for
+gender-mainstreaming accessibility analysis}
 \author[1]{Anastasia Soukhov%
 \corref{cor1}%
 }
@@ -181,27 +201,32 @@ Environment \& Society},city={Hamilton},postcode={L8S
 
         
 \begin{abstract}
-Accessibility, the ease of reaching opportunities, is an increasingly
-important tool amongst transport planners aiming to foster equitable and
-sustainable cities. However, in present research there is a bias in
-accessibility analyses towards employment-centric destinations, a
-destination more frequent for working-aged, and often higher income,
-men. This paper aims to counter this gendered bias by calculating access
-to care destinations, all destinations required to sustain household
-needs such as shopping, errands, and caring for others (children and
-dependents). Through the creation of a novel database of care
-destinations in the City of Hamilton, Canada, this paper considers
-access to care across different modes of transport at two timeframes
-(15-minute and 30-minute trips) using unconstrained (cumulative
-opportunity) and constrained (spatial availability) measures. Results
-indicate that travel to care destinations by car is extensively
-favoured, access to care by public transit and by foot is low in all
-parts of the city except some areas of the inner city. Access to care by
-bicycle is surprisingly high in many areas of the city, even beyond the
-downtown core. Neighbourhoods with both low access to care and a high
+Accessibility, the ease of interacting with opportunities, is an
+increasingly important tool amongst transport planners aiming to foster
+equitable and sustainable cities. However, in accessibility research
+there is a masculinist bias whereby employment destinations are often
+the default. This paper aims to counter this gendered bias by connecting
+the Mobility of Care conceptualisation to an empirical accessibility
+analysis of care destinations in the City of Hamilton, Canada. Care
+destinations are all the places one must visit to sustain household
+needs such shopping, errands, and caring for others (children and other
+dependents). Through the creation of a novel care destination dataset,
+this paper considers access to care across different modes of transport
+at two travel time thresholds (trips shorter than 15-minutes and
+30-minutes) using unconstrained (cumulative opportunity) and
+competitive-constrained (spatial availability) measures. Results
+generally indicate that travel to care destinations by car is
+exceptionally high, and access by public transit, cycling and by foot is
+low across the city with some exceptions in the inner city. Noteably,
+there are distinctions between both methods: unconstrained access
+illustrates a more optimistic landscape for non-car modes, while
+competitive and constrained access demonstrates a conceptually more
+realistic spatial distribution of care destination availability.
+Neighbourhoods with both low spatial availability to care and a high
 proportion of low-income households are also identified as areas in need
-of intervention. The analysis presented in this paper demonstrates one
-method planners can use to gender-mainstream accessibility analyses.
+of intervention. The manuscript and analysis is computationally
+reproducible and openly available. The analysis presented demonstrates
+methods planners can use to gender-mainstream accessibility analysis.
 Further, results can inform policies aiming to encourage sustainable
 mobility.
 \end{abstract}
@@ -211,92 +236,75 @@ mobility.
 
 
 \begin{keyword}
-    Accessibility \sep Mobility of Care \sep Gender \sep Equity \sep 
-    Travel Mode
+    Accessibility \sep Mobility of Care \sep Gender \sep Cumulative
+Opportunity \sep 
+    Spatial Availability
 \end{keyword}
 \end{frontmatter}
-    \ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, frame hidden, sharp corners, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+    \ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, breakable, sharp corners]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
-\section{INTRODUCTION}\label{introduction}}
+\section{Introduction}\label{introduction}}
 
-A gender bias exists in transport planning whereby research and policy
-historically has focused on one trip purpose, the on-peak commute to
-work, a travel pattern more frequent amongst men
-\citep{sanchezdemadariagaMobilityCareIntroducing2013}. To counter this
-bias, the concept `mobility of care' was developed; it refers to all the
-travel needed to fulfil household needs (e.g., travel to grocery stores,
-to run errands, to pickup/ drop off children), and is a type of travel
-that is predominantly done by women
-\citep{sanchezdemadariagaMobilityCareIntroducing2013, sanchezdemadariagaMeasuringMobilitiesCare2019}.
-Transport planning research to date has inadequately considered mobility
-of care, for instance, trips to care destinations such as grocery
-stores, schools, and daycares, are not explicitly considered in typical
+A gender bias exists in transport research and policy
+\citep{sanchezdemadariagaMobilityCareIntroducing2013, lawWomenTransportNew1999, siemiatyckiGenderedProductionInfrastructure2020}.
+The field has historically focused on one trip purpose; the on-peak
+commute to work. While many women do, of course, work, the commute is
+still a travel pattern more frequent amongst men
+\citep{sanchezdemadariagaMobilityCareIntroducing2013}. Women, on the
+other hand, have been found to complete more household-serving travel
+than men, such as escorting children
+\citep{craigGenderMobilityParental2019, taylorWhatExplainsGender2015, hanTaskAllocationGender2019, mcdonaldExploratoryAnalysisChildren2006},
+shopping, and errand trips
+\citep{taylorWhatExplainsGender2015, rootWomenTravelIdea2000, sweetGenderDifferencesRole2016}.
+
+Though research on the gendered distribution of household-serving travel
+has existed for decades, it was only in 2013 that Sánchez de Madariaga
+coined the term Mobility of Care, i.e., all the travel needed to fulfill
+household needs (e.g., a combination of travel to grocery stores,
+errands, and pick-up / drop-off of children)
+\citep{sanchezdemadariagaMobilityCareIntroducing2013}. The term was
+developed to highlight how these household-serving trips are
+systematically under-represented, under-counted, and rendered invisible
+due to masculinist biases in transport planning. Take, for instance, how
+trips to household sustaining destinations are categorized in typical
 large-scale travel surveys
-\citep{sanchezdemadariagaMobilityCareIntroducing2013}, including major
-Canadian surveys such as the Transportation Tomorrow Survey
-\citep{transportationtomorrowsurveyTransportationTomorrwoSurvey2022} or
-the Montréal Origin-Destination Survey
-\citep{autoriteregionaldetransportmetropolitainEnqueteOrigineDestination20182022}.
-This results in the mislabelling of these trips into `shopping',
-`leisure', or other `discretionary' trips
-\citep{sanchezdemadariagaMobilityCareIntroducing2013, transportationtomorrowsurveyTransportationTomorrwoSurvey2022}.
+\citep{sanchezdemadariagaMobilityCareIntroducing2013}. In the Greater
+Golden Horseshoe Area's (encompassing the Greater Toronto and Hamilton
+Area) Transportation Tomorrow Survey (TTS)
+\citep{transportationtomorrowsurvey2018} respondents are given the
+following options to categorize their trip origins and destinations:
+home, work, school, daycare, facilitate passenger, marketing/shopping,
+other, or unknown. While home-work and home-school trips are easily
+identified, care trips are more challenging to measure. Many
+marketing/shopping trips are likely for care purposes (e.g., groceries),
+but others are likely for leisure. While escort trips are likely well
+captured under the categories `daycare' or `facilitate passenger', trips
+to run errands or to attend health appointments are not clearly
+captured. It is probable that responds categorize many of these trips as
+`other' or even `unknown'. The focus of the survey is on what is a
+`typical' trip to work or school
+\citep{transportationtomorrowsurvey2018}; other trips are a by-product,
+`non-typical' and minimialised in importance. Of course, people's travel
+behaviours are complex and surveys must balance detail with summary.
+However, what is seen as a `typical' trip continues to shape transport
+and land-use, and this aggregation steers data-driven solutions from
+counted and observed home -work/-school based trips.
+
 When travel surveys are designed to explicitly capture mobility of care,
 preliminary research has found that it comprises approximately one third
 of adults' trips
-\citep{sanchezdemadariagaMobilityCareIntroducing2013, sanchezdemadariagaMeasuringMobilitiesCare2019, mcdonaldExploratoryAnalysisChildren2006}.
-The omission of mobility of care in research and planning has important
-equity considerations, as studies have found that mobility of care are
-completed predominantly by women, especially low-income women
-\citep{sanchezdemadariagaMobilityCareIntroducing2013, ravensbergenExploratoryAnalysisMobility2022}.
+\citep{gomezvaroAccountingCareEveryday2023, sanchezdemadariagaMobilityCareIntroducing2013, sanchezdemadariagaMeasuringMobilitiesCare2019, ravensbergenExploratoryAnalysisMobility2022}.
+Given the large proportion of daily travel that mobility of care
+comprises, these trips should be explicitly captured in transport
+research. Further, the current under-reporting of mobility of care in
+research and planning has important equity considerations. Not only are
+mobility of care trips completed predominantly by women, this gendered
+discrepancy is greater in low-income households
+\citep{murillomunarCaregiversMoveGender2023, sanchezdemadariagaMobilityCareIntroducing2013, ravensbergenExploratoryAnalysisMobility2022}.
 For instance, in lower income households in Montréal, women complete
-twice as many care trips than men
+50\% more care trips than men
 \citep{ravensbergenExploratoryAnalysisMobility2022}.
-
-Mobility of care research stems from previous work examining
-household-serving travel. Focusing on the gender inequity found within
-this type of mobility; this body of work examines individual
-household-serving trips (e.g., grocery shopping or escorting children),
-and identifies the multiples roles women play within this type of
-mobility. Ample research on this inequity has found that women take on
-more responsibility for the travel needs of their children
-\citep{mauchGenderRaceTravel1997, craigGenderMobilityParental2019, taylorWhatExplainsGender2015, hanTaskAllocationGender2019, mcdonaldExploratoryAnalysisChildren2006}
-and grandchildren \citep{plyushtevaCarerelatedJourneysLife2018} than
-men. In addition, women also complete the bulk of elder care within
-households, likely resulting in more travel for these care purposes
-\citep{handyAccessibilityIdeaWhose2020} (?). Women's role in care
-mobility does not end there, with studies showing that women make more
-shopping trips and run more errands than men as well as shouldering the
-responsibility of planning mobilities of care even when a male partner
-undertakes them
-\citep{taylorWhatExplainsGender2015, mcdonaldExploratoryAnalysisChildren2006, elgeneidyMakingAccessibilityWork2021, kelobonyeRelativeAccessibilityAnalysis2019, farberOntarioLineSocioeconomic2019}.
-While this literature on gender and household-serving travel has made
-significant contributions to the literature of mobility of care,
--\citet{sanchezdemadariagaMobilityCareIntroducing2013} argues that
-focusing on separate household-serving trips results in the
-under-representation of mobility of care. Only by considering
-household-serving trips together (i.e., mobility of care), do we see
-that they represent approximately 30\% of daily mobility.
-
-The idea of mobility of care also warrants special sustainability
-considerations when planning for urban mobility. Transport planners
-aiming to discourage high emitting car travel and encourage low emitting
-travel by walking, biking, and public transit should consider mobility
-of care whilst informing policies. In
--\citet{ravensbergenExploratoryAnalysisMobility2022} study on mobility
-of care, Montréalers were two and half times less likely to use public
-transport for care trips than for work related trips. Similarly,
-residents were nearly two times less likely to use bicycles for care
-trips than for work trips. Yet, car use was almost 8\% more likely for
-care trips than for work trips \citep{mauchGenderRaceTravel1997}.
-Furthermore, qualitative research in Europe has identified that this
-type of travel is considered easier to complete by car as it tends to
-include carrying items (groceries, library books, etc.) or children,
-which is seen as a barrier to travelling by foot, bicycle, or public
-transport \citep{maciejewskaHaveChildrenThus2019}. Therefore, with this
-preliminary research suggesting a bias towards car travel when accessing
-care, transport planners should consider mobility of care when informing
-policies aiming to encourage sustainable urban mobility.
 
 The power of the Mobility of Care concept lies in its ability to
 highlight the masculinist bias in transport research -- travel for care
@@ -307,68 +315,87 @@ practitioners. Another popular tool in transport planning and research
 is accessibility, an indicator that quantifies ``the potential of
 opportunities for interaction'' as defined in the seminal work of Hansen
 \citep{hansenHowAccessibilityShapes1959}. Accessibility indicators can
-be interpreted to capture the ease of reaching destinations using a
-transport network - a representation of the land-use and transportation
-systems in a region
+be interpreted as the ease of reaching destinations using transport
+networks: a byproduct of mobility and a representation of the people's
+interaction with land-use and transportation systems
 \citep{hansenHowAccessibilityShapes1959, handyAccessibilityIdeaWhose2020, elgeneidyMakingAccessibilityWork2021}.
-In reflecting the gender bias of the data collected, the points of
-interest in many accessibility-based assessments have been home-to-work
-destinations
-\citep{kelobonyeRelativeAccessibilityAnalysis2019, farberOntarioLineSocioeconomic2019}.
+The points of interest in many accessibility-based assessments have been
+home-to-work destinations
+\citep{kelobonyeRelativeAccessibilityAnalysis2019, farberOntarioLineSocioeconomic2019, duarteInfluenceJobAccessibility2023, ryanAccessibilitySpaceTime2023}.
 For example, in the accessibility assessment of the Ontario Line, a
 subway line that will be constructed in the city of Toronto, Canada,
--\citet{farberOntarioLineSocioeconomic2019} highlight how this new
-investment will increase access to jobs for residents across the City by
-1.14\% overall. Jobs, however, are not the most appropriate destination
-for many segments of the population. Indeed, while the commute is an
-important trip type amongst women, on average it comprises a smaller
-proportion of their daily travel than men's
+Farber and Allen \citep{farberOntarioLineSocioeconomic2019} highlight
+how this new investment will increase access to jobs for residents
+across the City by 1.14\% overall. While much has been learned, shifting
+focus from jobs as the default destination may open opportunities for
+gender-mainstreaming accessibility analyses. Indeed, jobs are not always
+the most significant destination for many segments of the population. As
+discussed, women's commutes comprise on average a smaller proportion of
+their daily travel than men's
 \citep{ravensbergenExploratoryAnalysisMobility2022}. This focus on
 job-access can additionally bias accessibility-gains that children and
 older adults who reside in impacted areas may see as well
 \citep{grantsmithManagingChallengesCombining2016}. One way to counter
-this bias is to reframe the analysis and calculate accessibility to
-different destinations, such as mobility of care destinations.
+this bias is to reframe accessibility analysis by explicitly considering
+destinations involved in mobility of care.
 
-In this spirit, this study expands the nascent body of work on mobility
-of care, a topic that has been thus far ignored due to systematic gender
-bias in transport research and planning, by focusing on mobility of care
-accessibility in the City of Hamilton. Given that preliminary research
-has found that certain travel modes are more commonly used for mobility
-of care (the private car and walking), this study also compared mobility
-of care accessibility across travel mode to test the hypothesis that
-certain modes provide more access to care destinations than others.
-Finally, because certain people have been found to be more likely to
-complete care travel than others (low-income women), this study also
-examines how accessibility varies across sociodemographic factors at the
-neighbourhood scale. In doing so, this research aims to contribute to
-gender mainstreaming in transport planning by conducting a feminist
-accessibility calculation, and to sustainable transport planning by
-examining the potential access to barriers to care destinations using
-low carbon modes (walking, cycling, and transit).
+Reframing accessibility analyses to incorporate mobility of care is also
+pertinent to the promotion of sustainable travel modes in cities.
+Research has found that people are less likely to use public transport
+or bicycles for care trips
+\citep{ravensbergenExploratoryAnalysisMobility2022} and more likely to
+make these trips by car
+\citep{maciejewskaHaveChildrenThus2019, ravensbergenExploratoryAnalysisMobility2022}.
+A lack of access to care destinations by bicycle and transit may
+contribute to these trends. Mobility of care is also more commonly
+completed by foot than the commute to work
+\citep{ravensbergenExploratoryAnalysisMobility2022}. Whether there is a
+relationship between these travel behaviors and people's access to care
+destination using different modes, however, remains unknown, as mobility
+of care is largely uncounted in transport research.
+
+In this spirit, this study foregrounds the theoretical mobility of care
+concept by calculating the accessibility to care destinations or
+multiple modes in an empirical case study of Hamilton, Canada. Two
+place-based accessibility measures are used to motivate the discussion:
+one unconstrained measure (cumulative opportunity) and another
+competitive and constrained measure (spatial availability
+\citep{soukhovIntroducingSpatialAvailability2023}). The cumulative
+opportunity measure demonstrates the potential access to all
+destinations within 15-minutes and 30-minutes. This measure is widely
+appreciated for its intuitive computation
+\citep{handyAccessibilityIdeaWhose2020, handyMeasuringAccessibilityExploration1997, kelobonyeRelativeAccessibilityAnalysis2019, chengInvestigatingWalkingAccessibility2019}
+but critiqued for its omission of competition effects
+\citep{paezDemand2019, soukhovIntroducingSpatialAvailability2023, kelobonyeMeasuringAccessibilitySpatial2020, merlinDoesCompetitionMatter2017}.
+To respond to this critic, spatial availability of care destinations per
+mode is also calculated as an additional and arguably more conceptually
+realistic reflection of opportunity availability. This research aims to
+contribute to gender-mainstreaming in transport planning by
+demonstrating an approach to a feminist accessibility calculation
+through these two accessibility measures.
 
 \hypertarget{background-and-methods}{%
-\section{BACKGROUND AND METHODS}\label{background-and-methods}}
+\section{Background and methods}\label{background-and-methods}}
 
-This paper focuses on the case of Hamilton, a mid-size city of
-approximately 500,000 residents and an economy historically (and still)
-connected to steel manufacturing and related manufacturing. Though a
-city in its own right, Hamilton lies within the urban and suburban
-Greater Toronto and Hamilton Area (GTHA) that spans a shoreline of Lake
-Ontario. The GTHA comprises seven million people, or approximately 20\%
-of the Canadian population
-\citep{cityoftoronto2021CensusPopulationa2022}. Hamilton is divided into
-six regional communities: Hamilton Central, Dundas, Ancaster,
-Flamborough, Stoney Creek and Glanbrook (Figure~\ref{fig-Fig1}). Each of
-these regions demonstrate different characteristics of the urban and
-suburban landscape of the city. Hamilton Central is the densest and most
-urbanized of the six, and the five periphery regions of Dundas,
-Ancaster, Flamborough, Glanbrook and Stoney Creek are significantly more
-suburbanized with the furthest periphery regions being undeveloped or
-rural owing to their inclusion in the region's greenbelt
-\citep{greenbeltfoundationThrivingGreenbeltThrivingNA}. Urban and
-suburban landscapes play a key role in accessing care as differences in
-infrastructure could affect one's ability to access care destinations.
+This paper focuses on Hamilton, a mid-size city of approximately 500,000
+residents that lies within the urban and suburban Greater Toronto and
+Hamilton Area (GTHA) \citep{transportationtomorrowsurvey2018}. The GTHA
+is home to seven million people, or approximately 20\% of the Canadian
+population \citep{cityoftoronto2021CensusPopulationa2022}. Hamilton is
+divided into six regional communities (Figure~\ref{fig-Fig1}).
+Hamilton-Central is the densest and most urbanized of the six, and the
+five periphery communities of Dundas, Ancaster, Flamborough, Glanbrook
+and Stoney Creek are significantly more suburbanized with the furthest
+periphery regions being undeveloped or rural owing to their inclusion in
+the region's greenbelt
+\citep{greenbeltfoundationThrivingGreenbeltThriving2023}. These
+different urban forms and associated transport infrastructure play a key
+role in access to care destinations.
+
+Further, the entire manuscript and all analysis is conducted in R and
+RStudio. All work is computationally reproducible and openly available
+in the lead author's
+\href{https://github.com/soukhova/Care-Destinations}{GitHub repository}.
 
 \begin{figure}
 
@@ -384,128 +411,98 @@ light grey.}
 
 \end{figure}
 
-\hypertarget{destination-database}{%
-\subsection{Destination database}\label{destination-database}}
+\hypertarget{destination-dataset}{%
+\subsection{Destination dataset}\label{destination-dataset}}
 
-To complete the accessibility analysis, a geospatial database of care
-destinations for Hamilton (e.g., full addresses of longitude and
-latitude) was compiled. The geospatial data was sourced from
-governmental open data portals
+A geospatial dataset of care destinations for Hamilton (e.g., full
+addresses of longitude and latitude) was compiled. The geospatial data
+was sourced from provincial and municipal open data portals
 \citep{governmentofontarioOntarioDataCatalogue2023, cityofhamiltonOpenData2023},
-Data Axle, a consumer database compiled of businesses and companies
+Data Axle, a consumer dataset compiled of businesses and companies
 within Canada \citep{axledataConsumerData2023} or manually through
 Google Maps. Each destination was categorized based on the specific type
-of care being accessed. Categories include child-, elder-, errand-,
-grocery-, and health- centric destinations. These final categories, and
-their sources of data, are described as follows and their spatial
-distribution is visualized in Figure~\ref{fig-Fig2}.
+of care being accessed following the mobility of care research by
+Sanchez de Madariaga \& Zucchini (2019)
+\citep{sanchezdemadariagaMeasuringMobilitiesCare2019}. Categories
+include child, elder, grocery, health, and errand -centric destinations.
+Category sources of data and preparation notes are detailed in
+Table~\ref{tbl-Tbl1}. Their spatial distribution and sub-categories are
+visualised in Figure~\ref{fig-Fig2}.
 
-\hypertarget{child-centric}{%
-\subsubsection{Child-Centric:}\label{child-centric}}
+\hypertarget{tbl-Tbl1}{}
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
 
-This category includes the geospatial location of all child-oriented
-destinations such as \textbf{schools}, \textbf{daycares},
-\textbf{community centres}, \textbf{recreation centres}, and
-\textbf{parks}: 1190 destinations are identified in the City.
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Schools} are sourced from the Educational Institution data
-  from Open Data Hamilton
-  \citep{opendatahamiltonEducationalInstitutions2022}. The data was then
-  filtered, and all locations that typically do not serve children were
-  removed including: Post-Secondary, Adult-Learning Centres, Group
-  Homes, and Foster Care Centres. Through examination some ``Section
-  23'' institutions defined as \emph{``centres for children who cannot
-  attend school to meet the needs of care or treatment, and
-  rehabilitation''}
-  \citep{governmentofontarioministryofeducationFundingEducationCommunity2023},
-  were kept due to their innate connection to care.
-\item
-  \textbf{Daycares} were identified from the Registered Child Care
-  Facilities in the Ontario Open Data Portal
-  \citep{governmentofontarioOntarioDataCatalogue2023} and filtered to
-  Hamilton. Additionally, EarlyON childcare locations, defined as
-  \emph{``\ldots locations for child rearing and development where
-  parents accompany their children''}
-  \citep{cityofhamiltonChildCareRegistry2023}, were added manually from
-  the Hamilton Child Care Registry
-  \citep{cityofhamiltonChildCareRegistry2023}.
-\item
-  \textbf{Community centres}, \textbf{recreation centres}, and
-  \textbf{Parks} were identified from the Recreation and Community
-  Centres and Parks data from Open Data Hamilton
-  \citep{opendatahamiltonParksDatabase2022, opendatahamiltonRecreationCommunityCentres2022},
-  respectively.
-\end{itemize}
+\setlength{\tabcolsep}{0pt}
 
-\hypertarget{elder-centric-destinations}{%
-\subsubsection{Elder-Centric
-Destinations:}\label{elder-centric-destinations}}
+\renewcommand*{\arraystretch}{1.5}
 
-This category includes the geospatial locations of \textbf{senior
-centres}, \textbf{long-term care homes}, and \textbf{retirement homes}:
-75 destinations are identified in the City. \textbf{Senior centres} are
-also retrieved from the Recreation and Community Centre database
-\citep{opendatahamiltonRecreationCommunityCentres2022}, specifically
-locations that contain the name ``Senior Centre''. \textbf{Long-term
-care homes} and \textbf{retirement homes} are sourced from the Ontario
-Ministry of Health GEOHub for Health Service Locations
-\citep{ontarioministryofhealthgeohubMinistryHealthService2023}.
 
-\hypertarget{grocery-centric}{%
-\subsubsection{Grocery-Centric:}\label{grocery-centric}}
 
-This category includes the geospatial location of all \textbf{grocery
-stores}, a place a household could buy groceries ranging from
-convenience stores to large retail stores: 381 destinations are
-identified. Data is gathered from Data Axle and filtered by Company
-Name, Suite Number, Address, City, Province, Phone Number and Postal
-Code \citep{axledataConsumerData2023}. From there the type was
-identified e.g., grocers specialty foods, grocers retail, grocer health
-food, grocer wholesale, grocer curbside, grocer delicatessen wholesale,
-grocer convenience. Next, data was cross referenced to ensure all
-included locations were operational and legitimate grocery stores.
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
-\hypertarget{health-centric}{%
-\subsubsection{Health-Centric:}\label{health-centric}}
+\begin{longtable}[c]{|p{0.67in}|p{1.69in}|p{4.33in}}
+\caption{\label{tbl-Tbl1}Details on the preparation and data sources of care destinations. }\tabularnewline
 
-This category includes the geospatial location of health destination
-including \textbf{hospitals}, \textbf{pharmacies}, \textbf{clinics}, and
-\textbf{dentist offices}: 421 destinations are identified in the City.
-\textbf{Hospitals} and \textbf{pharmacies} were derived from the Ontario
-Ministry of Health GEOHub for Health Service Locations
-\citep{ontarioministryofhealthgeohubMinistryHealthService2023}.
-\textbf{Clinics} were manually entered with data being gathered from
-Hamilton Niagara Haldimand Brant Health Line -- Health Service Locations
-\citep{hamiltonniagarahaldimandbranthealthlineWalkInMedicalClinics2023}.
-Clinic data was then double checked to ensure locations were in
-operation. Dentistry locations were also manually entered through Google
-Map search filtering as well as reassessed for operational use.
 
-\hypertarget{errand-centric}{%
-\subsubsection{Errand Centric:}\label{errand-centric}}
 
-This category includes other types of destinations that are
-errand-centric such as \textbf{libraries}, \textbf{post offices}, and
-\textbf{banks}: 158 destinations are identified in the City. In travel
-surveys, these destinations are often lumped in within `grocery
-shopping' \citep{taylorWhatExplainsGender2015}. In this research, we
-distinguish these destinations from child-, elder-, grocery- and
-health-centric destinations. \textbf{Libraries} are derived from
-Hamilton Open Data Portal \citep{opendatahamiltonLibraries2022}.
-\textbf{Post Offices} are collected from two sources; Axle Database and
-then supplemented from the Canada Post Postal Office Tracker Website
-\citep{axledataConsumerData2023, canadapostPostOfficeLocator2023}. The
-supplemented locations from Canada Post Postal Office Tracker Website
-were manually entered into the database to ensure data was accurately
-being represented from its source. \textbf{Banks} are also derived from
-Axle Data and then cross referenced to ensure data quality with the ABM
-Bank Locator websites for the following national banking firms: Bank of
-Montreal, CIBC, HSBC, National Bank of Canada, Royal Bank of Canada,
-Scotiabank and TD Financial
-\citep{bankofmontrealBankMontrealBranch2023, thehongkongandshanghaibankingcorporationlimitedhsbcHSBCBranchABM2023, nationalbankNationalBankBranches2023, royalbankofcanadaRBCBranchABM2023, scotiabankScotiabankABMBranch2023, thetorontodominionbankTDBankBranch2023}.
+
+\ascline{1.5pt}{666666}{1-3}
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Care\ category}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Sources}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Data\ preparation\ notes}}} \\
+
+\ascline{1.5pt}{666666}{1-3}\endfirsthead 
+
+\ascline{1.5pt}{666666}{1-3}
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Care\ category}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Sources}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Data\ preparation\ notes}}} \\
+
+\ascline{1.5pt}{666666}{1-3}\endhead
+
+
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Child-centric}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Hamilton}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2022a,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2022c,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2022d;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Ontario}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023b)}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Schools,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{daycares,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{community}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{centres,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{recreation}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{centres,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{parks:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{1,190}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{locations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{included.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{After}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{manual}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{review,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{all}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{locations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{that}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{typically}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{do}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{not}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{serve}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{children}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{were}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{removed}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{including:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Post-Secondary,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Adult-Learning}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Centres,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Group}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Homes,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Foster}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Care}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Centres.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Further,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{through}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{examination}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{some}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Section}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{23}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{institutions}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{defined}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{as}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{“}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{centres}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{for}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{children}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{who}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{cannot}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{attend}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{school}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{to}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{meet}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{the}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{needs}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{of}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{care}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{or}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{treatment,}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{and}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{\ }}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{rehabilitation}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\textit{”}}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Ontario}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023a)}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{were}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{kept}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{due}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{their}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{innate}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{connection}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{care.}}} \\
+
+
+
+
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Elder-centric}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Hamilton}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2022d;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Ontario GeoHub}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023)}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Senior}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{centres,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{long-term}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{care}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{homes,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{retirement}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{homes:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{75}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{destinations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{identified.}}} \\
+
+
+
+
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Grocery-centric}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Axle Data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023)}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Grocery}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{stores,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{namely}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{a}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{place}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{a}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{household}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{could}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{buy}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{groceries}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{ranging}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{from}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{convenience}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{stores}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{large}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{retail}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{stores:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{381}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{destinations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{identified.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{is}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{filtered}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{by}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Company}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Name,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Suite}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Number,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Address,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{City,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Province,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Phone}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Number}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Postal}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Code.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{The}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{type}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{was}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{then}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{identified}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{e.g.,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocers}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{specialty}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{foods,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocers}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{retail,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocer}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{health}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{food,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocer}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{wholesale,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocer}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{curbside,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocer}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{delicatessen}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{wholesale,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocer}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{convenience.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{was}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{crossreferenced}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{ensure}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{all}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{included}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{locations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{were}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{operational}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{legitimate}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{grocery}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{stores.}}} \\
+
+
+
+
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Health-centric}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Ontario GeoHub}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{HNHB Healthline}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023)}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Hospitals,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{pharmacies,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{clinics,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{dentist}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{offices:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{421}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{destinations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{identified.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Hospitals}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{pharmacies}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{were}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{retrieved}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{while}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{clinics}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{dentistry}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{clincs}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{were}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{manually}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{scraped}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{from}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{a}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{healthcare}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{services}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{database}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{checked}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{via}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Google}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Maps}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{remove}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{non-operational}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{locations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{confirm}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{dentistry-orientation.}}} \\
+
+
+
+
+
+\multicolumn{1}{>{\raggedright}m{\dimexpr 0.67in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Errand-centric}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 1.69in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Hamilton}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{libraries}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Hamilton}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2022b)}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{post}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{office}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{locations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(Axle Data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Canada Post}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023)}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{datasets}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{of}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{all}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{national}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{bank}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{chains}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{(BMO}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{HSBC}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{National Bank}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{RBC}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Scotiabank}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023;}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{TD Bank}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{2023)}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{.}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 4.33in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Libraries,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{post}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{offices,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{banks:}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{158}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{destinations}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{identified.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Post}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{offices}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{retrieved}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{from}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{a}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{mix}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{of}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{databases,}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{duplicates}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{removed.}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Banks}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{are}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{also}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{derived}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{from}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Axle}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{and}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{then}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{cross-referenced}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{to}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{ensure}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{data}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{quality}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{with}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{a}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Bank}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{Locator}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{website}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{for}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{all}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{national}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{banking}}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{\ }}\textcolor[HTML]{000000}{\fontsize{10}{10}\selectfont{firms.}}} \\
+
+\ascline{1.5pt}{666666}{1-3}
+
+
+
+\end{longtable}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
 
 \begin{figure}
 
@@ -523,19 +520,29 @@ USGS \citep{greatlakesUSGS2010}.}
 
 \end{figure}
 
-Once the care destinations were compiled, the data was validated to
-ensure that duplicate locations were removed. Each location was manually
-inspected using Google Maps to confirm if it was operational and
-legitimate, if not, those locations were removed. The complete care
-destination database was imported into RStudio for further processing
-and visualised in Figure~\ref{fig-Fig2}, by category and sub-category.
-
-For the purpose of this analysis and in absence of city-wide empirical
-household preferences for care destinations, all destinations are
-re-weighted to be equal. For example, if all count as 1 destination in
-our analysis, the result will favour child-centric destinations as they
-make up the majority of the database. As such, the five care categories
-are re-weighted so they each represent one-fifth of the database:
+For the purpose of this analysis and in absence of city-wide household
+preferences for care destinations, all locations are re-weighted to make
+each of the six categories conceptually equivalent i.e., each location
+within each category \(c\) is weighted to equal
+\(O_c = \frac{1}{\sum_{c=1}^{6} c}\frac{\sum_{c=1}^{6} J_c}{J_c}\) where
+\(J_c\) is the number of locations within a category \(c\). If this was
+not done, the results would favour access to child-centric destinations
+as they make up the majority of the dataset. Accessibility literature
+has weighted destinations (amenities) using a variety of method such as
+estimated capacity of destinations
+\citep{liMeasuringMultiactivities2024} or origin-destination flows from
+travel surveys
+\citep{graellsCityCitiesMeasuring2021, chengInvestigatingWalkingAccessibility2019}.
+This work's focus is on household-serving care destinations, so many
+destinations do not have traditional `capacities' like health care
+facilities have beds. Origin-destination flows to all care destinations
+also have not been counted within the TTS
+\citep{transportationtomorrowsurvey2018}. So, in this analysis, the five
+care categories are re-weighted to represent one-fifth of the dataset.
+Conceptually, this simplistic re-weight assumes the population
+potentially interacts with all categories and all locations within each
+category equally. In absence of empirical data for amenity weight
+calibration, this methodological assumption is a limitation.
 
 \begin{itemize}
 \tightlist
@@ -551,26 +558,27 @@ are re-weighted so they each represent one-fifth of the database:
   Health- centric (421 destinations each at 1.0570071) .
 \end{itemize}
 
-\hypertarget{census-data-and-multimodal-travel-time-estimations}{%
-\subsection{Census data and multimodal travel time
-estimations}\label{census-data-and-multimodal-travel-time-estimations}}
+\hypertarget{population-data}{%
+\subsection{Population data}\label{population-data}}
 
-To supplement the care destination database and complete the
-accessibility calculation, population data for the City of Hamilton was
-sourced from the most recent 2021 Canadian census
-\citep{governmentofcanadaCensusPopulation2023}. The number of residents
-and the percent of after-tax low-income-cut-off (LICO-AT) residents was
-sourced at the highest level of spatial resolution, the dissemination
-area (DA). LICO-AT is a composite indicator included in the census that
+To supplement the care destination dataset and complete the
+accessibility calculation, population data for the City of Hamilton is
+sourced from the 2021 Canadian census using the \{cancensus\} R Package
+\citep{governmentofcanadaCensusPopulation2023, vonbergmannCancensusCensusMapper2021}.
+Three categories of variables are selected: the population, the percent
+of after-tax low-income-cut-off (LICO-AT), and the primary commute mode
+used. LICO-AT is a composite indicator included in the census that
 reflects the proportion of households spending 20\% more than the area
 average on food, shelter and clothing
-\citep{governmentofcanadaLowIncomeCutoffs2023}. The \{cancensus\}
-open-sourced R package was used to access the 2021 Canadian Census data
-in a programmatic way \citep{vonbergmannCancensusCensusMapper2021}.
+\citep{governmentofcanadaLowIncomeCutoffs2023}. All data was sourced at
+the most granual level of spatial resolution publicly available, the
+level of the dissemination area (DA).
+
 Figure~\ref{fig-Fig3} displays the spatial distribution of the total
 population and the prevalence of LICO-AT as a percentage of the total
-population. Of note is the density of population and LICO-AT prevalence
-within Hamilton-Central.
+population. Of note is the density of population within Hamilton-Central
+(oranges) and the cluster of high density and high LICO-AT prevalence
+near the shoreline in Hamilton-Central (dark purple-oranges).
 
 \begin{figure}
 
@@ -580,27 +588,30 @@ within Hamilton-Central.
 
 \caption{\label{fig-Fig3}The total population in each dissemination area
 (DA), visualized with the six former muncipal boundaries in the city of
-Hamilton. The top plot represents the population density and the bottom
-plot depicts the prevalence of low-income cutt-off after taxes (LICO-AT)
-as a percentage of the total DA population. LICO-AT is a measure of
-economic disadvantage. The legend categories represent quartiles.
-Basemap shapefiles are retrieved from the 2021 Canadian census
-\citep{governmentofcanadaCensusPopulation2023}, the Open Data Hamilton
-Portal \citep{opendatahamiltonCityBoundary2023} and the USGS
+Hamilton. The left plot represents the population and the right
+represents the population density versus the low-income cutt-off after
+taxes (LICO-AT) as a percentage of the total DA population. LICO-AT is a
+measure of economic disadvantage. The legend categories represent
+quartiles. Basemap shapefiles are retrieved from the 2021 Canadian
+census \citep{governmentofcanadaCensusPopulation2023}, the Open Data
+Hamilton Portal \citep{opendatahamiltonCityBoundary2023} and the USGS
 \citep{greatlakesUSGS2010}.}
 
 \end{figure}
 
-To further investigate the spatial differences in access to care that
-modes offer, we use the proportion of the total population that commute
-by a specific mode (Figure~\ref{fig-Fig4}). These variables are also
-retrieved as a long-form variable of the 2021 Canadian census using the
-\{cancensus\} R Package
-\citep{governmentofcanadaCensusPopulation2023, vonbergmannCancensusCensusMapper2021}.
-Though mode-choice used in travel to work is not necessarily reflective
-of the mode used to travel to care destinations, no other data is
-available City-wide. That said, the population predominately commutes by
-car, even within the more densely populated Hamilton-Central.
+Further, the population proportion that commutes by a specific mode
+(car, transit, walk, or cycle/other) is visualised in
+Figure~\ref{fig-Fig4}. Though mode-choice used in travel to work is not
+necessarily reflective of the mode used to travel to care destinations,
+to our knowledge no other data is available at a granular level
+City-wide that centers mobility of care. The population generally
+commutes by car (50\% or higher, is yellow to green), even within the
+more densely populated Hamilton-Central. However, for transit and
+walking, a group of DAs near the shoreline within Hamilton-Center have
+the highest proportion of transit users and those who walk to work
+(yellows in the plots that are otherwise red i.e., below 15\%). Those
+same DAs are also relatively dense and have a high prevalence of LICO-AT
+(Figure~\ref{fig-Fig3}).
 
 \begin{figure}
 
@@ -618,51 +629,56 @@ Portal \citep{opendatahamiltonCityBoundary2023} and the USGS
 
 \end{figure}
 
-Travel time is conducted using the `travel\_time\_matrix()' function
-from \{r5r\}, an open-source R package for rapid realistic routing on
-multimodal transport networks \citep{pereiraR5rRapidRealistic2021}. The
-inputs were the geometric centroids of the DA, the centroids of all care
-destinations, the Open Street Map (OSM) road network retrieved from
-Geofabrik, \citep{geofrabrikOntarioCanadaOpen2023} and the static GTFS
-(transit network in which only urban buses operate) for Hamilton
-\citep{transitfeedsHamiltonStreetRailway2023}. Travel times for walking,
-cycling, transit (with walking to stations), and car were calculated for
-each origin to all care destinations.
+\hypertarget{multimodal-travel-time-estimations-and-accessibility-measures}{%
+\subsection{Multimodal travel time estimations and accessibility
+measures}\label{multimodal-travel-time-estimations-and-accessibility-measures}}
 
-For all modes, travel times under 60 minutes based on the shortest
-travel-time path OSM road network were calculated. For transit and
-cycling modes, additional parameters were included. In estimating
-transit travel times, a typical Wednesday departure time at 8:00 was
-selected, as it is representative of relative accessibility over the
-course of the day \citep{boisjolyDailyFluctuationsTransit2016}. Further,
-a departure travel window parameter of +/- 30 mins was used, so the
-origin-destination travel times are calculated for each minute between
-7:30 to 8:30. This consider is important as transit travel times are
-highly sensitive to vehicle frequency and connecting transfers (see
-discussion of the modifiable temporal unit problem e.g.,
-\citep{pereiraFutureAccessibilityImpacts2019}). After evaluation, the
-25th percentile travel time from the distribution of travel times in the
-window was selected to represent each OD trip. This travel time
+As empirical travel behaviour to care-oriented destinations is
+uncounted, it is approximated in the estimation of travel time to all
+locations. Travel times by walking, cycling, transit and car is
+calculated for each DA to the destination point using the
+`travel\_time\_matrix()' function from the \{r5r\} package
+\citep{pereiraR5rRapidRealistic2021}. Inputs are point locations of
+origins, destinations, an OpenStreetMap road network
+\citep{geofabrikOntarioCanadaOpen2023}, and city GTFS transit
+routes/schedules \citep{transitfeedsHamiltonStreetRailway2023}. The
+origin of each DA and destination location is assumed to be its
+geometric centroid. For all modes, travel times under 60 minutes based
+on the shortest travel-time path are calculated.
+
+For transit and cycling, additional parameters were included. For
+transit travel times, a Wednesday departure time of 8:00AM was selected
+\citep{boisjolyDailyFluctuationsTransit2016} with a departure travel
+window parameter of \(\pm\) 30 mins. Travel times are calculated for
+each minute of the travel window (7:30-8:30AM) and the 25th percentile
+from the distribution of travel window times were selected to represent
+each origin-destination. Selecting a sufficiently wide window is an
+important consideration as travel times are sensitive to transit vehicle
+frequency and connecting transfers (see discussion of the modifiable
+temporal unit problem e.g.,
+\citep{pereiraFutureAccessibilityImpacts2019}). The 25th percentile
 indicates that 25\% of trips from that origin to destination have a
 travel time that is that length or shorter. This assumption provides an
-optimistic assumption of transit travel times. For cycling travel times,
-the default parameter for cycling routes of level 1 or 2 traffic level
-of stress, dedicated or separated cycling lanes respectively, was
-selected. The level of traffic stress is variable associated with links
-of the OSM road network.
+optimistic perspective of transit travel times. For cycling travel
+times, level 1 or 2 traffic level of stress routes (i.e., dedicated or
+separated cycling lanes respectively) were selected. The level of
+traffic stress is a variable associated with links of the OSM road
+network; level 1 and 2 are considered the default.
 
-\hypertarget{accessibility-measures}{%
-\subsection{Accessibility measures}\label{accessibility-measures}}
-
-Both the \textbf{cumulative opportunity} and \textbf{spatial
-availability} measure are used to estimate the potential access to care
-that each mode provides to the DA. These measures represent the
-aggregate zonal (DA) accessibility that populations that reside within
-those DA may have access.
+The \textbf{cumulative opportunity} and \textbf{spatial availability}
+measures are used to estimate the potential access to care that each
+mode provides to the DA. From the cumulative opportunity measure, the DA
+level values represent the potential interaction with reachable
+destinations a population located at DA could access using a given mode.
+The interpretation of the spatial availability measure is different:
+each DA level values are a proportional value of all the care
+destinations in Hamilton. Each proportional value represents the
+potential availability of reachable care destinations to a mode-using
+population located at the DA.
 
 \textbf{Cumulative opportunity accessibility}: takes the following
-general form for multi-mode calculation: \[
-A_i^m=\sum_{j=1}^{J}O_j\cdot f^m(c_{ij}^m)
+general form for multi-modal calculation: \[
+S_i^m=\sum_{j}O_j\cdot f^m(c_{ij}^m)
 \] \noindent Where:
 
 \begin{itemize}
@@ -682,15 +698,15 @@ A_i^m=\sum_{j=1}^{J}O_j\cdot f^m(c_{ij}^m)
   \(f^m(\cdot)\) is an impedance function of \(c^m_{ij}\) for each
   \(m\); within the cumulative opportunity approach, it is a binary
   function that takes the value of 1 if \(c^m_{ij}\) is less than a
-  selected value.
+  selected value \citep{handyMeasuringAccessibilityExploration1997}.
 \item
-  \(A^m_{i}\) is the unconstrained accessibility for \(m\) at each
+  \(S^m_{i}\) is the unconstrained accessibility for \(m\) at each
   \(i\).
 \end{itemize}
 
-\textbf{Spatial availability} takes the following general form for
-multi-mode calculation: \[
-V^m_{i} = \sum_{j=1}^J O_j\ F^{tm}_{ij}
+\textbf{Spatial availability}, on the other hand, takes the following
+general form for multi-modal calculation: \[
+V^m_{i} = \sum_{j} O_j\ F^{tm}_{ij}
 \] \noindent Where:
 
 \begin{itemize}
@@ -713,28 +729,27 @@ V^m_{i} = \sum_{j=1}^J O_j\ F^{tm}_{ij}
 \end{itemize}
 
 What makes spatial availability stand apart from other competitive
-measures is the multimodal balancing factor \(F^{tm}_{ij}\) (discussed
-in the pre-print by Soukhov et al.
-\citep{soukhovMultimodalSpatialAvailability2023}). \(F^{tm}_{ij}\)
-implements a proportional allocation mechanism that ensures the sum of
-all spatial availability values at each \(i\) always matches the total
-number of opportunities in the region. \(F^{tm}_{ij}\) consists of two
-parts: the first is a population-based proportional allocation factor
-\(F_i^{pm}\) that models the mass effect of the gravity model and the
-second is an impedance-based proportional allocation factor
-\(F_{ij}^{cm}\) that models the cost effect. Both factors consider
-competition: \(F^{pm}_{i}\) estimates a proportion of how many people
-are in each \(i\) and using each \(m\) relative to the region and
-\(F^{cm}_{ij}\) estimates a proportion of the cost of travel from \(i\)
-to \(j\) at each \(i\) using each \(m\) relative to the region. As both
-\(F^{pm}_{i}\) and \$F\^{}\{mc\}\emph{\{i\} \$ are proportions,
-\(\sum_{m} \sum_{i} F^{pm}_{i} = 1\) and \$ \sum}\{m\} \sum\emph{\{i\}
-F\^{}\{cm\}}\{i\} = 1\$). Both factors are combined to equal the total
-balancing factor \(F^{tm}_{ij}\) which is used to calculated \(V^m_i\)
-as follows:
+measures is the multimodal balancing factor \(F^{tm}_{ij}\)
+\citep[see][]{soukhovMultimodalSpatialAvailability2023, soukhovIntroducingSpatialAvailability2023}.
+\(F^{tm}_{ij}\) implements a proportional allocation mechanism that
+ensures the sum of all spatial availability values at each \(i\) always
+matches the total number of opportunities in the region. \(F^{tm}_{ij}\)
+consists of two parts: the first is a population-based proportional
+allocation factor \(F_i^{pm}\) that models the mass effect (relative
+population-demand for opportunities) and the second is an
+impedance-based proportional allocation factor \(F_{ij}^{cm}\) that
+models the cost effect (relative travel time). Both factors consider
+competition through proportional allocation: \(F^{pm}_{i}\) estimates a
+proportion of how many people are in each \(i\) and using each \(m\)
+relative to the region and \(F^{cm}_{ij}\) estimates a proportion of the
+cost of travel from \(i\) to \(j\) at each \(i\) using each \(m\)
+relative to the region. Since \(F^{pm}_{i}\) and \(F^{mc}_{i}\) are
+proportions, \(\sum_{m}\sum_{i}F^{pm}_{i} = 1\) and
+\(\sum_{m} \sum_{i}F^{cm}_{i}=1\). Both factors are combined to create
+the total balancing factor \(F^{tm}_{ij}\) used to calculate \(V^m_i\):
 
 \[
-F^{tm}_{ij} = \frac{F^{pm}_{i} \cdot F^{cm}_{ij}}{\sum_{m=1}^M \sum_{i=1}^N F^{pm}_{i} \cdot F^{cm}_{ij}}
+F^{tm}_{ij} = \frac{F^{pm}_{i} \cdot F^{cm}_{ij}}{\sum_{m} \sum_{i} F^{pm}_{i} \cdot F^{cm}_{ij}}
 \] \noindent Where:
 
 \begin{itemize}
@@ -742,7 +757,7 @@ F^{tm}_{ij} = \frac{F^{pm}_{i} \cdot F^{cm}_{ij}}{\sum_{m=1}^M \sum_{i=1}^N F^{p
 \item
   The factor for allocation by population for each \(m\) at each \(i\)
   is \(F^{pm}_{i} = \frac{P_{i}^m}{\sum_{m}\sum_{i} P_{i}^m}\). This
-  factor makes opportunities available based on demand. The pop
+  factor makes opportunities available based on demand.
 \item
   The factor for allocation by cost of travel for each \(m\) at \(i\) is
   \(F_{ij}^{cm} = \frac{f^m(c_{ij}^m)}{\sum_{m} \sum_{i} f^m(c_{ij}^m)}\).
@@ -750,84 +765,91 @@ F^{tm}_{ij} = \frac{F^{pm}_{i} \cdot F^{cm}_{ij}}{\sum_{m=1}^M \sum_{i=1}^N F^{p
   can reach them at a lower cost.
 \end{itemize}
 
-The use of both constrained and unconstrained accessibility measures is
-strategic, as they illuminate different trends. As an unconstrained
-measure, cumulative opportunity measure counts all the destinations that
-can be reached from each DA within a travel cost, for each DA. From a
-region-wide perspective, a destination that can be reached by multiple
-DAs is counted multiple times, so the sum of all cumulative opportunity
-values region-wide is not meaningful. However, cumulative opportunity
-measure is relative straightforward to implement, and has been widely
-used in accessibility research because of its simple computation (XX).
-The value is understood relative to the score in the region, XX
-opportunities can be accessed within 30 minutes from this neighbourhood
-- this is XXth percentile in the estimated region, a regionally high
-score. Comparisons of score within the region make sense, but
-substantive interpretation of levels of access between modes is hard to
-compare. We often seen, car provides more unconstrained access to
-opportunities than transit.
-
-On the other hand, spatial availability is constrained
-\citep{soukhovIntroducingSpatialAvailability2023}, it incorporates the
-concept of the \emph{finite}. The spatial availability value for each
-mode at each DA is a count of how many destinations can be accessed by
-that mode out of all the destinations in the region. The sum of spatial
-availability values across the region is constrained to equal the total
-number of opportunities. Proportions of each destination (supply) are
-allocated to each mode at each DA based on the DA-to-region-relative
-population (demand for opportunities) and travel impedance (travel cost
-to opportunities). Unlike cumulative opportunity measure, multimodal
-spatial availability measures can be used to extra additional meaning
-between modes. It can be used to illustrate in what neighbourhoods do
-car-drivers access \emph{more} than their equal share of opportunities
-than transit-users and how much more, for instance.
-
 The travel impedance threshold used in both measures is 15 minutes and
 30 minutes; each measure is calculated eight times, once for each four
 modes and assuming a travel time cut-off of 15 minutes or less and
 another assuming a travel time cut-off of 30 minutes or less. The
-selection of the travel time threshold was informed by the literature.
-Only one study to date has calculated the average travel time to all
+selection of travel time thresholds is informed by the literature. Only
+one study to date has calculated the average travel time to all
 different categories of care destinations (16 minutes by car and 36 by
-public transport) \citep{grantsmithManagingChallengesCombining2016}.
-Other literature on travel to care trends to consider trips to one type
-of care category (e.g., health, or school, or grocery stores). Here,
-travel times vary by care category (e.g., 15 minutes to grocery shopping
+public transport) \citep{ravensbergenExploratoryAnalysisMobility2022}.
+Other literature typically considers trips to one type of care category
+(e.g., health, or school, or grocery stores) Here, travel times vary by
+care category (e.g., 15 minutes to grocery shopping
 \citep{hamrickTimeCostAccess2012} or 20.45 for cancer treatments
 \citep{segelRuralurbanDifferencesAssociation2020}. In other care-related
 accessibility analyses, time-cut offs include 10 mins (for daycares)
 \citep{fransenCommuterbasedTwostepFloating2015} and 30 mins to 1 hr (for
-hospitals) \citep{schuurmanDefiningRationalHospital2006}. Furthermore,
-the use of a binary travel time threshold was selected, as opposed to
-more complex impedance functions, to simplify computation. As mentioned,
-region-specific empirical travel data regarding care-centric trip travel
-times is lacking, and this work establishes a methodology to streamline
-access to care interpretation and analysis for then that data is
-available (?).
+hospitals) \citep{schuurmanDefiningRationalHospital2006}. 15 and 30
+minutes were selected to broadly reflect this past research. The use of
+a binary travel time threshold, as opposed to more complex impedance
+functions, was selected to simplify communication of assumed travel
+behaviour. As mentioned, lacking region-specific empirical data
+regarding care-centric travel, this work establishes a methodology to
+streamline access to care interpretation and analysis for when that data
+is available.
+
+This work uses both constrained and unconstrained accessibility measures
+to elucidate different interpretations of access to care. As an
+unconstrained measure, cumulative opportunity measure counts all the
+destinations that can be reached from each DA within a travel cost, for
+each DA. From a region-wide perspective, a destination that can be
+reached is counted multiple times by all DAs that can reach it, so the
+sum of all cumulative opportunity DA values in the region is not
+meaningful. Simply, if walking-mode provides access to some number of
+opportunities within a 30 minutes, car-mode provides some greater access
+within 30 minutes, and the access that walk-mode is not discounted by
+the population using car-mode and the greater number of opportunities
+they can potentially access. However, cumulative opportunity measure is
+intuitive to implement, a part in why it has been widely adopted in
+accessibility research and considered a introductory method to more
+advanced accessibility measure
+\citep{elgeneidyMakingAccessibilityWork2021}.
+
+On the other hand, spatial availability is constrained accessibility
+measure that considers competition
+\citep{soukhovIntroducingSpatialAvailability2023}. It incorporates the
+concept of the \emph{finite}: opportunities are numbered in the region
+so they can be potentially interacted with more or less based on the
+travel impedance offered by the zone (i.e., the travel cost on the
+transport network) as well as how densely or sparsely the zone is
+populated with opportunity-seeking opportunities. This is especially
+important considering population-distinct characteristics like selected
+travel modes. In a North American context, car-modes can potentially
+access more opportunities (unconstrained) because of their higher range
+relative to transit. But if opportunities are considered finite, high
+car mobility may take-up a higher share of opportunities from
+populations using modes that offer lower mobility, especially in zones
+where there is a high population and car-using modal split. Cumulative
+opportunities does not consider the relative population-demand for care
+destinations while spatial availability does: the use of these two
+measure illustrates distinct results.
 
 \hypertarget{results}{%
-\section{RESULTS}\label{results}}
+\section{Results}\label{results}}
 
-In absence of people's travel behaviour and preference for care
-destinations - a bias in traditional travel surveys - we map access to
-all destinations assuming an equal weighting of the five categories. The
-results are described across: unconstrained access to care by mode
-across the city, constrained access by mode, and identification of
-intervention areas through equity considerations.
+\hypertarget{unconstrained-access-to-care}{%
+\subsection{Unconstrained access to
+care}\label{unconstrained-access-to-care}}
 
 The cumulative opportunity accessibility plots for each mode are shown
-in Figure~\ref{fig-Fig5}. It visualises an unconstrained count of
-destinations, we can interpret it as: the more destinations that can be
-reached by a mode, the more potential interactions and thus the
-potentially better. Spatial trends between the 15 minute and 30 minute
-threshold plots are similar (values are coloured by quantile). We can
-also notice three significant findings between modes: first, the access
-that car provides is significantly higher relative to other modes, it
-sets the max. value of (1939 opportunities for 15 min and 2209
-opportunities for 30 mins) across all modes. Next, access by cycling is
-surprisingly also relatively high. And importantly, transit and walking
-access is great and pretty good, respectively, within Hamilton-Centre
-but this is not the same story in other communities.
+in Figure~\ref{fig-Fig5}. They visualise an unconstrained count of care
+destinations that can be reached by each mode from each DA. The higher
+the zonal value, the more potential interaction with care destinations.
+This greater potential is conceptualised as a positive outcomes of well
+functioning land-use and transport networks
+\citep{corderaImpactAccessibilityPublic2019, blumenbergDriveWorkRelationship2017, cuiSpatialAccessPublic2020}.
+Spatial trends between the 15-min and 30-min threshold plots are similar
+(values are grouped by quantile). Three significant findings between
+modes can be identified. First, the access that the car-mode provides is
+significantly higher relative to other modes. Travel by car results in
+the greatest maximum number of potential interactions to care
+destinations (1939 opportunities for 15-min and 2209 opportunities for
+30-mins). Next, access by cycling is also relatively high. It provides
+the second most opportunities for interactions after travel by car, and
+affords at least one opportunity for interaction in more DAs than
+walking and transit use. Finally, access by transit is high and walking
+is also relatively high within Hamilton-Central but low elsewhere.
 
 \begin{figure}
 
@@ -844,19 +866,37 @@ USGS \citep{greatlakesUSGS2010}.}
 
 \end{figure}
 
-From Figure~\ref{fig-Fig5}, we can tell car is king, an expected outcome
-given the tendency of North American cities to be designed around the
-private car \citep{saeidizandRevisitingCarDependency2022}. However,
-access by non-car modes is great (Q3 and Q4) within many DAs in
-Hamilton-Centre and cycling has potential, especially in the more rural
-communities (Q1). However, though many households use car as a commute
-mode, not everyone does, wants to, or can. How does the access that car
-provides \emph{out compete} access given by other modes? Lets consider
-cycling. Though cycling provides access to many destinations, seeing the
-2225 care destinations in the City as the total, how many of those are
-potentially available to cyclists considering motorists greater
-unconstrained access? We can't answer this question using unconstrained
-accessibility, so lets turn to constrained accessibility, shown in
+From Figure~\ref{fig-Fig5}, car-mode offering high accessibility to
+destinations is an expected outcome given the car-oriented design of
+North American cities \citep{saeidizandRevisitingCarDependency2022}.
+However, access by non-car modes is great within many DAs in
+Hamilton-Central (Q3 and Q4). As well, cycling provides some access to
+destinations (Q1) in more rural communities. While car ownership is high
+in Hamilton, not everyone has access to a private vehicle: 13\% of
+Hamilton households own zero vehicles
+\citep{datamanagementgroupTTSTransportationTomorrow2018}. Unconstrained
+access is insightful in illustrating the spatial accessibility to
+destinations that people may have, but it does not account for how the
+overall access provided by the transportation systems to destinations is
+allocated to different mode-using populations. This lack of
+consideration may conjure misleading conclusions, namely the inflated
+promise of lower access-providing modes.
+
+\hypertarget{constrained-acces-to-care}{%
+\subsection{Constrained acces to care}\label{constrained-acces-to-care}}
+
+Consider cycling: the access provided by this mode appears promising
+when examining the cumulative opportunity results
+(Figure~\ref{fig-Fig5}). This may be in part because interpreting
+cycling access against the much higher access providing car-mode is
+difficult. Unconstrained access by car is high (Q4), but at least
+cycling-mode can achieve Q3 levels in Hamilton-Central and Q1 beyond.
+However, by conceptualising the amount of accessibility available in the
+region as a total, one can answer how many opportunities are available
+to those using the cycling-mode considering the allocation to the other
+three mode-using populations. This comparison cannot be addressed using
+unconstrained accessibility, but can be explored with spatial
+availability (constrained accessibility), mapped in
 Figure~\ref{fig-Fig6}.
 
 \begin{figure}
@@ -865,136 +905,176 @@ Figure~\ref{fig-Fig6}.
 
 }
 
-\caption{\label{fig-Fig6}The spatial availability measure. The number of
-care destinations that can be reached, per DA, within 15 mins (top) and
-30 mins (bottom). Basemap shapefiles are retrieved from the 2021
+\caption{\label{fig-Fig6}Spatial availability: the number of care
+destinations that can be reached, per DA, within 15 mins (top) and 30
+mins (bottom). Basemap shapefiles are retrieved from the 2021 Canadian
+census \citep{governmentofcanadaCensusPopulation2023}, the Open Data
+Hamilton Portal \citep{opendatahamiltonCityBoundary2023} and the USGS
+\citep{greatlakesUSGS2010}.}
+
+\end{figure}
+
+This study's calculation of spatial availability (Figure~\ref{fig-Fig6})
+assumes population mode-shares (proportions shown in
+Figure~\ref{fig-Fig4}), while the unconstrained analysis does not. In
+this context, from Figure~\ref{fig-Fig6} it can be observed that those
+who use car-modes are allocated the most spatial availability i.e., the
+proportion of spatial access to destinations out of all spatial access
+to destinations in the region. A similar spatial trend is found in the
+unconstrained accessibility analysis (Figure~\ref{fig-Fig5}). However,
+since Figure~\ref{fig-Fig6} accounts for the mode-using population, the
+results are more rich. Spatial availability for motorists is in-part due
+to the exceptionally high proportion of car-using populations
+(especially in rural communities) as well as car-mode's relatively
+competitive travel time. There is a higher car-using population and the
+car-mode has low travel times to destinations allowing the car-mode
+using population in each DA to capture the majority of spatial
+availability. Figure~\ref{fig-Fig5} only sheds light on how much
+unconstrained accessibility the car-mode could potentially provided to
+people within a DA.
+
+While the unconstrained accessibility analysis (Figure~\ref{fig-Fig5})
+demonstrates that non-car modes are promising in urban areas, as well as
+cycling in rural communities, Figure~\ref{fig-Fig6} demonstrates a more
+nuanced perspective. Though non-car modes may provide good unconstrained
+accessibility within Hamilton-Central (and some access in rural
+communities), they do not provide similar levels of spatial
+availability. Car-using populations capture more spatial availability,
+even in the centre of Hamilton-Central, than all other modes. Note the
+lower number of Q3 and Q4 values within and radiating outwards from
+Hamilton-Central for non-car modes in Figure~\ref{fig-Fig6} compared to
+Figure~\ref{fig-Fig5}. Differences between the two measures follow a
+similar descriptive trend for both travel times.
+
+The proportion of spatial availability allocated to a mode-using
+population can also be directly compared. This sheds light on what mode,
+and in what region, a mode-using population captures more than its equal
+share of spatial availability. Overall, 97\% of the spatial availability
+is taken by motorists (destinations within 30-minutes) but they only
+represent 87\% of the population; they have disproportionately more
+availability than their population's presence in the city. They capture
+this availability from non-car mode using populations that exists in
+high proportions with lower spatial availability (i.e., transit users to
+destinations within 30-minutes are 7\% of the population but take 2\% of
+the spatial availability, 30-minute cyclist are 2\% of the population
+but represent 0.3\% of the spatial availability, and 30-minute walkers
+are 4\% of the population but are allocated 0.3\% of the spatial
+availability.
+
+The key interpretation from Figure~\ref{fig-Fig6} is that if certain
+modes capture an exceptional proportion of availability, than the
+availability left for other modes is lower overall. This does not
+necessarily have to align with the unconstrained accessibility that mode
+offers. As noted, non-car modes have the potential to offer higher
+unconstrained access (within Hamilton-Central) in Figure~\ref{fig-Fig5}.
+But as it exists (assuming modal commute shares), the majority of
+spatial availability to care destinations can still be captured by
+motorists even in DAs where car mode share is under 50\% (such as
+Hamilton-Central, see proportions in Figure~\ref{fig-Fig4}).
+
+\hypertarget{equity-considerations}{%
+\subsection{Equity considerations}\label{equity-considerations}}
+
+To draw insights on who may reside in DAs where populations are
+advantaged with higher modal spatial availability, a cross-tabulation of
+low-high spatial availability \& LICO-AT prevalence and high-no spatial
+availability \& LICO-AT prevalence is visualised in
+Figure~\ref{fig-Fig8}. The modal spatial availability is divided by the
+mode-using population in each DA, resulting in the rate of modal spatial
+availability. LICO prevalence is the proportion of population that falls
+below the LICO-AT (see Figure~\ref{fig-Fig3}). Figure~\ref{fig-Fig8} can
+be interpreted as follows: residents who use a specific mode in a
+``yellow'' DA reside in a DA that offers below average spatial
+availability (i.e., below or equal to the the 50th percentile (median)
+levels of spatial availability per mode-using population) and the
+population within the DA has a high LICO-prevalence (i.e, 80th
+percentile or higher (8.4\% or more)).
+
+\begin{figure}
+
+{\centering \includegraphics[width=6.25in,height=\textheight]{figures/Fig8-plot_Savail_smallv_LICO_measures.png}
+
+}
+
+\caption{\label{fig-Fig8}The spatial availability per mode-using-capita
+measure versus high-income cut-off . The number of care destinations
+that can be reached per mode-using-capita, per DA, within 15 mins (top)
+and 30 mins (bottom). Basemap shapefiles are retrieved from the 2021
 Canadian census \citep{governmentofcanadaCensusPopulation2023}, the Open
 Data Hamilton Portal \citep{opendatahamiltonCityBoundary2023} and the
 USGS \citep{greatlakesUSGS2010}.}
 
 \end{figure}
 
-Assuming the population that commutes by a certain mode
-(Figure~\ref{fig-Fig4}) also accesses care destinations by this mode,
-the spatial availability per mode is displayed in Figure~\ref{fig-Fig6}.
-We can observe that motorists capture the most \emph{availability} i.e.,
-potential access to destinations out of all destinations. This is
-in-part because many DAs, especially in rural communities, have 0\% or
-exceptionally low non-car mode usage. From Figure~\ref{fig-Fig5} we can
-see that non-car modes have potential, especially cycling, but
-Figure~\ref{fig-Fig6} affirms that even though non-car modes may provide
-good access within Hamilton-Central (and some access in rural
-communities), they do not provide sufficient availability, even within
-Hamilton-Centre. The proportion of car users \emph{and} their
-competitive travel times relative to other modes allow motorists to
-capture more finite access to opportunities (availability). Motorist
-capture more availability, even in the centre of Hamilton-Centre, than
-all other modes. Overall, 97\% of the spatial availability is captured
-by 30-minute motorists that represent only 87\% of the population; they
-capturing disproportionately more availability than their presence in
-the region. They capture this availability from non-car mode using
-populations that exists in high proportions by with lower spatial
-availability (i.e., 30-minute transit users are 7\% but capture 2\%,
-30-minute cyclist are 2\% but capture 0.3\%, and 30-minute walkers are
-4\% but capture 0.3\%).
+Notice the green DAs for the car-driving population and presence of
+yellow DAs for non-car modes within Hamilton-Central:
+Figure~\ref{fig-Fig8} reinforces findings from Figure~\ref{fig-Fig6}.
+Even in Hamilton-Central where there is high proportion of LICO-AT
+prevalence, car-mode using populations who reside in green DAs are still
+offered high levels of spatial availability. However, car ownership is
+not always possible for low-income households and the lack of ownership
+acts as a barrier to accessing economic and economic-support
+opportunities for low-income households \citep{morrisDoesLackingCar2020}
+when alternative modes are insufficient
+\citep{kleinTransitionsOutCar2023}. For this reason, populations below
+the LICO-AT may rely on non-car modes, and the introduction of policies
+that increase access to care-destinations could be considered. The
+majority of yellow DAs are within the centre of Hamilton-Central,
+specifically for cycle- and walking populations. Policies that increase
+the number of available care-destinations within Hamilton-Central,
+improve conditions that decrease LICO-AT prevalence, as well as policies
+that make car-modes less spatial availability advantaged (i.e.,
+encourage modal shift and decrease travel time) could be further
+investigated through the lens of mobility of care.
 
-It is difficult to tease out spatial trends in how much more
-availability motorists capture than other mode-users referencing
-Figure~\ref{fig-Fig6}, so in Figure~\ref{fig-Fig7} we divide modal
-spatial availability per mode-using population. These values represent
-how much availability is captured per mode-using population in a DA.
-They are admittedly small, as each represents how many opportunities out
-of 2,225 destinations are available to the mode-using population in the
-DA (out of 569353 people residing in Hamilton). As in all other plots,
-each colour is a quantile so trends can be interpreted accordingly. In
-Figure~\ref{fig-Fig7}, the motorists capture vast majority of
-opportunities (Q4, dark green and dark purple), but notably this is
-still very much true within Hamilton-Centre, where we know there are
-pockets where non-car user is greater than 50\%. Figure~\ref{fig-Fig7}
-reinforces that if certain modes capture an exceptional amount of
-availability (car), than the availability left for other modes is low.
-Further, non-car modes have the potential to offer high access (within
-Hamilton-Centre) as seen in Figure~\ref{fig-Fig5}, but as it exists now
-(assuming modal commute share), availability to care destinations is
-captured by motorists even in DAs where car mode share is under 50\%.
+\hypertarget{discussion-and-conclusions}{%
+\section{Discussion and conclusions}\label{discussion-and-conclusions}}
 
-\begin{figure}
-
-{\centering \includegraphics[width=6.25in,height=\textheight]{figures/Fig7-plot_Savail_smallv_measures.png}
-
-}
-
-\caption{\label{fig-Fig7}The spatial availability per mode-using-capita
-measure. The number of care destinations that can be reached per
-mode-using-capita, per DA, within 15 mins (top) and 30 mins (bottom).
-Basemap shapefiles are retrieved from the 2021 Canadian census
-\citep{governmentofcanadaCensusPopulation2023}, the Open Data Hamilton
-Portal \citep{opendatahamiltonCityBoundary2023} and the USGS
-\citep{greatlakesUSGS2010}.}
-
-\end{figure}
-
-Equity consideration and the consideration of travel time cut-off. We
-can see signficant difference in the correlation between LICO-AT in a DA
-and the modal per-capita spatial availability depending on if the 15
-minute or 30 minute cut-off is considered. We can see 30 minute cut-off
-is more generous, especially for the motorists that can almost reach all
-destinations. As such, there is a weak positive correlation between for
-motorists (0.1583927) and cyclists (0.2288479). However, there is
-stronger positive correlation for those who walk (0.5715248) and use
-transit (0.4185431). This is in line with literature XX. Areas that are
-LICO-AT are clustered in higher density DAs in Hamilton-Centre, where
-unconstrained and constrained access by all modes is high but access is
-also high (or alright) for car and cycling in areas outside
-Hamilton-Centre (areas with lower LICO-AT).
-
-However, relationships are different assuming a 15 minute cut-off; all
-modes see a weak but positive linear relationship between LICO-AT and
-per-capita modal spatial availability however trends are reversed.
-Cyclists and motorists now see a stronger relationship (cycle: 0.264636
-and motorists: 0.4409378) than those who walk and use transit (walk:
-0.1865794 and transit: 0.1262046). As mentioned, availability is high
-for all modes in Hamilton-Centre where there is high LICO-AT, but
-especially for faster modes like car and cycling. However, access for
-all modes is not high outside of Hamilton-Centre. Because Car and
-cycling does not have such an exceptional advantage in the rural
-communities consider a 15-minute cut-off, the reverse trend emerges
-where LICO-AT is correlated more strongly with cyclist and motorist
-availability. This reversal in trend highlights the importance in
-threshold selection as accessibility results are highly sensitive to the
-assumptions of travel to destinations. Echos trends in literature X.
-Empirical data is needed, but there is a bias in excluding
-considerations for care destinations in conventional survey methods XX.
-
-Overall, between the 15-minute and 30-minute cut-offs, there is a
-positive relationship in per-capita availability and LICO-AT as well as
-cumulative opportunity and LICO-AT. We know car mode provides
-unconstrained and constrained access to opportunities; those who have a
-car are covered. But we must plan for cities that are not reliant on
-cars. Cycling has potential, but mostly in areas with low LICO-AT and
-with the consideration for some risky cycling (level 1 and 2). Further,
-comparing access to what cars can reach may not be the best approach --
-most opportunities in the city of \textasciitilde500,000 can be reached
-within 30-minutes. Is that necessary? Should that be the goal for all
-modes? Or shall access by car be reduced while access by other modes
-increased such that availability matches the proportion of the
-mode-using population. Spatial availability can be used to consider
-these options.
-
-\hypertarget{discussion-and-conclusion}{%
-\section{DISCUSSION AND CONCLUSION}\label{discussion-and-conclusion}}
-
-This paper is first to conduct an exploratory feminist accessibility
+This paper is the first to conduct an exploratory feminist accessibility
 analysis of care destinations -- one that counters the current
 literature's emphasis on employment-related travel, a travel more
 significant for men, and especially wealthy and educated men
-\citep{robinlawWomenTransportNew1999, hansonGenderMobilityNew2010}. Its
-aim is to challenge assumptions often made in transport planning tools
-(i.e., that work is the most important place to access), and to provide
-a tangible example of how one could gender-mainstream accessibility
-analyses.
+\citep{lawWomenTransportNew1999, hansonGenderMobilityNew2010}. Its aim
+is to challenge current planning paradigms by explicitly focusing on
+care, vital and life-sustaining activities that are undervalued, and to
+provide a tangible example of how one could gender-mainstream
+accessibility analyses. In doing so, it contributes to the emergent
+mobility of care literature, a body of what that has, to date, focused
+on quantifying this under-represented type of travel
+\citep{gomezvaroAccountingCareEveryday2023, murillomunarCaregiversMoveGender2023, ravensbergenExploratoryAnalysisMobility2022, sanchezdemadariagaMobilityCareIntroducing2013, sanchezdemadariagaMeasuringMobilitiesCare2019, shumanCanMobilityCare2023}
+and has provided rich and nuanced qualitative accounts of lived
+experiences completing mobility of care
+\citep{orjuelaReconsideringMobilityCare2023, ravensbergenVelomobilitiesCareLowcycling2020, sersliRidingAloneTogether2020}.
 
-This study also contributes to the literature on sustainable travel
+This paper also contributes to accessibility research by implementing
+both an unconstrained (cumulative opportunities) and constrained
+(spatial availability) multimodal accessibility measure. The
+unconstrained measure demonstrates the potential interaction with care
+destinations that each mode offers from each DA within a 15- and 30-
+minute travel time thresholds. The constrained measure incorporates the
+assumed proportion of mode-using population and mode-specific travel
+time to demonstrate the potential interaction with destinations that
+each DA has available to a mode-using population. The distinction
+between the constrained and unconstrained measures are clarified, namely
+that potential interaction may be over-inflated, especially for the
+lower range non-car modes, when considering unconstrained access over
+spatial availability. Unconstrained access may demonstrate over-inflated
+promise for active transport modes. The consideration of both
+unconstrained and constrained access can encourage a shift in
+perspective. Motorists are generally estimated high unconstrained access
+to many care destinations as well as exceptionally high spatial
+availability. Those who use alternative modes, have low unconstrained
+access and, in certain DAs, and even lower level of availability. This
+is as a result of car-using populations being allocated a
+disproportionate number of total care destinations. Spatial Availability
+is a way of conceptualising accessibility as a city-wide total and each
+calculated value is a proportion so it can be easily placed relative to
+all others in the city. However, it relies on assumptions on who is
+``demanding'' the destinations, and how those assumptions are made are a
+subject of ongoing discussion in how accessibility considers competition
+\citep{merlinDoesCompetitionMatter2017, kelobonyeMeasuringAccessibilitySpatial2020}.
+
+Further, this study contributes to the literature on sustainable travel
 behaviour. Results indicate that care is most easily accessed in
 Hamilton by car, an unsurprising result given its car-oriented design.
 Previous research has found that mobility of care are more frequently
@@ -1002,11 +1082,11 @@ completed by car or by foot than by transit or by bicycle
 \citep{ravensbergenExploratoryAnalysisMobility2022}. It is possible that
 the car's ability to provide higher access to care destinations, as
 observed in this study, shapes this tendency to complete care trips by
-car. Then again, car use may be more frequent for care trips because
-these trips tend to involve carrying things (e.g., groceries) or people
-(e.g., children). Indeed, past qualitative work has found that many
-prefer travelling by car for this type of trip due to convenience and
-increased safety
+car. Car use may also be more frequent for care trips because these
+trips tend to involve carrying things (e.g., groceries) or people (e.g.,
+children). Indeed, past qualitative work has found that many prefer
+travelling by car for this type of trip due to convenience and increased
+safety
 \citep{maciejewskaHaveChildrenThus2019, carverParentalChauffeursWhat2013}.
 Then again, care trips tend to be shorter than other trips
 \citep{ravensbergenExploratoryAnalysisMobility2022}, making them ideal
@@ -1027,44 +1107,43 @@ the results of this study highlight the great potential of the bicycle
 for easily accessing care.
 
 The preliminary nature of this research also comes with its limitations
-as a result of data availability. Firstly, the travel time estimations
-assume free-flow network conditions: this may not drastically impact
-walking travel time accuracy, but could impact car, transit and cycling
-estimations. Secondly, the geometric centroids of DAs (origins) and
+as a result of data availability. The accessibility results are not
+calibrated to reflect observed mobility-to-care travel behaviour due to
+data unavailability nor are they formulated to express any normative
+accessibility goals. Instead, they present a preliminary exploration of
+how the mobility of care concept could be operationalised within
+accessibility analysis.
+
+First, the travel time estimations assume free-flow network conditions:
+while impacting estimated travel times, estimated congested conditions
+may not have a drastic impact on spatial accessibility calculations
+\citep{yiannakouliasEstimatingEffectTurn2013}, especially for cycling
+and walking modes. Second, the use of a binary travel time cut-off
+instead of a more complex travel impedance function can have a
+significant impact on accessibility results. To add reliability, two
+literature-informed travel cost thresholds (15-minutes and 30-minutes)
+were selected, but results' interpretation are hampered by the binary
+function selection: some zonal populations could \emph{still} value
+destinations beyond a 30-minute travel time, and some populations may
+not see a destination 5 minutes and 15 minutes away as necessarily equal
+in travel impedance. Third, the geometric centroids of DAs (origins) and
 destinations (all care destinations) were used as inputs for travel time
 calculations. DAs are created for the purpose of the census: they vary
 in area and centroids may not necessarily align with where that
-population may be beginning their journey to care destinations. Thirdly,
-the cumulative opportunity accessibility measure is unconstrained and
-does not consider competition. It is the sum of every care destination
-that can be possibly reached, not taking into consideration the density
-of neighbouring population that may also be reaching those destinations.
-Fourthly, quality of the care destinations was not considered (e.g.,
-access to a park is equal to access to a school). These limitations all
-contribute to how accurately results reflect the quantitative access to
-care landscape within Hamilton.
+population may begin their journey to care destinations. Fourth, the
+quality, importance and specific willingness to travel to types of care
+destinations for mode-using populations within a zone was not considered
+as data is unavailable city-wide. As such, this study assumes each
+destination is 1 opportunity and re-weights each of the five care
+categories to be conceptually equal. Fifth, the mode choice for care
+destinations trips is unknown and hampers interpretation of spatial
+availability. It is assumed in the study to be equal to the work-commute
+mode selection, but this is may not be necessarily the case.
 
-Future work on the accessibility of care will consider competition
-factors through different accessibility measures, a higher spatial level
-of travel time estimation, and the incorporation of different weightings
-of care destination categories. In addition, future work will compare
-care accessibility to work accessibility in Hamilton to highlight the
-bias in planning towards jobs as well as substantive equity critiques.
-
-\hypertarget{acknowledgements}{%
-\section{ACKNOWLEDGEMENTS}\label{acknowledgements}}
-
-This research was funded by the McMaster Undergraduate Student Research
-Assistantship program of the Faculty of Social Sciences.
-
-\hypertarget{author-contributions}{%
-\section{AUTHOR CONTRIBUTIONS}\label{author-contributions}}
-
-The authors confirm contribution to the paper as follows: study
-conception and design: NM, LR, AS.; data collection: NM, AS; analysis
-and interpretation of results: NM, AS, LR; draft manuscript preparation:
-NM, LR, AS. All authors reviewed the results and approved the final
-version of the manuscript.
+Future work could look to address these limitations as well as compare
+access to care results to conventional access to work landscapes. This
+comparison could highlight the bias in planning towards jobs as well as
+substantiate equity critiques.
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
