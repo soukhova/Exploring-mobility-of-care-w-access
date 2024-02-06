@@ -1,32 +1,33 @@
 ---
 title: "Exploring mobility of care with measures of access: a case for gender-mainstreaming accessibility analysis"
 author:
-  - name: Anastasia Soukhov 
-    email: soukhoa@mcmaster.ca
-    affiliations: 
-        - name: McMaster University
-          department: School of Earth, Environment & Society 
-          city: Hamilton
-          state: Ontario, Canada
-          postal-code: L8S 4L8
+  - name: AAA #Anastasia Soukhov 
+    email: AAA@AAA #soukhoa@mcmaster.ca
+    # affiliations: 
+    #     - name: McMaster University
+    #       department: School of Earth, Environment & Society 
+    #       city: Hamilton
+    #       state: Ontario, Canada
+    #       postal-code: L8S 4L8
     attributes:
         corresponding: true
-  - name: Léa Ravensbergen
-    email: ravensbl@mcmaster.ca
-    affiliations:
-        - name: McMaster University
-          department: School of Earth, Environment & Society 
-          city: Hamilton
-          state: Ontario, Canada
-          postal-code: L8S 4L8
-  - name: Nicholas Mooney
-    email: mooneyn@mcmaster.ca
-    affiliations:
-        - name: McMaster University
-          department: School of Earth, Environment & Society 
-          city: Hamilton
-          state: Ontario, Canada
-          postal-code: L8S 4L8
+  - name: BBB #Nicholas Mooney
+    email: BBB@BBB #mooneyn@mcmaster.ca 
+    # affiliations:
+    #     - name: McMaster University
+    #       department: School of Earth, Environment & Society 
+    #       city: Hamilton
+    #       state: Ontario, Canada
+    #       postal-code: L8S 4L8
+  - name: CCC #Léa Ravensbergen 
+    email: CCC@CCC #ravensbl@mcmaster.ca 
+    # affiliations:
+    #     - name: McMaster University
+    #       department: School of Earth, Environment & Society 
+    #       city: Hamilton
+    #       state: Ontario, Canada
+    #       postal-code: L8S 4L8
+
 abstract: |
   Accessibility, the ease of interacting with opportunities, is an increasingly important tool amongst transport planners aiming to foster equitable and sustainable cities. However, in accessibility research there is a masculinist bias whereby employment destinations are often the default. This paper aims to counter this gendered bias by connecting the Mobility of Care conceptualisation to an empirical accessibility analysis of care destinations in the City of Hamilton, Canada. Care destinations are all the places one must visit to sustain household needs such shopping, errands, and caring for others (children and other dependents). Through the creation of a novel care destination dataset, this paper considers access to care across different modes of transport at two travel time thresholds (trips shorter than 15-minutes and 30-minutes) using unconstrained (cumulative opportunity) and competitive-constrained (spatial availability) measures. Results generally indicate that travel to care destinations by car is exceptionally high, and access by public transit, cycling and by foot is low across the city with some exceptions in the inner city. Noteably, there are distinctions between both methods: unconstrained access illustrates a more optimistic landscape for non-car modes, while competitive and constrained access demonstrates a conceptually more realistic spatial distribution of care destination availability. Neighbourhoods with both low spatial availability to care and a high proportion of low-income households are also identified as areas in need of intervention. The manuscript and analysis is computationally reproducible and openly available. The analysis presented demonstrates methods planners can use to gender-mainstream accessibility analysis. Further, results can inform policies aiming to encourage sustainable mobility.  
 keywords: 
@@ -993,7 +994,7 @@ In this spirit, this study foregrounds the theoretical mobility of care concept 
 This paper focuses on Hamilton, a mid-size city of approximately 500,000 residents that lies within the urban and suburban Greater Toronto and Hamilton Area (GTHA) [@transportationtomorrowsurvey2018]. The GTHA is home to seven million people, or approximately 20% of the Canadian population [@cityoftoronto2021CensusPopulationa2022]. 
 Hamilton is divided into six regional communities (@fig-Fig1). Hamilton-Central is the densest and most urbanized of the six, and the five periphery communities of Dundas, Ancaster, Flamborough, Glanbrook and Stoney Creek are significantly more suburbanized with the furthest periphery regions being undeveloped or rural owing to their inclusion in the region’s greenbelt [@greenbeltfoundationThrivingGreenbeltThriving2023]. These different urban forms and associated transport infrastructure play a key role in access to care destinations.
 
-Further, the entire manuscript and all analysis is conducted in R and RStudio. All work is computationally reproducible and openly available in the lead author's [GitHub repository](https://github.com/soukhova/Care-Destinations).
+Further, the entire manuscript and all analysis is conducted in R and RStudio. All work is computationally reproducible and openly available in the lead author's [GitHub repository](XXX).
 
 ```{r plot-figure1, out.width=600}
 #| label: fig-Fig1
@@ -1065,7 +1066,7 @@ To supplement the care destination dataset and complete the accessibility calcul
 knitr::include_graphics("figures/Fig3-plot_pops.png")
 ```
 
-Further, the population proportion that commutes by a specific mode (car, transit, walk, or cycle/other) is visualised in @fig-Fig4. Though mode-choice used in travel to work is not necessarily reflective of the mode used to travel to care destinations, to our knowledge no other data is available at a granular level City-wide that centers mobility of care. The population generally commutes by car (50% or higher, is yellow to green), even within the more densely populated Hamilton-Central. However, for transit and walking, a group of DAs near the shoreline within Hamilton-Center have the highest proportion of transit users and those who walk to work (yellows in the plots that are otherwise red i.e., below 15%). Those same DAs are also relatively dense and have a high prevalence of LICO-AT (@fig-Fig3).
+Further, the population proportion that commutes by a specific mode (car, transit, walk, or cycle/other) is visualised in @fig-Fig4. Though mode-choice used in travel to work is not necessarily reflective of the mode used to travel to care destinations, to our knowledge no other data is available at a granular level City-wide that centers mobility of care. The population generally commutes by car (50% or higher, is yellow to green), even within the more densely populated Hamilton-Central. However, for transit and walking, a group of DAs near the shoreline within Hamilton-Central have the highest proportion of transit users and those who walk to work (yellows in the plots that are otherwise red i.e., below 15%). Those same DAs are also relatively dense and have a high prevalence of LICO-AT (@fig-Fig3).
 
 ```{r plot-figure4, out.width=600}
 #| label: fig-Fig4
