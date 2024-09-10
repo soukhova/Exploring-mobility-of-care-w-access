@@ -16,20 +16,20 @@ NOTE: Used p25 travel times for transit mode.
 # Load data
 ```{r load packages}
 # DAs (origins)
-load("data-analysis/HAM_census_21.rda")
+load("data-intermediate/HAM_census_21.rda")
 
 # Care destinations 
-load("data-analysis/care_dest.rda")
+load("data-intermediate/care_dest.rda")
 
 # travel time matrices
-load("data-analysis/ttm_care_car.rda")
-load("data-analysis/ttm_care_bus.rda")
-load("data-analysis/ttm_care_bike.rda")
-load("data-analysis/ttm_care_walk.rda")
+load("data-intermediate/ttm_care_car.rda")
+load("data-intermediate/ttm_care_bus.rda")
+load("data-intermediate/ttm_care_bike.rda")
+load("data-intermediate/ttm_care_walk.rda")
 
 # city boundaries
-ham_bound <- read_sf("data-raw/City_Boundary/City_Boundary.shp")
-ham_comms <- read_sf("data-raw/Community_Boundaries/Community_Boundaries.shp")
+ham_bound <- read_sf("data-raw/Boundaries/City_Boundary.shp")
+ham_comms <- read_sf("data-raw/Boundaries/Community_Boundaries.shp")
 ```
 
 # Cumulative opportunity calculations
