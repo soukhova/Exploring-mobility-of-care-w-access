@@ -2,4 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-parcel-ttm
+parcel-ttm/
+data-intermediate/parcel_tts/
+data-raw/R_PARCELS_CENTS_2020.rda
+Journal-manuscript/

@@ -3,12 +3,12 @@ title: "Exploring mobility of care with measures of accessibility"
 author:
   - name: AAA #Anastasia Soukhov 
     email: AAA@AAA #soukhoa@mcmaster.ca
-    # affiliations: 
-    #     - name: McMaster University
-    #       department: School of Earth, Environment & Society 
-    #       city: Hamilton
-    #       state: Ontario, Canada
-    #       postal-code: L8S 4L8
+    affiliations:
+        - name: McMaster University
+          department: School of Earth, Environment & Society
+          city: Hamilton
+          state: Ontario, Canada
+          postal-code: L8S 4L8
     attributes:
         corresponding: true
   - name: BBB #Nicholas Mooney
@@ -29,12 +29,13 @@ author:
     #       postal-code: L8S 4L8
 
 abstract: |
-  Accessibility, the ease of interacting with potential opportunities, is an increasingly important tool amongst transport planners aiming to foster equitable and sustainable cities. However, in accessibility research there is a historical focus on employment destinations that is shaped by a masculinist transportation planning tradition. This paper aims to counter this gendered bias by connecting the Mobility of Care framework, a gender-aware transport planning conceptualisation to an empirical accessibility analysis of care destinations in the City of Hamilton, Canada. Care destinations are all the places one must visit to sustain household needs such shopping, errands, and caring for others (children and other dependents). Through the creation of a novel care destination dataset, this paper considers access to care across different modes of transport at two travel time thresholds (trips shorter than 15-minutes and 30-minutes). The methods include using a routinely used accessibility measure (cumulative opportunity) and a novel competitive and singly-constrained accessibility measure (spatial availability). Results indicate that accessibility to care destinations by car is exceptionally high, and access by public transit, cycling and by foot is low across the city with some exceptions in the inner city. Noteably, there are distinctions between both methods: cumulative opportunities illustrates a more optimistic potential interaction landscape for non-car modes, while the spatial availability measure demonstrates a theortically more realistic spatial distribution of care destination availability of potential interaction. Neighbourhoods with both low spatial availability to care and a high proportion of low-income households are also identified as areas in need of intervention. The manuscript and analysis is computationally reproducible and openly available. The analysis presented demonstrates methods planners can use to apply a gender-aware lens to accessibility analysis. Further, results can inform policies aiming to encourage sustainable mobility.  
+  Accessibility, the ease of interacting with potential opportunities, is an increasingly important tool amongst transport planners aiming to foster equitable and sustainable cities. However, in accessibility research there is a historical focus on employment destinations that is shaped by a masculinist transportation planning tradition. This paper aims to counter this gendered bias by connecting the Mobility of Care framework, a gender-aware transport planning conceptualisation to an empirical accessibility analysis of care destinations in the City of Hamilton, Canada. Care destinations are all the places one must visit to sustain household needs such shopping, errands, and caring for others. This paper considers access to care across different modes of transport at two travel time thresholds (trips shorter than 15-minutes and 30-minutes) using a curated care destination dataset. The accessibility methods used includes the cumulative opportunities measure and a competitive and singly-constrained accessibility measure (spatial availability) for different modes. Overall, results indicate that accessibility by car is exceptionally high across the city, while access by public transit, cycling and foot is relatively low with some exceptions in the inner city. Notably, there are distinctions between both methods: cumulative opportunities illustrates a more optimistic potential interaction landscape for non-car modes, while the spatial availability measure demonstrates a theoretically more realistic spatial distribution of care destination availability of potential interaction. Neighbourhoods with both low spatial availability to care and a high proportion of low-income households are also identified and discussed as areas in need of intervention. The manuscript and analysis is computationally reproducible and openly available. The presented analysis demonstrates methods planners can use to apply a gender-aware lens to accessibility analysis. Further, results can inform policies aiming to encourage sustainable mobility.
+  
 keywords: 
   - Accessibility
   - Mobility of Care
   - Gender
-  - Cumulative Opportunity
+  - Cumulative Opportunities
   - Spatial Availability
 date: last-modified
 bibliography: bibliography.bib
@@ -80,6 +81,8 @@ library(flextable)
 library(ftExtra)
 library(scales)
 library(ggplot2)
+library(stringr)
+library(renv)
 ```
 
 ```{r function-for-creating-comments-in-docx}
@@ -89,6 +92,14 @@ word_comment <- function(comment, highlight = "") {
            'date="2024-01-06T15:00:00Z"}', highlight, '[]{.comment-end id="0"}')
   }
 }
+```
+
+```{r, eval=FALSE}
+#creates a bib file with R librarys used, will cite in manuscript
+deps <- renv::dependencies()
+pkgs <- setdiff(unique(deps$Package), "R")
+bibtex::write.bib(entry = pkgs, file = "biliography_Rlibs.bib", append = FALSE)
+#and manually added core R (citation()) and renv (citation("renv"))
 ```
 
 ```{r spatial-availability-function}
@@ -137,19 +148,19 @@ sp_avail_detailed <- function(x, o_id, d_id, pop, opp, r, f, alpha = 1){
 }
 ```
 
-```{r import-data, message=FALSE}
+```{r import-data, message=FALSE, warning=FALSE}
 #boundaries for mapping
-hamilton_communities <- st_read(paste0(here::here(),"/data-raw/Boundaries/Community_Boundaries.shp")) |> mutate(COMMUNITY_ = ifelse(COMMUNITY_ == "Hamilton", "Hamilton-Central", COMMUNITY_))
-ham_bound <- st_read(paste0(here::here(),"/data-raw/Boundaries/City_Boundary.shp"))
+hamilton_communities <- st_read(paste0(here::here(),"/data-raw/Boundaries/Community_Boundaries.shp"), quiet = TRUE) |> mutate(COMMUNITY_ = ifelse(COMMUNITY_ == "Hamilton", "Hamilton-Central", COMMUNITY_))
+ham_bound <- st_read(paste0(here::here(),"/data-raw/Boundaries/City_Boundary.shp"), quiet = TRUE)
 
-hydro_p_LakeOntario <- st_read(paste0(here::here(),"/data-raw/Boundaries/hydro_p_LakeOntario.shp")) |> st_transform(crs=4326)
-ham_bay <- st_read(paste0(here::here(),"/data-raw/Boundaries/Waterbodies.shp")) |> st_transform(crs=4326) |> filter(FEATURE_TY == "Lake")
-ham_streets <- st_read(paste0(here::here(),"/data-raw/Boundaries/Street_Centreline.shp")) |> st_transform(crs=4326) |> filter(ROAD_CLASS %in% c("Provincial Highway", "Parkway", "Arterial")) #no collectors, arterial, Local
+hydro_p_LakeOntario <- st_read(paste0(here::here(),"/data-raw/Boundaries/hydro_p_LakeOntario.shp"), quiet = TRUE) |> st_transform(crs=4326)
+ham_bay <- st_read(paste0(here::here(),"/data-raw/Boundaries/Waterbodies.shp"), quiet = TRUE) |> st_transform(crs=4326) |> filter(FEATURE_TY == "Lake")
+ham_streets <- st_read(paste0(here::here(),"/data-raw/Boundaries/Street_Centreline.shp"), quiet = TRUE) |> st_transform(crs=4326) |> filter(ROAD_CLASS %in% c("Provincial Highway", "Parkway", "Arterial")) #no collectors, arterial, Local
 
 #opportunities and population dataset 
-load(paste0(here::here(),"/data-intermediate/care_dest.rda"))
+base::load(paste0(here::here(),"/data-intermediate/care_dest.rda"))
 care_dest <- care_dest |> mutate(ID = as.character(ID))
-load(paste0(here::here(),"/data-intermediate/HAM_census_21.rda"))
+base::load(paste0(here::here(),"/data-intermediate/HAM_census_21.rda"))
 HAM_census_21 <- HAM_census_21 |>
   rename("LICO_AT_TOTAL" = `v_CA21_1085: Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)`) |> 
   mutate(LICO_AT_TOTAL = ifelse(is.na(LICO_AT_TOTAL), 0, LICO_AT_TOTAL)) |>
@@ -161,7 +172,7 @@ perc_transit = (`v_CA21_7644: Public transit`)/sum(`v_CA21_7647: Walked`,`v_CA21
 pop_den = Population/`Shape Area`) |>
   select(c("GeoUID", "Population", "LICO_AT_TOTAL", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other", "pop_den"))
 
-load(paste0(here::here(),"/data-intermediate/HAM_census_16.rda"))
+base::load(paste0(here::here(),"/data-intermediate/HAM_census_16.rda"))
 HAM_census_16 <- HAM_census_16 |>
   rename("LICO_AT_TOTAL" = `v_CA16_2570: Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)`) |> 
   mutate(LICO_AT_TOTAL = ifelse(is.na(LICO_AT_TOTAL), 0, LICO_AT_TOTAL)) |>
@@ -176,7 +187,7 @@ pop_den = Population/`Shape Area`) |>
 
 ```{r import-data2, message=FALSE, include=FALSE}
 # #add GeoUIDs to parcel id list
-# load(paste0(here::here(),"/data-raw/R_PARCELS_CENTS_2020.rda")) #add the census id to the parcels, then the ttm
+# base::load(paste0(here::here(),"/data-raw/R_PARCELS_CENTS_2020.rda")) #add the census id to the parcels, then the ttm
 # 
 # #first join it to census. Transfer the GeoUID from the DAs that intersect with the residential land use parcel centroids to the R_PARCELS_CENTS_2020 sf object. (we use 'over' here instead of st_intersection because it is way faster)
 # R_PARCELS_CENTS_GeoUIDs <- sp::over(as_Spatial(R_PARCELS_CENTS_2020),as_Spatial(HAM_census_21 |> dplyr::select(GeoUID)))
@@ -188,10 +199,10 @@ pop_den = Population/`Shape Area`) |>
 
 ```{r import-data3, message=FALSE, include=FALSE}
 # #calculated travel times - bike
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel1.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel2.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel3.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel4.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel1.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel2.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel3.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_bike_parcel4.rda"))
 # 
 # ttm_care_bike_parcel <- rbind(ttm_care_bike_parcel1, ttm_care_bike_parcel2, ttm_care_bike_parcel3, ttm_care_bike_parcel4)
 # rm(ttm_care_bike_parcel1, ttm_care_bike_parcel2, ttm_care_bike_parcel3, ttm_care_bike_parcel4)
@@ -203,10 +214,10 @@ pop_den = Population/`Shape Area`) |>
 # 
 # 
 # #walk
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel1.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel2.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel3.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel4.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel1.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel2.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel3.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_walk_parcel4.rda"))
 # 
 # ttm_care_walk_parcel <- rbind(ttm_care_walk_parcel1, ttm_care_walk_parcel2, ttm_care_walk_parcel3, ttm_care_walk_parcel4)
 # rm(ttm_care_walk_parcel1, ttm_care_walk_parcel2, ttm_care_walk_parcel3, ttm_care_walk_parcel4)
@@ -217,10 +228,10 @@ pop_den = Population/`Shape Area`) |>
 #   left_join(R_PARCELS_CENTS_GeoUIDs_IDs,by = c("from_id"="ID") )
 # 
 # #car times
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel1.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel2.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel3.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel4.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel1.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel2.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel3.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_CAR_parcel4.rda"))
 # 
 # ttm_care_car_parcel <- rbind(ttm_care_CAR_parcel1, ttm_care_CAR_parcel2, ttm_care_CAR_parcel3, ttm_care_CAR_parcel4)
 # rm(ttm_care_CAR_parcel1, ttm_care_CAR_parcel2, ttm_care_CAR_parcel3, ttm_care_CAR_parcel4)
@@ -231,10 +242,10 @@ pop_den = Population/`Shape Area`) |>
 #   left_join(R_PARCELS_CENTS_GeoUIDs_IDs,by = c("from_id"="ID") )
 # 
 # #transit times
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel1.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel2.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel3.rda"))
-# load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel4.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel1.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel2.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel3.rda"))
+# base::load(paste0(here::here(),"/data-intermediate/parcel_tts/ttm_care_TRANSIT_parcel4.rda"))
 # 
 # ttm_care_transit_parcel <- rbind(ttm_care_TRANSIT_parcel1, ttm_care_TRANSIT_parcel2, ttm_care_TRANSIT_parcel3, ttm_care_TRANSIT_parcel4)
 # rm(ttm_care_TRANSIT_parcel1, ttm_care_TRANSIT_parcel2, ttm_care_TRANSIT_parcel3, ttm_care_TRANSIT_parcel4)
@@ -247,10 +258,10 @@ pop_den = Population/`Shape Area`) |>
 
 ```{r import-data4, message=FALSE}
 #calculated travel times - bike
-load(paste0(here::here(),"/data-intermediate/ttm_care_bike.rda"))
-load(paste0(here::here(),"/data-intermediate/ttm_care_car.rda"))
-load(paste0(here::here(),"/data-intermediate/ttm_care_transit.rda"))
-load(paste0(here::here(),"/data-intermediate/ttm_care_walk.rda"))
+base::load(paste0(here::here(),"/data-intermediate/ttm_care_bike.rda"))
+base::load(paste0(here::here(),"/data-intermediate/ttm_care_car.rda"))
+base::load(paste0(here::here(),"/data-intermediate/ttm_care_transit.rda"))
+base::load(paste0(here::here(),"/data-intermediate/ttm_care_walk.rda"))
 ```
 
 <!-- NOTE: created new Figure 1 in "00-Data-Preparation.RMD" as it requires the r5_core street network-->
@@ -519,7 +530,7 @@ HAM_access_30_4 <-HAM_census_21 |>
 HAM_access_30 <- rbind(HAM_access_30_1, HAM_access_30_2, HAM_access_30_3, HAM_access_30_4) |>
   mutate(cum_opps = ifelse(is.na(cum_opps), 0, cum_opps))
 
-remove(HAM_access_30_1,HAM_access_30_2,HAM_access_30_3,HAM_access_30_4)
+base::remove(HAM_access_30_1,HAM_access_30_2,HAM_access_30_3,HAM_access_30_4)
 
 # the 15 mins
 HAM_access_15_1 <- HAM_census_21 |>
@@ -561,7 +572,7 @@ HAM_access_15_4 <-HAM_census_21 |>
 
 HAM_access_15_cats <- rbind(HAM_access_15_1, HAM_access_15_2, HAM_access_15_3, HAM_access_15_4) |>
   mutate(cum_opps = ifelse(is.na(cum_opps), 0, cum_opps))
-remove(HAM_access_15_1,HAM_access_15_2,HAM_access_15_3,HAM_access_15_4)
+base::remove(HAM_access_15_1,HAM_access_15_2,HAM_access_15_3,HAM_access_15_4)
 ```
 
 ```{r calcing spatial availability part one}
@@ -622,7 +633,7 @@ ttm_ALL_15 <- rbind(ttm_car_15, ttm_walk_15, ttm_bike_15,ttm_transit_15) |>
 rm(ttm_car_15, ttm_walk_15, ttm_bike_15,ttm_transit_15)
 ```
 
-```{r sp-test-pt1, eval=false}
+```{r sp-test-pt1, eval=FALSE}
 # HERE we try an neg exponential distance decay function instead of a binary 1/0 function... rapidly decreasing after 15 mins or less. The resulting plot appears to show similar trends as 
 ttm_car_15_1 <- ttm_care_car |>
   mutate(f = dexp(travel_time_p50,rate = 0.25)
@@ -1165,37 +1176,31 @@ tmap_save(plot_Savail_smallv_LICO_measures, filename ="figures/Fig6-plot_Savail_
 ```
 
 # Introduction
-A gender bias exists in transport research and policy [@sanchezdemadariagaMobilityCareIntroducing2013; @lawWomenTransportNew1999; @siemiatyckiGenderedProductionInfrastructure2020]. The field has historically focused predominately on the on-peak commute to work. While most women participate in the labour force, the commute is still a travel pattern more frequent among men [@sanchezdemadariagaMobilityCareIntroducing2013]. Women, on the other hand, have been found to complete more household-serving travel than men, such as escorting children [@craigGenderMobilityParental2019; @taylorWhatExplainsGender2015; @hanTaskAllocationGender2019; @mcdonaldExploratoryAnalysisChildren2006], shopping, and errand trips [@taylorWhatExplainsGender2015;@rootWomenTravelIdea2000; @sweetGenderDifferencesRole2016]. 
+A gender bias exists in transport research and policy [@sanchezdemadariagaMobilityCareIntroducing2013; @lawWomenTransportNew1999; @siemiatyckiGenderedProductionInfrastructure2020]. The field has focused predominately on the on-peak commute to work. While most women participate in the labour force, the commute is still a travel pattern more frequent among men [@sanchezdemadariagaMobilityCareIntroducing2013]. Women, on the other hand, have been found to complete more household-serving travel than men, such as escorting children [@craigGenderMobilityParental2019; @taylorWhatExplainsGender2015; @hanTaskAllocationGender2019; @mcdonaldExploratoryAnalysisChildren2006], shopping, and errand trips [@taylorWhatExplainsGender2015;@rootWomenTravelIdea2000; @sweetGenderDifferencesRole2016]. 
 
-Although research on the gendered distribution of household-serving travel has existed for decades, it was Sánchez de Madariaga who introduced the "Mobility of Care" framework to support the proper accounting of travel needed to fulfill caring and home-related activities (e.g., the combined travel to grocery stores, errands, and picking-up or dropping off children) [@sanchezdemadariagaMobilityCareIntroducing2013]. Mobility of Care highlights how household-serving travel is systematically under-represented, under-counted, and rendered invisible in transport planning, particularly in travel surveys. Travel surveys are a key source of mobility data for transportation planners in metropolitan cities, and their primary focus is on the collection of 'compulsory' trip purposes such as school and work. For instance in the Canadian context, respondents of the Transportation Tomorrow Survey (TTS) which encompasses the cities of Toronto, Hamilton and surrounding urban area [@transportationtomorrowsurvey2018], are given the following options to categorize their trip origins and destinations: home, work, school, daycare, facilitate passenger, marketing/shopping, other, or unknown. While home-work and home-school trips are easily identified, care trips are more challenging to discern. Likely, many shopping trips are for care purposes (e.g., groceries), but others may be for leisure. While escort trips may be well captured under the categories ‘daycare’ or ‘facilitate passenger’, trips to run errands or to attend health appointments may not be; it is probable that respondents categorize many of these trips as ‘other’ or even ‘unknown’. Ultimately, the travel survey's focus is on a 'typical' trip to work or school [@transportationtomorrowsurvey2018]; other trips are a by-product, minimialised in importance. Of course, people's travel behaviours are complex and surveys must balance detail with summary. However, what is seen as a 'typical' trip continues to shape transport and land-use, and this aggregation steers data-driven solutions from counted and observed home -work/-school based trips.
+Although research on the gendered distribution of household-serving travel has existed for decades, it was Sánchez de Madariaga who introduced the "Mobility of Care" framework to support the proper accounting of travel needed to fulfill caring and home-related activities (e.g., the combined travel to grocery stores, errands, and picking-up or dropping off children) [@sanchezdemadariagaMobilityCareIntroducing2013]. Mobility of Care highlights how household-serving travel is systematically under-represented, under-counted, and rendered invisible in transport planning, particularly in travel surveys. Travel surveys are a key source of mobility data for transportation planners in metropolitan cities, and their focus is often on the collection of 'compulsory' trip purposes such as school and work. In the Canadian context, respondents of the Transportation Tomorrow Survey (TTS) which encompasses the cities of Toronto, Hamilton and surrounding urban area [@transportationtomorrowsurvey2018], are given the following options to categorize their trip origins and destinations: home, work, school, daycare, facilitate passenger, marketing/shopping, other, or unknown. While home-work and home-school trips are easily identified, care trips are more challenging to discern. Likely, many shopping trips are for care purposes (e.g., groceries), but others may be for leisure. While escort trips may be well captured under the categories ‘daycare’ or ‘facilitate passenger’, trips to run errands or to attend health appointments may not be; it is probable that respondents categorize many of these trips as ‘other’ or even ‘unknown’. Ultimately, the travel survey's focus is on a 'typical' trip to work or school [@transportationtomorrowsurvey2018]; other trips are a by-product, minimized in importance. Of course, people's travel behaviours are complex and surveys must balance detail with summary. However, what is seen as a 'typical' trip continues to shape transport and land-use, and this aggregation helps to steer data-driven solutions using the counted and observed home -work/-school based trips.
 
 When travel surveys _are_ designed to explicitly capture mobility of care, preliminary research has found that it comprises approximately one third of adults’ trips [@gomezvaroAccountingCareEveryday2023; @sanchezdemadariagaMobilityCareIntroducing2013;@sanchezdemadariagaMeasuringMobilitiesCare2019; @ravensbergenExploratoryAnalysisMobility2022]. Given the large proportion of daily travel that mobility of care comprises, these trips should be explicitly captured in transport research. Further, the current under-reporting of mobility of care in research and planning has important equity considerations. Not only are mobility of care trips completed predominantly by women, this gendered discrepancy is greater in low-income households [@murillomunarCaregiversMoveGender2023; @sanchezdemadariagaMobilityCareIntroducing2013; @ravensbergenExploratoryAnalysisMobility2022]. For instance, in lower income households in the city of Montréal, women complete 50% more care trips than men [@ravensbergenExploratoryAnalysisMobility2022]. The power of the Mobility of Care concept lies in its ability to highlight the masculinist bias in transport research – travel for care appears insignificant because travel surveys are not written to capture it [@sanchezdemadariagaMobilityCareIntroducing2013].
 
-Travel surveys, however, are but one source of information used by transport researchers and practitioners. Another popular instrument is accessibility, especially in the case of sustainable and equitable cities [@ryanAccessibilitySpaceTime2023; @bertoliniSustainableAccessibilityConceptual2005]. Accessibility is an indicator of the ease of interacting with destinations. However, the point of interest in many accessibility-based assessments has been on travel to work destinations by car or public transit modes e.g., [@kelobonyeRelativeAccessibilityAnalysis2019; @farberOntarioLineSocioeconomic2019; @duarteInfluenceJobAccessibility2023; @ryanAccessibilitySpaceTime2023]. Jobs are not always the most significant destination for many segments of the population nor are car and transit modes relevant for care trips in the same way. For instance, women's commutes are on average a smaller proportion of their daily travel than men's [@ravensbergenExploratoryAnalysisMobility2022]. Care trips are also less likely to be completed by public transit or bicycle [@ravensbergenExploratoryAnalysisMobility2022] and are more likely done by car or foot than the commute [@maciejewskaHaveChildrenThus2019; @ravensbergenExploratoryAnalysisMobility2022]. One way to apply a gender-sensitive lens to accessibility analysis is by explicitly considering access to destinations involved in Mobility of Care by multiple modes. Reframing accessibility analysis in this way reinforces its importance as an instrument that supports the planning of sustainable and equitable travel and land-use in cities. 
+Travel surveys, however, are but one source of information used by transport researchers and practitioners. Another popular instrument is accessibility, especially in the case of sustainable and equitable cities [@ryanAccessibilitySpaceTime2023; @bertoliniSustainableAccessibilityConceptual2005]. Accessibility is an indicator that quantifies the ease of reaching, and potentially interacting with, destinations. The point of interest in many accessibility-based assessments has been on travel to work destinations by car or public transit modes e.g., [@kelobonyeRelativeAccessibilityAnalysis2019; @farberOntarioLineSocioeconomic2019; @duarteInfluenceJobAccessibility2023; @ryanAccessibilitySpaceTime2023;@soukhovMultimodalSpatialAvailability2024]. However, jobs are not always the most significant destination for many segments of the population. Further, modal options to employment and care differ. For example, women's commutes are on average a smaller proportion of their daily travel than men's [@ravensbergenExploratoryAnalysisMobility2022]. Care trips are also less likely to be completed by public transit or bicycle, and are more likely by car or by foot than the commute [@ravensbergenExploratoryAnalysisMobility2022]. One way to apply a gender-sensitive lens to accessibility analysis is by explicitly considering access to destinations involved in Mobility of Care by multiple modes. Normatively reframing accessibility analysis in this way explicitly reinforces its importance as a supportive tool in the planning of sustainable and equitable cities. 
 
-Taken together, this study's objective is to contribute to the transport planning literature through the demonstration of a multimodal accessibility analysis of Mobility of Care destinations. Two accessibility measures are used: the cumulative opportunity measure and the singly-constrained spatial availability measure. The measures are applied on a care destination dataset with novel Mobility of Care classifications for the city of Hamilton, Canada. The potential access to Mobility of Care destinations for walking, transit, bike, and on foot is calculated for 15- and 30-minute travel time thresholds. Results are compared across the two measures and four modes, and the overlap between low accessibility areas and high low-income prevalence is presented. Implications of the results are discussed along with study conclusions.
+Taken together, this study's objective is to contribute to the transport planning literature through the demonstration of a multimodal accessibility analysis of Mobility of Care destinations. Two accessibility measures are used: the cumulative opportunity measure and the singly-constrained spatial availability measure. The measures are applied to a care destination dataset with novel Mobility of Care classifications for the city of Hamilton, Canada. The access to care destinations by car, walking, cycling and transit is calculated for 15- and 30-minute travel time thresholds. Results are compared across the two measures and four modes, and the overlap between low accessibility areas and high low-income prevalence is presented. Implications of the results are discussed along with study conclusions.
 
 # Overview of multimodal accessibility analysis
 
-As indicators of "the potential of opportunities for interaction" [@hansenHowAccessibilityShapes1959], accessibility measures can also be interpreted as the relative ease of reaching destinations using transport networks: they are a byproduct of mobility and a representation of the people's interaction with land-use and transportation systems [@hansenHowAccessibilityShapes1959; @handyAccessibilityIdeaWhose2020; @elgeneidyMakingAccessibilityWork2021]. 
+As indicators of "the potential of opportunities for interaction" [@hansenHowAccessibilityShapes1959], accessibility measures can also be interpreted as the relative ease of reaching destinations using transport networks. They are a byproduct of mobility and are a representation of the people's interaction with land-use and transportation systems [@hansenHowAccessibilityShapes1959; @handyAccessibilityIdeaWhose2020; @elgeneidyMakingAccessibilityWork2021]. 
 
-The cumulative opportunity measure is a popular accessibility measure, widely appreciated for its intuitive computation [@handyAccessibilityIdeaWhose2020; @handyMeasuringAccessibilityExploration1997; @kelobonyeRelativeAccessibilityAnalysis2019; @chengInvestigatingWalkingAccessibility2019]. It quantifies how many destinations can be reached from a point in space within a given travel time threshold. The measure has been used to quantify access, given a travel time threshold and mode, often to employment destinations: for instance, access to employment is explored by car and/or transit [@kapatsilaResolvingAccessibilityDilemma2023; @deboosereEvaluatingEquityAccessibility2018a; @tomasiello2023time], by bike [@faghihimaniCycleAccessibilityLevel2019], and by foot [@singhCumulativeOpportunitybasedAccessibility2022]. Non-work amenities have also been analysed by this popular measure. For example, grocery stores [@hosford15minuteCityReach2022] and 'baskets' of urban-amenities [@mccahillNonworkAccessibilityRelated2018; @klumpenhouwerFlexibleFrameworkMeasuring2021; @chengInvestigatingWalkingAccessibility2019]. From the authors' review, the cumulative opportunity literature has not yet focused on destination selection from the lens of Mobility of Care. 
+The cumulative opportunity measure is a popular accessibility measure, widely appreciated for its intuitive computation [@handyAccessibilityIdeaWhose2020; @handyMeasuringAccessibilityExploration1997; @kelobonyeRelativeAccessibilityAnalysis2019; @chengInvestigatingWalkingAccessibility2019]. It quantifies how many destinations can be reached from a point in space within a given travel time threshold. The measure has been used to quantify access, given a travel time threshold and mode, often to employment destinations. For instance, @kapatsilaResolvingAccessibilityDilemma2023, @deboosereEvaluatingEquityAccessibility2018a and @tomasiello2023time explore access to employment by car and/or transit, @faghihimaniCycleAccessibilityLevel2019 calculates employment access by bike, and @singhCumulativeOpportunitybasedAccessibility2022 measures access to employment by foot. However, non-work amenities have also been analysed by this popular measure as well. For example, @hosford15minuteCityReach2022 investigates grocery store access, and the works of @mccahillNonworkAccessibilityRelated2018, @klumpenhouwerFlexibleFrameworkMeasuring2021 and @chengInvestigatingWalkingAccessibility2019 investigate 'baskets' of urban-amenities. The cumulative opportunity accessibility literature has yet to focus its analysis on destinations selected from the perspective of Mobility of Care. 
 
-A critique leveled at cumulative opportunity measures (and other non-competitive accessibility measures) is its omission of competition-for-opportunities effects [@paezDemand2019; @soukhovIntroducingSpatialAvailability2023; @kelobonyeMeasuringAccessibilitySpatial2020; @merlinDoesCompetitionMatter2017]. Conceptually, this consideration is important as opportunities are finite, so there is bound to be competition between the population seeking them. However, planners often opt for simpler measures [@kapatsilaResolvingAccessibilityDilemma2023] as measures that account for competition tend to be more difficult to implement and interpret [@merlinDoesCompetitionMatter2017]. In the recent work of @soukhovIntroducingSpatialAvailability2023, an accessibility measure named Spatial Availability is introduced that simplifies the interpretation of resulting values while considering competition using a proportional allocation. It is extended for multimodal applications in @soukhovMultimodalSpatialAvailability2024. Notably, the use of competitive accessibility measures to explore access to a vareity of destinations is scarce, with only recent exceptions (e.g., @kelobonyeMeasuringAccessibilitySpatial2020 and @singhCumulativeOpportunitybasedAccessibility2022). Moreover, competitive accessibility measures have not yet been focused on Mobility of Care.
+A critique leveled at cumulative opportunity measures (and other non-competitive accessibility measures) is its omission of competition-for-opportunities effects [@soukhovIntroducingSpatialAvailability2023; @kelobonyeMeasuringAccessibilitySpatial2020; @merlinDoesCompetitionMatter2017]. Conceptually, this consideration is important as opportunities are finite, so there is bound to be competition between the population seeking them. However, planners often opt for simpler measures [@kapatsilaResolvingAccessibilityDilemma2023], as measures that account for competition tend to be more difficult to implement and interpret [@merlinDoesCompetitionMatter2017]. In the recent work of @soukhovIntroducingSpatialAvailability2023, an accessibility measure named Spatial Availability is introduced that simplifies the interpretation of resulting values while considering competition using population and travel cost proportional allocation balancing factors. Spatial availability was then extended for multimodal applications in @soukhovMultimodalSpatialAvailability2024. Notably, the use of competitive accessibility measures to explore access to a variety of destinations is relatively scarce, with some recent exceptions [e.g., @kelobonyeMeasuringAccessibilitySpatial2020; @singhCumulativeOpportunitybasedAccessibility2022]. Moreover, competitive accessibility measures have not yet been focused on Mobility of Care.
 
-As such, in this work, two multimodal accessibility measures are implemented for the calculation of accessibility to Mobility of Care destinations. The first is a routinely used measure, the cumulative opportunity measure, and the second is a competitive and singly-constrained measure, spatial availability [@soukhovIntroducingSpatialAvailability2023; @soukhovMultimodalSpatialAvailability2024].
-
-<!-- This is especially important considering population-distinct characteristics like selected travel modes. In a North American context, car-modes can potentially access more opportunities because of their higher range relative to transit. But if opportunities are considered finite, high car mobility may take-up a higher share of opportunities from populations using modes that offer lower mobility, especially in zones where there is a high population and car-using modal split. Cumulative opportunities does not consider the relative population-demand for care destinations while spatial availability does: the use of these two measure illustrates distinct results.  -->
-
-<!-- In part to respond to this critic as all as conceptually more realsitic reflection of opportunity availability, accessibility analysis have incorporated accessibility.  spatial availability of care destinations per mode is also calculated as an additional and arguably more conceptually realistic reflection of opportunity availability.  -->
-
-<!-- In summary, this work uses both the cumulative opportunity and spatial availability measure to elucidate different interpretations of access to care. As an non-competitive measure, cumulative opportunity measure counts all the destinations that can be reached from each DA within a travel cost, for each DA. From a region-wide perspective, a destination that can be reached is counted multiple times by all DAs that can reach it, so the sum of all cumulative opportunity DA values in the region is not meaningful. Simply, if walking-mode provides access to some number of opportunities within a 30 minutes, car-mode provides some greater access within 30 minutes, and the access that walk-mode is not discounted by the population using car-mode and the greater number of opportunities they can potentially access. However, cumulative opportunity measure is intuitive to implement, a part in why it has been widely adopted in accessibility research and considered a introductory method to more advanced accessibility measure [@elgeneidyMakingAccessibilityWork2021].  -->
+As such, in this work, two multimodal accessibility measures are implemented for the calculation of accessibility to Mobility of Care destinations. The first is the cumulative opportunity measure, and the second is a competitive and singly-constrained measure, spatial availability [@soukhovIntroducingSpatialAvailability2023; @soukhovMultimodalSpatialAvailability2024].
 
 # Background on Hamilton
 
 This paper focuses on Hamilton as a case study, a mid-size city of approximately 500,000 residents that lies within the urban and suburban Greater Toronto and Hamilton Area (GTHA) [@transportationtomorrowsurvey2018]. The GTHA is home to seven million people, or approximately 20% of the Canadian population [@cityoftoronto2021CensusPopulationa2022]. 
 
-Hamilton is divided into six regional communities (@fig-Fig1). Hamilton-Central is the most urbanized of the six, and the five periphery communities of Dundas, Ancaster, Flamborough, Glanbrook and Stoney Creek are significantly more suburbanized with the furthest periphery regions being undeveloped or rural owing to their inclusion in the region’s greenbelt [@greenbeltfoundationThrivingGreenbeltThriving2023]. These different urban forms and associated transport infrastructure play a key role in access to care destinations. Hamilton Street Railway (HSR) is the city's transit provider operating only buses at the current date. Notably, Hamilton-Central is the only community fully serviced by HSR and has the highest concentration of walking and bike infrastructure for mainstream use (e.g., Level of Traffic Stress 1 or 2 which indicates low-speed, low-volume streets, separated bicycle facilities, and dedicated lanes where cyclist must interact with traffic at formal crossings) [@conveyalCyclingLevelTraffic2024] as identified in the OpenStreetMaps road network [@geofabrikOntarioCanadaOpen2023] and the city's General Transit Feed Specification file [@transitfeedsHamiltonStreetRailway2023]. 
+Hamilton is divided into six regional communities (@fig-Fig1). Hamilton-Central is the most urbanized of the six, and the five periphery communities of Dundas, Ancaster, Flamborough, Glanbrook and Stoney Creek are significantly more suburban, with the furthest periphery regions being undeveloped or rural owing to their inclusion in the region’s greenbelt [@greenbeltfoundationThrivingGreenbeltThriving2023]. These different urban forms and associated transport infrastructure play a key role in access to care destinations. Hamilton Street Railway (HSR) is the city's transit provider, and at the current date only operating buses. Notably, Hamilton-Central is the only community fully serviced by HSR and has the highest concentration of walking and bike infrastructure for mainstream use (e.g., Level of Traffic Stress 1 or 2 which indicates low-speed, low-volume streets, separated bicycle facilities, and dedicated lanes where cyclist must interact with traffic at formal crossings) [@conveyalCyclingLevelTraffic2024] as identified in the OpenStreetMaps road network [@geofabrikOntarioCanadaOpen2023] and the city's General Transit Feed Specification file [@transitfeedsHamiltonStreetRailway2023]. 
 
 
 ```{r plot-figure1, out.width=600}
@@ -1206,7 +1211,7 @@ knitr::include_graphics("figures/Fig1-descriptive-boundaries.png")
 
 ## Care destination dataset
 
-A novel geospatial dataset of care destinations for Hamilton was compiled using a variety of local sources and manually confirmed through Google Maps. To showcase the dataset, it is grouped by care destination category. These five categories were generated by the authors following the travel purpose categories created in the mobility of care research by @sanchezdemadariagaMeasuringMobilitiesCare2019. Notably: child-centric (destinations for "Childcare" escorting trips), elder-centric (common destinations for other escorting trips that are not childcare-focused), grocery-centric, health-centric, and errand-centric destinations. Category sources of data and preparation notes are detailed in @tbl-Tbl1. Their spatial distribution and sub-categories are visualised in @fig-Fig2.
+A spatial dataset of care destinations for Hamilton was compiled from various sources, and destination operation was manually verified using Google Maps. To showcase the dataset, each type of destination is grouped into one of five care destination categories. These five categories were generated by the authors following the travel purpose categories created in the mobility of care research by @sanchezdemadariagaMeasuringMobilitiesCare2019. Notably: child-centric (destinations for "childcare" escorting trips), elder-centric (common destinations for other escorting trips that are not childcare-focused), grocery-centric, health-centric, and errand-centric destinations. The majority of destinations included can be publicly accessed (e.g., only public schools, grocery stores, clinics, community centres). However, certain destinations may require a fee that could be prohibitive for lower-income households (e.g., all long term care homes, both publicly subsided or private are included in the dataset). Category sources of data and preparation notes are detailed in @tbl-Tbl1. Their spatial distribution and sub-categories are visualised in @fig-Fig2.
 
 ```{r creating-table-content}
 dat <- data.frame(matrix(c("Child-centric",
@@ -1230,7 +1235,7 @@ dat <- data.frame(matrix(c("Child-centric",
 ```{r creating-table}
 #| tbl-cap: "Details on the preparation and data sources of care destinations."
 #| label: tbl-Tbl1
-set_flextable_defaults(font.size= 10,
+set_flextable_defaults(font.size= 8,
                        font.family = NULL,
                        text.align = 'justify',
                        table.layout = 'fixed')
@@ -1246,22 +1251,22 @@ flextable(dat) %>%
 
 ```{r plot-figure2, out.width=600}
 #| label: fig-Fig2
-#| fig-cap: "The geo-located points of care destinations in the City of Hamilton separated by the author-generated categories of: child-, elder-, errand-, grocery- and health- centric care categories. Locations of these destinations were retrieved through multiple sources as described in the text. Basemap shapefiles are sourced from the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
+#| fig-cap: "Locations of care destinations in the City of Hamilton tagged by the author-generated categories of: child-, elder-, errand-, grocery- and health- centric care categories. Locations of these destinations were retrieved through multiple sources as described. Basemap shapefiles are sourced from the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
 knitr::include_graphics("figures/Fig2-plot_care_categories.png")
 ```
 
 ## Population data
-To supplement the care destination dataset and complete the accessibility calculation (discussed in Methods), population data for the City of Hamilton is sourced from the 2021 Canadian census using the {cancensus} R Package [@governmentofcanadaCensusPopulation2023; @vonbergmannCancensusCensusMapper2021]. Three categories of variables are selected: the population, the percent of after-tax low-income-cut-off (LICO-AT), and the primary commute mode used. LICO-AT is a composite indicator included in the census that reflects the proportion of households spending 20% more than the area average on food, shelter and clothing [@governmentofcanadaLowIncomeCutoffs2023]. All data was sourced at the most granual level of spatial resolution publicly available, the level of the dissemination area (DA). 
+To supplement the care destination dataset and complete the accessibility calculation (discussed in Methods Section 4), population data for the City of Hamilton is sourced from the 2021 Canadian census using the {cancensus} R Package [@governmentofcanadaCensusPopulation2023; @vonbergmannCancensusCensusMapper2021]. Three categories of variables are selected: the population, the percent of after-tax low-income-cut-off (LICO), and the primary commute mode used. LICO is a composite indicator that reflects the proportion of households spending 20% more than the area average on food, shelter and clothing [@governmentofcanadaLowIncomeCutoffs2023]. As stated in the Introduction Section 1, women, especially those in low-income households, preform the majority of care trips. However, since the proportion of women and men residing across the city is balanced, this study focuses on the total population and total LICO prevalence. All data was sourced at the most granual level of spatial resolution publicly available, the level of the dissemination area (DA). 
 
-@fig-Fig3 displays the spatial distribution of the total population and the prevalence of LICO-AT as a percentage of the total population. Of note is the density of population within Hamilton-Central (oranges) and the cluster of high density and high LICO-AT prevalence near the shoreline in Hamilton-Central (dark purple-oranges).
+@fig-Fig3 displays the spatial distribution of the total population and LICO as a percentage of the total population. Notably, the density of population within Hamilton-Central (oranges) and the cluster of high density and high LICO prevalence near the shoreline in Hamilton-Central (dark purple-oranges).
 
 ```{r plot-figure3, out.width=600}
 #| label: fig-Fig3
-#| fig-cap: "The total population in each dissemination area (DA), visualized with the six former muncipal boundaries in the city of Hamilton. The left plot represents the population and the right represents the population density versus the low-income cutt-off after taxes (LICO-AT) as a percentage of the total DA population. LICO-AT is a measure of economic disadvantage. The legend categories represent quartiles. Basemap shapefiles are retrieved from the 2021 Canadian census [@governmentofcanadaCensusPopulation2023], the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
+#| fig-cap: "The total population in each dissemination area (DA), visualized with the six former muncipal boundaries in the city of Hamilton. The left plot represents the population (legend represents quartiles) and the right represents population density versus the low-income cut-off after taxes (LICO) as a percentage of the total DA population. Basemap shapefiles are retrieved from the 2021 Canadian census [@governmentofcanadaCensusPopulation2023], the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
 knitr::include_graphics("figures/Fig3-plot_pops.png")
 ```
 
-Further, the population proportion that commutes by a specific mode (car, transit, walk, or cycle/other) is visualised in @fig-Fig4. Though mode-choice used in travel to work is not necessarily reflective of the mode used to travel to care destinations, to our knowledge no other data is available at a granular level City-wide that centers mobility of care. The population generally commutes by car (50% or higher, is yellow to green), even within the more densely populated Hamilton-Central. However, for transit and walking, a group of DAs near the shoreline within Hamilton-Central have the highest proportion of transit users and those who walk to work (yellows in the plots that are otherwise red i.e., below 15%). Those same DAs are also relatively dense and have a high prevalence of LICO-AT (@fig-Fig3).
+Further, the population proportion that commutes by a specific mode (car, transit, walk, or cycle/other) is visualised in @fig-Fig4. Though mode choice used in travel to work is not necessarily reflective of the mode used to travel to care destinations, no other data is available at a granular level City-wide that captures mobility of care travel to our knowledge. The population generally commutes by car (50% or higher, is yellow to green), even within the more densely populated Hamilton-Central. However, for transit and walking, a grouping of DAs near the shoreline within Hamilton-Central have the highest proportion of transit users and those who walk to work (yellows in the plots that are otherwise red i.e., below 15%). Those same DAs are also relatively dense and have a high prevalence of LICO.
 
 ```{r plot-figure4, out.width=600}
 #| label: fig-Fig4
@@ -1271,9 +1276,9 @@ knitr::include_graphics("figures/Fig4-plot_modal_splits.png")
 
 ## Transportation network and travel time estimations
 
-As empirical travel behaviour to care-oriented destinations is uncounted and thus travel time is unavailable, travel time is approximated. Travel times by walking, cycling, transit and car is calculated for the geometric centroids of the DAs to the geometric centroids of the care destination location using the 'travel_time_matrix()' function from the {r5r} package [@pereiraR5rRapidRealistic2021]. Inputs are point locations of DA centroids (origins), care destinations centroids, an OpenStreetMap road network including bike, transit and vehicle infrastructure [@geofabrikOntarioCanadaOpen2023], and city GTFS transit routes/schedules [@transitfeedsHamiltonStreetRailway2023]. For all modes, travel times under 60 minutes based on the shortest travel-time path are calculated. 
+Travel time to care destinations by walking, cycling, transit and car is approximated using the 'travel_time_matrix()' function from the {r5r} package [@pereiraR5rRapidRealistic2021]. Inputs into the function are locations of DA centroids (origins), care destinations centroids, an OpenStreetMap road network including bike, transit and vehicle infrastructure [@geofabrikOntarioCanadaOpen2023], and city GTFS transit routes/schedules [@transitfeedsHamiltonStreetRailway2023]. For all modes, travel times under 60 minutes based on the shortest travel-time path are calculated. 
 
-For transit and cycling, additional parameters were included. For transit travel times, a Wednesday departure time of 8:00AM was selected [@boisjolyDailyFluctuationsTransit2016] with a departure travel window parameter of 30 mins. Travel times are calculated for each minute of the travel window (8:00-8:30AM) and the 25th percentile from the distribution of travel window times were selected to represent each origin-destination. Selecting a sufficiently wide window is an important consideration as travel times are sensitive to transit vehicle frequency and connecting transfers (see discussion of the modifiable temporal unit problem e.g., [@pereiraFutureAccessibilityImpacts2019]). The 25th percentile indicates that 25% of trips from that origin to destination have a travel time that is that length or shorter. This assumption provides an optimistic perspective of transit travel times. For cycling travel times, level 1 or 2 traffic level of stress routes (i.e., dedicated or separated cycling lanes respectively) were selected. The level of traffic stress is a variable associated with links of the OSM road network; level 1 and 2 are considered the default. 
+For transit and cycling, additional parameters were included. For transit travel times, a Wednesday departure time of 8:00AM was selected [@boisjolyDailyFluctuationsTransit2016] with a departure travel window parameter of 30 mins. Travel times are calculated for each minute of the travel window (8:00-8:30AM) and the 25th percentile from the distribution of travel window times were selected to represent each origin-destination. Selecting a sufficiently wide window is an important consideration as travel times are sensitive to transit vehicle frequency and connecting transfers (see discussion of the modifiable temporal unit problem e.g., [@pereiraFutureAccessibilityImpacts2019]). The 25th percentile indicates that 25% of trips from that origin to destination have a travel time that is that length or shorter. This assumption provides a more optimistic perspective on transit travel times. For cycling travel times, level 1 or 2 level of traffic stress (LTS) routes (i.e., dedicated or separated cycling lanes, respectively) were selected. The LTC is a calculated variable associated with links of the OSM road network. LTS 1 and 2 are considered mainstream cycling conditions [@faghihimaniCycleAccessibilityLevel2019] and are the function's default.
 
 # Accessibility measurement methods
 
@@ -1281,39 +1286,39 @@ Two accessibility measures are detailed: the cumulative opportunity measure and 
 
 ## Cumulative opportunities: the number of care opportunities that can be reached by a mode within a travel time
 
-Often referred to as the cumulative opportunity measure, it is a special form of the gravity-based accessibility measure used in at least as far back as @hansenHowAccessibilityShapes1959 [@handyMeasuringAccessibilityExploration1997]. It receives its name from its' interpretation: the value calculated for each spatial unit (DAs in this study) represent the number of opportunities that could spatially accessed within a given travel time. The cumulative opportunity accessibility measure takes the following general form for a multimodal calculation:
+Often referred to as the cumulative opportunity measure, it is a special form of the gravity-based accessibility measure [@handyMeasuringAccessibilityExploration1997]. It receives its name from its interpretation: the value calculated for each spatial unit (DAs in this study) represents the number of opportunities that could be spatially accessed within a given travel time. The cumulative opportunity accessibility measure takes the following general form for a multimodal calculation:
 $$
 S_i^m=\sum_{j}O_j\cdot f^m(c_{ij}^m)
-$$
+$${#eq-1}
 \noindent Where:
 
 - $i$ is a set of origin locations (e.g., DA centroids)
 - $j$ is a set of destination locations (e.g., care destinations)
 - $m$ is a set of modes (e.g., by foot, cycle, transit and car)
-- $O_j$ is the number of opportunities at $j$ (e.g., the presence of a care destination in this study)
+- $O_j$ is the number of opportunities at $j$ (e.g., in this study, the presence of a care destination)
 - $c_{ij}^m$ is the travel cost between $i$ and $j$ for each $m$.
 - $f^m(\cdot)$ is an impedance function of $c^m_{ij}$ for each $m$; within the cumulative opportunity measure, it is a binary function that takes the value of 1 if $c^m_{ij}$ is less than a selected value.
 - $S^m_{i}$ is the cumulative opportunities accessible by $m$ at each $i$.
 
 ## Spatial availability: the number of care opportunities that are spatially available to a mode-user within a travel time
 
-Differing from cumulative opportunity measure, the spatial availability measure considers competition leading to a different interpretation in its results. The values for each origin $i$ (in our study, DAs) for a given mode $m$ represents the number of care opportunities that can be accessed by a mode-user out of _all_ care opportunities in Hamilton. Spatial availability considers competition through proportional allocation of opportunities to a given $i$ based the relative proportion of population computing for an opportunity and their travel times based on each $i$ value represents the potential availability of reachable destinations. Spatial availability, takes the following general form for multi-modal calculation:
+Differing from cumulative opportunity measure, the spatial availability measure considers competition. The spatial availability value for each origin $i$ for a given mode $m$ represents the number of care opportunities that can be accessed by a mode-user out of _all_ care opportunities in Hamilton. Spatial availability considers competition through the proportional allocation of opportunities to a given $i$. The proportional allocation balancing factors are based on the relative proportion of population computing for an opportunity and their travel times to reachable destinations. Spatial availability, takes the following general form for multi-modal calculation:
 $$
 V^m_{i} = \sum_{j} O_j\ F^{tm}_{ij}
-$$
+$${#eq-2}
 \noindent Where: 
 
-- Like in equation (1), $i$, $j$, and $m$ is a set of origin locations, destination locations, modes respectively and $O_j$ is the number of opportunities at $j$. 
+- Like in @eq-1, $i$, $j$, and $m$ is a set of origin locations, destination locations, modes respectively and $O_j$ is the number of opportunities at $j$. 
 - $V^m_{i}$ is the cumulative opportunities spatially available by $m$-using population at $i$ for each $i$.
 - $F^{tm}_{ij}$ is a total balancing factor for each $m$ at each $i$; it considers the size of the populations at different locations that demand opportunities $O_j$, as well as the cost of movement in the system $f(c_{ij})$.
 
-What makes spatial availability stand apart from other competitive measures is the multimodal balancing factor $F^{tm}_{ij}$ [see @soukhovMultimodalSpatialAvailability2023; @soukhovIntroducingSpatialAvailability2023]. $F^{tm}_{ij}$ implements a proportional allocation mechanism that ensures the sum of all spatial availability values at each $i$ always matches the total number of opportunities in the region. In other words, it ensure an opportunity-side (single) opportunities remain constrained such that the sum of $V^m_{i}$ for all $m$ at each $i$ is equivalent to the total sum of opportunities in the region (i.e., $\sum_j O_j = \sum_i V_i = \sum_{m} \sum_{i} V^m_{i}$). This constraint helps in clarifying the interpretation of the $V^m_{i}$ value itself.
+What makes spatial availability stand apart from other competitive measures is the multimodal balancing factor $F^{tm}_{ij}$ [see @soukhovMultimodalSpatialAvailability2024; @soukhovIntroducingSpatialAvailability2023]. $F^{tm}_{ij}$ implements a proportional allocation mechanism that ensures the sum of all spatial availability values at each $i$ always matches the total number of opportunities in the region. In other words, it ensure an opportunity-side (single) opportunities remain constrained such that the sum of $V^m_{i}$ for all $m$ at each $i$ is equivalent to the total sum of opportunities in the region (i.e., $\sum_j O_j = \sum_i V_i = \sum_{m} \sum_{i} V^m_{i}$). This constraint helps in clarifying the interpretation of the $V^m_{i}$ value itself.
 
-The total proportional allocation factor $F^{tm}_{ij}$ consists of two parts: the first is a population-based proportional allocation factor $F_i^{pm}$ that models the mass effect (relative population-demand for opportunities) and the second is an impedance-based proportional allocation factor $F_{ij}^{cm}$ that models the cost effect (relative travel time). Both factors consider competition through proportional allocation: $F^{pm}_{i}$ estimates a proportion of how many people are in each $i$ and using each $m$ relative to the region and $F^{cm}_{ij}$ estimates a proportion of the cost of travel from $i$ to $j$ at each $i$ using each $m$ relative to the region. Since $F^{pm}_{i}$ and $F^{mc}_{i}$ are proportions, $\sum_{m}\sum_{i}F^{pm}_{i} = 1$ and $\sum_{m} \sum_{i}F^{cm}_{i}=1$. Both factors are combined to create the total balancing factor $F^{tm}_{ij}$ used to calculate $V^m_i$:
+The total proportional allocation factor $F^{tm}_{ij}$ consists of two parts: the first is a population-based proportional allocation factor $F_i^{pm}$ that models the mass effect (relative population-demand for opportunities) and the second is an impedance-based proportional allocation factor $F_{ij}^{cm}$ that models the cost effect (relative travel time). Both factors consider competition through proportional allocation: $F^{pm}_{i}$ estimates a proportion of how many people are in each $i$ and using each $m$ relative to the region and $F^{cm}_{ij}$ estimates a proportion of the cost of travel from $i$ to $j$ at each $i$ using each $m$ relative to the region. Both factors are combined to create the total balancing factor $F^{tm}_{ij}$ used to calculate $V^m_i$:
 
 $$
 F^{tm}_{ij} = \frac{F^{pm}_{i} \cdot F^{cm}_{ij}}{\sum_{m} \sum_{i} F^{pm}_{i} \cdot F^{cm}_{ij}}
-$$
+$${#eq-3}
 \noindent Where:
 
 - The factor for allocation by population for each $m$ at each $i$ is $F^{pm}_{i} = \frac{P_{i}^m}{\sum_{m}\sum_{i} P_{i}^m}$. This factor makes opportunities available based on demand.
@@ -1322,16 +1327,20 @@ $$
 
 ## Travel impedance function
 
-A binary travel impedance function $f^m(c_{ij}^m)$ is assumed (e.g., $c_{ij}$ is equal or below a certain travel time threshold, $f^m(c_{ij}^m)$ equals 1, otherwise, $f^m(c_{ij}^m)$ equals 0). Two travel time thresholds are selected for both measures: 15 minutes and 30 minutes for all modes. 
+A uniform binary travel impedance function $f^m(c_{ij}^m)$ is assumed; specifically, when $c_{ij}$ is equal or below a certain travel time threshold, $f^m(c_{ij}^m)$ equals 1, otherwise, $f^m(c_{ij}^m)$ equals 0. Two travel time thresholds are selected for both measures: 15 minutes and 30 minutes for all modes. 
 
-This selection is informed by a scan of the literature. Typically, literature considers travel to one type of care category (e.g., health, or school, or grocery stores) and each destination type is associated with different travel impedance behaviour (e.g., grocery shopping trips are on average 15  [@hamrickTimeCostAccess2012], trips to receive cancer treatments are on average 20 minutes [@segelRuralurbanDifferencesAssociation2020]). In other care-related accessibility analyses, travel time thresholds of include 10 mins (for daycares) [@fransenCommuterbasedTwostepFloating2015] and 30 mins to 1 hr (for hospitals) [@schuurmanDefiningRationalHospital2006] are selected. Of the one study to-date that has calculated the average travel times to all different categories of care destinations, travel times to each care category differ by mode e.g., 16 minutes by car and 36 minutes by public transport [@ravensbergenExploratoryAnalysisMobility2022]. To broadly reflect this past research: 15 and 30 minutes are selected.
+This selection is informed by a scan of the literature. Typically, literature considers travel to one type of care category (e.g., health, or school, or grocery stores) and each destination type is associated with varied travel impedance behaviour. As examples, grocery shopping trips are on average 15 in @hamrickTimeCostAccess2012, trips to receive cancer treatments are on average 23.6 minutes for non-white metro residents in @segelRuralurbanDifferencesAssociation2020], travel time thresholds of 10 mins are selected for a daycare analysis in @fransenCommuterbasedTwostepFloating2015, and 30 mins to 1 hr travel time thresholds are selected for hospitals in @schuurmanDefiningRationalHospital2006. 
+Travel times also depend on the mode used. From the perspective of mobility of care, average travel times to all different categories of care destinations are on average 16 minutes by car and 36 minutes by public transportation [@ravensbergenExploratoryAnalysisMobility2022]. To broadly reflect this past research: 15 and 30 minutes are selected in this study.
 
-Notably, the use of a binary travel impedance functions as opposed to a distance-decay impedance function, were selected to simplify communication of the assumed travel behaviour. As mentioned, lacking region-specific empirical data regarding care-centric travel, this work establishes a methodology to streamline access to care interpretation and analysis for when that data is available.
+As previously discussed, the use of binary travel impedance functions as opposed to distance decay impedance functions was selected to simplify communication of the assumed travel behaviour. Lacking region-specific empirical data regarding care-centric travel, this work establishes a methodology to streamline access to care interpretation and analysis for when that data is available.
 
 # Results
 
 ## Cumulative opportunities: access to care 
-The cumulative opportunity and spatial availability plots for each mode, for both 15-minute and 30-minute travel time thresholds are shown in @fig-Fig5. The cumulative opportunities measure visualises a cumulative count of care opportunities that can be spatially accessed by each mode from each DA, where each opportunity represents a reachable destination. The spatial availability measure visualises a constrained accessibility intrepretation; the cumulative count of care opportunities that _are spatially available to mode-using populations and_  can be spatially accessed from each DA. In both measures, the higher the value, the more potential interaction with care opportunities. This greater potential of opportunity of interaction is conceptualised as a positive outcomes of well functioning land-use and transport networks [@corderaImpactAccessibilityPublic2019; @blumenbergDriveWorkRelationship2017; @cuiSpatialAccessPublic2020]. In @fig-Fig5, values are grouped by quantile and spatial trends between the 15-min and 30-min threshold plots are highly correlated (`r cor(HAM_access_15$cum_opps,HAM_access_30$cum_opps) |> round(digits=2)` for cumulative opportunities and for `r cor(HAM_access_15$V_im,HAM_access_30$V_im) |> round(digits=2)`spatial availability).
+The cumulative opportunity and spatial availability plots for each mode and 15-minute and 30-minute travel time thresholds are shown in @fig-Fig5.  Each cumulative opportunities value represents a cumulative count of care opportunities that can be spatially accessed by each mode from each DA, where each opportunity represents a reachable care destination. The spatial availability measure presents a constrained interpretation of this measure; each value is a cumulative count of care opportunities that can be spatially accessed from each DA and _are spatially available to the mode-using population based on the relative size of the mode-using population and modal travel times_.  As proportional allocation is used, each spatial
+availability value can also be interpreted as the _spatially available_ proportion of the total care destinations in the city, i.e., the sum of all spatial availability values in the second row of @fig-Fig5 equal, the total number of care destinations in this case study.
+
+In both measures, the higher the value, the more potential interaction with care opportunities. This greater potential of opportunity of interaction is conceptualised as a positive outcomes of well functioning land-use and transport networks [@corderaImpactAccessibilityPublic2019; @blumenbergDriveWorkRelationship2017; @cuiSpatialAccessPublic2020]. In @fig-Fig5, values are grouped by quantile and spatial trends between the 15-min and 30-min threshold plots are highly correlated (`r cor(HAM_access_15$cum_opps,HAM_access_30$cum_opps) |> round(digits=2)` for cumulative opportunities and for `r cor(HAM_access_15$V_im,HAM_access_30$V_im) |> round(digits=2)`spatial availability).
 
 ```{r plot-figure5, out.width=600}
 #| label: fig-Fig5
@@ -1339,281 +1348,53 @@ The cumulative opportunity and spatial availability plots for each mode, for bot
 knitr::include_graphics("figures/Fig5-plot_copp_Savail_measures.png")
 ```
 
-When considering cumulative opportunity measure; three notable findings between modes can be identified. First, access by transit is high and walking is also relatively high (Q3 and Q4) within Hamilton-Central but low elsewhere. This finding is expected as as transit does not significantly serve communities outside of Hamilton-Central and Dundas (@fig-Figure1). Second, access by cycling is also relatively high. It provides the second most opportunities for interactions after travel by car, and affords at least one opportunity for interaction in more DAs than walking and transit use (notably some access (Q1) in rural communities). Third, the access that the car-mode provides is significantly higher relative to other modes. Travel by car results in the greatest maximum number of potential interactions to care destinations (`r HAM_access_15$cum_opps |> max() |> round()` and `r HAM_access_30$cum_opps |> max() |> round()` opportunities within 15-min and 30-mins respectively). Car-mode offering high accessibility to care destinations is an expected outcome given the car-oriented design of North American cities [@saeidizandRevisitingCarDependency2022]. However, though car ownership is high in Hamilton, not everyone has access to a private vehicle. For instance, `r (27831/sum(27831,82436,73454,20089,5768,1312,353,156,45,27,41)) |> scales::percent()` of Hamilton households own zero vehicles [@datamanagementgroupTTSTransportationTomorrow2018], presenting equity concerns in who may benefit from the high accessibility car-mode offers.
-COMEBACKHERE
-The cumulative opportunity access is insightful in illustrating the range of destinations that can be reached, but it does not account for how accessibility is impacted by the density of populations and their mode-associated travel speeds to a finite number of destinations, i.e., competition for opportunities. Neglecting this consideration may conjure misleading conclusions regarding the _availability_ of spatial accessibility (competition for opportunities). The spatial availability measure sheds light on this concept: as each value sums to equal For instance, consider cycling: access to cumulative opportunities by car is high (Q4), but at least cycling-mode offers Q3 levels in Hamilton-Central and Q2 and Q1 levels beyond. Cycling offers high-travel speeds, less fast than car, but still fast nonethless. However, in Hamilton assuming modal-split proportions shown in @fig-Fig4, there are far fewer cyclists (`r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "c_bike") |> mutate(bike_pop = Population*perc_cycle_other) |> dplyr::select(bike_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population) compared to motorists (`r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> mutate(car_pop = Population*perc_car) |> dplyr::select(car_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population), so their mode-relative slower travel speeds put them at a further disadvantage when accessing the () total care opportunities in Hamilton relative to the _many_ faster-traveling motorists. Cyclists, though representing () of the population, only capture () total care opportunities (i.e., the mode's total spatial availability in Hamilton). This is compared to motorist population () which captures () total care opportunities. Similar to the story told by cyclist's spatial availability, walking population and transit population ( , ) capture (,) and () of the total care opportunities.
+When considering cumulative opportunity measure; three notable findings between modes can be identified. First, access by transit and walking is somewhat high (mostly Q3 and some Q4) within the core of Hamilton-Central but low elsewhere. This finding is somewhat expected as as transit does not significantly serve communities outside of Hamilton-Central and Dundas, and the density of walking infrastructure is
+high in Hamilton-Central (see @fig-Fig1). Second, access by cycling is even higher (mostly Q3 but more Q4) in Hamilton-Central; it provides the second most opportunities for interactions after travel by car, and affords at least one opportunity for interaction in more DAs than walking and transit use (notably some access (Q1) in rural communities). Third, the access that the car-mode provides is significantly higher relative to the three sustainable modes. Travel by car results in the greatest maximum number of potential interactions to
+care destinations (`r HAM_access_15$cum_opps |> max() |> round()` and `r HAM_access_30$cum_opps |> max() |> round()` opportunities within 15-min and 30-mins respectively). Car-mode offering high accessibility to care destinations is an expected outcome given the car-oriented design of North American cities [@saeidizandRevisitingCarDependency2022] and the range (travel speeds over a distance) of the car mode. However, though car ownership is high in Hamilton, not everyone has access to a private vehicle. For instance, `r (27831/sum(27831,82436,73454,20089,5768,1312,353,156,45,27,41)) |> scales::percent()` of Hamilton households do not own a car [@datamanagementgroupTTSTransportationTomorrow2018], presenting equity concerns in who may benefit from the high accessibility car-mode offers. The cumulative opportunities access is insightful in illustrating the range in which opportunities can be accessed by each mode based on their travel speed (on available infrastructure); a summary of each origins' modal opportunity isochrone. 
 
-In these ways, the cumulative opportunity measure and spatial availability measure differ. Car-using populations capture more spatial availability, even in the centre of Hamilton-Central, than all other modes. Lower number of Q3 and Q4 non-car spatial availability values within and radiating out from the Hamilton-Central boundaries can also be noted more noticeably than in the cumulative opportunity measure plots.
+However, the cumulative opportunities measure does not account for competition effects. Namely, what proportion of the modal opportunity range is _spatially available_ to a mode-user at a given location when
+competing for those same opportunities with other mode-users. Considering competition in this way conjures richer conclusions that reflects the mode-using population. For instance, consider cycling, a mode that offers a relatively high range but still smaller than the car. The cumulative opportunities values in  @fig-Fig5 reflects this intuition: Q3 and Q4 cumulative opportunities values are present for cycling in Hamilton-Central, offering the second best cumulative opportunities after the car. However, bike spatial availability values depicts a more complex story of opportunity accessibility: it reflect the mode's opportunity range as well as proportion of mode-using population and how their range relatively compares to all other modes. The bike-using population is small (`r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "c_bike") |> mutate(bike_pop = Population*perc_cycle_other) |> dplyr::select(bike_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population), with many DAs having no or low proportions of bike-users. Meaning DAs with no bike-users are proportionally allocated no access to opportunities (zero spatial availability) and DAs with a small proportion of cyclists have relatively slow travel speeds compared to the car-using population. Though bike mode offers a relatively high opportunity range (cumulative opportunities), because of the low proportion of cyclist and their opportunity range compared to the _many_ other mode-users, they receive low spatial availability values.
 
+Spatial availability values reflect the proportion of cumulative opportunities accessibility to the mode user (based on relative population and travel times), which can be used to shed light on what mode, and in what region, a mode-using population captures more than its equal share of spatial availability. Overall, `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="a_car") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent()` of the spatial availability is taken by motorists (destinations within 30-minutes) but they only represent `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> mutate(car_pop = Population*perc_car) |> dplyr::select(car_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population. Therefore, they have disproportionately more availability than their population's presence in the city. Motorists capture this availability from populations that do not use cars, and as a result are left with lower
+spatial availability. For instance, transit users that have access to destinations within 30-minutes represent `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "b_transit") |> mutate(transit_pop = Population*perc_transit) |> dplyr::select(transit_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population but claim only `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="b_transit") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent(accuracy=1)` of the spatial availability. Similarly, though cyclists and pedestrians represent `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "c_bike") |> mutate(bike_pop = Population*perc_cycle_other) |> dplyr::select(bike_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` and `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "d_walk") |> mutate(walk_pop = Population*perc_walked) |> dplyr::select(walk_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population respectively, they only capture `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="c_bike") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent(accuracy=0.1)` (cyclist) and  `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="d_walk") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent(accuracy=0.1)` (pedestrian) of the spatial availability. In other words, if certain mode-users capture a greater proportion of spatial availability, then there is less spatial availability remaining for other mode users. Spatial availability does not necessarily have to align with the cumulative opportunities that the mode offers, it is simply a constrained version that considers competition by mode-using populations. As noted, non-car modes have the potential to offer higher cumulative opportunities (within Hamilton-Central), but as it exists assuming modal commute shares, the majority of spatial availability to care destinations can still be
+captured by motorists even in DAs where car mode share is under 50\% (such as Hamilton-Central, see proportions in @fig-Fig4.
 
-The proportion of spatial availability allocated to a mode-using population can also be directly compared. This sheds light on what mode, and in what region, a mode-using population captures more than its equal share of spatial availability. Overall, `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="a_car") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent()` of the spatial availability is taken by motorists (destinations within 30-minutes) but they only represent `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> mutate(car_pop = Population*perc_car) |> dplyr::select(car_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population; they have disproportionately more availability than their population's presence in the city. They capture this availability from non-car mode using populations that exists in high proportions with lower spatial availability (i.e., transit users to destinations within 30-minutes are `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "b_transit") |> mutate(transit_pop = Population*perc_transit) |> dplyr::select(transit_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population but take `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="b_transit") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent()` of the spatial availability, 30-minute cyclist are `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "c_bike") |> mutate(bike_pop = Population*perc_cycle_other) |> dplyr::select(bike_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population but represent `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="c_bike") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent(accuracy=0.1)` of the spatial availability, and 30-minute walkers are `r ((HAM_access_30 |> st_drop_geometry() |> filter(mode == "d_walk") |> mutate(walk_pop = Population*perc_walked) |> dplyr::select(walk_pop) |> sum(na.rm=T)) / ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T)))) |> scales::percent()` of the population but are allocated `r ((HAM_access_30 |> sf::st_drop_geometry() |> filter(mode =="d_walk") |> dplyr::select(V_im) |> sum()) / (HAM_access_30 |> sf::st_drop_geometry() |> dplyr::select(V_im) |> sum())) |> scales::percent(accuracy=0.1)` of the spatial availability. 
+Taken together, though non-car modes may provide somewhat good access to care destinations within Hamilton-Central (and some only some access in rural communities), they do not provide similar levels of available access (spatial availability). Car-using populations capture more spatial availability, even in the centre of Hamilton-Central, than all other modes. Note the lower number of Q3 and Q4 values within and radiating outwards from Hamilton-Central for non-car modes for cumulative opportunities measure compared to spatial availability. 
 
-The key interpretation from @fig-Fig5 is that if certain modes capture an exceptional proportion of availability, than the availability left for other modes is lower overall. This does not necessarily have to align with the unconstrained accessibility that mode offers. As noted, non-car modes have the potential to offer higher unconstrained access (within Hamilton-Central) in @fig-Fig5. But as it exists (assuming modal commute shares), the majority of spatial availability to care destinations can still be captured by motorists even in DAs where car mode share is under 50% (such as Hamilton-Central, see proportions in @fig-Fig4).
-
-<!--`r word_comment("Here we can also calculate these proportions for just Hamilton-Central; what we'll see is car-mode-using-pops (i.e., % pop using car in hamilton-central) are allocated more than their equivalent share of spatial availability (i.e., % of spatial availability allocated to hamilton-central) -- but non-car modes do better than when looking at the city overall. Does that make sense? If yes, maybe worth adding?", ".")`-->
-
-<!-- In @fig-Fig7, modal spatial availability is divided by the mode-using population for each DA to more equivalently visualise values across modes. Magnitude of values are small as they represent a rate of how many destinations out of 2,225 destinations are available to the mode-using population in the DA (out of `r (HAM_access_30 |> st_drop_geometry() |> filter(mode == "a_car") |> dplyr::select(Population) |> sum(na.rm=T))` people residing in Hamilton). Similar to trends in previous figures, motorists are allocated the vast majority of opportunities, but notably this is still true within Hamilton-Central, where pockets of non-car users is greater than 50% (see @fig-Fig4).   
-
-```{r plot-figure7, out.width=600}
-#| label: fig-Fig7
-#| fig-cap: "The spatial availability per mode-using-capita measure. The number of care destinations that can be reached per mode-using-capita, per DA, within 15 mins (top) and 30 mins (bottom). Basemap shapefiles are retrieved from the 2021 Canadian census [@governmentofcanadaCensusPopulation2023], the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
-knitr::include_graphics("figures/Fig7-plot_Savail_smallv_measures.png")
-```
-```{r correlations, include=FALSE}
-car_HAM_access_30 <- HAM_access_30 |> filter(mode == "a_car") |> st_drop_geometry()
-transit_HAM_access_30 <- HAM_access_30 |> filter(mode == "b_transit") |> st_drop_geometry()
-bike_HAM_access_30 <- HAM_access_30 |> filter(mode == "c_bike") |> st_drop_geometry()
-walk_HAM_access_30 <- HAM_access_30 |> filter(mode == "d_walk") |> st_drop_geometry()
-
-car_HAM_access_15 <- HAM_access_15 |> filter(mode == "a_car") |> st_drop_geometry()
-transit_HAM_access_15 <- HAM_access_15 |> filter(mode == "b_transit") |> st_drop_geometry()
-bike_HAM_access_15 <- HAM_access_15 |> filter(mode == "c_bike") |> st_drop_geometry()
-walk_HAM_access_15 <- HAM_access_15 |> filter(mode == "d_walk") |> st_drop_geometry()
-```
--->
 ## Spatial availability and low-income mismatch
 
-To draw insights on who may reside in DAs where populations are advantaged with higher modal spatial availability, a cross-tabulation of low-high spatial availability & LICO-AT prevalence and high-no spatial availability & LICO-AT prevalence is visualised in @fig-Fig6. The modal spatial availability is divided by the mode-using population in each DA, resulting in the rate of modal spatial availability. LICO prevalence is the proportion of population that falls below the LICO-AT (see @fig-Fig3). @fig-Fig6 can be interpreted as follows: residents who use a specific mode in a "yellow" DA reside in a DA that offers below average spatial availability (i.e., below or equal to the the 50th percentile (median) levels of spatial availability per mode-using population) and the population within the DA has a high LICO-prevalence (i.e, 80th percentile or higher (8.4% or more)). <!-- THIS IS A GOOD IDEA, but no space! `r word_comment("For our information: Though not pictured, cum opps vs. LICO cross-tab plot presents a different story. DAs with high LICO (often in Hamilton Center) have high unconstrained access by all modes. This is not the case when looking at this through spatial availability; where of the total availability in the city, car-using populations take most and even the well-connected unconstrained transit-taking population in the centre have proportionally less. TLDR: cumulative opportunity paints a more optimistic store of accessibility -- though non-car modes can provide access within Hamilton-Central broadly, that access is proportionally allocated away to car-mode using populations when spatial availability is considered. So, there are fewer yellow DAs in Hamilton-Central for all modes.", ".")`-->
+To draw insights on who may reside in DAs where populations are advantaged with higher modal spatial availability, a cross-tabulation is visualised in @fig-Fig6. The modal spatial availability is divided by the mode-using population in each DA, resulting in the rate of modal spatial availability. LICO prevalence is the proportion of population that falls below the low-income cutoff threshold (see @fig-Fig3). @fig-Fig6 can be interpreted as follows: residents who use a specific mode in a "yellow" area resides in a DA that offers below average spatial availability (i.e., below or equal to the the 50th percentile (median) levels of spatial availability per mode-using population) and the population within the DA has a high LICO-prevalence
+(i.e, 80th percentile or higher (8.4\% or more)).
 
 ```{r plot-figure6, out.width=600}
 #| label: fig-Fig6
-#| fig-cap: "The spatial availability per mode-using-capita measure versus high-income cut-off . The number of care destinations that can be reached per mode-using-capita, per DA, within 15 mins (top) and 30 mins (bottom). Basemap shapefiles are retrieved from the 2021 Canadian census [@governmentofcanadaCensusPopulation2023], the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
+#| fig-cap: "The spatial availability per mode-using-capita measure versus LICO prevelance, visualized for 15 mins (top) and 30 mins (bottom) travel time cutoffs. Basemap shapefiles are retrieved from the 2021 Canadian census [@governmentofcanadaCensusPopulation2023], the Open Data Hamilton Portal [@opendatahamiltonCityBoundary2023] and the USGS [@greatlakesUSGS2010]."
 knitr::include_graphics("figures/Fig6-plot_Savail_smallv_LICO_measures.png")
 ```
 
-Notice the green DAs for the car-driving population and presence of yellow DAs for non-car modes within Hamilton-Central: @fig-Fig6 reinforces findings from @fig-Fig5. Even in Hamilton-Central where there is high proportion of LICO-AT prevalence, car-mode using populations who reside in green DAs are still offered high levels of spatial availability. However, car ownership is not always possible for low-income households and the lack of ownership acts as a barrier to accessing economic and economic-support opportunities for low-income households [@morrisDoesLackingCar2020] when alternative modes are insufficient [@kleinTransitionsOutCar2023]. For this reason, populations below the LICO-AT may rely on non-car modes, and the introduction of policies that increase access to care-destinations could be considered. The majority of yellow DAs are within the centre of Hamilton-Central, specifically for cycle- and walking populations. Policies that increase the number of available care-destinations within Hamilton-Central, improve conditions that decrease LICO-AT prevalence, as well as policies that make car-modes less spatial availability advantaged (i.e., encourage modal shift and decrease travel time) could be further investigated through the lens of mobility of care.
-<!-- Ultimately, policies that both redistribute spatial availability from car-driving populations as well as support the access to household-serving economic-related opportunities can be a way forward in improving the spatial availability landscape for non-car mode-users in zones with high prevalence of LICO-AT. -->
+Notice the green DAs for the car-driving population and presence of yellow DAs for non-car modes within Hamilton-Central: @fig-Fig6 reinforces findings from @fig-Fig5. Even in Hamilton-Central where there is a high proportion of LICO prevalence, car-mode using populations who reside in green DAs are offered high levels of spatial availability. However, due to financial constraints, car ownership is not always possible for low-income households. Lack of car ownership in areas with insufficient alternative modes hinders access to economic opportunities [@morrisDoesLackingCar2020; @kleinTransitionsOutCar2023]. For this reason, the introduction of policies that increase availability of care destination access for non-car modes could be considered. The majority of yellow DAs are concentrated in the centre of Hamilton-Central for cycling and walking populations. The mobility of care lens could be used to further examine policies that improve conditions that decrease LICO prevalence without displacing local residents, increase the number of accessible care destinations within Hamilton-Central, and make car-modes less spatially available (i.e., encourage modal shift, decrease travel times of non-car modes, and deprioritize decreasing car travel times).
 
 # Discussion and conclusions
 
-This paper is the first to conduct an exploratory gender-sensitive accessibility analysis of care destinations – one that counters the current literature’s emphasis on employment-related destinations, a travel purpose more significant for men, and especially wealthy and educated men [@lawWomenTransportNew1999; @hansonGenderMobilityNew2010]. Its aim is to challenge current planning paradigms by explicitly focusing on care, vital and life-sustaining activities that are undervalued, and to provide a tangible example of how one could gender-mainstream accessibility analyses. In doing so, it contributes to the emergent mobility of care literature, a body of what that has, to date, focused on quantifying this under-represented type of travel [@gomezvaroAccountingCareEveryday2023; @murillomunarCaregiversMoveGender2023; @ravensbergenExploratoryAnalysisMobility2022; @sanchezdemadariagaMobilityCareIntroducing2013; @sanchezdemadariagaMeasuringMobilitiesCare2019; @shumanCanMobilityCare2023] and has provided rich and nuanced qualitative accounts of lived experiences completing mobility of care [@orjuelaReconsideringMobilityCare2023; @ravensbergenVelomobilitiesCareLowcycling2020; @sersliRidingAloneTogether2020]. 
+This paper is the first to conduct an exploratory multimodal accessibility analysis of Mobility of Care destinations -- one that counters the current literature's emphasis on employment-related destinations, a travel purpose more significant for men, and especially wealthy and educated men [@lawWomenTransportNew1999; @hansonGenderMobilityNew2010]. Its aim is to challenge current planning paradigms by explicitly focusing on care, vital and life-sustaining activities that are currently undervalued. This study also provides a tangible example of how one could conduct a gender-aware multimodal accessibility analyses, using the city of Hamilton as an empirical case study. In doing so, this paper contributes to the emergent mobility of care literature, that has focused on quantifying this underrepresented type of travel [@gomezvaroAccountingCareEveryday2023; @murillomunarCaregiversMoveGender2023; @ravensbergenExploratoryAnalysisMobility2022; @sanchezdemadariagaMobilityCareIntroducing2013; @sanchezdemadariagaMeasuringMobilitiesCare2019; @shumanCanMobilityCare2023] through rich and nuanced qualitative accounts of lived experiences completing mobility of care [@orjuelaReconsideringMobilityCare2023; @ravensbergenVelomobilitiesCareLowcycling2020; @sersliRidingAloneTogether2020]. 
 
-This paper also contributes to accessibility research by implementing both an unconstrained (cumulative opportunities) and constrained (spatial availability) multimodal accessibility measure. The unconstrained measure demonstrates the potential interaction with care destinations that each mode offers from each DA within a 15- and 30- minute travel time thresholds. The constrained measure incorporates the assumed proportion of mode-using population and mode-specific travel time to demonstrate the potential interaction with destinations that each DA has available to a mode-using population. The distinction between the constrained and unconstrained measures are clarified, namely that potential interaction may be over-inflated, especially for the lower range non-car modes, when considering unconstrained access over spatial availability. Unconstrained access may demonstrate over-inflated promise for active transport modes. <!-- Multimodal spatial availability is the proportional allocation of the total spatial availability in the region to each mode-using population in each zone. In this way, each value is placed placed relative to all other values in the city.--> The consideration of both unconstrained and constrained access can encourage a shift in perspective. Motorists are generally estimated high unconstrained access to many care destinations as well as exceptionally high spatial availability. Those who use alternative modes, have low unconstrained access and, in certain DAs, and even lower level of availability. This is as a result of car-using populations being allocated a disproportionate number of total care destinations. Spatial Availability is a way of conceptualising accessibility as a city-wide total and each calculated value is a proportion so it can be easily placed relative to all others in the city. However, it relies on assumptions on who is "demanding" the destinations, and how those assumptions are made are a subject of ongoing discussion in how accessibility considers competition [@merlinDoesCompetitionMatter2017; @kelobonyeMeasuringAccessibilitySpatial2020].
+This study also methodologically contributes to the accessibility literature by contrasting two multimodal accessibility measures: the widely used cumulative opportunities measure and the spatial availability measure, which offers accessibility insights on modal competition. The cumulative opportunities measure demonstrates the modal range of access by presenting the number of care destinations that each mode can reach within a 15- and 30- minute travel time threshold from each spatial location. Spatial availability constrains the cumulative opportunities measure by incorporating the _assumed_ proportions of mode-using populations and mode-specific travel times; this yields the number of care destinations that the mode-using population has access to out of all care destinations in the study region. The two measures communicate different insights about the case study: the study's results demonstrate that the car mode offers high cumulative opportunities access as well as exceptionally high spatial availability for motorists. While sustainable modes offer lower cumulative opportunities access (though higher in the city center) and, in certain areas, even lower spatial availability due to the disproportionately high spatial availability for the car users. In this way, relying only on the cumulative opportunities measure could provide an incomplete picture, as it does not reflect how the relatively large quantity of motorists and the greater range offered by the car can disproportionately claim more care destinations than non-car modes (pedestrians, cyclists, and transit) users. Although spatial availability offers a more complex picture of how modes provide access under competition, like other competitive measures, it relies on assumptions about who is "demanding" destinations. How those assumptions are made is a subject of ongoing discussion in the competitive accessibility literature [@merlinDoesCompetitionMatter2017; @kelobonyeMeasuringAccessibilitySpatial2020].
 
-Further, this study contributes to the literature on sustainable travel behaviour. Results indicate that care is most easily accessed in Hamilton by car, an unsurprising result given its car-oriented design. Previous research has found that mobility of care are more frequently completed by car or by foot than by transit or by bicycle [@ravensbergenExploratoryAnalysisMobility2022]. It is possible that the car’s ability to provide higher access to care destinations, as observed in this study, shapes this tendency to complete care trips by car. Car use may also be more frequent for care trips because these trips tend to involve carrying things (e.g., groceries) or people (e.g., children). Indeed, past qualitative work has found that many prefer travelling by car for this type of trip due to convenience and increased safety [@maciejewskaHaveChildrenThus2019; @carverParentalChauffeursWhat2013]. Then again, care trips tend to be shorter than other trips  [@ravensbergenExploratoryAnalysisMobility2022], making them ideal for more sustainable travel modes, such as active modes (walking, cycling) and public transport. The low access to care by foot identified in this study is discouraging, given both people’s tendency to use this mode for care trips [@ravensbergenExploratoryAnalysisMobility2022], and the benefits of walking as a travel mode, both for individuals, cities, and the environment. Somewhat unexpectedly, access to care was found to be low by transit and by foot and relatively high by bicycle. Given that low income women, in particular, seem to be transit reliant for care trips [@ravensbergenExploratoryAnalysisMobility2022], this result highlights both a potential bias against care trips by transit and the equity implications of that bias. Though past work has found that many barriers exist for cycling for care [@ravensbergenVelomobilitiesCareLowcycling2020; @ravensbergenFeministGeographiesCycling2019; @sersliRidingAloneTogether2020], the results of this study highlight the great potential of the bicycle for easily accessing care. 
+Further, this study contributes to the literature on equitable and sustainable transportation planning by providing a methodology to identify areas in need for further development. By highlighting how the car offers all-round high access and even higher spatial availability to care destinations in Hamilton, sustainable modes can be prioritized equitably. Previous research suggests that currently care trips are more frequently completed by car than by transit or bicycle as they often involve carrying things (e.g., groceries) or people (e.g., children) [@ravensbergenExploratoryAnalysisMobility2022]. Qualitative work supports this preference, citing convenience and increased safety as key reasons for choosing travel by car for care trips [@maciejewskaHaveChildrenThus2019; @carverParentalChauffeursWhat2013].
 
-The preliminary nature of this research also comes with its limitations as a result of data availability. The accessibility results are not calibrated to reflect observed mobility-to-care travel behaviour due to data unavailability nor are they formulated to express any normative accessibility goals. Instead, they present a preliminary exploration of how the mobility of care concept could be operationalised within accessibility analysis. 
+However, this study also highlights that the high spatial availability of motorists results in disproportionately low spatial availability for sustainable mode users, even in Hamilton-Central. While sustainability policies should aim to re-balance the spatial availability away from motorists to users of sustainable modes, these policies should incorporate an equity perspective that considers existing preferences in care trips. This study provides the stepping stones for such an equity lens in @fig-Fig6, by presenting a cross-tabulation of areas with high LICO prevalence and low spatial availability per sustainable-mode that could be the focus of policy intervention. Consider the cycling plot in @fig-Fig6, a factor driving the higher quantity of yellow DAs is the low proportion of cyclists assumed. This assumption holds in other Canadian contexts, cycling as a mode for care trips is also uncommon as cycling is uncommon  [@ravensbergenExploratoryAnalysisMobility2022]. Moreover, as care trips tend to be preformed by women, the low proportion of cycling for care trips has been put forth as a hypothesis to explain the gender-gap in cycling observed in low-cycling cities (like Hamilton) where only a third of cyclists are women [@ravensbergenFeministGeographiesCycling2019; @prati2018gender]. However, cycling as a mode has potential as it demonstrates high cumulative opportunities values. However, that potential is not being realized in part due to the low proportion of cyclists and the higher spatial availability values of motorists. Future research could examine what barriers those who conduct care trips are facing in regards to cycling, particularly focusing on the yellow areas indicated in @fig-Fig6.
 
-First, the travel time estimations assume free-flow network conditions: while impacting estimated travel times, estimated congested conditions may not have a drastic impact on spatial accessibility calculations [@yiannakouliasEstimatingEffectTurn2013], especially for cycling and walking modes. Second, the use of a binary travel time cut-off instead of a more complex travel impedance function can have a significant impact on accessibility results. To add reliability, two literature-informed travel cost thresholds (15-minutes and 30-minutes) were selected, but results' interpretation are hampered by the binary function selection: some zonal populations could _still_ value destinations beyond a 30-minute travel time, and some populations may not see a destination 5 minutes and 15 minutes away as necessarily equal in travel impedance. Third, the geometric centroids of DAs (origins) and destinations (all care destinations) were used as inputs for travel time calculations. DAs are created for the purpose of the census: they vary in area and centroids may not necessarily align with where that population may begin their journey to care destinations. 
+## Study limitations
 
-Absence of mobility of care travel behaviour, lack of capacities or attractiveness characteristics for destinations, and the mode used to access destinations presents limitations as well. Accessibility literature has weighted destinations (amenities) using a variety of method such as estimated capacity of destinations [@liMeasuringMultiactivities2024] or origin-destination flows from travel surveys [@graellsCityCitiesMeasuring2021; @chengInvestigatingWalkingAccessibility2019]. However, traditional 'capacities' like health care facilities have beds is not relevant for all care destinations, moreover, origin-destination flows to all care destinations also have not been counted within the region's travel survey (e.g., TTS [@transportationtomorrowsurvey2018]). In absence of this data, the destinations are left unweighted. Notably, since the majority of destinations are child-centric, total access results favour child-centric destinations. In absence of empirical data for amenity weight calibration, this methodological assumption is a limitation. Additionally, the mode choice for care destinations trips is unknown and hampers interpretation of spatial availability. It is assumed in the study to be equal to the work-commute mode selection, but this is may not be necessarily the case.
+This study presents three types of limitations related to assumptions in the accessibility measure methods and data availability. First, since travel times from origin to care destination are unknown, they are estimated assuming a road network under free-flow conditions. While this affects the estimated travel times, research suggests that considering congested conditions may not significantly impact the resulting accessibility values [@yiannakouliasEstimatingEffectTurn2013]. In the context of Hamilton, road congestion is also more pertinent to car and transit modes than for pedestrians or cyclists. Second, using a binary uniform impedance function instead of a more complex distance-decay function could significantly affect accessibility results [@kapatsilaResolvingAccessibilityDilemma2023]. For instance, destinations beyond a 30-minute travel time could still be valued by people, and those within 5 and 15 minutes do not necessarily have the same importance. However, the use of the binary function trades complexity for interpretation, and this trade-off was made strategically to improve interpretability in the comparison between the two accessibility measures. To enhance reliability, two literature informed travel cost thresholds (15-minutes and 30-minutes) are selected. Third, the geometric centroids of DAs (origins) and destinations (all care destinations) were used as inputs for travel time calculations. This is a limitation as DAs were created for the purpose of the statistical census: they vary in area, and their centroids may not necessarily align with where that population may begin their journey to care destinations. This methodological decision presents limitations on how the travel time estimates can be interpreted to reflect actual travel times to care destinations.
 
-Future work could look to address these limitations as well as compare access to care results to conventional access to work landscapes. This comparison could highlight the bias in planning towards jobs as well as substantiate equity critiques.
+Moreover, due to the exploratory nature of this research and novelty of the Mobility of Care concept, no research to date has directly captured the characteristics of mobility of care trips in Hamilton. The presented results thus are not calibrated to reflect observed mobility of care travel behaviour nor establish normative accessibility goals [@paezMeasuringAccessibilityPositive2012]. Travel behaviour data is needed to calibrate local destination-specific travel impedance cutoffs. For example, using a 15-minute cutoff for grocery-centric destinations and a 30-minute cutoff for health-centric destinations or assigning weights for each destination type as done in previous studies (e.g., a weight that reflects their "capacity" [@liMeasuringMultiactivities2024] or their "attractiveness" using origin-destination flows from travel surveys [@graellsCityCitiesMeasuring2021, @chengInvestigatingWalkingAccessibility2019]). In the absence of travel behaviour data and the use of uniform travel time thresholds and destination weights, the result's interpretation is limited to the access to _all_ care destinations within 15- or 30-minutes. It does not include the real individual socio-economic and intersectional characteristics that influence what destinations can be potentially accessed. Consequently, each destination is treated as a single opportunity, e.g., a school, a clinic, a hospital, and a grocery store are all equal to one opportunity each. Additionally, since care trip modal choice is unavailable at a disaggregated level for Hamilton, the commute mode choice is assumed for the spatial availability measure. This mode may not be what is used to visit care destinations and hence places a limitation on how the results should be interpreted.
 
+Taken together, the discussion of these limitations presents room for future research to incorporate context-specific mobility of care travel surveys into accessibility analysis to more accurately reflect care accessibility landscapes. Future work could also look to disaggregate access to care by category and compare results to access to employment landscapes. This comparison could highlight the bias in planning toward jobs, as well as substantiate equity critiques.
 
-# References {-}
+# Data availability
 
-# Appendix
+All work is open, reproducible and completed in R [@Rcore]. A [GitHub repository](https://github.com/soukhova/Care-Destinations) hosts all associated data, text, figures and code, which relies on the following R packages: {knitr} [@knitr1], {biscale} [@biscale], {cancensus} [@cancensus], {cowplot} [@cowplot], {disk.frame} [@diskframe], {dplyr} [@dplyr], {flextable} [@flextable], {ftExtra} [@ftExtra], {ggplot2} [@ggplot2], {here} [@here], {mapview} [@mapview], {scales} [@scales], {sf} [@sf2], {tmap} [@tmap], {tmaptools} [@tmaptools], {renv} [@renv], {r5r} [@r5r], {rlang} [@rlang], and {rmarkdown} [@rmarkdown1].
 
-<!-- <!-- REJECTED --> 
+# References
 
-<!-- Consider this example: a few households in the south edge of Hamilton-Central, relatively high-density area, do not own cars but they cycle. Many of their neighbours do drive, a mode that provides the most access, even more than cycling. So more of the 2,215 destinations are available to their neighbours than the cycling households _because_ car access is high and more motorists can potentially access these opportunities. Availability is constrained accessibility; because car access is uniformly high throughout the city, availability of destinations is lower for all other modes. In this way, spatial availability estimates how many destinations can be accessed by the users of a specific mode out of all destinations in the region. -->
-
-
-<!-- ```{r} -->
-<!-- #st_bbox(hamilton_communities) -->
-<!-- plot_hamilton_boundaries <- tm_basemap(server=providers$Esri.WorldGrayCanvas, alpha=1) + -->
-<!--   tm_shape(hamilton_communities, bbox=bb(x=hamilton_communities, ext=0.5, relative=TRUE))+ -->
-<!--   tm_polygons("COMMUNITY_",  palette = viridis::viridis(6), border.col = "black", lwd=1, title = "Hamilton Communities", alpha=0.7)+ -->
-<!--   tm_text(text = "COMMUNITY_", size = 1, col = "black", shadow = TRUE) + -->
-<!--   tm_scale_bar(position = c("left", "bottom")) -->
-<!--   #tm_compass(position = c("left", "top"), size = 1.0, north = -20) -->
-<!-- plot_hamilton_boundaries <- tmap_leaflet(plot_hamilton_boundaries) -->
-<!-- mapshot(plot_hamilton_boundaries, file ="figures/Fig1-boundaries.png") -->
-<!-- ``` -->
-
-
-<!-- HERE IS THE CODE FOR MAKING PLOTS THAT VISUALIZE ONLY 1 MODE SPATIAL AVAILABILITY, FOR EACH MODE-->
-<!-- ```{r} -->
-<!-- ttm_car_30 <- ttm_care_car |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 30, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_30 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_walk_30 <- ttm_care_walk |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 30, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_30 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_bike_30 <- ttm_care_bike |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 30, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_30 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_transit_30 <- ttm_care_transit |> -->
-<!--   mutate(f = ifelse(travel_time_p25 <= 30, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_30 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- #15 mins or less -->
-<!-- ttm_car_15 <- ttm_care_car |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 15, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_15 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-
-<!-- ttm_walk_15 <- ttm_care_walk |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 15, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_15 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_bike_15 <- ttm_care_bike |> -->
-<!--   mutate(f = ifelse(travel_time_p50 <= 15, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_15 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_transit_15 <- ttm_care_transit |> -->
-<!--   mutate(f = ifelse(travel_time_p25 <= 15, 1, 0), -->
-<!--          Dest_count = 1) |> -->
-<!--   merge(HAM_access_15 |> select(c("GeoUID", "Population", "perc_walked", "perc_car", "perc_transit", "perc_cycle_other")) |> st_drop_geometry(), by.x = "from_id", by.y = "GeoUID") -->
-
-<!-- ttm_ALL_30 <- rbind(ttm_car_30, ttm_walk_30, ttm_bike_30,ttm_transit_30) -->
-<!-- rm(ttm_car_30, ttm_walk_30, ttm_bike_30,ttm_transit_30) -->
-<!-- ``` -->
-
-<!-- ```{r} -->
-<!-- ttm_car_30 <- ttm_car_30 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, #the DA centroid -->
-<!--                     d_id = to_id, #the care destination point -->
-<!--                     pop = Population, #the population of the DA using that mode -->
-<!--                     opp = Dest_count, -->
-<!--                     r = catch, -->
-<!--                     f = f, -->
-<!--                     alpha = 1)|> -->
-<!--   group_by(from_id) |> -->
-<!--   summarize(V_i = sum(V_ij, na.rm = TRUE)) |> -->
-<!--   mutate(mode = "a_car") -->
-
-<!-- ttm_walk_30 <- ttm_walk_30 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE)) |> -->
-<!--   mutate(mode = "d_walk") -->
-
-<!-- ttm_bike_30 <- ttm_bike_30 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "c_bike") -->
-
-<!-- ttm_transit_30 <- ttm_transit_30 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "b_transit") -->
-
-<!-- ttm_car_30$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_transit_30$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_bike_30$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_walk_30$V_i |> sum(na.rm = TRUE) -->
-
-<!-- #now 15 mins -->
-<!-- ttm_car_15 <- ttm_car_15 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "a_car") -->
-
-<!-- ttm_walk_15 <- ttm_walk_15 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "d_walk") -->
-
-<!-- ttm_bike_15 <- ttm_bike_15 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "c_bike") -->
-
-<!-- ttm_transit_15 <- ttm_transit_15 |> -->
-<!--   mutate(catch = 1) |> -->
-<!--   sp_avail_detailed(o_id = from_id, d_id = to_id, pop = Population, opp = Dest_count, r = catch, f = f, alpha = 1)|> -->
-<!--   group_by(from_id) |> summarize(V_i = sum(V_ij, na.rm = TRUE))|> -->
-<!--   mutate(mode = "b_transit") -->
-
-<!-- ttm_car_15$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_transit_15$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_bike_15$V_i |> sum(na.rm = TRUE) -->
-<!-- ttm_walk_15$V_i |> sum(na.rm = TRUE) -->
-<!-- ``` -->
-
-<!-- ```{r} -->
-<!-- #attaching the cum opps to sf object for mapping. First the 30 mins. -->
-<!-- HAM_access_30_1 <- HAM_access_30 |> merge(ttm_car_30, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_30_2 <- HAM_access_30 |> merge(ttm_transit_30, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_30_3 <- HAM_access_30 |> merge(ttm_bike_30, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_30_4 <- HAM_access_30 |> merge(ttm_walk_30, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-
-<!-- HAM_access_30 <- rbind(HAM_access_30_1, HAM_access_30_2, HAM_access_30_3, HAM_access_30_4) -->
-<!-- remove(HAM_access_30_1,HAM_access_30_2,HAM_access_30_3,HAM_access_30_4) -->
-
-<!-- # the 15 mins -->
-<!-- HAM_access_15_1 <- HAM_access_15 |> merge(ttm_car_15, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_15_2 <- HAM_access_15 |> merge(ttm_transit_15, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_15_3 <- HAM_access_15 |> merge(ttm_bike_15, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-<!-- HAM_access_15_4 <- HAM_access_15 |> merge(ttm_walk_15, by.x = c("GeoUID", "mode"),by.y = c("from_id", "mode")) -->
-
-<!-- HAM_access_15 <- rbind(HAM_access_15_1, HAM_access_15_2, HAM_access_15_3, HAM_access_15_4) -->
-<!-- remove(HAM_access_15_1,HAM_access_15_2,HAM_access_15_3,HAM_access_15_4) -->
-<!-- ``` -->
-
-<!-- ```{r} -->
-<!-- #plotting the spatial availability measure results -->
-<!-- plot_Savail_30m <- -->
-<!--   tm_shape(ham_bay, bbox=hamilton_communities) + tm_polygons(col="skyblue", border.alpha = 0) + -->
-<!--   tm_shape(hydro_p_LakeOntario, bbox=hamilton_communities) + tm_polygons(col="skyblue", border.alpha = 0)+ -->
-<!--   tm_shape(HAM_access_30) + -->
-<!--   tm_polygons("V_i", -->
-<!--               palette = "Purples", -->
-<!--               # breaks = c(0,0.0001, 66, 246, 753, 2215), -->
-<!--               # labels = c("0",">0 to <66", "66 to <246", "246 to <753", "753 to 2215"), -->
-<!--               border.alpha = 0, -->
-<!--               title = "Spatially available destinations within 30 mins.", -->
-<!--               legend.is.portrait = FALSE) + -->
-<!--   tm_facets(by=c("mode"), nrow=1, showNA = FALSE)+ -->
-<!--   tm_shape(hamilton_communities) + tm_polygons(alpha=0)+ -->
-<!--   tm_scale_bar(position = c("left", "bottom"), breaks = c(0, 1, 5, 10, 20)) + -->
-<!--   tm_compass(position = c("right", "top"), size=1.0)+ -->
-<!--   tm_layout(panel.labels=c("Car","Transit","Bike","Walk"), -->
-<!--             bg.color = "grey", -->
-<!--             panel.label.bg.color = "white", -->
-<!--             panel.label.color = "black", -->
-<!--             legend.outside = TRUE, -->
-<!--             legend.position = c("center", "bottom"), -->
-<!--             legend.outside.position = "bottom", -->
-<!--             legend.outside.size = 0.2, -->
-<!--             legend.title.size = 0.7, -->
-<!--             legend.text.size = 0.5) -->
-
-<!-- plot_Savail_15m <- -->
-<!--   tm_shape(ham_bay, bbox=hamilton_communities) + tm_polygons(col="skyblue", border.alpha = 0) + -->
-<!--   tm_shape(hydro_p_LakeOntario, bbox=hamilton_communities) + tm_polygons(col="skyblue", border.alpha = 0)+ -->
-<!--   tm_shape(HAM_access_15) + -->
-<!--   tm_polygons("V_i", -->
-<!--               palette = "Greens", -->
-<!--               # breaks = c(0,0.0001, 12,47,242,1818), -->
-<!--               # labels = c("0",">0 to <12", "12 to <47", "47 to <242", "242 to 1818"), -->
-<!--               border.alpha = 0, -->
-<!--               title = "Spatially available destinations within 15 mins.", -->
-<!--               legend.is.portrait = FALSE) + -->
-<!--   tm_facets(by=c("mode"), nrow=1, showNA = FALSE)+ -->
-<!--   tm_shape(hamilton_communities) + tm_polygons(alpha=0)+ -->
-<!--   tm_scale_bar(position = c("left", "bottom"), breaks = c(0, 1, 5, 10, 20)) + -->
-<!--   tm_compass(position = c("right", "top"), size=1.0)+ -->
-<!--   tm_layout(panel.labels=c("Car","Transit","Bike","Walk"), -->
-<!--             bg.color = "grey", -->
-<!--             panel.label.bg.color = "white", -->
-<!--             panel.label.color = "black", -->
-<!--             legend.outside = TRUE, -->
-<!--             legend.position = c("center", "bottom"), -->
-<!--             legend.outside.position = "bottom", -->
-<!--             legend.outside.size = 0.2, -->
-<!--             legend.title.size = 0.7, -->
-<!--             legend.text.size = 0.5) -->
-<!-- plot_Savail_measures <- tmap_arrange(plot_Savail_15m, plot_Savail_30m, asp=1/1.5) -->
-<!-- plot_Savail_measures -->
-<!-- #tmap_save(plot_cum_opp_measures, filename ="figures/Fig4-plot_cum_opp_measures.png", dpi=600) -->
-<!-- #rm(plot_cum_opp_15m,plot_cum_opp_30m) -->
-<!-- ``` -->

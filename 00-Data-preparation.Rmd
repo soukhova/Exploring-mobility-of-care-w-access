@@ -8,8 +8,8 @@ date: "2023-07-07"
 ```{r, message=FALSE}
 # increase Java memory
 options(java.parameters = "-Xmx6G")
-#cancensus API key, Nicks
-options(cancensus.api_key = "CensusMapper_1d16ff8ad5e8a65ff028959182ac4940")
+#cancensus API key,
+options(cancensus.api_key = "XX")
 
 library(disk.frame)
 library(cancensus)
